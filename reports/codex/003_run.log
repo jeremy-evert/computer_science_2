@@ -1,0 +1,1565 @@
+Reading additional input from stdin...
+OpenAI Codex v0.146.1
+--------
+workdir: /mnt/brandy_nvme/jevert/git/computer_science_2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: medium
+reasoning summaries: none
+session id: 019fd7c2-ecd1-7442-b0cc-9806b0f0eb6b
+--------
+user
+# Prompt 003 — CS2 Coding Odyssey gates + rubrics: Weeks 2-6
+
+**Status: decided by Jeremy 2026-08-06. Ready to execute. Runs in parallel
+with prompt 002 (skeleton) and prompt 004 (weeks 7-17) — this prompt only
+touches weeks 2-6 files, the other two touch disjoint file sets.**
+
+## Context
+
+Same background as `prompts/002_cs2_odyssey_spine_and_skeleton.md` — read
+that file's Context section first, it is not repeated in full here. CS1
+(`/mnt/brandy_nvme/jevert/git/computer_science_1`) proved a per-week
+"Odyssey Gate" format: a short, mechanically-checkable Quick Check tied to
+one concept, plus an optional suggested-textbook-problem scaffold per genre,
+plus a matching rubric file with a pass/fail Quick Check table and a
+"grading notes" section. Read these two CS1 files in full before writing
+anything — they are the exact shape to mirror:
+
+- `computer_science_1/assignments/odyssey_gates/week-05.md`
+- `computer_science_1/rubrics/odyssey_gates/week-05_rubric.md`
+
+Also skim 2-3 more CS1 week files (`week-02.md`, `week-07.md`,
+`week-12.md` and their rubrics) to see how the format flexes for different
+concept types (a first-checkpoint week, a functions week, a classes week).
+
+## The confirmed chapter mapping for weeks 2-6 — do not redesign, only build
+
+| Week | Topic (Deitel ch.) | Note |
+|---|---|---|
+| 2 | Exceptions (10), part 1 | try/except, catching specific exception types |
+| 3 | Exceptions (10), part 2 | raising exceptions, custom exception classes, robust input validation |
+| 4 | Modules (11) | writing/importing a module, `__name__ == "__main__"`, namespacing |
+| 5 | Files (12) | reading/writing text and/or CSV, persistence across runs |
+| **6** | **Checkpoint 1** | Exceptions+Modules+Files integration — same four-axis "Build" checkpoint rubric shape as `computer_science_1/rubrics/odyssey_gates/week-06_rubric.md` (read it), not a plain gate |
+
+**Same Odyssey world/genre menu as CS1's four genres** (Frontier Settlement,
+Investigation Bureau, Starship Log, Small Business) unless prompt 002's
+report flags a genuine reason CS2 needs its own menu — check
+`reports/002_cs2_odyssey_spine_and_skeleton.md` if it exists yet; if it
+doesn't exist yet (parallel execution), use CS1's exact four genres as the
+default and note the assumption in your own report.
+
+## Task
+
+For each of weeks 2, 3, 4, 5: write
+`assignments/odyssey_gates/week-0N.md` and
+`rubrics/odyssey_gates/week-0N_rubric.md`, matching CS1's week-05 format
+exactly (Concept/Arc/Instrument header, "The gate" section, Quick Check
+checklist, optional suggested-textbook-problem per genre, "open
+continuation" section, World Bible one-liner, "Looking ahead" pointer to
+the next week). Ground each gate's concept in the Deitel chapter 10/11/12
+content (`curriculum_rag_supporter/books/Intro to Python for Computer
+Science and Data Science...pdf`) — the gate should test something real
+about exceptions/modules/files, not a generic restatement.
+
+For week 6: write `assignments/odyssey_gates/week-06.md` and
+`rubrics/odyssey_gates/week-06_rubric.md` as **Checkpoint 1**, matching
+`computer_science_1/assignments/odyssey_gates/week-06.md` and its rubric's
+checkpoint shape (the four-axis Build rubric referenced in
+`docs/curriculum/judgment_toolkit.md` §2 — read that section, in
+`computer_science_1/docs/curriculum/judgment_toolkit.md` if the CS2 copy
+doesn't exist yet from prompt 002) — integration across exceptions,
+modules, and files, not a single new concept.
+
+Depth requirement per Jeremy's "same areas, greater depth" framing:
+CS2's gates should ask for more — e.g. a custom exception class, not just a
+caught built-in one; a module with more than one function; file
+persistence that survives and is reloaded on the next run — rather than the
+minimum-viable version CS1 asked for at the equivalent concept depth.
+
+## Explicitly out of scope
+
+- Weeks 1, 7-17 — prompt 004 or prompt 002 cover those. Do not create or
+  edit anything under those week numbers.
+- Skeleton documents (`docs/grading-model.md`, `docs/course-ethos.md`,
+  `docs/curriculum/judgment_toolkit.md`, `assignments/A1`/`A2`/`A5`,
+  `planning/week-NN.md`) — prompt 002 owns those.
+- Shared-strand content (Monday Moment, Wacky Wednesday, Fun Friday,
+  Paired Programming, Show and Tell) — not this repo's job.
+- Any live Canvas/Savnac push.
+
+## Requirements
+
+- Read the named CS1 source files in full before writing CS2 counterparts.
+- Ground technical content in the Deitel PDF, cite what's drawn from where
+  a claim needs grounding (matching CS1's own judgment_toolkit.md
+  citation bar).
+- If a genuine ambiguity surfaces, stop and report it rather than guessing.
+- Do not commit — leave edited files for review.
+
+## Report Requirement
+
+Write `reports/003_cs2_odyssey_gates_weeks_2to6.md`: what was built per
+week, how each gate's depth exceeds CS1's equivalent-concept baseline, any
+assumptions made about the genre menu (since this runs in parallel with
+002), and any open questions.
+codex
+I’ll build only the week 2–6 gate and rubric files, first mirroring the specified CS1 examples and checking the Deitel source plus the parallel skeleton report if available.
+exec
+/bin/bash -lc "pwd && rg --files -g 'week-0[2-7]*.md' -g 'judgment_toolkit.md' -g '*Deitel*' -g '002_cs2_odyssey_spine_and_skeleton.md' . /mnt/brandy_nvme/jevert/git/computer_science_1 2>/dev/null | sed -n '1,160p'" in /mnt/brandy_nvme/jevert/git/computer_science_2
+ succeeded in 0ms:
+/mnt/brandy_nvme/jevert/git/computer_science_2
+./prompts/002_cs2_odyssey_spine_and_skeleton.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-06_rubric.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-07_rubric.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-05_rubric.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-04_rubric.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-03_rubric.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-02_rubric.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/planning/week-07.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/planning/week-06.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/planning/week-05.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/planning/week-04.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/planning/week-03.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/planning/week-02.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/docs/curriculum/judgment_toolkit.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-06.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-07.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-04.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-03.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-05.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-02.md
+
+exec
+/bin/bash -lc "find . /mnt/brandy_nvme/jevert/git/computer_science_1 -type f \\( -iname '*.pdf' -o -name '002_cs2_odyssey_spine_and_skeleton.md' \\) -print | sed -n '1,120p'
+printf '\\n--- CS1 gates ---\\n'
+for f in /mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-{02,05,06,07,12}.md /mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-{02,05,06,07,12}_rubric.md /mnt/brandy_nvme/jevert/git/computer_science_1/docs/curriculum/judgment_toolkit.md; do echo \"### "'$f"; sed -n '"'1,260p' \""'$f"; done' in /mnt/brandy_nvme/jevert/git/computer_science_2
+ succeeded in 0ms:
+./archive/spring-2021/files/BS in CS; 6 options -- effective FA 2020.pdf
+./archive/spring-2026/files/BS in CS; 6 options -- effective FA 2020.pdf
+./prompts/002_cs2_odyssey_spine_and_skeleton.md
+/mnt/brandy_nvme/jevert/git/computer_science_1/archive/2026-27-academic-calendar-unofficial.pdf
+/mnt/brandy_nvme/jevert/git/computer_science_1/archive/fall-2023/files/duran cs1.pdf
+/mnt/brandy_nvme/jevert/git/computer_science_1/archive/fall-2025/files/ai in the world.pdf
+/mnt/brandy_nvme/jevert/git/computer_science_1/archive/spring-2025/files/ai in the world.pdf
+/mnt/brandy_nvme/jevert/git/computer_science_1/archive/spring-2026/files/Chapter_2_report_Jeremy_Evert.pdf
+
+--- CS1 gates ---
+### /mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-02.md
+# Odyssey Gate — Week 2: The world wakes up
+
+**Concept:** variables, expressions, types (`lessons/02-variables-expressions-types.md`).
+**Arc:** 1 — Foundations. **Instrument:** Quick Check (pass/fail) — see
+`docs/curriculum/judgment_toolkit.md` §1. Full map: `planning/coding-odyssey-arc-map.md`.
+
+## Step 0 — Pick your genre (moved here 2026-07-24 from Week 1 Friday)
+
+Before anything else this week: pick one of 4 bounded genres and keep it
+all semester.
+
+- **The Frontier Settlement** — manage colonists, resources, events.
+- **The Investigation Bureau** — a detective case-file engine (strongest
+  fit for the optional NLP/text-analysis side-quest — see
+  `planning/coding-odyssey-arc-map.md`).
+- **The Starship Log** — crew and exploration management.
+- **The Small Business** — inventory, customers, transactions.
+
+Write a one-paragraph **founding charter**: what is this world, who's in
+it, what's at stake. This is the seed of your World Bible
+(`assignments/A2-coding-odyssey-project.md`) and the first Judgment Log
+checkpoint (`docs/curriculum/judgment_toolkit.md` §5) — not graded
+pass/fail like the gate below, just needs to genuinely exist.
+
+## The gate (do this first)
+
+Write a short scene where your world states its own founding condition —
+using **at least one variable** and **at least one arithmetic or comparison
+expression** — and prints the result. That's it. This is a gate, not the
+week's whole assignment: if you're writing more than a few lines of world
+logic to pass it, you've overbuilt it.
+
+Examples of "founding condition," by genre (pick whichever fits the genre
+you chose above — these are illustrations, not requirements):
+
+- **Frontier Settlement:** starting food stock, computed as rations ×
+  colonist count, printed as "The settlement begins with N days of food."
+- **Investigation Bureau:** a case clock — hours since the report was filed,
+  computed and printed as "The trail is N hours cold."
+- **Starship Log:** fuel remaining after the jump, computed from a starting
+  reserve minus a jump cost, printed as a status line.
+- **Small Business:** opening cash on hand after rent, computed and printed
+  as a ledger's first line.
+
+## Quick Check (pass/fail)
+
+- [ ] A variable is assigned and reused (not just a literal printed directly).
+- [ ] At least one arithmetic or comparison expression computes something
+      from that variable.
+- [ ] The result prints as part of a sentence about the world, not a bare
+      number.
+
+All three present → pass. Missing any → not yet; resubmit, this is a gate,
+not a one-shot.
+
+## Suggested textbook problem (optional scaffolding)
+
+If you'd rather start from concrete numbers than invent your own scenario,
+plug these straight into the genre examples above — same shapes, filled in:
+
+- **Frontier Settlement:** `rations_per_colonist = 2`, `colonist_count = 40`
+  → `food_stock = rations_per_colonist * colonist_count` → "The settlement
+  begins with 80 days of food."
+- **Investigation Bureau:** `report_filed_hour = 14`, `current_hour = 20` →
+  `hours_cold = current_hour - report_filed_hour` → "The trail is 6 hours
+  cold."
+- **Starship Log:** `fuel_reserve = 100`, `jump_cost = 37` →
+  `fuel_remaining = fuel_reserve - jump_cost` → "63 units of fuel remain
+  after the jump."
+- **Small Business:** `cash_on_hand = 5000`, `rent = 1200` →
+  `opening_cash = cash_on_hand - rent` → "Opening cash on hand: $3800."
+
+Do this version directly if it helps, then let it *be* your gate
+submission — you don't need a second, different one.
+
+## Then: open continuation (light Build, holistic)
+
+Once the gate passes, keep building your world's opening scene for the rest
+of the week using anything covered through Week 2. Add more state, more
+detail, more of your founding charter coming alive in code. Graded
+holistically, not against this gate's checklist — see
+`docs/curriculum/judgment_toolkit.md` §2 (light Build).
+
+## World Bible
+
+Add one line to your World Bible: what gate you passed, and anything that
+broke along the way. See `assignments/A2-coding-odyssey-project.md` and
+`docs/curriculum/judgment_toolkit.md` §5.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-05.md
+# Odyssey Gate — Week 5: The first season passes
+
+**Concept:** loops and repetition (`lessons/04-loops.md`).
+**Arc:** 1 — Foundations. **Instrument:** Quick Check (pass/fail) — see
+`docs/curriculum/judgment_toolkit.md` §1.
+
+## The gate (do this first)
+
+Add a loop that processes an **unknown or variable number** of events in
+your world — sentinel-controlled (keeps going until some condition) or
+range-driven from real world state (not a hardcoded `for i in range(3)`
+with no connection to anything). Something repeated — harvests, patrols,
+transactions, log entries, whatever fits your genre — happens more than
+once because the loop says so, not because you wrote it out three times by
+hand.
+
+## Quick Check (pass/fail)
+
+- [ ] A `for` or `while` loop is present and actually repeats (not a
+      single-iteration loop standing in for an `if`).
+- [ ] The number of iterations is driven by real data or a sentinel
+      condition, not a hardcoded constant unrelated to world state.
+- [ ] An accumulator or running total/state changes across iterations (the
+      loop does more than print the same thing N times).
+
+## Suggested textbook problem (optional scaffolding)
+
+The general problem: write a loop over a short list of 3–5 made-up events,
+printing something for each one and keeping a running total or count as
+you go.
+
+- **Frontier Settlement:** loop over a list of harvest amounts (e.g.
+  `[12, 9, 15, 11]`), summing into `total_food`.
+- **Investigation Bureau:** loop over a list of witness statements,
+  counting how many mention a keyword (e.g. `"saw"`).
+- **Starship Log:** loop over a list of system-check results, counting how
+  many came back `"fail"`.
+- **Small Business:** loop over a list of daily sales figures, summing into
+  `total_revenue`.
+
+Do this version directly if it helps, then let it *be* your gate
+submission — you don't need a second, different one.
+
+## Then: open continuation (light Build, holistic)
+
+## World Bible
+
+One line: what gate you passed, what broke.
+
+## Looking ahead
+
+Week 6 folds loops review directly into **Coding Odyssey Checkpoint 1**
+(the "baby project" dry run) — see `assignments/A2-coding-odyssey-project.md`
+and `planning/week-06.md`. No separate gate next week; the checkpoint is
+the gate.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-06.md
+# Odyssey Gate — Week 6: Coding Odyssey Checkpoint 1 (baby project)
+
+**Concept:** loops II (`lessons/04-loops.md`, continued) plus everything
+taught through Week 5. **This week's gate is Coding Odyssey Checkpoint 1
+itself** — see `assignments/A2-coding-odyssey-project.md`'s checkpoint
+table and `planning/week-06.md`. No separate parallel gate; this file was
+previously missing even though Week 5's own gate file already pointed here
+("Week 6 folds loops review directly into Coding Odyssey Checkpoint 1 —
+no separate gate next week; the checkpoint is the gate," see
+`assignments/odyssey_gates/week-05.md`). Authored 2026-08-06 (course_foundry
+prompt 026) to close that gap. **Instrument:** the two-axis rubric
+(result 15 + process 10 = 25 points) defined in `docs/grading-model.md` —
+reused as-is, not a new shape, per Jeremy's 2026-08-06 decision.
+
+## The checkpoint (do this first)
+
+Submit a working "baby project" version of your world — small, complete,
+low-stakes, using only what's been taught through loops (Weeks 2-5:
+variables/types, branching, loops). A few dozen lines is a completely
+acceptable baby project; this checkpoint rehearses the submit/explain/
+demonstrate rhythm before the real project ramps up, it does not need to
+be impressive yet.
+
+1. **Submit** a working version of your world that runs end to end,
+   however small.
+2. **Explain**, in your own words, what it does and what changed since
+   Week 2's founding charter.
+3. **Demonstrate** it actually runs (a short transcript of real output is
+   enough — no video required at this checkpoint).
+
+## Suggested shape (optional scaffolding)
+
+Whatever loop-driven behavior you built for Week 5's gate is a completely
+acceptable core of this checkpoint — extend it lightly (one more piece of
+state, one more branch) rather than starting over. The point is
+demonstrating the submit/explain/demonstrate rhythm, not novelty.
+
+## World Bible
+
+One line: what checkpoint you passed, what broke, what's still rough.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-07.md
+# Odyssey Gate — Week 7: Someone else must be able to run this
+
+**Concept:** functions and decomposition (`lessons/05-functions.md`).
+**Arc:** 2 — First Real Choices. **Instrument:** Quick Check (pass/fail) —
+see `docs/curriculum/judgment_toolkit.md` §1. Full graded functions
+instruction starts this week (Week 6 was preview-only, ungraded — see
+`planning/week-06.md`).
+
+## The gate (do this first)
+
+Take one distinct action your world already does (something from Weeks
+2-6 — the founding print, the decision, the loop) and pull it into its own
+function with **at least one parameter and a return value**. Call it from
+somewhere else in your code. This is your world's first refactor: the same
+behavior as before, now named and reusable.
+
+## Quick Check (pass/fail)
+
+- [ ] A function is defined with at least one parameter (not a
+      zero-argument function that just reads globals).
+- [ ] The function returns a value (not just prints and returns `None`).
+- [ ] The function is called at least once from outside its own
+      definition, and the world's behavior is unchanged from before the
+      refactor (same output, cleaner structure).
+
+## Suggested textbook problem (optional scaffolding)
+
+The general problem: take a branching check you already wrote (Week 3 or
+4) and turn it into a function that takes the value as a parameter and
+*returns* the status label instead of printing it directly; call the
+function and print the result yourself.
+
+- **Frontier Settlement:** `def food_status(stock): ...` returns
+  `"critical"`/`"low"`/`"stable"`.
+- **Investigation Bureau:** `def case_temperature(hours_cold): ...` returns
+  `"hot"`/`"cooling"`/`"cold"`.
+- **Starship Log:** `def fuel_status(fuel_remaining): ...` returns
+  `"critical"`/`"low"`/`"nominal"`.
+- **Small Business:** `def cash_status(balance): ...` returns
+  `"overdrawn"`/`"tight"`/`"healthy"`.
+
+Do this version directly if it helps, then let it *be* your gate
+submission — you don't need a second, different one.
+
+## Then: open continuation (light Build, holistic)
+
+## World Bible
+
+One line: what gate you passed, what broke — this is the first week where
+"what broke" is likely to mean something real (refactors reveal bugs that
+were hiding in copy-pasted code).
+### /mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-12.md
+# Odyssey Gate — Week 12: The world becomes real things (Round 1)
+
+**Concept:** classes, objects, modules — Round 1 (`lessons/08-classes-and-modules.md`).
+**Arc:** 3 — Systems That Remember Themselves. **Instrument:** Quick Check
+(pass/fail) — see `docs/curriculum/judgment_toolkit.md` §1.
+
+This is the start of the deliberate refactor: the major noun you've been
+tracking as dict/list entries since Week 10-11 becomes a real class. Full
+reckoning (multiple classes interacting) is Week 13; this gate only asks
+for the first one.
+
+## The gate (do this first)
+
+Turn **at least one major noun** already tracked in your Week 10-11
+collection into a class, with a constructor (`__init__`) that sets real
+instance attributes, and at least one method beyond `__init__`.
+
+## Quick Check (pass/fail)
+
+- [ ] A class is defined with `__init__` setting ≥1 real instance
+      attribute (not an empty shell class).
+- [ ] At least one method beyond `__init__` exists and does something with
+      `self`'s state (not a static/unrelated helper).
+- [ ] At least one instance is created and its method called, replacing (or
+      alongside, mid-refactor) the old dict/list-entry representation.
+
+## Suggested textbook problem (optional scaffolding)
+
+The general problem: turn one entity from your Week 10–11 dict/list into a
+class with `__init__` setting at least one real attribute, plus one method
+beyond `__init__` that does something with that attribute.
+
+- **Frontier Settlement:** `class Colonist:` — `__init__(self, name,
+  role)`; `def status(self):` returns a sentence using `self.role`.
+- **Investigation Bureau:** `class Suspect:` — `__init__(self, name,
+  alibi)`; `def summary(self):` returns a one-line case note.
+- **Starship Log:** `class CrewMember:` — `__init__(self, name, role)`;
+  `def report(self):` returns a status line.
+- **Small Business:** `class Customer:` — `__init__(self, name,
+  balance)`; `def account_status(self):` returns a label based on
+  `self.balance`.
+
+Do this version directly if it helps, then let it *be* your gate
+submission — you don't need a second, different one.
+
+## Then: open continuation (light Build, holistic)
+
+## World Bible
+
+One line: what gate you passed, what broke — refactors into classes tend to
+surface real bugs from the dict/list version; that's expected, log it.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-02_rubric.md
+# Odyssey Gate — Week 2 rubric: Quick Check (pass/fail) + light Build
+
+Matches `docs/curriculum/judgment_toolkit.md` §1/§2. Two separately-graded
+parts — do not average them into one score.
+
+## Step 0 — Genre pick + founding charter (existence check, not scored here)
+
+Not a separate pass/fail row: confirm a genre was picked and a founding
+charter paragraph exists (this feeds the Week 1/Week 2 Judgment Log
+checkpoint, `judgment_toolkit.md` §5) — don't block the Quick Check below
+on charter *quality*, only presence. Moved here 2026-07-24 from Week 1
+Friday (`jeremy_task_tracking/DECISIONS.md`).
+
+## Part 1 — Quick Check (pass/fail, mechanical-checkable)
+
+| Criterion | Pass condition |
+|---|---|
+| Variable used | A named variable is assigned and referenced again (not a literal used once). |
+| Expression present | At least one arithmetic or comparison expression computes a value from that variable. |
+| World-framed output | The computed result prints as part of a sentence about the world (not a bare `print(x)`). |
+
+**All three present → pass.** Any missing → not yet. This gate does not
+average or partial-credit — see `judgment_toolkit.md`'s Quick Check design
+rule (a gate is pass/fail, nuance is graded elsewhere).
+
+**Grading route:** mechanical-checkable — a variable-assignment +
+expression + print-statement pattern is detectable from the submission
+without judgment calls. Suitable for a Marker LOCAL-style static/pattern
+check; confirm during Marker wiring, not assumed here.
+
+## Part 2 — Light Build (holistic, not this checklist)
+
+| Band | What it looks like |
+|---|---|
+| Strong | Founding scene feels genuinely like the start of *this* world — specific numbers, a voice, more than the gate's minimum. |
+| Solid | Gate passed, some real continuation beyond the minimum. |
+| Minimal | Gate passed, little to no continuation. |
+
+Matches this course's existing effort-based grading norm
+(`docs/philosophy/teaching-patterns.md`) — not a point-precise rubric.
+
+## Grading notes
+
+- A student who passes the gate with a technically-correct but
+  world-disconnected example (e.g., unrelated math with no narrative frame)
+  should not pass the "world-framed output" criterion — the point is
+  connecting the concept to their own project, not proving syntax in
+  isolation.
+- Do not penalize creative interpretations of "founding condition" — the
+  four genre examples in the assignment are illustrations, not a checklist.
+- The Step 0 founding-charter existence check and the World Bible one-line
+  log entry (this week's assignment, "## World Bible") are both required
+  parts of this week's submission but are not scored by this gate — the
+  charter is a presence check only (Step 0 above), and the World Bible log
+  is tracked across the semester and reviewed as a whole at Week 17's
+  checkpoint (`rubrics/odyssey_gates/week-17_rubric.md`), not graded
+  week-by-week here.
+- Light Build (Part 2 above) is graded separately and holistically — not
+  part of this gate's pass/fail criteria.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-05_rubric.md
+# Odyssey Gate — Week 5 rubric: Quick Check (pass/fail) + light Build
+
+Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+
+## Part 1 — Quick Check (pass/fail, mechanical-checkable)
+
+| Criterion | Pass condition |
+|---|---|
+| Real loop | A `for` or `while` loop is present and iterates more than once in the demonstrated run. |
+| Data- or sentinel-driven | Iteration count comes from real world data or a sentinel condition, not a hardcoded constant disconnected from world state. |
+| State changes across iterations | An accumulator, running total, or other state actually changes iteration to iteration (not the same print repeated N times). |
+
+**All three present → pass.** This is the clearest fully-mechanical gate so
+far — all three criteria are detectable from a static/behavioral trace
+without a judgment call, a strong first candidate for a real Marker
+LOCAL-style check.
+
+## Part 2 — Light Build (holistic)
+
+Same three-band shape as Week 2 — see `rubrics/odyssey_gates/week-02_rubric.md`.
+
+## Grading notes
+
+- A loop with a hardcoded `range(3)` that happens to match the current data
+  size by coincidence does not pass "data- or sentinel-driven" — check that
+  the bound is actually derived from state, not a lucky constant.
+- The World Bible one-line log entry (this week's assignment) is a
+  required but not-separately-scored part of the submission — tracked
+  across the semester and reviewed as a whole at Week 17's checkpoint
+  (`rubrics/odyssey_gates/week-17_rubric.md`), not graded week-by-week
+  here.
+- Light Build (Part 2 above) is graded separately and holistically — not
+  part of this gate's pass/fail criteria.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-06_rubric.md
+# Odyssey Gate — Week 6 rubric: Checkpoint 1 (two-axis, 25 points)
+
+Per Jeremy's 2026-08-06 decision (course_foundry prompt 026): checkpoint
+weeks reuse the same two-axis rubric already defined for weekly
+reinforcement (`docs/grading-model.md`, "The two-axis rubric for the
+weekly reinforcement assignment") rather than a new checkpoint-specific
+shape. This is not the four-axis Full Build rubric used at Weeks 14/16 —
+those are the two *later* checkpoints, kept on the four-axis shape they
+already had; Weeks 6 and 9 (newly authored) use the simpler two-axis
+shape by explicit decision, since the "baby project" and "first real pass"
+checkpoints are earlier and lower-stakes than the Week 14/16 pair.
+
+## Axis 1 — working result (15 of 25 points)
+
+For this checkpoint, "the result" is Week 6's submit/explain/demonstrate
+checkpoint itself, mapped onto the same historical effort-based ladder
+`grading-model.md` describes for gate weeks: checkpoint not yet passed
+(project doesn't run, or nothing new since Week 2) sits around 25% of this
+axis; checkpoint passed with a minimal baby project 50-75%; checkpoint
+passed with a solid, genuinely explained-and-demonstrated baby project
+100%.
+
+## Axis 2 — process (10 of 25 points)
+
+Same four dimensions as every weekly reinforcement week
+(`docs/grading-model.md`): Rhetoric, Planning, Resource budgeting,
+Knowledge management. 0/1/2 per dimension (8 points) + 2 points for the
+whole package being organized and reusable = 10.
+
+## Grading notes
+
+- This checkpoint is deliberately low-stakes — "a few dozen lines is a
+  completely acceptable baby project" (`assignments/odyssey_gates/week-06.md`).
+  Do not penalize small scope; penalize a missing explain/demonstrate step
+  or a project that doesn't actually run.
+- The World Bible one-line log entry is required but not separately
+  scored here, same convention as every other gate week.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-07_rubric.md
+# Odyssey Gate — Week 7 rubric: Quick Check (pass/fail) + light Build
+
+Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+
+## Part 1 — Quick Check (pass/fail, mechanical-checkable)
+
+| Criterion | Pass condition |
+|---|---|
+| Parameterized function | A function definition exists with ≥1 parameter. |
+| Real return | The function returns a value used by the caller (not `None`/print-only). |
+| Called + behavior-preserving | Called from outside its own body at least once; world output matches pre-refactor behavior. |
+
+**All three present → pass.** Fully mechanical — parameter presence, return
+statement, and a call site are all detectable statically; "behavior
+preserved" is checkable by diffing pre/post output if both are available,
+otherwise a light human spot-check.
+
+## Part 2 — Light Build (holistic)
+
+Same three-band shape as Week 2 — see `rubrics/odyssey_gates/week-02_rubric.md`.
+
+## Grading notes
+
+- A function that takes a parameter but ignores it (dead parameter) does
+  not pass "parameterized function" in spirit — check the parameter is
+  actually used in the function body, not just present in the signature.
+- The World Bible one-line log entry (this week's assignment) is a
+  required but not-separately-scored part of the submission — tracked
+  across the semester and reviewed as a whole at Week 17's checkpoint
+  (`rubrics/odyssey_gates/week-17_rubric.md`), not graded week-by-week
+  here.
+- Light Build (Part 2 above) is graded separately and holistically — not
+  part of this gate's pass/fail criteria.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-12_rubric.md
+# Odyssey Gate — Week 12 rubric: Quick Check (pass/fail) + light Build
+
+Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+
+## Part 1 — Quick Check (pass/fail, mechanical-checkable)
+
+| Criterion | Pass condition |
+|---|---|
+| Real class | `__init__` sets ≥1 real instance attribute — not an empty pass-only class. |
+| Real method | ≥1 method beyond `__init__` uses `self`'s state meaningfully. |
+| Instantiated + used | An instance is created and its method called in the demonstrated run. |
+
+**All three present → pass.** Fully mechanical.
+
+## Part 2 — Light Build (holistic)
+
+Same three-band shape as Week 2 — see `rubrics/odyssey_gates/week-02_rubric.md`.
+
+## Grading notes
+
+- An empty class with only `pass` or attributes set but never read by any
+  method does not pass — the point is behavior tied to state, not a data
+  container renamed "class."
+- The World Bible one-line log entry (this week's assignment) is a
+  required but not-separately-scored part of the submission — tracked
+  across the semester and reviewed as a whole at Week 17's checkpoint
+  (`rubrics/odyssey_gates/week-17_rubric.md`), not graded week-by-week
+  here.
+- Light Build (Part 2 above) is graded separately and holistically — not
+  part of this gate's pass/fail criteria.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/docs/curriculum/judgment_toolkit.md
+# The judgment-building toolkit — Build / Decide-Compare / Debrief / Quick Check / Judgment Log
+
+**Why this exists.** CS1's content spine pivoted 2026-07-24 ("The Coding
+Odyssey" — one persistent per-student project, weekly gates, replacing the
+standalone AI-practice-rubric plan; see `jeremy_task_tracking/DECISIONS.md`'s
+2026-07-24 entry). Jeremy's framing for the pivot: students today are
+"senior executives with decades of clout they can use to make ChatGPT,
+Claude, Copilot, Gemini, Grok, and others do their bidding, but none of the
+experience to know why it is not good just to throw around their weight."
+These five instruments exist to build that judgment directly, not grade it
+as a side rubric. None of them existed anywhere in this repo or
+`course_foundry` before this pass (confirmed by grep before writing this).
+
+**Grounding.** Drafted from a real query pass against `curriculum_rag_supporter`
+(Wiggins & McTighe's *Understanding by Design*, 2005; *How Learning Works*,
+2010) — not invented cold. Citations inline below. Also grounded in this
+course's own recurring pattern, not a fresh invention:
+`docs/philosophy/teaching-patterns.md`'s evidence-based read of the 2021-26
+archive already shows formative, pass/fail-or-effort-based, demonstrative
+grading as the stable norm here — these instruments formalize that existing
+tone, they don't import a stricter one.
+
+**Where each instrument sits, at a glance:**
+
+| Instrument | Grain | Frequency | Ties to |
+|---|---|---|---|
+| Quick Check | one gate, one concept | ~weekly | the weekly technical topic |
+| Build | one checkpoint or continuation | ~weekly (light) + 4 checkpoints (full) | `assignments/A2-coding-odyssey-project.md` |
+| Decide/Compare | one real choice, defended | 2 points (Wk 10-11, Wk 16 capstone) | collections-era design choice; capstone |
+| Debrief | reflective, cyclical | 4 arc closes + finals | Checkpoints 1-4, Week 17 |
+| Judgment Log | cumulative, living | 3 checkpoints (Wk2 / mid / Wk17) | the World Bible |
+
+---
+
+## 1. Quick Check — the weekly gate
+
+**Grain:** the smallest thing that proves this week's concept was actually
+used. Not a spec, not a full assessment — a gate.
+
+**Why this shape.** Wiggins & McTighe: effective formative checkpoints are
+**specific** (clearly defined, directly tied to the learning objective, p.68)
+and **relevant** (each one reflects a necessary step toward the larger goal,
+pp.59-60) rather than a scaled-down version of the whole unit's assessment.
+A gate that takes more than 2-3 sentences to define has stopped being a gate
+and started being a spec — same rule the original Odyssey design named
+independently; the RAG pass confirms it's not just a style preference.
+
+**Format:** one criterion, pass/fail (or complete/incomplete, matching this
+course's existing effort-based norm — see `docs/philosophy/teaching-patterns.md`).
+No partial credit; a gate is not where nuance gets graded (that's Build).
+Each Quick Check states:
+1. The one concept being gated (e.g., "a loop that processes an unknown
+   number of events").
+2. Where the evidence must appear (e.g., "in this week's world code, not a
+   separate exercise file").
+3. Pass/fail line: does it exist and run, yes or no.
+
+**Grading path — mechanical vs. human, decide per gate, not by default.**
+Some gates are mechanically checkable (does a loop construct exist in the
+diff; does a function with a return value exist) and can run through
+Marker's existing per-criterion pipeline as a cheap LOCAL-style check. Others
+(a founding charter reads like a real premise; a class models something
+that's actually a "major noun" in the student's own world) need a human or a
+frontier-agent Quick Check. Naming which is which per week is part of
+authoring that week's gate (see `planning/coding-odyssey-arc-map.md`) — not
+decided globally here.
+
+---
+
+## 2. Build — construction evidence
+
+**Grain:** did the student actually build/extend the world with this week's
+or this checkpoint's concept, correctly, and does it run.
+
+**Two grains of Build, graded differently:**
+- **Light Build (weekly creative continuation).** Holistic, not the full
+  rubric below — matches this course's existing "effort, then working
+  solutions" pattern (`docs/philosophy/teaching-patterns.md`). Did the
+  student do something real with the week's open continuation time.
+- **Full Build (the 4 Checkpoints + Week 17 final).** The existing
+  `assignments/A2-coding-odyssey-project.md` template already names the
+  right shape ("submit a working version, explain what changed, and
+  demonstrate it") — this rubric formalizes it, doesn't replace it.
+
+**Full Build rubric axes:**
+
+| Axis | What it checks | Note |
+|---|---|---|
+| Functions | Does it run; does it do what the student claims | Not "is it impressive" — does the claimed behavior actually happen |
+| Concept use | Does this arc's target concept genuinely appear (not cosmetically) | The Quick Checks along the way are the evidence trail for this |
+| Explanation | Can the student say, in their own words, what changed and why | Matches Checkpoint mechanics already in place ("explain what changed") |
+| Demonstrability | Could another person run or follow it | Matches "playability, clarity" already named as a recurring value |
+
+Checkpoint 1 (Wk6, "baby project") is deliberately light on all four axes
+per its own existing framing (`reports/007`) — it exists to rehearse the
+mechanics, not to be graded at full Build weight. Checkpoints 2-4 and the
+Week 17 final use the full rubric.
+
+---
+
+## 3. Decide/Compare — judgment under real trade-offs
+
+**Grain:** commit to a choice *before* comparing it against alternatives,
+then defend it against a genuine trade-off — not a retroactive rationalization.
+
+**Two placements, both real weeks, not invented ones:**
+1. **Weeks 10-11 (Lists and dictionaries).** A natural home: pick a data
+   structure for a specific lookup/tracking need in the student's world,
+   commit, then compare against at least one real alternative (e.g., "why a
+   dict here and not a list" or "why not a set"). This replaces the
+   original brainstorm's generic "Big-O algorithm choice at Week 11" framing
+   — the real Week 11 topic is collections, not recursion/Big-O, so the
+   decision point follows the real content instead.
+2. **Week 16 capstone**, alongside Checkpoint 4 — a bigger version of the
+   same move at the scale of the whole world.
+
+**Grading:** does the comparison name a real trade-off (not just restate the
+chosen option's benefits), and does the final choice follow from the
+comparison rather than precede it cosmetically.
+
+---
+
+## 4. Debrief — the reflective cycle
+
+**Grain:** structured reflection on what was planned, what actually
+happened, what broke, and what would be done differently.
+
+**Why this shape.** *How Learning Works*'s metacognitive cycle — assess the
+task, evaluate your own knowledge/gaps, plan an approach, monitor progress,
+reflect on what worked (pp.217-220) — doesn't happen by default; students
+need it modeled and explicitly practiced (p.245: better metacognitive habits
+would have changed both example students' outcomes in the source text), and
+instructors get better results by walking through their own version of the
+cycle rather than assuming it's implicit (p.237). Debrief is that explicit
+practice, not a bonus reflection paragraph.
+
+**Placement — the 4 existing Checkpoints plus Week 17, not new dates:**
+- **Checkpoint 1 (Wk6):** light Debrief — "what broke when you refactored
+  into a bigger loop-driven world?" Matches the checkpoint's own
+  already-decided light weight.
+- **Checkpoint 2 (Wk9):** standard Debrief.
+- **Checkpoint 3 (Wk14): Full Trail Debrief, mandatory.** This is the
+  natural point for it — Weeks 12-13 (OOP Rounds 1-2) is where "every major
+  noun becomes a class," the real deliberate-refactor-crisis moment in this
+  course's actual sequence (not Week 10, which is collections here, not
+  OOP). Week 14 already has a "show-and-tell reflection tie-in" on the
+  Friday (`planning/week-14.md`) — Full Trail Debrief deepens what's already
+  scheduled there rather than adding a new due date. Prompts: what
+  specifically broke in the OOP refactor, why, what would be designed
+  differently starting fresh.
+- **Checkpoint 4 (Wk16) + Week 17 final:** capstone Debrief, paired with
+  full show-and-tell (already scheduled) and the final reflection
+  (`assignments/A5-final-reflection.md`, already scheduled to start Wk16).
+
+---
+
+## 5. Judgment Log — the cumulative record
+
+**Grain:** not a new document — this *is* the World Bible, viewed as a
+running judgment record rather than a project journal. Same file, two
+purposes: shows what exists (Build evidence) and shows how the student
+decided to get there (Judgment Log).
+
+**Minimum contents** (from the original Odyssey design, unchanged):
+founding charter (Week 2), current state, one line per week on what gate was
+passed and what broke, a running "known debt" list.
+
+**Three graded checkpoints, not a running grade:**
+1. **Week 2** — founding charter exists, committed. **Moved 2026-07-24**
+   from Week 1 Friday: Week 1 stays strictly universal across all five
+   courses (no CS1-only content, even as a separate module); Week 2 is the
+   first unambiguously-CS1 week, opening with the genre pick right before
+   that week's gate — see `planning/week-02.md` and
+   `assignments/odyssey_gates/week-02.md`.
+2. **Mid-semester** — implicitly checked at each Debrief (the Log is the raw
+   material each Debrief draws from); no separate standalone grade.
+3. **Week 17 final** — the Log as a whole is reviewed alongside the final
+   Debrief and show-and-tell. This is also each student's own AI-practice
+   "Routine" evidence — the same discipline asked of their fictional world
+   is the discipline this actual course roadmap (`ROADMAP.md`) is built
+   with, worth pointing out to students directly.
+
+---
+
+## Open, not decided here
+
+- **Which weekly gates route through Marker (mechanical) vs. stay a human
+  Quick Check** — a per-week authoring decision, not a global rule; see
+  `planning/coding-odyssey-arc-map.md`.
+- **Point values / weighting** across the five instruments — not set here;
+  matches this course's existing pattern of effort-based, not tightly
+  point-standardized, grading (`docs/philosophy/teaching-patterns.md`), but
+  a real number is still owed before Savnac load.
+- **NRP calibration** — these rubrics are drafted, not yet battery-tested;
+  see `jeremy_task_tracking/TASKS.md`'s NRP-tuning follow-on task.
+
+exec
+/bin/bash -lc "rg --files . | rg -i 'curriculum|rag|deitel|book|odyssey|grading-model|course-ethos|judgment_toolkit|week-0[2-6]' | sed -n '1,200p'
+if [ -f reports/002_cs2_odyssey_spine_and_skeleton.md ]; then sed -n '1,260p' reports/002_cs2_odyssey_spine_and_skeleton.md; fi
+printf '\\n--- prompt context ---\\n'
+sed -n '1,240p' prompts/002_cs2_odyssey_spine_and_skeleton.md
+printf '\\n--- CS1 Week 3/4 full ---\\n'
+for f in /mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-{03,04}.md /mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-{03,04}_rubric.md; do echo \"### "'$f"; sed -n '"'1,240p' \""'$f"; done' in /mnt/brandy_nvme/jevert/git/computer_science_2
+ succeeded in 0ms:
+./prompts/004_cs2_odyssey_gates_weeks_7to17.md
+./prompts/003_cs2_odyssey_gates_weeks_2to6.md
+./prompts/002_cs2_odyssey_spine_and_skeleton.md
+./assignments/coding-odyssey-project.md
+./docs/curriculum/unit-notes.md
+./docs/curriculum/course-sequence.md
+./docs/reports/curriculum-history-synthesis.md
+
+--- prompt context ---
+# Prompt 002 — CS2 Coding Odyssey spine: skeleton documents
+
+**Status: decided by Jeremy 2026-08-06. Ready to execute.**
+
+## Context
+
+CS1 (`/mnt/brandy_nvme/jevert/git/computer_science_1`) already proved a
+course structure that works: one persistent per-student Coding Odyssey
+project as the spine, weekly gates tied to a textbook chapter, four
+checkpoints, a five-instrument "judgment toolkit" (Quick Check / Build /
+Decide-Compare / Debrief / Judgment Log), and five shared cross-course
+strands (Monday Moment, Wacky Wednesday, Fun Friday, Paired Programming,
+Show and Tell) that are IDENTICAL across CS1/CS2/DSCT and are NOT part of
+this task — do not touch or recreate them here.
+
+Jeremy's explicit call, 2026-08-06: CS2 should reuse this same structure
+almost exactly ("if CS2 looks a lot like CS1, that is okay"), applied to
+the *next* stretch of the Deitel textbook (*Intro to Python for Computer
+Science and Data Science*, already in `curriculum_rag_supporter/books/`) at
+greater depth, using the CS2 Canvas archive's own historical durable
+sequence (already synthesized in this repo:
+`docs/curriculum/course-sequence.md`, `docs/curriculum/unit-notes.md`,
+`docs/reports/curriculum-history-synthesis.md`) plus the old zyBooks
+assignment signals (driver/navigator pair programming with AI as a
+collaborator, "Coding Quest" duplicate practice, three-problems+mini-report
+depth) as texture/depth references, not verbatim imports.
+
+## The confirmed chapter/week mapping — do not redesign this, only build it
+
+CS1 covers Deitel chapters ~1-9 (variables, branching x2, loops, functions,
+strings, lists/dicts, classes x2). CS2 continues into chapters 10-16:
+
+| Weeks | Topic (Deitel ch.) | Depth note |
+|---|---|---|
+| 2-3 | Exceptions (10) | two weeks — a harder topic gets two rounds, same pattern CS1 used for classes |
+| 4 | Modules (11) | |
+| 5 | Files (12) | |
+| **6 (checkpoint 1)** | Exceptions+Modules+Files integration | |
+| 7-8 | Inheritance (13) | two weeks, mirrors CS1's "classes Round 1/2" |
+| **9 (checkpoint 2)** | Inheritance checkpoint | |
+| 10-11 | Recursion (14) | two weeks — historically the hardest topic per the archive synthesis |
+| 12 | Plotting/data exploration (15) | |
+| 13 | Searching, sorting, Big-O (16) | |
+| **14 (checkpoint 3)** | Recursion+Plotting checkpoint | |
+| **16 (checkpoint 4)** | Searching/sorting + full integration checkpoint | |
+| 17 (finals) | Final portfolio, same project continued/leveled-up | |
+
+**Use week NUMBERS, not calendar dates — CS2's real Fall 2026 meeting
+schedule (days/times/room) is not yet known to this prompt.** Leave a
+`[[DATE: week N — TBD, confirm against real CS2 section schedule]]`
+placeholder anywhere CS1's own template has a real date. Do not invent
+dates. Do not assume CS2 meets the same days/times as CS1 (MWF) — it may
+not.
+
+## Task — build these skeleton/spine documents only
+
+Mirror each CS1 source file's *structure and shape* exactly, adapted to
+CS2's chapter mapping above. Read every CS1 file listed below in full
+before writing its CS2 counterpart — do not guess the shape from this
+prompt's summary alone.
+
+1. **`docs/grading-model.md`** — mirror
+   `/mnt/brandy_nvme/jevert/git/computer_science_1/docs/grading-model.md`'s
+   exact category structure and weights (Monday Moment 6%, Wacky Wednesday
+   6%, Fun Friday 6%, Paired-programming 5%, Friday feedback 5%, Weekly
+   reinforcement 25%, Odyssey checkpoints 15%, Final reflection 10%,
+   Attendance 20%, Course evaluation 2%) — same categories, same weights,
+   CS2-specific description text where the category ties to CS2's own
+   Weekly reinforcement/checkpoint content.
+2. **`docs/course-ethos.md`** (new file, CS1 has one at
+   `computer_science_1/docs/course-ethos.md`) — same voice/purpose, adapted
+   to CS2's "greater depth, same spine" framing Jeremy gave directly.
+3. **`docs/curriculum/judgment_toolkit.md`** — mirror
+   `computer_science_1/docs/curriculum/judgment_toolkit.md`'s five
+   instruments exactly (do not redesign the pedagogy — this is a proven,
+   RAG-grounded design). Adapt only the concrete examples to CS2-level
+   topics (exceptions, inheritance, recursion, etc. instead of loops,
+   branching, classes).
+4. **`assignments/A1-weekly-coding-practice.md`** and
+   **`assignments/A2-coding-odyssey-project.md`** — mirror CS1's same-named
+   files at `computer_science_1/assignments/A1-weekly-coding-practice.md`
+   and `A2-coding-odyssey-project.md`. A2 in particular needs the genre
+   menu section preserved (same four genres, or confirm via
+   `computer_science_1/assignments/A2-coding-odyssey-project.md`'s "genre
+   menu" section whether CS2 continues the *same* per-student world from
+   CS1 or starts a new one at greater rigor — if genuinely ambiguous, flag
+   it explicitly in your report rather than guessing).
+5. **`assignments/A5-final-reflection.md`** — mirror
+   `computer_science_1/assignments/A5-final-reflection.md`.
+6. **`planning/week-NN.md`** skeleton files for weeks 1-17 (new
+   `planning/` directory, mirroring `computer_science_1/planning/week-NN.md`'s
+   shape) — Weekly Focus / gate-or-checkpoint tie-in / Due-this-week
+   sections per the table above, dates left as `[[DATE: TBD]]`
+   placeholders. Week 1 should note it's the universal cross-course Week 1
+   (same as CS1 — don't reinvent it, just reference
+   `semester_kickoff_week`).
+
+## Explicitly out of scope — other prompts cover these, do not touch
+
+- `assignments/odyssey_gates/week-NN.md` and their rubrics — a separate
+  prompt (003) covers weeks 2-6, another (004) covers weeks 7-17. Do not
+  create or edit anything under `assignments/odyssey_gates/` or
+  `rubrics/odyssey_gates/`.
+- Monday Moment / Wacky Wednesday / Fun Friday / Paired Programming / Show
+  and Tell content — identical across CS1/CS2/DSCT, already exists
+  elsewhere, not this repo's job to rebuild.
+- Anything in `archive/`, `career-artifact-sequence.md`,
+  `chapter-coding-practice.md`, `coding-odyssey-project.md` (the old
+  pre-pivot placeholder files) — leave those alone; they're historical
+  synthesis inputs, not being deleted or edited by this prompt.
+- Any live Canvas/Savnac push — this prompt only writes local files.
+
+## Requirements
+
+- Read every CS1 source file named above in full before writing its CS2
+  counterpart.
+- Ground CS2-specific content (topic descriptions, examples) in the
+  Deitel PDF (`curriculum_rag_supporter/books/Intro to Python for Computer
+  Science and Data Science...pdf`) and this repo's own archive synthesis
+  (`docs/curriculum/`, `docs/reports/`) — cite what you drew from where a
+  claim needs grounding, same bar CS1's own judgment_toolkit.md holds.
+- Do not invent calendar dates. Do not touch shared-strand content.
+- If a genuine ambiguity surfaces (e.g., new vs. continued Odyssey world;
+  whether CS2's own historical career-artifact-sequence should map onto
+  anything), stop and report it explicitly rather than guessing.
+- Do not commit. Leave the working tree as edited files only — Jeremy's
+  session will review and commit.
+
+## Report Requirement
+
+Write `reports/002_cs2_odyssey_spine_and_skeleton.md`: what was built, what
+was mirrored verbatim vs. adapted, every real ambiguity or open question
+found, and confirmation every listed CS1 source file was actually read
+(not assumed) before its CS2 counterpart was written.
+
+--- CS1 Week 3/4 full ---
+### /mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-03.md
+# Odyssey Gate — Week 3: The world starts noticing things
+
+**Concept:** types/formatting continued; branching introduced
+(`lessons/02-variables-expressions-types.md`, `lessons/03-branching.md`).
+**Arc:** 1 — Foundations. **Instrument:** Quick Check (pass/fail) — see
+`docs/curriculum/judgment_toolkit.md` §1.
+
+## The gate (do this first)
+
+Add **one `if` statement** to your world that changes what gets printed
+based on some piece of world state (a number, a flag, a name — whatever you
+already have from Week 2). This is your world's first real decision — small
+on purpose. Full branching depth (elif chains, nested conditions) is next
+week; this gate only asks for one working condition.
+
+Examples, illustrative only:
+
+- **Frontier Settlement:** if food stock is below a threshold, print a
+  shortage warning instead of the normal status line.
+- **Investigation Bureau:** if the case clock passes some number of hours,
+  print "growing cold" instead of "active."
+- **Starship Log:** if fuel is below a threshold, print a warning instead of
+  the normal status.
+- **Small Business:** if cash on hand is negative, print a different ledger
+  line than the normal one.
+
+## Quick Check (pass/fail)
+
+- [ ] An `if` statement (with or without `else`) is present and reachable.
+- [ ] The condition references real world state from Week 2, not a
+      hardcoded `True`/`False`.
+- [ ] Both branches (or the one branch + fallthrough) are demonstrated —
+      show your world in a state where the condition is true, and a state
+      where it isn't.
+
+## Suggested textbook problem (optional scaffolding)
+
+The general problem: pick one number or flag you already track, and write
+one `if`/`else` that prints a different sentence depending on its value —
+show both a true-condition run and a false-condition run.
+
+- **Frontier Settlement:** `if food_stock < 20:` print a shortage warning;
+  `else:` print "The settlement is stable."
+- **Investigation Bureau:** `if hours_cold > 48:` print "The trail has gone
+  cold."; `else:` print "The case is still active."
+- **Starship Log:** `if fuel_remaining < 20:` print "Warning: fuel
+  critical."; `else:` print "Fuel levels nominal."
+- **Small Business:** `if opening_cash < 0:` print a negative-balance
+  alert; `else:` print "Opening balance looks normal."
+
+Do this version directly if it helps, then let it *be* your gate
+submission — you don't need a second, different one.
+
+## Then: open continuation (light Build, holistic)
+
+Keep extending your world's opening scene. See
+`docs/curriculum/judgment_toolkit.md` §2.
+
+## World Bible
+
+One line: what gate you passed, what broke.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/assignments/odyssey_gates/week-04.md
+# Odyssey Gate — Week 4: The world weighs its options
+
+**Concept:** branching and decision-making, full depth
+(`lessons/03-branching.md`). No Monday session this week (Labor Day) — the
+lecture content moves to Wed/Fri active time or the podcast; this gate is
+unaffected.
+**Arc:** 1 — Foundations. **Instrument:** Quick Check (pass/fail) — see
+`docs/curriculum/judgment_toolkit.md` §1.
+
+## The gate (do this first)
+
+Deepen last week's single `if` into a real decision with **at least three
+distinct outcomes** (an `if`/`elif`/`else` chain, or nested conditions) that
+meaningfully changes your world's behavior — not just its printed text.
+"Meaningfully changes behavior" means something downstream is actually
+different (a different value gets stored, a different path gets taken),
+not just a different sentence printed.
+
+## Quick Check (pass/fail)
+
+- [ ] At least 3 distinct outcomes are reachable from the same decision
+      point (`if`/`elif`/`else` or equivalent nesting).
+- [ ] At least one boundary or edge case is handled on purpose (not just
+      the obvious middle case) — e.g., the threshold value itself, not just
+      clearly-above and clearly-below.
+- [ ] The decision changes real behavior downstream, not only output text.
+
+## Suggested textbook problem (optional scaffolding)
+
+The general problem: take the same value from Week 3 and sort it into
+three or more named bands (not just true/false), and deliberately test the
+exact boundary value between two bands, not just the obvious middle cases.
+
+- **Frontier Settlement:** `food_stock` → "critical" (< 5), "low" (5–14),
+  "stable" (15+); test exactly `5` and exactly `15`.
+- **Investigation Bureau:** `hours_cold` → "hot" (< 24), "cooling" (24–71),
+  "cold" (72+); test exactly `24` and exactly `72`.
+- **Starship Log:** `fuel_remaining` → "critical" (< 10), "low" (10–29),
+  "nominal" (30+); test exactly `10` and exactly `30`.
+- **Small Business:** `cash_on_hand` → "overdrawn" (< 0), "tight" (0–999),
+  "healthy" (1000+); test exactly `0` and exactly `1000`.
+
+Do this version directly if it helps, then let it *be* your gate
+submission — you don't need a second, different one.
+
+## Then: open continuation (light Build, holistic)
+
+## World Bible
+
+One line: what gate you passed, what broke.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-03_rubric.md
+# Odyssey Gate — Week 3 rubric: Quick Check (pass/fail) + light Build
+
+Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+
+## Part 1 — Quick Check (pass/fail, mechanical-checkable)
+
+| Criterion | Pass condition |
+|---|---|
+| Conditional present | An `if` (with or without `else`) exists and is reachable in the submitted run. |
+| Real condition | The condition references actual world state carried from Week 2, not a literal `True`/`False` or unrelated toy value. |
+| Both paths shown | Submission demonstrates the world in both a true-condition and a false-condition state (two runs, or one run plus a clear code-level explanation of the other path). |
+
+**All three present → pass.**
+
+**Grading route:** mechanical-checkable for presence of an `if` and
+non-literal condition; the "both paths shown" criterion needs a light human
+or frontier-agent check (does the demonstrated state actually differ, not
+just cosmetically).
+
+## Part 2 — Light Build (holistic)
+
+Same three-band shape as Week 2's rubric (Strong/Solid/Minimal) — see
+`rubrics/odyssey_gates/week-02_rubric.md` for the band descriptions;
+applied here to "does the decision feel like it belongs to this world."
+
+## Grading notes
+
+- A condition that's technically present but never actually reachable
+  (dead code) does not pass "Conditional present" — it must run in the
+  demonstrated submission.
+- The World Bible one-line log entry (this week's assignment) is a
+  required but not-separately-scored part of the submission — tracked
+  across the semester and reviewed as a whole at Week 17's checkpoint
+  (`rubrics/odyssey_gates/week-17_rubric.md`), not graded week-by-week
+  here.
+- Light Build (Part 2 above) is graded separately and holistically — not
+  part of this gate's pass/fail criteria.
+### /mnt/brandy_nvme/jevert/git/computer_science_1/rubrics/odyssey_gates/week-04_rubric.md
+# Odyssey Gate — Week 4 rubric: Quick Check (pass/fail) + light Build
+
+Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+
+## Part 1 — Quick Check (pass/fail, mechanical-checkable)
+
+| Criterion | Pass condition |
+|---|---|
+| 3+ outcomes | `if`/`elif`/`else` chain or nested conditions reach at least 3 distinct outcomes from the same decision point. |
+| Boundary handled | At least one edge/boundary case (the threshold itself, not just clearly-above/clearly-below) is deliberately handled, not accidentally correct. |
+| Real behavior change | A stored value or execution path differs across outcomes — not just the printed sentence. |
+
+**All three present → pass.**
+
+**Grading route:** "3+ outcomes" and "real behavior change" are
+mechanical-checkable (branch count, whether downstream state differs across
+a traced run). "Boundary handled" needs a human/frontier-agent check — it's
+a judgment call about whether the edge case was deliberate, not just
+lucky.
+
+## Part 2 — Light Build (holistic)
+
+Same three-band shape as Week 2 — see `rubrics/odyssey_gates/week-02_rubric.md`.
+
+## Grading notes
+
+- Do not require exactly 3 outcomes as a hard ceiling — more is fine; fewer
+  than 3 does not pass.
+- "The threshold itself" boundary case matters because it's the classic
+  off-by-one/edge trap this lesson's own objectives name
+  (`lessons/03-branching.md`: "Test boundary and invalid cases").
+- The World Bible one-line log entry (this week's assignment) is a
+  required but not-separately-scored part of the submission — tracked
+  across the semester and reviewed as a whole at Week 17's checkpoint
+  (`rubrics/odyssey_gates/week-17_rubric.md`), not graded week-by-week
+  here.
+- Light Build (Part 2 above) is graded separately and holistically — not
+  part of this gate's pass/fail criteria.
+
+exec
+/bin/bash -lc "find /mnt/brandy_nvme -type f -iname '*Intro*Python*Computer*Science*Data*Science*.pdf' -print 2>/dev/null | sed -n '1,20p'
+printf '\\n--- local sequence ---\\n'
+sed -n '1,260p' docs/curriculum/course-sequence.md
+sed -n '1,220p' docs/curriculum/unit-notes.md
+sed -n '1,180p' docs/reports/curriculum-history-synthesis.md
+printf '\\n--- existing project ---\\n'
+sed -n '1,260p' assignments/coding-odyssey-project.md" in /mnt/brandy_nvme/jevert/git/computer_science_2
+ succeeded in 39ms:
+/mnt/brandy_nvme/jevert/git/curriculum_rag_supporter/books/Intro to Python forComputer Science and Data Science Learning to Program with AI, Big Data and the Cloud (Paul Deitel) (Z-Library).pdf
+
+--- local sequence ---
+# Computer Science 2: historical course sequence
+
+This map is a topic/type synthesis of the eleven archived semesters (spring 2021 through spring 2026). It is a starting structure, not a claim that every semester used every item.
+
+## Durable sequence
+
+1. **Functions and problem decomposition** (Chapter 6)
+2. **Strings and collections** (Chapter 7 where present; Chapter 8 lists and dictionaries)
+3. **Classes and object-oriented design** (Chapter 9, often taught in two rounds)
+4. **Exceptions** (Chapter 10)
+5. **Modules and reusable code** (Chapter 11)
+6. **Files and persistent data** (Chapter 12)
+7. **Inheritance** (Chapter 13)
+8. **Recursion** (Chapter 14)
+9. **Plotting/data exploration** (Chapter 15; intermittent until spring 2024 and stable in 2026)
+10. **Searching, sorting, and algorithmic efficiency** (Chapter 16)
+
+The chapter sequence is clearest from spring 2023 onward and is foreshadowed by the chapter readings and programming homework in fall 2021. Early 2021 is a different course shape: Java-oriented exams, discussions, modules, and a semester project. The recurring spine is therefore the later Python sequence, with the earlier material retained as historical context rather than forced into the main order.
+
+## Recurring course rhythm
+
+Most later semesters pair each chapter with a coding assignment or discussion. One or more open-ended projects (CYOAG/Coding Odyssey) recur between clusters and at the end. Career/professional tasks and an end-of-semester reflection are common companions, especially from 2023 onward.
+
+## Variation points
+
+- Chapter 7 strings, Chapter 15 plotting, and explicit Git/file exercises appear inconsistently.
+- Fall 2024–spring 2025 add a large pair-programming/AI-supported practice layer and “Coding Quest” duplicates; these are useful experiments, not yet a durable replacement for chapter practice.
+- Spring 2026 adds structured career artifacts and short wellbeing/productivity pages, a notable expansion beyond the programming spine.
+# Unit notes
+
+These notes identify the durable topic units. Detailed lesson files live in `lessons/`; this index keeps the historical sequence visible as the course grows.
+
+| Unit | Historical evidence | Core student work |
+|---|---|---|
+| Functions and decomposition | Chapter 6 in 2022–2026 | Small programs, reusable functions |
+| Strings and collections | Chapters 7–8 across most later terms | Text processing; lists/dictionaries |
+| Classes | Chapter 9 and “Round 2” in 2022–2026 | Class design, methods, object modeling |
+| Exceptions | Chapter 10 in 2021 and 2022–2026 | Robust input and error handling |
+| Modules and files | Chapters 11–12 in later terms | Reuse, CSV/text input, persistence |
+| Inheritance | Chapter 13 in later terms | Base/derived classes |
+| Recursion | Chapter 14 in later terms | Recursive decomposition and tracing |
+| Plotting | Chapter 15 in 2024 and 2026 | Simple visualizations and interpretation |
+| Searching and sorting | Chapter 16 in nearly all later terms | Tracing, comparison, Big-O intuition |
+# Curriculum history synthesis
+
+## Scope and method
+
+I reviewed the Canvas JSON snapshots for all eleven archived semesters: spring 2021 through spring 2026, including fall 2021–2025. I compared assignment, discussion, quiz, page, module, and announcement names/descriptions, and skimmed the available uploaded text/document materials, especially the spring 2021 homework/project files and the spring 2026 syllabus/tutorial/homework materials. The archive is read-only source material; this synthesis is intentionally organized around recurring types rather than semester copies.
+
+## What recurred
+
+The durable later-course backbone is a chapter sequence: functions; strings and lists/dictionaries; classes (often two passes); exceptions; modules; files; inheritance; recursion; and searching/sorting. Chapter 16 is especially consistent, while plotting (Chapter 15) is intermittent until spring 2026. Fall 2021’s programming homework and readings show the same broad progression, though with a mix of Java/Python terminology; spring 2021 is the clearest outlier, with Java-oriented chapters, module pages, discussion homework, and chapter exams.
+
+The dominant assignment type is frequent chapter coding practice, usually assembled from zyBooks labs. Recent versions move toward three problems plus output evidence and a quick reflection, sometimes allowing a student-designed problem. Open-ended CYOAG/Coding Odyssey projects recur from 2022 onward and ask students to apply several course tools to a game, utility, simulation, or other choice. Project Parts 1–2 add written reporting, peer comments, and a video presentation in the early archive.
+
+Career/professional tasks are a second stable strand from 2021/22 onward: Dream Job, transcript/progress/degree planning, resume, gap analysis, GitHub, LinkedIn, and LinkedIn Learning. End-of-semester reflection is repeated with unusually permissive pass/fail language: choose five questions, answer honestly, and optionally add a meme/quote. Welcome videos, workspace photos, attendance/roll call, and “show and tell” signal community-building alongside technical practice.
+
+## What evolved
+
+The course moves from a 2021 discussion/exam/project model toward a Python/zyBooks chapter rhythm. CYOAG becomes Coding Odyssey and is sometimes repeated three times. Fall 2024 and spring/fall 2025 add a substantial driver/navigator pair-programming layer that explicitly permits peer or ChatGPT collaboration, plus “Coding Quest” duplicates of chapter work. Spring 2026 adds structured A01–A06 career artifacts, weekly mini-reports, and short productivity/wellbeing pages (Pomodoro, mindfulness, goals, journaling, scarcity/surplus); these are meaningful experiments but not yet evidence of the long-run CS2 core.
+
+## Teaching-philosophy signals
+
+The archive is practice-heavy and supportive rather than exam-heavy in later years. Rubrics often give credit for a serious attempt, then progressive credit for working solutions, and bonus for improvement, explanation, creativity, clean code, or repository/video evidence. The project framing values choice and practical application. Reflections and personal/professional tasks treat students as people with goals, and the collaboration/AI assignments emphasize process, driver/navigator roles, and learning rather than merely obtaining code.
+
+## Inconsistencies and questions for Jeremy
+
+- The archive has little stable syllabus/rubric structure: names, numbering, points, and even language/runtime shift across terms.
+- Several snapshots contain unpublished placeholders, duplicate assignments, duplicated discussions, or stale links to external SharePoint/Google/Dropbox documents. Fall 2022 includes a placeholder giving full credit because submissions were missing.
+- The archive’s quiz evidence is concentrated in spring 2021; later terms have no Canvas `quizzes` despite extensive chapter assessments/discussions. Decide whether quizzes were intentionally replaced or simply exported differently.
+- Historical files are sparse and uneven: only some semesters preserve uploads, and the most consequential templates are often external links. Reconstructing exact original rubrics from the JSON alone is not always possible.
+- Spring 2026 appears to include content from a broader professional-development/life-planning curriculum in the same Canvas course. Jeremy should decide which of those artifacts belong in CS2’s enduring identity.
+
+--- existing project ---
+# Reusable assignment: Coding Odyssey / CYOAG project
+
+**Historical basis:** CYOAG in 2022–23; Coding Odyssey in 2024–26; related open projects in earlier semesters.
+
+## Student task
+
+Design and build a project of choice: game, utility, simulation, or another useful program. The project should demonstrate an appropriate selection of course tools—control flow, functions, collections, classes, files, exceptions, and (where useful) plotting or a GUI.
+
+Submit an idea/design, incremental working code, run evidence, and a short explanation or presentation. Keep the scope achievable and name collaborators/tools used.
+
+## Assessment pattern
+
+Progressive milestones historically range from design, to partial code, to running code, with bonus/qualitative credit for creativity, efficiency, enjoyment, clean code, or a presentation.
+
+## Semester variation
+
+The name, number of iterations, and final-project framing changed. Some terms used three Coding Odysseys; others used CYOAG stages or a final review project. Preserve the project choice and progressive-credit shape, not a semester-specific point schedule.
+
+exec
+/bin/bash -lc "task_pdf='/mnt/brandy_nvme/jevert/git/curriculum_rag_supporter/books/Intro to Python forComputer Science and Data Science Learning to Program with AI, Big Data and the Cloud (Paul Deitel) (Z-Library).pdf'
+pdftotext -layout \""'$task_pdf" /tmp/cs2_deitel.txt
+rg -n -i '"'Chapter 10|Chapter 11|Chapter 12|Exception|raise |custom exception|__name__|CSV|persist' /tmp/cs2_deitel.txt | sed -n '1,260p'" in /mnt/brandy_nvme/jevert/git/computer_science_2
+ succeeded in 7048ms:
+589:9. 9 Files and Exceptions 319
+611: 8. 9.8 Handling Exceptions 331
+617:          3. 9.8.3 Catching Multiple Exceptions in One except
+620:          4. 9.8.4 What Exceptions Does a Function or Method
+628:10. 9.10 Explicitly Raising an Exception 339
+632:12. 9.12 Intro to Data Science: Working with CSV Files 342
+634:          1. 9.12.1 Python Standard Library Module csv 342
+635:                  2. 9.12.2 Reading CSV Files into Pandas DataFrames
+715:11. 10.11 Exception Class Hierarchy and Custom Exceptions 397
+1335:visualization, working with CSV files, pandas for data
+1769:   like a computer scientist. Chapter 11, “Computer Science Thinking:
+1771:   perspective—these are classic computer science topics. Chapter 11
+1815:  we process files in the popular CSV (comma-separated values) format
+1816:  using the Python Standard Library’s csv module and capabilities of the
+1850:  polymorphism and duck typing. We discuss these in Chapter 10.
+1854:   Chapter 10 includes a discussion of unit testing with doctest and a fun
+1859:   cover Chapter 10 can have students simply mimic our class definitions.
+2044:          Chapter 9, Files and Exceptions—For JSON serialization, it’s useful to
+2055:      Chapter 10, Object-Oriented Programming—The Intro to Data Science
+2063:      Chapter 11, Computer Science Thinking: Recursion, Searching,
+2075:      Chapter 12, Natural Language Processing (NLP), uses pandas
+2082:      inheritance (Chapter 10), but readers can simply mimic the class
+2083:      definitions we provide without reading Chapter 10.
+2106:      (Chapter 10), but readers can simply mimic the class definitions we
+2107:      provide without reading Chapter 10.
+3762:devices is persistent—it’s preserved even when the computer’s
+3782:  2. (True/False) Information in the memory unit is persistent—it’s preserved
+3903:You’ll see how to do that in Chapter 9, “Files and Exceptions.”
+4667:programming, file/directory access, data persistence, data
+4740:    csv—Processing comma-separated          queue—First-in, first-out data
+4893:each of those in the index. You’ll explore this in the Chapter 12 exercises.
+6525:      processing (NLP). We present NLP in Chapter 12 and use it in several
+6707:(Chapter 11) and generalized list processing (Chapter 5).
+7292:Exceptions and Tracebacks
+7294:exception—a sign that a problem occurred:
+7309:Python reports an exception with a traceback. This traceback
+7310:indicates that an exception of type ZeroDivisionError
+7311:occurred—most exception names end with Error. In
+7312:interactive mode, the snippet number that caused the exception
+7321:caused the exception. Sometimes snippets have more than one
+7323:within the snippet caused the exception. The last line shows
+7324:the exception that occurred, followed by a colon (:) and an
+7325:error message with more information about the exception:
+7329:The “Files and Exceptions” chapter discusses exceptions in
+7332:An exception also occurs if you try to use a variable that you
+9133:     raise            True    try              with
+9605:exception occurs (such as a ZeroDivisionError from an
+10010:how to do in the “Files and Exceptions” chapter). We also
+10334:and Exceptions” chapter, we discuss how to write programs
+10335:that recognize such exceptions and take appropriate actions.
+16032:single-line snippets. When an exception occurs in such a
+16034:1 (the snippet’s only line) caused the exception. Multiline
+16037:above indicates that the exception occurred in line 4 of
+16039:the last line of code with ----> caused the exception.
+19136:        exception.
+20183:does not cause an exception if the value is not in the set.
+25284:In the “Files and Exceptions” chapter, you’ll see how to work
+25286:known as CSV files and are a common format for storing data
+25291:with CSV data.
+25356:In the “Files and Exceptions” chapter, you’ll read text from a
+25614:      separated values (CSV) for an application that requires data to be in CSV
+26688:and writing text to files. We’ll introduce the csv module for
+26689:manipulating comma-separated value (CSV) files. We’ll also
+26690:introduce exception handling so we can process exceptions as
+27010:9 Files and Exceptions
+27015:       Understand the notions of files and persistent data.
+27019:       Read and write CSV files, a common format for machine-learning
+27028:       Use the try statement to delimit code in which exceptions may occur and
+27029:       handle those exceptions with associated except clauses.
+27031:       Use the try statement’s else clause to execute code when no exceptions
+27035:       whether an exception occurs in the try.
+27037:       raise exceptions to indicate runtime problems.
+27040:       exception.
+27043:       Disaster CSV dataset.
+27064:  8. 9.8 Handling Exceptions
+27070:           3. 9.8.3 Catching Multiple Exceptions in One except Clause
+27072:           4. 9.8.4 What Exceptions Does a Function or Method Raise?
+27079: 10. 9.10 Explicitly Raising an Exception
+27083: 12. 9.12 Intro to Data Science: Working with CSV Files
+27085:           1. 9.12.1 Python Standard Library Module csv
+27087:           2. 9.12.2 Reading CSV Files into Pandas DataFrames
+27106:maintained in files is persistent. Computers store files on
+27112:JSON (JavaScript Object Notation) and CSV (comma-
+27117:the Python Standard Library’s csv module and pandas to load
+27118:and manipulate CSV data. In particular, we’ll look at the CSV
+27128:We also introduce exception handling. An exception indicates
+27129:an execution-time problem. You’ve seen exceptions of types
+27133:with exceptions as they occur by using try statements and
+27134:associated except clauses to handle exceptions. We’ll also
+27144:use by other programs, even if an exception has occurred.
+27930:the file if it does not exist. The reading modes raise a
+27973:9.8 Handling Exceptions
+27974:Various types of exceptions can occur when you work with
+27995:Let’s revisit two exceptions that you saw earlier in the book.
+28019:In this case, the interpreter is said to raise an exception of type
+28020:ZeroDivisionError. When an exception is raised in
+28025:       displays the exception’s traceback, then
+28030:If an exception occurs in a script, IPython terminates the script
+28031:and displays the exception’s traceback.
+28060:Now let’s see how to handle these exceptions so that you can
+28064:the second. The script uses exception handling to catch and
+28071:     2   """Simple exception handling example."""
+28089:14      else: # executes only if no exceptions
+28111:exception handling. The try statement’s try clause (lines 6–
+28113:suite of statements that might raise exceptions.
+28121:try clause’s suite. These also are known as exception
+28122:handlers. Each except clause specifies the type of exception
+28123:it handles. In this example, each exception handler just
+28132:the try suite did not raise exceptions. If no exceptions occur
+28147:       by 0, causing Python to raise a ZeroDivisionError. The point in the
+28148:       program at which an exception occurs is often referred to as the raise
+28152:When an exception occurs in a try suite, it terminates
+28160:exception:
+28171:When an except clause successfully handles the exception,
+28176:exception is handled, program control does not return to the
+28177:raise point. Rather, control resumes after the try statement.
+28196:The exception terminates the try suite and program control
+28222:When no exceptions occur in the try suite, program
+28233:1. (Fill-In) The statement that raises an exception is sometimes called the
+28234:   of the exception.
+28235:   Answer: raise point.
+28237:2. (True/False) In Python, it’s possible to return to the raise point of an
+28238:   exception via keyword return.
+28240:  the try statement in which the exception was handled.
+28280:Exceptions in One except
+28283:several except clauses to handle various types of exceptions.
+28285:exception types by specifying them as a tuple in a single
+28294:reference the caught exception object directly. If you do, you
+28295:can use the variable in the as clause to reference the exception
+28301:9.8.4 What Exceptions Does
+28304:Exceptions may surface via statements in a try suite, via
+28310:documentation, which specifies what exceptions are thrown (if
+28312:exceptions may occur. Next, read the online API
+28313:documentation for each exception type to see potential reasons
+28314:why such an exception occurs.
+28322:in which several statements can raise exceptions, rather than
+28324:that raises an exception. However, for proper exception-
+28326:section of code small enough that, when an exception occurs,
+28328:process the exception properly. If many statements in a try
+28329:suite raise the same exception types, multiple try statements
+28330:may be required to determine each exception’s context.
+28349:whether its try suite executes successfully or an exception
+28367:exception occurs in the corresponding try suite. First, let’s
+28368:consider a try statement in which no exceptions occur in the
+28373:        ...:      print('try suite with no exceptions
+28379:     exceptions in the try suite')
+28383:     try suite with no exceptions raised
+28384:     else executes because no exceptions in the try
+28393:any exceptions. When program control successfully reaches
+28401:Now let’s consider a try statement in which an exception
+28407:   exception')
+28414:   an exception occurred')
+28418:   try suite that raises an exception
+28428:integer, which causes the int function to raise a
+28431:catches the ValueError exception and displays a message.
+28432:The else clause does not execute because an exception
+28447:exceptions associated with processing those resources. For
+28453:exceptions that occur and you do not need a finally clause
+28477:To catch exceptions like FileNotFoundError that occur
+28504:   whether the function raises an exception.
+28553:Exception
+28554:You’ve seen various exceptions raised by your Python code.
+28556:exceptions to inform callers of errors that occur. The raise
+28557:statement explicitly raises an exception. The simplest form of
+28558:the raise statement is
+28561:     raise ExceptionClassName
+28565:The raise statement creates an object of the specified
+28566:exception class. Optionally, the exception class name may be
+28568:exception object—typically to provide a custom error message
+28569:string. Code that raises an exception first should release any
+28570:resources acquired before the exception occurred. In the next
+28571:section, we’ll show an example of raising an exception.
+28573:In most cases, when you need to raise an exception, it’s
+28575:exception types9 listed at:
+28577:9. You may be tempted to create custom exception classes that are specific to your application.
+28578:We’ll say more about custom exceptions in the next chapter.
+28579:https://docs.python.org/3/library/exceptions.html
+28590:Each exception object stores information indicating the precise
+28591:series of function calls that led to the exception. This is helpful
+28594:function2 raises an Exception:
+28602:      ...:     raise Exception('An exception
+28610:indicating the lines of code that led to the exception:
+28616:   Exception                               Traceback
+28628:    ----> 2     raise Exception('An exception
+28631:    Exception: An exception occurred
+28637:The traceback shows the type of exception that occurred
+28638:(Exception) followed by the complete function call stack
+28639:that led to the raise point. The stack’s bottom function call is
+28666:Finally, we see the raise point—in this case, line 2 in snippet
+28667:[2] raised the exception:
+28672:   ----> 2     raise Exception('An exception
+28679:In our previous exception-handling examples, the raise point
+28680:occurred in a try suite, and the exception was handled in one
+28682:When an exception is not caught in a given function, stack
+28686:       In function2, the raise statement raises an exception. This is not in a
+28696:       terminates. Because the exception was not caught (known as an uncaught
+28697:       exception), IPython displays the traceback, then awaits your next input. If
+28700:       10. In more advanced applications that use threads, an uncaught exception terminates
+28701:       only the thread in which the exception occurs, not necessarily the entire application.
+28709:methods raise exceptions. When reading a traceback, start
+28713:this is the location in your code that led to the exception.
+28718:Exceptions in finally
+28720:Raising an exception in a finally suite can lead to subtle,
+28721:hard-to-find problems. If an exception occurs and is not
+28724:exception that the suite does not catch, the first exception is
+28725:lost, and the new exception is passed to the next enclosing
+28727:always enclose in a try statement any code that may raise an
+28728:exception, so that the exceptions will be processed within that
+28735:     1. (Fill-In) An uncaught exception in a function causes    . The function’s
+28739:     2. (True/False) Exceptions always are handled in the function that raises the
+28740:        exception.
+28741:        Answer: False. Although it is possible to handle an exception in the
+28742:        function that raises it, normally an exception is handled by a calling
+28745:     3. (True/False) Exceptions can be raised only by code in try statements.
+28746:       Answer: False. Exceptions can be raised by any code, regardless of
+28749:Working with CSV Files
+28751:learn data-science concepts. CSV (comma-separated values) is
+28753:demonstrate CSV file processing with a Python Standard
+28760:Library Module csv
+28761:The csv module11 provides functions for working with CSV
+28762:files. Many other Python libraries also have built-in CSV
+28765:11. https://docs.python.org/3/library/csv.html.
+28770:Writing to a CSV File
+28771:Let’s create an accounts.csv file using CSV format. The
+28772:csv module’s documentation recommends opening CSV files
+28777:    In [1]: import csv
+28779:    In [2]: with open('accounts.csv', mode='w',
+28781:       ...:     writer = csv.writer(accounts)
+28794:The .csv file extension indicates a CSV-format file. The csv
+28795:module’s writer function returns an object that writes CSV
+28800:the preceding snippet, accounts.csv contains:
+28802:12. https://docs.python.org/3/library/csv.html#csv-fmt-params.
+28811:CSV files generally do not contain spaces after commas, but
+28836:single value. Programs reading this from a CSV file would
+28843:Reading from a CSV File
+28844:Now let’s read the CSV data from the file. The following
+28845:snippet reads records from the file accounts.csv and
+28850:   In [3]: with open('accounts.csv', 'r',
+28854:       ...:     reader = csv.reader(accounts)
+28869:The csv module’s reader function returns an object that
+28870:reads CSV-format data from the specified file object. Just as
+28880:Caution: Commas in CSV
+28885:'Sue', then writerow would, of course, create a CSV
+28886:record with four fields, not three. Programs that read CSV files
+28898:three. If these two records were written into the CSV file, then
+28910:and Extra Commas in CSV
+28912:Be careful when preparing and processing CSV files. For
+28947:     1. (Fill-In) The csv module provides capabilities for writing and reading
+28948:       files in (CSV) format.
+28951:     2. (True/False) The csv module’s reader function returns an object that
+28952:       reads from the specified file object CSV-format data.
+28955:3. (IPython Session) Create a text file named grades.csv and write to it
+28965:  Then, read the file grades.csv and display it in columns with the
+28971:       In [1]: import csv
+28973:       In [2]: with open('grades.csv', mode='w',
+28975:          ...:     writer = csv.writer(grades)
+28984:       In [3]: with open('grades.csv', 'r',
+28988:          ...:     reader = csv.reader(grades)
+29003:9.12.2 Reading CSV Files
+29007:demonstrate pandas’ ability to load files in CSV format, then
+
+codex
+Blocked by a source conflict: the specified Deitel PDF does not match the “confirmed” chapter mapping.
+
+Its table of contents places files and exceptions together in Chapter 9; Chapter 10 is OOP, and Chapter 11 is recursion/searching—not exceptions/modules/files. I have not created any week 2–6 materials or the report, because assigning chapter-specific citations would require guessing.
+
+Please confirm whether to:
+1. follow the stated CS2 week topics and cite the PDF’s Chapter 9 sections, or
+2. use a different Deitel edition/source whose Chapters 10–12 match the provided mapping.
+tokens used
+28,320
+Blocked by a source conflict: the specified Deitel PDF does not match the “confirmed” chapter mapping.
+
+Its table of contents places files and exceptions together in Chapter 9; Chapter 10 is OOP, and Chapter 11 is recursion/searching—not exceptions/modules/files. I have not created any week 2–6 materials or the report, because assigning chapter-specific citations would require guessing.
+
+Please confirm whether to:
+1. follow the stated CS2 week topics and cite the PDF’s Chapter 9 sections, or
+2. use a different Deitel edition/source whose Chapters 10–12 match the provided mapping.
