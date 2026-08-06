@@ -2,7 +2,7 @@
 
 ## Status
 
-Finals week. No new technical material. Dates and meeting times remain unassigned: [[DATE: week 17 — TBD, confirm against real CS2 section schedule]].
+Finals week. No new technical material. Dates and meeting times remain unassigned: Mon Dec 7 / Wed Dec 9 / Fri Dec 11, 2026 (finals week), MWF 1:00-1:50 PM (room TBD).
 
 ## Weekly Focus
 

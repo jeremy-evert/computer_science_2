@@ -1,6 +1,6 @@
 # Week 1 — Universal Course Kickoff
 
-**Date:** [[DATE: week 1 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Aug 17 / Wed Aug 19 / Fri Aug 21, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 

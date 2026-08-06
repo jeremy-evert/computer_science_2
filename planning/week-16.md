@@ -1,10 +1,10 @@
 # Week 16 — Checkpoint 4: Searching/Sorting + Full Integration
 
-**Date:** [[DATE: week 16 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Nov 30 / Wed Dec 2 / Fri Dec 4, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Last full instructional/checkpoint week; actual meeting pattern TBD.
+Last full instructional/checkpoint week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 

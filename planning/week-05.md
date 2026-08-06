@@ -1,14 +1,14 @@
 # Week 5 — Persistence: Files
 
-**Date:** [[DATE: week 5 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Sep 14 / Wed Sep 16 / Fri Sep 18, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Full instructional week; actual meeting pattern TBD.
+Full instructional week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 
-Files (Deitel Ch. 12 in the confirmed map): paths, context managers, and reading/writing text or CSV data for persistent program state. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/exceptions-modules-files.md`.
+Files (Ch. 12 in the confirmed map): paths, context managers, and reading/writing text or CSV data for persistent program state. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/exceptions-modules-files.md`.
 
 ## Gate-or-checkpoint tie-in
 

@@ -1,10 +1,10 @@
 # Week 8 — Extension II: Inheritance
 
-**Date:** [[DATE: week 8 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Oct 5 / Wed Oct 7 / Fri Oct 9, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Full instructional week; actual meeting pattern TBD.
+Full instructional week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 

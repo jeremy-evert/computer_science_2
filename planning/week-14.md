@@ -1,10 +1,10 @@
 # Week 14 — Checkpoint 3: Recursion + Plotting
 
-**Date:** [[DATE: week 14 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Nov 16 / Wed Nov 18 / Fri Nov 20, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Checkpoint week; actual meeting pattern TBD.
+Checkpoint week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 

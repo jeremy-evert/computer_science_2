@@ -1,14 +1,14 @@
 # Week 7 — Extension I: Inheritance
 
-**Date:** [[DATE: week 7 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Sep 28 / Wed Sep 30 / Fri Oct 2, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Full instructional week; actual meeting pattern TBD.
+Full instructional week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 
-Inheritance, Round 1 (Deitel Ch. 13 in the confirmed map): base classes, subclasses, and inherited behavior. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/inheritance-and-recursion.md`.
+Inheritance, Round 1 (Ch. 13 in the confirmed map): base classes, subclasses, and inherited behavior. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/inheritance-and-recursion.md`.
 
 ## Gate-or-checkpoint tie-in
 

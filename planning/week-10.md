@@ -1,14 +1,14 @@
 # Week 10 — Recursive Thinking I
 
-**Date:** [[DATE: week 10 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Oct 19 / Wed Oct 21 / Fri Oct 23, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Full instructional week; actual meeting pattern TBD.
+Full instructional week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 
-Recursion, Round 1 (Deitel Ch. 14 in the confirmed map): recursive decomposition, base cases, recursive cases, and tracing. Recursion receives two weeks because archive synthesis identifies it as historically hardest.
+Recursion, Round 1 (Ch. 14 in the confirmed map): recursive decomposition, base cases, recursive cases, and tracing. Recursion receives two weeks because archive synthesis identifies it as historically hardest.
 
 ## Gate-or-checkpoint tie-in
 

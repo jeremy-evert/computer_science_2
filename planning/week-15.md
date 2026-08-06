@@ -1,10 +1,10 @@
 # Week 15 — Integration and Polish
 
-**Date:** [[DATE: week 15 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Nov 23, 2026 only (Thanksgiving begins Tue Nov 24, 10 PM -- no Wed/Fri meeting), MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Integration/polish week; actual meeting pattern TBD.
+Integration/polish week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 

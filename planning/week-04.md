@@ -1,14 +1,14 @@
 # Week 4 — Reuse: Modules
 
-**Date:** [[DATE: week 4 — TBD, confirm against real CS2 section schedule]]
+**Date:** Wed Sep 9 / Fri Sep 11, 2026 (no Monday meeting -- Labor Day, Mon Sep 7), MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Full instructional week; actual meeting pattern TBD.
+Full instructional week (Wed/Fri only, no Monday -- Labor Day).
 
 ## Weekly Focus
 
-Modules (Deitel Ch. 11 in the confirmed map): imports, reusable code, and meaningful module boundaries. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/exceptions-modules-files.md`.
+Modules (Ch. 11 in the confirmed map): imports, reusable code, and meaningful module boundaries. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/exceptions-modules-files.md`.
 
 ## Gate-or-checkpoint tie-in
 

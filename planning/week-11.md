@@ -1,10 +1,10 @@
 # Week 11 — Recursive Thinking II
 
-**Date:** [[DATE: week 11 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Oct 26 / Wed Oct 28 / Fri Oct 30, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Full instructional week; actual meeting pattern TBD.
+Full instructional week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 

@@ -107,8 +107,10 @@ Once, then reused weekly:
 
 ## Known tensions to resolve
 
-1. **Meeting schedule.** Fall 2026 days, times, room, and resulting shared-
-   strand placement are not known; all planning dates remain placeholders.
+1. **Meeting schedule — resolved 2026-08-06.** CS2 meets MWF 1:00-1:50 PM,
+   same days as CS1's 10:00 AM section (sister sections, same Fall 2026
+   calendar and holiday exceptions) — room still TBD. `planning/week-NN.md`
+   dates are filled in against this schedule.
 2. **Weekly student load.** Six artifacts per week require small, gradeable
    work and reliable automated feedback.
 3. **Syllabus.** It must fold in this contract, the grading categories, and

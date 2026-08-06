@@ -1,6 +1,6 @@
 # Week 17 — Finals: Final Portfolio
 
-**Date:** [[DATE: week 17 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Dec 7 / Wed Dec 9 / Fri Dec 11, 2026 (finals week), MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 

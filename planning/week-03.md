@@ -1,10 +1,10 @@
 # Week 3 — Robustness II: Exceptions
 
-**Date:** [[DATE: week 3 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Aug 31 / Wed Sep 2 / Fri Sep 4, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Full instructional week; actual meeting pattern TBD.
+Full instructional week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 

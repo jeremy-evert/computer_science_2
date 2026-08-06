@@ -1,14 +1,14 @@
 # Week 13 — Algorithmic Judgment: Searching, Sorting, Big-O
 
-**Date:** [[DATE: week 13 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Nov 9 / Wed Nov 11 / Fri Nov 13, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Full instructional week; actual meeting pattern TBD.
+Full instructional week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 
-Searching, sorting, and Big-O (Deitel Ch. 16 in the confirmed map): linear/binary search, sorted-data preconditions, sort tracing, and qualitative efficiency trade-offs. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/plotting-searching-sorting.md`.
+Searching, sorting, and Big-O (Ch. 16 in the confirmed map): linear/binary search, sorted-data preconditions, sort tracing, and qualitative efficiency trade-offs. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/plotting-searching-sorting.md`.
 
 ## Gate-or-checkpoint tie-in
 

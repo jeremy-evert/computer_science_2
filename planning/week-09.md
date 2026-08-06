@@ -1,10 +1,10 @@
 # Week 9 — Checkpoint 2: Inheritance
 
-**Date:** [[DATE: week 9 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Oct 12 / Wed Oct 14, 2026 (no Friday meeting -- Fall Break begins Wed Oct 14, 10 PM), MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Checkpoint week; actual meeting pattern TBD.
+Checkpoint week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 

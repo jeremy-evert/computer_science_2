@@ -1,10 +1,10 @@
 # Week 6 — Checkpoint 1: Robust, Reusable, Persistent
 
-**Date:** [[DATE: week 6 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Sep 21 / Wed Sep 23 / Fri Sep 25, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Checkpoint week; actual meeting pattern TBD.
+Checkpoint week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 

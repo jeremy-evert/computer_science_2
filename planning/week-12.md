@@ -1,14 +1,14 @@
 # Week 12 — Data Exploration: Plotting
 
-**Date:** [[DATE: week 12 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Nov 2 / Wed Nov 4 / Fri Nov 6, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Full instructional week; actual meeting pattern TBD.
+Full instructional week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 
-Plotting/data exploration (Deitel Ch. 15 in the confirmed map): transform data into a simple, labeled visualization and interpret what it shows. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/plotting-searching-sorting.md`.
+Plotting/data exploration (Ch. 15 in the confirmed map): transform data into a simple, labeled visualization and interpret what it shows. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/plotting-searching-sorting.md`.
 
 ## Gate-or-checkpoint tie-in
 

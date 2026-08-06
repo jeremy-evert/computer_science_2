@@ -1,14 +1,14 @@
 # Week 2 — Robustness I: Exceptions
 
-**Date:** [[DATE: week 2 — TBD, confirm against real CS2 section schedule]]
+**Date:** Mon Aug 24 / Wed Aug 26 / Fri Aug 28, 2026, MWF 1:00-1:50 PM (room TBD)
 
 ## Status
 
-Full instructional week; actual meeting pattern TBD.
+Full instructional week, MWF 1:00-1:50 PM.
 
 ## Weekly Focus
 
-Exceptions, Round 1 (Deitel Ch. 10 in the confirmed CS2 map): invalid input, validation, and `try`/`except` reasoning. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/exceptions-modules-files.md`.
+Exceptions, Round 1 (Ch. 10 in the confirmed CS2 map): invalid input, validation, and `try`/`except` reasoning. Source grounding: `docs/curriculum/course-sequence.md`; `lessons/exceptions-modules-files.md`.
 
 ## Gate-or-checkpoint tie-in
 
