@@ -1,0 +1,72 @@
+# Computer Science II — durable course metadata
+#
+# Tracked source of truth for COMSC-1053's Fall 2026 offering, added
+# prompt 045 (`jeremy_task_tracking/prompts/
+# 045_add_week_at_a_glance_for_other_three_classes.md`) so the shared
+# `course_foundry.course_information_page` generator (built prompt 044 for
+# Computer Architecture, reused here rather than rebuilt) can push a
+# durable Course Information page to Savnac course 3. Every field below
+# traces to the official catalog/section record Jeremy supplied verbatim
+# in prompt 045. Nothing here is inferred.
+
+course:
+  code: "COMSC-1053"
+  name: "Computer Science II"
+  credits: 3
+  term: "Fall 2026"
+  section_number: "COMSC-1053-1417"
+  start_date: "2026-08-17"
+  end_date: "2026-12-11"
+  instructor: "Dr. Jeremy P. Evert"
+  requisites: "COMSC-1033"
+  catalog_offering_note: "Traditional, in-person section"
+
+# Official Banner/catalog facts, preserved verbatim.
+official:
+  modality: "Traditional (in-person)"
+  location: "Gen. Thomas P. Stafford Center, Room 259"
+  meeting_pattern: "M/W/F 1:00 PM - 1:50 PM"
+  catalog_description: >-
+    This course is a continuation of Computer Science I. Object-oriented
+    programming concepts such as class inheritance, encapsulation and
+    polymorphism are covered. Topics covered include abstract classes;
+    interfaces; GUI programming, event-driven programming, data
+    abstraction through use of classic data structures list, stack and
+    queue, and object-oriented thinking and design. Emphasis will be on
+    program design, modularity, debugging, and documentation. Source code
+    management is practiced in paired programming projects.
+
+# CS2 is a traditional in-person section with a real Banner meeting time --
+# unlike Computer Architecture, there is no official/planning-cadence
+# ambiguity to disambiguate. This block is populated with the same real
+# meeting pattern for schema consistency with the shared Course
+# Information generator (which expects this key), not because CS2 has a
+# separate "working" rhythm distinct from its official one.
+instructional_working_cadence:
+  days: "Monday / Wednesday / Friday"
+  time: "1:00 PM"
+  label: "Same as the official Banner meeting time above -- no separate planning cadence for this course."
+
+# No textbook/zyBook source was supplied for CS2 in prompt 045 or found
+# tracked elsewhere in this repo as of 2026-08-09 -- recorded honestly as
+# not yet tracked rather than fabricated. Update this block once a real
+# source is confirmed.
+textbook:
+  title: "Not yet tracked"
+  authors: []
+  zybook_identifier: "TBD"
+  zybook_url: ""
+  main_chapters: []
+  note: >-
+    No textbook/zyBook source has been confirmed and tracked for CS2 as of
+    2026-08-09. `computer_science_2/docs/curriculum/course-sequence.md`
+    references a Deitel-style Python chapter sequence informally, but no
+    specific edition/zyBook identifier has been supplied -- do not
+    fabricate one here.
+
+provenance:
+  - source: "Jeremy's directly supplied Fall 2026 catalog/section record (jeremy_task_tracking/prompts/045_add_week_at_a_glance_for_other_three_classes.md)"
+    covers: "course/official blocks"
+  - note: >-
+      Textbook block is intentionally empty/TBD -- no source was supplied
+      or found tracked; see the `textbook.note` field above.
