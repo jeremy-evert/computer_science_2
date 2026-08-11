@@ -47,22 +47,25 @@ instructional_working_cadence:
   time: "1:00 PM"
   label: "Same as the official Banner meeting time above -- no separate planning cadence for this course."
 
-# No textbook/zyBook source was supplied for CS2 in prompt 045 or found
-# tracked elsewhere in this repo as of 2026-08-09 -- recorded honestly as
-# not yet tracked rather than fabricated. Update this block once a real
-# source is confirmed.
+# Updated 2026-08-11: Jeremy filed a ZyBooks adoption request for CS2
+# today; not yet cleared/confirmed. CS2 has real historical SWOSU ZyBooks
+# precedent to reuse once the product is named -- see the Fall 2021 Canvas
+# archive (16 per-chapter LTI-graded assignments,
+# jeremy_task_tracking/reports/2026-08-11_zybooks_lti_real_integration_options.md).
 textbook:
-  title: "Not yet tracked"
+  title: "ZyBooks adoption filed 2026-08-11, pending -- not yet cleared or named"
   authors: []
-  zybook_identifier: "TBD"
+  zybook_identifier: "TBD -- pending adoption"
   zybook_url: ""
   main_chapters: []
   note: >-
-    No textbook/zyBook source has been confirmed and tracked for CS2 as of
-    2026-08-09. `computer_science_2/docs/curriculum/course-sequence.md`
-    references a Deitel-style Python chapter sequence informally, but no
-    specific edition/zyBook identifier has been supplied -- do not
-    fabricate one here.
+    Fall 2026 strategy (Jeremy, 2026-08-11): ZyBooks-first for all four
+    courses. `computer_science_2/docs/curriculum/course-sequence.md`
+    references a Deitel-style Python chapter sequence informally, but the
+    live product for Fall 2026 is whatever this pending adoption clears
+    to -- do not assume it matches Deitel or the old archived product
+    without Jeremy confirming. See jeremy_task_tracking/DECISIONS.md's
+    2026-08-11 entries.
 
 provenance:
   - source: "Jeremy's directly supplied Fall 2026 catalog/section record (jeremy_task_tracking/prompts/045_add_week_at_a_glance_for_other_three_classes.md)"
