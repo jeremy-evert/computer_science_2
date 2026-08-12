@@ -1,24 +1,17 @@
-# Odyssey Gate — Week 7 rubric: Quick Check (pass/fail) + light Build
+# Odyssey gate rubric — Week 7 — World-Fit Data Abstraction (S05)
 
-Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+## Capability evidence
 
-## Part 1 — Quick Check (pass/fail, human-checkable)
-
-| Criterion | Pass condition |
+| Criterion | Meets expectation |
 |---|---|
-| Real hierarchy | The base/subclass pair is a defensible is-a relationship in this world. |
-| Shared setup | The subclass uses `super().__init__` for inherited state, then adds/refines its own state. |
-| Real override | The same method name has specialized behavior, demonstrated in a run. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-**All three present → pass.** This needs a brief human read: syntactically valid inheritance can still model the wrong relationship.
+For Week 07, assess the specific gate below without inflating scope:
 
-## Part 2 — Light Build (holistic)
+Choose a real List ADT, stack, or queue flow. State the client operations, demonstrate LIFO/FIFO or list behavior with a trace, and explain why this abstraction fits better than treating Python list syntax as the concept.
 
-Same three-band shape as Week 2 — see `rubrics/odyssey_gates/week-02_rubric.md`.
-
-## Grading notes
-
-- Copying the base initializer into the subclass does not pass shared setup.
-- A changed `__repr__` alone is insufficient unless it reflects a real specialized behavior in the demonstrated world.
-- The World Bible line is required but reviewed cumulatively at finals.
-
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

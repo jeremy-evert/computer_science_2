@@ -1,24 +1,17 @@
-# Odyssey Gate — Week 8 rubric: Quick Check (pass/fail) + light Build
+# Odyssey gate rubric — Week 8 — Search/Order Tradeoff (S05/S06)
 
-Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+## Capability evidence
 
-## Part 1 — Quick Check (pass/fail, behavioral)
-
-| Criterion | Pass condition |
+| Criterion | Meets expectation |
 |---|---|
-| Subtype range | Two distinct subclasses share a meaningful base class. |
-| Same message | Shared code calls the same meaningful method on both without type-based branching first. |
-| Different effects | The run demonstrates different real behavior or state consequences. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-**All three present → pass.** A human should inspect the short run: this is polymorphism, not merely two classes that happen to have similarly named code.
+For Week 08, assess the specific gate below without inflating scope:
 
-## Part 2 — Light Build (holistic)
+Trace a lookup or ordering operation over real world state. Explain a qualitative cost/maintenance tradeoff and any sorted-data precondition. Do not add binary search unless the world earns it.
 
-Same three-band shape as Week 2 — see `rubrics/odyssey_gates/week-02_rubric.md`.
-
-## Grading notes
-
-- `if isinstance(...)` deciding which behavior to call does not pass Same message.
-- Different printed names with no differing consequence do not pass Different effects.
-- This exceeds a mere derived-class existence check: the common interface must run.
-
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

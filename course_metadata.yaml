@@ -47,7 +47,7 @@ instructional_working_cadence:
   time: "1:00 PM"
   label: "Same as the official Banner meeting time above -- no separate planning cadence for this course."
 
-# Reconciled 2026-08-11: the supplied course-specific Fall 2026 URL proves
+# Historical/control note reconciled 2026-08-12: the supplied course-specific Fall 2026 URL proves
 # the operational zyBook identifier, but not the display title, release,
 # roster, assignments, due dates, or LTI state. `Zachary` is vendor-supplied
 # and must remain exactly as written. Historical Canvas evidence remains
@@ -59,12 +59,11 @@ textbook:
   zybook_url: "https://learn.zybooks.com/zybook/SWOSUCOMSC1053ZacharyFall2026"
   main_chapters: []
   note: >-
-    Fall 2026 strategy (Jeremy, 2026-08-11): ZyBooks-first for all four
-    courses. This course-specific URL closes the operational-product
-    identifier gap but does not establish its visible title, release,
-    configured TOC, adoption/roster state, assignments, due dates, or LTI
-    links. Obtain those from an authorized browser capture or instructor UI;
-    do not infer them from the identifier or historical Canvas archives.
+    Historical/control reference only. Fall 2026 COMSC-1053 does not require
+    ZyBooks or a paid textbook: its organizing path is course-owned Odyssey
+    work, shared Week 1/2 sources, and recommended no-cost references. This
+    URL does not establish visible title, release, roster, assignments, due
+    dates, or LTI state; do not infer any of them from archives.
 
 provenance:
   - source: "Jeremy's directly supplied Fall 2026 catalog/section record (jeremy_task_tracking/prompts/045_add_week_at_a_glance_for_other_three_classes.md)"

@@ -1,31 +1,17 @@
-# Odyssey Gate — Week 11 rubric: Quick Check (pass/fail) + Decide/Compare #1 + light Build
+# Odyssey gate rubric — Week 11 — Design Extensions / Flex Clinic (S07)
 
-Matches `docs/curriculum/judgment_toolkit.md` §1/§2/§3.
+## Capability evidence
 
-## Part 1 — Quick Check (pass/fail)
-
-| Criterion | Pass condition |
+| Criterion | Meets expectation |
 |---|---|
-| World decomposition | The function recursively solves a genuine need in this world. |
-| Real recursion | It reduces the problem and a run passes through at least two recursive levels. |
-| Consequence | Its result drives a real report, decision, state update, or visible outcome. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-**All three present → pass.**
+For Week 11, assess the specific gate below without inflating scope:
 
-## Part 2 — Decide/Compare #1
+Make a meaningful project refinement and justify it. A recursive, linked, or nested structure is welcome only when it clarifies this world; reinforcement of prior design/data/GUI/testing work is equally valid.
 
-| Band | What it looks like |
-|---|---|
-| Strong | A prior commitment, real recursive and iterative alternatives, and concrete trade-offs for this feature; the final call follows from that comparison. |
-| Solid | Both approaches are named and a choice is defended, but trade-offs remain generic. |
-| Not yet | “Recursion is better” or “loops are easier” is asserted with no world-specific comparison. |
-
-## Part 3 — Light Build (holistic)
-
-Same three-band shape as Week 2 — see `rubrics/odyssey_gates/week-02_rubric.md`.
-
-## Grading notes
-
-- The student may reasonably choose iteration after implementing/tracing the recursive version; the judgment is what is assessed.
-- A disguised loop or one-level self-call cannot pass Part 1.
-
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

@@ -1,23 +1,17 @@
-# Odyssey Gate — Week 12 rubric: Quick Check (pass/fail) + light Build
+# Odyssey gate rubric — Week 12 — Stabilization and Peer-Review Preparation (S08)
 
-Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+## Capability evidence
 
-## Part 1 — Quick Check (pass/fail, behavioral)
-
-| Criterion | Pass condition |
+| Criterion | Meets expectation |
 |---|---|
-| Real data series | The plot uses at least four observations from the world/project’s data flow. |
-| Readable view | Title and axes/legend make the values and categories understandable. |
-| Data observation | The student names a specific observation supported by the plot. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-**All three present → pass.** A screenshot plus runnable source is sufficient evidence.
+For Week 12, assess the specific gate below without inflating scope:
 
-## Part 2 — Light Build (holistic)
+Freeze a substantial slice for review: improve tests, runnable instructions, documentation, and known-debt record. Feature growth should be modest and justified.
 
-Same three-band shape as Week 2 — see `rubrics/odyssey_gates/week-02_rubric.md`.
-
-## Grading notes
-
-- Four numbers typed only into plotting code, with no connection to world state, do not pass Real data series.
-- “The graph goes up” is insufficient unless it identifies the data and a meaningful interval or pattern.
-
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

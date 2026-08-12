@@ -1,28 +1,17 @@
-# Odyssey Gate — Week 9 rubric: Checkpoint 2 (full Build) + Debrief
+# Odyssey gate rubric — Week 9 — Thin View over Tested Model (S04)
 
-Matches `docs/curriculum/judgment_toolkit.md` §2/§4. Two separately assessed parts; the checkpoint uses the four-axis full Build rubric.
+## Capability evidence
 
-## Part 1 — Full Build
-
-Use the four axes from `judgment_toolkit.md` §2 directly:
-
-| Axis | Week 9 evidence |
+| Criterion | Meets expectation |
 |---|---|
-| Functions | The submitted slice runs and carries out its claimed world action. |
-| Concept use | A defensible base class and multiple subclasses are used polymorphically for real behavior. |
-| Explanation | The student explains the is-a choice and what changed from Weeks 7–8. |
-| Demonstrability | Another person can run or follow the mixed-subtype outcome. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-## Part 2 — Checkpoint Debrief
+For Week 09, assess the specific gate below without inflating scope:
 
-| Band | What it looks like |
-|---|---|
-| Strong | Names a specific design payoff and a real break/awkwardness, explains its cause, and proposes a concrete next design move. |
-| Solid | Addresses all prompts but the cause or redesign remains general. |
-| Not yet | Could have been written without this inheritance implementation. |
+Use the course Tkinter lab pattern to render real model state in a modest view. Show that the model behavior can be tested or traced without trusting the GUI alone.
 
-## Grading notes
-
-- A collection of subclasses that never receives a shared method call cannot reach the top Concept use description.
-- The Debrief draws on the World Bible; it is not a second generic reflection.
-
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

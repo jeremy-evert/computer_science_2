@@ -1,19 +1,7 @@
-# Week 11 — Recursive Thinking II
+# Week 11 — Design Extensions / Flex Clinic (S07 + reinforcement)
 
-**Date:** Mon Oct 26 / Wed Oct 28 / Fri Oct 30, 2026, MWF 1:00-1:50 PM (room TBD)
-
-## Status
-
-Full instructional week, MWF 1:00-1:50 PM.
-
-## Weekly Focus
-
-Recursion, Round 2: trace recursive calls, test base and edge cases, and explain why termination is guaranteed.
-
-## Gate-or-checkpoint tie-in
-
-Coding Odyssey weekly gate: extend or refine the recursive feature with visible trace/test evidence.
-
-## Due this week
-
-Week 11 Odyssey gate (`assignments/odyssey_gates/week-11.md`); fulfills `assignments/A1-weekly-coding-practice.md`.
+This is a pressure-release valve. If useful, expose recursion or a linked,
+nested, or tree-like representation; if earlier work needs reinforcement,
+deepen it instead. No student must invent an artificial tree or recursive
+feature. **Odyssey:** a meaningful extension/refinement with justification;
+recursion/linked/nested structure is one valid route.

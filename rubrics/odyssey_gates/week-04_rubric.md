@@ -1,29 +1,17 @@
-# Odyssey Gate — Week 4 rubric: Quick Check (pass/fail) + light Build
+# Odyssey gate rubric — Week 4 — Collaborating Objects and Invariant (S01/S08)
 
-Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+## Capability evidence
 
-## Part 1 — Quick Check (pass/fail, mechanical-checkable)
-
-| Criterion | Pass condition |
+| Criterion | Meets expectation |
 |---|---|
-| Coherent module | A separate local module defines at least two related functions that do real world work. |
-| Qualified imported use | The main program imports the module and calls both functions via its namespace. |
-| Guarded direct run | `if __name__ == "__main__":` protects a direct-run demonstration; import does not run it. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-**All three present → pass.** Any missing → not yet. File/module structure,
-function definitions, qualified calls, and the guard are statically
-checkable; run the main program once to confirm the import path works.
+For Week 04, assess the specific gate below without inflating scope:
 
-## Part 2 — Light Build (holistic)
+Refactor a real flow into collaborating objects using composition. Protect one invariant with a test/trace and explain why composition fits better than an unnecessary hierarchy.
 
-Same three-band shape as `rubrics/odyssey_gates/week-02_rubric.md`.
-
-## Grading notes
-
-- `from module import *` does not meet the qualified-use requirement: this
-  gate explicitly tests namespace awareness.
-- Two unrelated utility functions placed in a file do not make a meaningful
-  module boundary; a brief human read decides coherence.
-- A guard with only `pass` is insufficient: it must protect a small,
-  runnable direct-run demonstration.
-- The World Bible line is required but reviewed cumulatively at finals.
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

@@ -1,26 +1,17 @@
-# Odyssey Gate — Week 14 rubric: Checkpoint 3 (full Build) + Full Trail Debrief
+# Odyssey gate rubric — Week 14 — Professional Workflow Receipt (S08)
 
-Matches `docs/curriculum/judgment_toolkit.md` §2/§4. Two separately assessed parts; neither is pass/fail.
+## Capability evidence
 
-## Part 1 — Full Build
-
-| Axis | Week 14 evidence |
+| Criterion | Meets expectation |
 |---|---|
-| Functions | The integration runs: the recursive operation terminates and the visualization is produced. |
-| Concept use | Recursion has a real base/reduction path and operates on world data that meaningfully reaches the plot. |
-| Explanation | The student explains the connection and what the visualization reveals. |
-| Demonstrability | Another person can follow the trace, run the code, and interpret the labeled plot. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-## Part 2 — Full Trail Debrief (mandatory)
+For Week 14, assess the specific gate below without inflating scope:
 
-| Band | What it looks like |
-|---|---|
-| Strong | Names a specific integration break or payoff, traces it to a concrete design cause, and proposes a materially different future design. |
-| Solid | Answers all three prompts, but cause analysis or redesign is generic. |
-| Not yet | Could have been written without the recursive/data/plotting integration. |
+Using the real Odyssey repository, inspect history; recover/revert a bounded change safely; use branch/merge or equivalent collaboration; review a bounded AI change from diff/tests/reasoning; and record change, test, and recovery evidence. Containers are conceptual only until classroom runtime is verified.
 
-## Grading notes
-
-- A standalone recursive exercise plus an unrelated chart does not meet Concept use.
-- “Nothing broke” can be strong only when the student explains the concrete choices that made integration smooth.
-
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

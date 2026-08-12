@@ -1,19 +1,12 @@
-# Week 1 — Universal Course Kickoff
+# Week 1 — Success Foundations
 
-**Date:** Mon Aug 17 / Wed Aug 19 / Fri Aug 21, 2026, MWF 1:00-1:50 PM (room TBD)
+**Date:** Aug 17–21, 2026, M/W/F 1:00–1:50 PM.
 
-## Status
+This universal human orientation week is owned by `semester_kickoff_week`.
+Monday asks how to get the most from this semester; Wednesday asks how to get
+the most from the degree/path; Friday asks what career/life students are
+beginning to build. CS2 supplies only its thin sequencing wrapper: no
+technical spine, Odyssey gate, technical diagnostic, or world-building
+pressure begins here.
 
-Week 1 is the universal cross-course week. CS2 does not recreate its shared strands or handouts here; reference `semester_kickoff_week`.
-
-## Weekly Focus
-
-Course launch, environment/repository readiness, and expectations for the greater-depth CS2 Coding Odyssey spine. No CS2 chapter concept begins this week.
-
-## Gate-or-checkpoint tie-in
-
-No Odyssey gate or checkpoint. Do not add CS2-only Odyssey content to the universal kickoff week.
-
-## Due this week
-
-Complete the universal Week 1 work supplied by `semester_kickoff_week`; confirm local development environment and repository access.
+**Evidence:** complete the canonical shared Week 1 work.

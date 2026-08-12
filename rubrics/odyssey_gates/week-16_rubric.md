@@ -1,34 +1,17 @@
-# Odyssey Gate — Week 16 rubric: Checkpoint 4 (full Build) + Decide/Compare #2 + capstone Debrief
+# Odyssey gate rubric — Week 16 — Shared Farkle/ML Reservation
 
-Matches `docs/curriculum/judgment_toolkit.md` §2/§3/§4. Three separately assessed parts.
+## Capability evidence
 
-## Part 1 — Full Build
-
-| Axis | Week 16 evidence |
+| Criterion | Meets expectation |
 |---|---|
-| Functions | The capstone runs and performs its claimed world behavior. |
-| Concept use | Search/sort is meaningful and Big-O reasoning is accurate; multiple CS2 concepts are integrated where useful, not cosmetically. |
-| Explanation | The student explains the final changes, data/algorithm choices, and their consequences. |
-| Demonstrability | Another person can run/follow the capstone and observe the searched/sorted result. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-## Part 2 — Decide/Compare #2 (capstone)
+For Week 16, assess the specific gate below without inflating scope:
 
-| Band | What it looks like |
-|---|---|
-| Strong | A specific still-open decision, a genuine alternative, and a world-stage trade-off; the conclusion follows from the comparison. |
-| Solid | Real decision and comparison, but stakes/trade-offs remain somewhat generic. |
-| Not yet | The decision is trivial or already settled, so no trade-off was at stake. |
+No Odyssey checkpoint. This wrapper reserves the shared applied-fun experience: use CS2 design thinking to discuss state, actions, reward, repeated play, behavior change, and evidence. Shared lesson authoring remains upstream.
 
-## Part 3 — Capstone Debrief
-
-| Band | What it looks like |
-|---|---|
-| Strong | Specific evidence from the semester, causal analysis, and a concrete redesign informed by both CS1 foundations and CS2 work. |
-| Solid | Honest answer to all prompts, but the causal or redesign account stays general. |
-| Not yet | Generic reflection detached from the actual world. |
-
-## Grading notes
-
-- Binary-search claims require the ordered-data precondition; faster is not automatically better at this world’s scale.
-- Non-technical scope or architecture decisions are valid Decide/Compare material when the trade-off is real.
-
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

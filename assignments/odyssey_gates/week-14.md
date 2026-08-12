@@ -1,24 +1,8 @@
-# Odyssey Gate — Week 14: Coding Odyssey Checkpoint 3 (the world explains itself)
+# Odyssey Gate — Week 14 — Professional Workflow Receipt (S08)
 
-**Concept:** recursion plus plotting/data exploration (Deitel, §§11.2–11.5 and §5.17). **This week's gate is Coding Odyssey Checkpoint 3 itself** — see `assignments/A2-coding-odyssey-project.md` and `planning/week-14.md`. **Instruments:** full Build + Full Trail Debrief (mandatory) — see `docs/curriculum/judgment_toolkit.md` §2/§4.
+## Required evidence
 
-## The checkpoint (do this first)
+Using the real Odyssey repository, inspect history; recover/revert a bounded change safely; use branch/merge or equivalent collaboration; review a bounded AI change from diff/tests/reasoning; and record change, test, and recovery evidence. Containers are conceptual only until classroom runtime is verified.
 
-Submit a working integration in which a real recursive operation produces, selects, summarizes, or explains data that a labeled visualization makes readable. Demonstrate the recursive trace and the plot; explain what each adds that the other does not.
-
-## Suggested shape (optional scaffolding)
-
-- **Frontier Settlement:** recursively aggregate a connected set of stores/routes, then plot the resulting turn history.
-- **Investigation Bureau:** recursively traverse a clue structure, then plot leads or resolution status.
-- **Starship Log:** recursively inspect nested systems, then plot alert/energy history.
-- **Small Business:** recursively summarize nested orders/categories, then plot sales or inventory history.
-
-## Full Trail Debrief (mandatory)
-
-1. What broke or became awkward when recursive code met accumulated world data and plotting?
-2. Why: an earlier data/design choice, recursion's base/reduction logic, or the visualization's assumptions?
-3. What would you design differently from the start so the next analysis feature is easier to build?
-
-## World Bible
-
-Log the checkpoint and the full Debrief; this is mid-semester Judgment Log evidence.
+Keep one concise World Bible entry: what changed, evidence used, and any
+remaining debt. This is a small growth gate, not a weekly mini-project.

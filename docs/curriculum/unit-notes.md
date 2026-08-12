@@ -1,15 +1,14 @@
-# Unit notes
+# Fall 2026 capability notes
 
-These notes identify the durable topic units. Detailed lesson files live in `lessons/`; this index keeps the historical sequence visible as the course grows.
+This index names the active units; legacy lesson files are historical
+reference, not required sequence.
 
-| Unit | Historical evidence | Core student work |
+| Unit | Weeks | Core student work |
 |---|---|---|
-| Functions and decomposition | Chapter 6 in 2022–2026 | Small programs, reusable functions |
-| Strings and collections | Chapters 7–8 across most later terms | Text processing; lists/dictionaries |
-| Classes | Chapter 9 and “Round 2” in 2022–2026 | Class design, methods, object modeling |
-| Exceptions | Chapter 10 in 2021 and 2022–2026 | Robust input and error handling |
-| Modules and files | Chapters 11–12 in later terms | Reuse, CSV/text input, persistence |
-| Inheritance | Chapter 13 in later terms | Base/derived classes |
-| Recursion | Chapter 14 in later terms | Recursive decomposition and tracing |
-| Plotting | Chapter 15 in 2024 and 2026 | Simple visualizations and interpretation |
-| Searching and sorting | Chapter 16 in nearly all later terms | Tracing, comparison, Big-O intuition |
+| Sound object design | 3–4 | collaborating objects, composition, invariants, tests |
+| Inheritance and polymorphism | 5 | earn an is-a relationship and demonstrate shared dispatch |
+| Contracts/interfaces | 6 | explicit abstract contract and swappable collaborator |
+| Data abstractions | 7–8 | choose/use list, stack, or queue; reason about search/order |
+| GUI and events | 9–10 | thin Tkinter view over testable model; controlled callbacks |
+| Flex extension | 11 | meaningful refinement; optional recursion/linked/nested model |
+| Project and workflow | 12–14 | stabilization, review, recovery, reproducibility concept |

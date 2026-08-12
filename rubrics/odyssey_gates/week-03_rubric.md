@@ -1,30 +1,17 @@
-# Odyssey Gate — Week 3 rubric: Quick Check (pass/fail) + light Build
+# Odyssey gate rubric — Week 3 — Cohesive Object Boundary (S01)
 
-Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+## Capability evidence
 
-## Part 1 — Quick Check (pass/fail, mechanical-checkable)
-
-| Criterion | Pass condition |
+| Criterion | Meets expectation |
 |---|---|
-| Named custom exception | A custom exception class exists and represents a real named world rule. |
-| Validation raises it | A validation function explicitly raises that exception with a useful message when the rule is violated. |
-| Safe recovery | A caller catches that exception; a demonstrated rejected action reports the failure and preserves the relevant pre-action state. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-**All three present → pass.** Any missing → not yet. Class definition,
-`raise`, and a named handler are statically checkable; unchanged state needs
-a brief run trace or focused human check.
+For Week 03, assess the specific gate below without inflating scope:
 
-## Part 2 — Light Build (holistic)
+Build one cohesive world object with meaningful state and behavior. Show a focused test or trace and explain why the boundary belongs together. Include an AI evidence trail when AI helped.
 
-Same three-band shape as `rubrics/odyssey_gates/week-02_rubric.md`.
-
-## Grading notes
-
-- Raising `ValueError` alone does not meet this CS2-depth gate; the custom
-  class must be defined and used.
-- A custom exception caught inside the same validation function without a
-  caller-level recovery path does not demonstrate the intended boundary.
-- “State unchanged” means validation occurs before the relevant mutation, or
-  the work is reliably rolled back; printing an error after changing the
-  value is not enough.
-- The World Bible line is required but reviewed cumulatively at finals.
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

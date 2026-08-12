@@ -1,28 +1,27 @@
-# Computer Science 2: historical course sequence
+# Computer Science II course sequence
 
-This map is a topic/type synthesis of the eleven archived semesters (spring 2021 through spring 2026). It is a starting structure, not a claim that every semester used every item.
+## Active Fall 2026 sequence
 
-## Durable sequence
+The active sequence is the accepted S01–S08 capability spine in
+`planning/fall-2026-course-design.md`. It is design-led: good collaborating
+objects precede earned inheritance; contracts, GUI/events, and data
+abstractions are explicit catalog obligations; recursion is an optional
+design lens rather than a universal hurdle.
 
-1. **Functions and problem decomposition** (Chapter 6)
-2. **Strings and collections** (Chapter 7 where present; Chapter 8 lists and dictionaries)
-3. **Classes and object-oriented design** (Chapter 9, often taught in two rounds)
-4. **Exceptions** (Chapter 10)
-5. **Modules and reusable code** (Chapter 11)
-6. **Files and persistent data** (Chapter 12)
-7. **Inheritance** (Chapter 13)
-8. **Recursion** (Chapter 14)
-9. **Plotting/data exploration** (Chapter 15; intermittent until spring 2024 and stable in 2026)
-10. **Searching, sorting, and algorithmic efficiency** (Chapter 16)
+| IDs | Weeks | Active role |
+|---|---|---|
+| S01 | 3–4, recurring | encapsulation, composition, invariants, design rationale |
+| S02 | 5 | true subtype substitution and polymorphism |
+| S03 | 6 | abstract contracts and swappable collaborators |
+| S05–S06 | 7–8 | list/stack/queue abstractions; search/order tradeoffs |
+| S04 | 9–10 | Tkinter model/view and event-driven state change |
+| S07 | 11 when authentic | optional recursive/linked/nested design extension |
+| S08 | 2–14 | testing, documentation, AI accountability, review, source management |
 
-The chapter sequence is clearest from spring 2023 onward and is foreshadowed by the chapter readings and programming homework in fall 2021. Early 2021 is a different course shape: Java-oriented exams, discussions, modules, and a semester project. The recurring spine is therefore the later Python sequence, with the earlier material retained as historical context rather than forced into the main order.
+## Historical context
 
-## Recurring course rhythm
-
-Most later semesters pair each chapter with a coding assignment or discussion. One or more open-ended projects (CYOAG/Coding Odyssey) recur between clusters and at the end. Career/professional tasks and an end-of-semester reflection are common companions, especially from 2023 onward.
-
-## Variation points
-
-- Chapter 7 strings, Chapter 15 plotting, and explicit Git/file exercises appear inconsistently.
-- Fall 2024–spring 2025 add a large pair-programming/AI-supported practice layer and “Coding Quest” duplicates; these are useful experiments, not yet a durable replacement for chapter practice.
-- Spring 2026 adds structured career artifacts and short wellbeing/productivity pages, a notable expansion beyond the programming spine.
+The inherited exceptions → modules/files → inheritance → recursion →
+plotting → search/sort survey is archived evidence, not the Fall 2026
+organizing spine. Historic chapter and vendor mappings remain in reports and
+`planning/zybooks-section-decisions.csv` for provenance; they do not impose
+required readings or gates.

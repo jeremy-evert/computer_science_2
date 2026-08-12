@@ -1,23 +1,17 @@
-# Odyssey Gate — Week 13 rubric: Quick Check (pass/fail) + light Build
+# Odyssey gate rubric — Week 13 — Culmination Design Review (S01–S08)
 
-Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+## Capability evidence
 
-## Part 1 — Quick Check (pass/fail, trace + explanation)
-
-| Criterion | Pass condition |
+| Criterion | Meets expectation |
 |---|---|
-| Search trace | A real collection is searched; inspected items/indices and found/absent result are visible. |
-| Meaningful order | The same kind of data is sorted by a world-relevant key, with before/after evidence. |
-| Growth reasoning | Linear-search worst case is identified as O(n), with an accurate plain-language growth explanation; binary-search claims state the sorted-data requirement. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-**All three present → pass.**
+For Week 13, assess the specific gate below without inflating scope:
 
-## Part 2 — Light Build (holistic)
+Show major creative construction substantially complete. Submit a runnable slice, important tests, design rationale, usable documentation, and clean enough history for recovery/review.
 
-Same three-band shape as Week 2 — see `rubrics/odyssey_gates/week-02_rubric.md`.
-
-## Grading notes
-
-- Calling a built-in sort is acceptable for the world feature; the trace/explanation must still show what order means and why.
-- “Binary is faster” without the sorted-data condition does not pass Growth reasoning.
-
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

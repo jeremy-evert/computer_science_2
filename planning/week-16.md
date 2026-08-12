@@ -1,19 +1,9 @@
-# Week 16 — Checkpoint 4: Searching/Sorting + Full Integration
+# Week 16 — Shared Farkle + Machine Learning Applied Fun
 
-**Date:** Mon Nov 30 / Wed Dec 2 / Fri Dec 4, 2026, MWF 1:00-1:50 PM (room TBD)
-
-## Status
-
-Last full instructional/checkpoint week, MWF 1:00-1:50 PM.
-
-## Weekly Focus
-
-Searching/sorting plus full project integration. Prepare a runnable, explainable portfolio version and begin the final reflection.
-
-## Gate-or-checkpoint tie-in
-
-**Coding Odyssey checkpoint 4:** demonstrate searching/sorting integration, complete the capstone Decide/Compare, and show the project as a coherent whole.
-
-## Due this week
-
-Coding Odyssey checkpoint 4 (`assignments/A2-coding-odyssey-project.md`) and start of `assignments/A5-final-reflection.md`; fulfills `assignments/A1-weekly-coding-practice.md`.
+This shared experience consumes CS2 skills without adding a formal ML
+prerequisite or reinforcement-learning mathematics. Ask: what is the state,
+what actions exist, what counts as reward, what happens across many games,
+does behavior change, and what evidence supports a better strategy? CS2
+students may bring richer model/data/design thinking. Shared Farkle/ML
+content remains upstream-authoring work; this is a CS2 reservation/wrapper,
+not a competing private curriculum or final Odyssey checkpoint.

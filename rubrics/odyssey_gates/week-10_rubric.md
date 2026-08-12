@@ -1,23 +1,17 @@
-# Odyssey Gate — Week 10 rubric: Quick Check (pass/fail) + light Build
+# Odyssey gate rubric — Week 10 — Controlled Callback (S04/S08)
 
-Matches `docs/curriculum/judgment_toolkit.md` §1/§2.
+## Capability evidence
 
-## Part 1 — Quick Check (pass/fail, behavioral)
-
-| Criterion | Pass condition |
+| Criterion | Meets expectation |
 |---|---|
-| Base case | A clearly reachable case returns without another recursive call. |
-| Reduction | The recursive call receives a smaller/simpler version of the problem. |
-| Live depth | A normal demonstration makes at least two recursive calls before the base case. |
+| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
+| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
+| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
+| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-**All three present → pass.** This is a human/trace check; the important evidence is termination through a shrinking problem.
+For Week 10, assess the specific gate below without inflating scope:
 
-## Part 2 — Light Build (holistic)
+Implement two meaningful callbacks that invoke controlled model-state changes. Predict one outcome, independently verify it, and retain test/trace evidence outside the GUI.
 
-Same three-band shape as Week 2 — see `rubrics/odyssey_gates/week-02_rubric.md`.
-
-## Grading notes
-
-- A function that calls itself once and immediately stops on all normal inputs does not pass Live depth.
-- A loop doing all meaningful work while a decorative recursive call occurs does not pass Reduction.
-
+Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+only and does not revive a final Odyssey checkpoint.

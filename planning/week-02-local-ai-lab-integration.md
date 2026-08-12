@@ -2,8 +2,8 @@
 
 ## Purpose
 
-This file makes explicit how CS2's Week 2 ("Robustness I: Exceptions, plus
-the Local AI Lab", `planning/week-02.md`) connects to the shared **Build and
+This file makes explicit how CS2's Week 2 ("Build and Verify Your Local AI
+Lab", `planning/week-02.md`) connects to the shared **Build and
 Verify Your Local AI Lab** module. It exists so a future instructor, Canvas
 builder, or agent does not have to reconstruct the relationship between three
 repositories from memory.
@@ -41,23 +41,12 @@ inputs from CS2's perspective.
 | Recover to the disposable starting state if needed | `windows_classroom/scripts/week2_classroom.ps1 Reset -ConfirmReset` | Run `Reset -ConfirmReset` | A dated backup under `classroom\backups`, then a reset exercise tree | Confirms the exercise is disposable and safely repeatable | Not itself submitted; supports retry without risk |
 | Submit readiness evidence and reflection | `local_ai_lab_setup/curriculum/shared/week2/12_readiness_assignment.md` and `readiness_assignment_rubric.md`, plus the CS2 reflection prompt in `curriculum/cs2/week2_extension.md` | Preview and submit `local-ai-readiness.md` in Canvas (future deployment) | The generated readiness report, three shared conceptual answers, and the CS2 course-specific reflection (method-call defect, why the one-line diff fits, what the passing test does/does not establish) | Establishes the full evidence chain the student can defend | Recorded in CS2 via `assignments/week-02-local-ai-readiness.md` |
 
-## How this coexists with the exceptions / Coding Odyssey spine
+## How this fits the Coding Odyssey
 
-Week 2's chapter concept (exceptions, Chapter 10) and its Odyssey gate
-(`assignments/odyssey_gates/week-02.md`) are unchanged and are not
-displaced by this stitch. The local-AI lab readiness experience and the
-Odyssey gate are two separate, concurrently due Week 2 deliverables:
-
-- The Odyssey gate is about applying a new Python concept (exception
-  handling) inside the student's persistent world.
-- The local-AI lab readiness experience is about the professional
-  development environment and evidence discipline CS2 already asks students
-  to apply whenever they use AI assistance (`docs/course-ethos.md`,
-  `assignments/A1-weekly-coding-practice.md`).
-
-Neither the current source curriculum nor this stitch claims a specific
-Monday/Wednesday/Friday split between the two. That day-level allocation
-decision remains open and belongs to Jeremy, not to this file.
+The local-AI readiness artifact is the sole required technical experience in
+Week 2. `assignments/odyssey_gates/week-02.md` permits only an ungraded,
+light world seed. It is not an exceptions gate and does not compete with the
+shared module. Graded Odyssey construction begins Week 3.
 
 ## What is intentionally not copied here
 
