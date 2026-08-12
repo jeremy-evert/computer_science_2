@@ -1,0 +1,7 @@
+resource,cost_account,rights_category,S01,S02,S03,S04,S05,S06,S07,S08,clarity,practice_feedback,direct_link_granularity,accessibility_usability,currency_maintenance,low_friction,summary
+Python official docs,"free; no account",OPEN-REUSE,3,3,3,3,3,2,2,2,2,1,3,2,3,3,"Selected reference/capture delta; documentation is not a practice backbone"
+Runestone PyDS3,"free reading; account for saved interactive work",PERMISSION-UNCLEAR,2,1,1,0,3,3,3,1,3,3,3,2,2,2,"Strong data-structure and algorithm practice; link only until rights/capture basis is verified"
+CS50P reused CS1 corpus,"free; account only for some tooling",OPEN-REUSE,2,1,0,0,1,1,0,3,3,3,3,3,2,2,"Reuse for prerequisite OOP/testing/exceptions/file reference; not CS2 backbone"
+GitHub Docs/Skills reused CS1 corpus,"free; GitHub account for hands-on Skills",OPEN-REUSE,0,0,0,0,0,0,0,3,3,2,3,3,3,2,"Selected Week-14 Git/review supplement; reuse existing capture"
+Docker Docs,"free; no account",FREE-LINK-ONLY,0,0,0,0,0,0,0,2,3,1,3,2,3,3,"Week-14 container concept/reference; metadata/link only pending documentation reuse review"
+ZyBooks private Fall-2026 inventory,"paid/authorized access",RESTRICTED,2,2,1,0,2,3,2,1,2,3,3,2,2,1,"Comparison/control only; inherited map omits catalog GUI/event/contracts/stack/queue"

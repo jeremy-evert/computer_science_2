@@ -1,0 +1,12 @@
+{
+  "scale": {"0":"absent","1":"mentions or weak support","2":"teachable but incomplete/weak practice","3":"strong second-course treatment with usable examples/practice/evidence"},
+  "capabilities":["S01","S02","S03","S04","S05","S06","S07","S08"],
+  "resources":[
+    {"resource":"Python official docs","rights":"OPEN-REUSE","scores":{"S01":3,"S02":3,"S03":3,"S04":3,"S05":3,"S06":2,"S07":2,"S08":2},"dimensions":{"clarity":2,"practice":1,"links":3,"accessibility":2,"currency":3,"friction":3},"capture":"net-new PSF delta"},
+    {"resource":"Runestone PyDS3","rights":"PERMISSION-UNCLEAR","scores":{"S01":2,"S02":1,"S03":1,"S04":0,"S05":3,"S06":3,"S07":3,"S08":1},"dimensions":{"clarity":3,"practice":3,"links":3,"accessibility":2,"currency":2,"friction":2},"capture":"metadata/link only"},
+    {"resource":"CS50P reused CS1 corpus","rights":"OPEN-REUSE","scores":{"S01":2,"S02":1,"S03":0,"S04":0,"S05":1,"S06":1,"S07":0,"S08":3},"dimensions":{"clarity":3,"practice":3,"links":3,"accessibility":3,"currency":2,"friction":2},"capture":"reused CS1"},
+    {"resource":"GitHub Docs/Skills reused CS1 corpus","rights":"OPEN-REUSE","scores":{"S01":0,"S02":0,"S03":0,"S04":0,"S05":0,"S06":0,"S07":0,"S08":3},"dimensions":{"clarity":3,"practice":2,"links":3,"accessibility":3,"currency":3,"friction":2},"capture":"reused CS1"},
+    {"resource":"Docker Docs","rights":"FREE-LINK-ONLY","scores":{"S01":0,"S02":0,"S03":0,"S04":0,"S05":0,"S06":0,"S07":0,"S08":2},"dimensions":{"clarity":3,"practice":1,"links":3,"accessibility":2,"currency":3,"friction":3},"capture":"metadata/link only"},
+    {"resource":"ZyBooks private inventory","rights":"RESTRICTED","scores":{"S01":2,"S02":2,"S03":1,"S04":0,"S05":2,"S06":3,"S07":2,"S08":1},"dimensions":{"clarity":2,"practice":3,"links":3,"accessibility":2,"currency":2,"friction":1},"capture":"not eligible"}
+  ]
+}

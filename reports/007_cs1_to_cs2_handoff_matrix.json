@@ -1,0 +1,17 @@
+{
+  "source": "Prompt 019; CS1 Reports 011 and 012",
+  "treatments": ["ASSUME", "DIAGNOSTIC CHECK", "QUICK REFRESH IN CONTEXT", "RETEACH only on evidence"],
+  "handoff": [
+    {"id":"C01","capability":"Run/read/change Python","treatment":"ASSUME","enables":["S01"],"risk":"Week-3 diagnostic studio if absent"},
+    {"id":"C02","capability":"Variables, expressions, I/O","treatment":"ASSUME","enables":["S01"],"risk":"State/invariant evidence unreliable"},
+    {"id":"C03-C04","capability":"Decisions and loops","treatment":"ASSUME","enables":["S04","S05"],"risk":"Trace diagnostic"},
+    {"id":"C05","capability":"Functions/decomposition","treatment":"ASSUME","enables":["S01","S08"],"risk":"Quick refactor refresh"},
+    {"id":"C06-C07","capability":"Strings, lists, dictionaries","treatment":"ASSUME","enables":["S05","S06"],"risk":"Real-state diagnostic"},
+    {"id":"C08","capability":"Basic classes/objects without inheritance","treatment":"QUICK REFRESH IN CONTEXT","enables":["S01","S02"],"risk":"Small object-model repair, not a unit"},
+    {"id":"C09","capability":"CSV/JSON/Markdown persistence","treatment":"ASSUME","enables":["S08"],"risk":"Quick format refresh"},
+    {"id":"C10","capability":"Testing/debugging","treatment":"ASSUME","enables":["S08"],"risk":"Supplied failing-test diagnostic"},
+    {"id":"C11","capability":"Technical judgment/explanation","treatment":"ASSUME","enables":["S01","S06","S08"],"risk":"Use existing Judgment Log"},
+    {"id":"C12","capability":"Git/GitHub basics","treatment":"QUICK REFRESH IN CONTEXT","enables":["S08"],"risk":"Recovery diagnostic in Week 14"},
+    {"id":"C13","capability":"AI-aware accountability","treatment":"ASSUME","enables":["S08"],"risk":"Explicit recurring verification habit"}
+  ]
+}

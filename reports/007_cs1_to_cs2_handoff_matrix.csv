@@ -1,0 +1,12 @@
+cs1_capability,cs1_evidence,cs2_treatment,new_cs2_capability_enabled,evidence_source,risk_if_assumption_fails
+Run/read/change Python,"C01 pinned; CS1 Report 011",ASSUME,"S01 design with objects","CS1 Report 011; Prompt 019","Cannot follow CS2 examples; diagnose in Week 3 studio"
+Variables expressions I/O,"C02 pinned; Week 2 gate",ASSUME,"S01 state and invariants","CS1 Report 011","Object state evidence becomes unreliable"
+Decisions and loops,"C03-C04 pinned",ASSUME,"S04 event handlers and S05 operations","CS1 Report 011","Quick diagnostic tracing needed"
+Functions/decomposition,"C05 pinned; Week 7 gate",ASSUME,"S01 boundaries and S08 modular delivery","CS1 Report 011","QUICK REFRESH in first refactor"
+Strings lists dictionaries,"C06-C07 pinned; Weeks 8-11",ASSUME,"S05 data abstraction and S06 search/sort","CS1 Report 011","DIAGNOSTIC CHECK using real world state"
+Basic classes/objects no inheritance,"C08 pinned; Weeks 12-13 introductory OOP",QUICK REFRESH,"S01 object design; S02 inheritance/polymorphism","CS1 Report 011; Report 012","Do not reteach syntax; repair vocabulary/model with a small design studio"
+CSV JSON Markdown persistence,"C09 pinned; save/load expected",ASSUME,"S08 reproducible project state","CS1 Report 011","QUICK REFRESH only when project format requires it"
+Testing/debugging,"C10 pinned; Week 7 passing test",ASSUME,"S08 verification and AI-aware review","CS1 Report 011","DIAGNOSTIC CHECK on a supplied failing test"
+Technical judgment/explanation,"C11 pinned; Judgment Log",ASSUME,"S01 design rationale; S06 tradeoffs; S08 review","CS1 Report 011","Use existing explanation scaffold, not a reteach unit"
+Git/GitHub basics,"C12 pinned; Week 14",QUICK REFRESH,"S08 branches merges paired work containers","CS1 Report 011; Report 012","Week 14 begins with repository recovery diagnostic"
+AI-aware accountability,"C13 pinned; Monday Moments and Week 14",ASSUME,"S08 bounded request diff test read/reason accept/reject","CS1 Report 011; Prompt 019 Week 2 architecture","Evidence habit needs explicit recurrence after Week 2"
