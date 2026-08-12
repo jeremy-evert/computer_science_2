@@ -6,8 +6,9 @@
 | 2 | Local AI bench | local_ai_lab_setup + windows_classroom shared source | course wrapper/readiness evidence |
 | 3–6 | object design, inheritance, contracts | course gates and micro-practice | Python docs (abc); CS1 refresh where useful |
 | 7–8 | data abstractions/tradeoffs | course gates and traces | Runestone PyDS3; Python queue docs |
-| 9–10 | GUI/events | course-owned Tkinter micro-lab | Python tkinter docs |
-| 11–13 | flex/stabilize/design review | Odyssey and course review | Python docs; project evidence |
+| 9 | compact GUI/events | course-owned Tkinter micro-lab | Python tkinter docs |
+| 10–11 | visualization, storytelling, flex | course-owned data-storytelling micro-lab and Odyssey evidence | Matplotlib docs; plain Python CSV/collections; no pandas required |
+| 12–13 | stabilize/design review | Odyssey and course review | Python docs; project evidence |
 | 14 | workflow/reproducibility | real Odyssey repository receipt | GitHub Docs/Skills; Docker docs link only |
 | 15–17 | async closure, Farkle/ML, reflection | shared/CS2 wrappers | no paid dependency |
 

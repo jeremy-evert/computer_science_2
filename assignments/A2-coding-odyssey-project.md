@@ -19,12 +19,13 @@ build begins Week 3.
 | 5 | S02 earned inheritance/polymorphism | real substitution or reason composition fits better |
 | 6 | S03 contracts | swappable collaborator, contract test, explanation |
 | 7–8 | S05/S06 data abstractions and tradeoffs | world-fit list/stack/queue flow and search/order reasoning |
-| 9–10 | S04 GUI/events | thin Tkinter model/view feature and controlled callback evidence |
-| 11 | S07 Flex Clinic | meaningful design extension; recursion/linked/nested structures optional |
+| 9 | S04 compact GUI/events | thin Tkinter model/view feature, meaningful callback, and independent model test/trace |
+| 10 | S09 visualization | real world/project data, question, honest readable visual, chart-choice rationale |
+| 11 | S09 storytelling / flex | evidence-backed claim, limitation/uncertainty, and a design/operational decision; deeper structures optional |
 | 12–13 | S08 stabilization and culmination | tests, docs, design review, usable/recoverable project |
 | 14 | S08 workflow/reproducibility | history/recovery/collaboration/AI-review receipt; containers only after environment verification |
 
-A gate must fit the selected world. No universal hierarchy, recursion, plot,
+A gate must fit the selected world. No universal hierarchy, recursion, chart,
 or search/sort checklist exists. Examples include settlement services, case
 workflows, ship operations, and business inventory/transactions; each can use
 composition, a contract, a data abstraction, or a modest interface without

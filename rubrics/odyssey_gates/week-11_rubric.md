@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 11 — Design Extensions / Flex Clinic (S07)
+# Odyssey gate rubric — Week 11 — Data Storytelling / Flex Clinic (S09 + S07)
 
 ## Capability evidence
 
@@ -11,7 +11,13 @@
 
 For Week 11, assess the specific gate below without inflating scope:
 
-Make a meaningful project refinement and justify it. A recursive, linked, or nested structure is welcome only when it clarifies this world; reinforcement of prior design/data/GUI/testing work is equally valid.
+The student communicates a concise evidence-backed story from project/world
+data. A visual appears only when it serves the story; the student names a
+limitation, uncertainty, or alternative interpretation and makes or defends a
+design or operational decision. If the project is not yet data-rich, a
+meaningful reinforcement of prior design, data, GUI, or testing work is
+equally valid. A recursive, linked, or nested structure is welcome only when
+it clarifies this world.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Odyssey checkpoint.

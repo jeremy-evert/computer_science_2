@@ -18,8 +18,8 @@ as a new decision in this reconciliation.
 |---|---|
 | Week 1 | shared foundations; no CS2 gate |
 | Week 2 | shared local-AI readiness/evidence reflection; no graded Odyssey build |
-| Weeks 3–10 | capability gates for S01–S06 and S04 |
-| Week 11 | meaningful flex extension/refinement, not mandatory recursion |
+| Weeks 3–9 | capability gates for S01–S06 and compact S04 GUI/event evidence |
+| Weeks 10–11 | S09 visualization/storytelling evidence; Week 11 remains a meaningful flex/refinement option, not mandatory recursion |
 | Weeks 12–13 | stabilization, peer/design review, major construction culmination |
 | Week 14 | source-management/collaboration/AI-review receipt; bounded container work only after runtime verification |
 | Week 15 | no required technical gate |

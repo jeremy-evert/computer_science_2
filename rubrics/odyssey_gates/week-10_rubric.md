@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 10 — Controlled Callback (S04/S08)
+# Odyssey gate rubric — Week 10 — Honest Visualization from Project Data (S09/S06/S08)
 
 ## Capability evidence
 
@@ -11,7 +11,11 @@
 
 For Week 10, assess the specific gate below without inflating scope:
 
-Implement two meaningful callbacks that invoke controlled model-state changes. Predict one outcome, independently verify it, and retain test/trace evidence outside the GUI.
+The student states a question about real selected-world or project data and
+produces one or more readable, labeled visualization(s) that answer it. They
+explain why the representation is defensible, identify one misleading
+alternative or visual pitfall, and retain runnable code/data or a reproducible
+trace. Plotting syntax alone is not the evidence.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Odyssey checkpoint.

@@ -9,6 +9,7 @@ reference, not required sequence.
 | Inheritance and polymorphism | 5 | earn an is-a relationship and demonstrate shared dispatch |
 | Contracts/interfaces | 6 | explicit abstract contract and swappable collaborator |
 | Data abstractions | 7–8 | choose/use list, stack, or queue; reason about search/order |
-| GUI and events | 9–10 | thin Tkinter view over testable model; controlled callbacks |
-| Flex extension | 11 | meaningful refinement; optional recursion/linked/nested model |
+| Compact GUI and events | 9 | thin Tkinter view over a testable model; one meaningful callback path |
+| Data visualization | 10 | question-led, honest readable visual from authentic project/world data |
+| Data storytelling / flex | 11 | evidence-backed claim, limitation, decision; optional recursion/linked/nested refinement |
 | Project and workflow | 12–14 | stabilization, review, recovery, reproducibility concept |

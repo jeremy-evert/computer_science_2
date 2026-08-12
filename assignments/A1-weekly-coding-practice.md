@@ -19,9 +19,10 @@ standalone problem-set track.
 - Week 17: reflection uses the repository as evidence; no new build.
 
 Short repetitions are welcome inside class or weekly learning: dispatch,
-composition decision, stack/queue, search/order, callback-prediction, failing
-test, and model exercises may be in-class, pair, low-stakes, optional, or
-bonus practice. They never create a parallel required homework curriculum.
+composition decision, stack/queue, search/order, callback-prediction, chart
+choice, misleading-axis diagnosis, claim-title revision, failing test, and
+model exercises may be in-class, pair, low-stakes, optional, or bonus
+practice. They never create a parallel required homework curriculum.
 No bonus amount is set here.
 
 ## Evidence expectations

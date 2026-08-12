@@ -8,8 +8,9 @@ bodies stay in their canonical repositories.
 ## Fall 2026 technical contract
 
 Students learn to design and test collaborating objects; earn inheritance;
-work with contracts, data abstractions, modest GUI/events, and professional
-review/workflow. They disclose AI help and verify every submitted change:
+work with contracts, data abstractions, a compact GUI/event experience, honest
+data visualization/storytelling, and professional review/workflow. They
+disclose AI help and verify every submitted change:
 **baseline → bounded proposal → diff → independent test → read/reason →
 accept or reject from evidence**.
 

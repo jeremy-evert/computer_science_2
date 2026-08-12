@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 9 — Thin View over Tested Model (S04)
+# Odyssey gate rubric — Week 9 — Compact GUI over Tested Model (S04)
 
 ## Capability evidence
 
@@ -11,7 +11,10 @@
 
 For Week 09, assess the specific gate below without inflating scope:
 
-Use the course Tkinter lab pattern to render real model state in a modest view. Show that the model behavior can be tested or traced without trusting the GUI alone.
+Use the course Tkinter lab pattern to render real model state in a modest
+view. At least one meaningful user event/callback invokes a model operation;
+the student explains the model/view boundary and event flow. Model behavior is
+tested or traced without trusting the GUI alone.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Odyssey checkpoint.
