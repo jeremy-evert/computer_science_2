@@ -47,29 +47,27 @@ instructional_working_cadence:
   time: "1:00 PM"
   label: "Same as the official Banner meeting time above -- no separate planning cadence for this course."
 
-# Updated 2026-08-11: Jeremy filed a ZyBooks adoption request for CS2
-# today; not yet cleared/confirmed. CS2 has real historical SWOSU ZyBooks
-# precedent to reuse once the product is named -- see the Fall 2021 Canvas
-# archive (16 per-chapter LTI-graded assignments,
-# jeremy_task_tracking/reports/2026-08-11_zybooks_lti_real_integration_options.md).
+# Reconciled 2026-08-11: the supplied course-specific Fall 2026 URL proves
+# the operational zyBook identifier, but not the display title, release,
+# roster, assignments, due dates, or LTI state. `Zachary` is vendor-supplied
+# and must remain exactly as written. Historical Canvas evidence remains
+# useful provenance, not current configuration evidence.
 textbook:
-  title: "ZyBooks adoption filed 2026-08-11, pending -- not yet cleared or named"
+  title: "TBD -- obtain the displayed title from the authorized Fall 2026 zyBooks page"
   authors: []
-  zybook_identifier: "TBD -- pending adoption"
-  zybook_url: ""
+  zybook_identifier: "SWOSUCOMSC1053ZacharyFall2026"
+  zybook_url: "https://learn.zybooks.com/zybook/SWOSUCOMSC1053ZacharyFall2026"
   main_chapters: []
   note: >-
     Fall 2026 strategy (Jeremy, 2026-08-11): ZyBooks-first for all four
-    courses. `computer_science_2/docs/curriculum/course-sequence.md`
-    references a Deitel-style Python chapter sequence informally, but the
-    live product for Fall 2026 is whatever this pending adoption clears
-    to -- do not assume it matches Deitel or the old archived product
-    without Jeremy confirming. See jeremy_task_tracking/DECISIONS.md's
-    2026-08-11 entries.
+    courses. This course-specific URL closes the operational-product
+    identifier gap but does not establish its visible title, release,
+    configured TOC, adoption/roster state, assignments, due dates, or LTI
+    links. Obtain those from an authorized browser capture or instructor UI;
+    do not infer them from the identifier or historical Canvas archives.
 
 provenance:
   - source: "Jeremy's directly supplied Fall 2026 catalog/section record (jeremy_task_tracking/prompts/045_add_week_at_a_glance_for_other_three_classes.md)"
     covers: "course/official blocks"
-  - note: >-
-      Textbook block is intentionally empty/TBD -- no source was supplied
-      or found tracked; see the `textbook.note` field above.
+  - source: "Jeremy, directly, 2026-08-11 (Fall 2026 zyBooks URL)"
+    covers: "textbook.zybook_identifier/textbook.zybook_url only"
