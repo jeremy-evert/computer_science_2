@@ -90,4 +90,4 @@ No blocking source defect was found in `windows_classroom` or `local_ai_lab_setu
 
 ## Commit SHA
 
-See the commit immediately following this report file in `computer_science_2`'s history (this report is committed in the same commit as the stitch itself; the SHA is reported to Jeremy alongside this file).
+`62bf345` on `computer_science_2` `main` — "Stitch Build and Verify Your Local AI Lab into CS2 Week 2" (includes this report file).
