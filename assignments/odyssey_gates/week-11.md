@@ -1,5 +1,7 @@
 # Odyssey Gate — Week 11 — Data Storytelling / Flex Clinic (S09 + S07)
 
+**Gate status:** active
+
 ## Required evidence
 
 Communicate a concise evidence-backed story from project/world data. Include

@@ -1,5 +1,7 @@
 # Odyssey Gate — Week 6 — Contract and Swap (S03/S08)
 
+**Gate status:** active
+
 ## Required evidence
 
 Define a collaborator promise, use an ABC/abstract method as an explicit example, and swap two conforming collaborators in a focused contract test. Explain the caller boundary; Protocol is optional comparison only.

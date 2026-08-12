@@ -1,5 +1,7 @@
 # Odyssey Gate — Week 3 — Cohesive Object Boundary (S01)
 
+**Gate status:** active
+
 ## Required evidence
 
 Build one cohesive world object with meaningful state and behavior. Show a focused test or trace and explain why the boundary belongs together. Include an AI evidence trail when AI helped.

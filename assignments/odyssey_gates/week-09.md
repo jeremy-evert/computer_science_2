@@ -1,5 +1,7 @@
 # Odyssey Gate — Week 9 — Compact GUI over Tested Model (S04)
 
+**Gate status:** active
+
 ## Required evidence
 
 Use the course Tkinter lab pattern to render real model state in a modest

@@ -1,5 +1,7 @@
 # Odyssey Gate — Week 2 — Light World Seed (ungraded)
 
+**Gate status:** optional_no_gate
+
 ## Required evidence
 
 Choose a genre/world and record a few possible nouns, flows, or questions only if it helps. This is optional light setup, not a technical gate, and no Odyssey construction is graded until Week 3.

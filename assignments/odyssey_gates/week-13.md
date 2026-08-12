@@ -1,5 +1,7 @@
 # Odyssey Gate — Week 13 — Culmination Design Review (S01–S08)
 
+**Gate status:** active
+
 ## Required evidence
 
 Show major creative construction substantially complete. Submit a runnable slice, important tests, design rationale, usable documentation, and clean enough history for recovery/review.
