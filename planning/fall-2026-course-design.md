@@ -11,7 +11,7 @@ Every Canvas/Savnac module has: **Week at a Glance** (purpose, objectives, path,
 | Week | Learning purpose and selected zyBooks | Student activity / evidence | Module readiness |
 |---|---|---|---|
 | 1 | Kickoff; diagnose COMSC-1033 carryover. Optional Ch. 9 classes review. | Environment/repository check; Odyssey choice. | Shared kickoff materials and diagnostic visible. |
-| 2–3 | Exceptions (required Ch. 10 non-lab sections). | Build and test recoverable error paths; Gates 2–3. | Exception examples, links, gate rubric. |
+| 2–3 | Exceptions (required Ch. 10 non-lab sections). Week 2 also carries the shared Build and Verify Your Local AI Lab readiness experience (`planning/week-02-local-ai-lab-integration.md`); canonical content stays in `local_ai_lab_setup`/`windows_classroom`. | Build and test recoverable error paths; Gates 2–3. Week 2: local-AI readiness check plus a bounded Aider-assisted repair, verified by independent diff/test review. | Exception examples, links, gate rubric. Local-AI lab crosswalk and readiness pointer published. |
 | 4 | Modules (required Ch. 11). | Extract a coherent module; Gate 4. | Import/reuse activity and rubric. |
 | 5 | Files (required Ch. 12). | Persist meaningful program state; Gate 5. | File/data activity and rubric. |
 | 6 | Integrate robustness, reuse, persistence. | Checkpoint 1 and debrief. | Checkpoint brief/rubric published. |
