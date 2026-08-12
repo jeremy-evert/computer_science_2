@@ -101,12 +101,14 @@ recursion, checkpoint, or paid resources expressly negate the old rule.
 - git diff --check: recorded after report creation before commit.
 - YAML parse: pass.
 - Week-plan heading and gate/rubric path checks: pass.
-- make task-check: unavailable (No rule to make target task-check).
-- make check: unavailable (No rule to make target check).
+- make task-check: unavailable: `make: *** No rule to make target 'task-check'.  Stop.`
+- make check: unavailable: `make: *** No rule to make target 'check'.  Stop.`
 - No repository-local AGENTS.md existed; top-level rules were followed.
 - Source reconciliation commit: e1f1b0e8eebf2b5d3bf24da1377b95a18fe5b8e9.
 - This report is committed separately as the companion receipt; push status
   and the final clean tree are verified after that commit.
+- Final receipt correction commit and push follow this report update; final
+  `git status --short --branch` was `## main...origin/main`.
 
 ## Next bounded task
 
