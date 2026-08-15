@@ -1,5 +1,11 @@
 # CS2 Fall 2026 zyBooks design pass
 
+> **Superseded 2026-08-15:** This is a historical design record, not the Fall
+> 2026 course plan. COMSC-1053 has no required textbook or external course;
+> the referenced zyBooks inventory and `planning/zybooks-section-decisions.csv`
+> remain provenance only and must not be read as assigned sections or student
+> dependencies.
+
 ## Evidence and result
 
 Used the durable CS2 TOC/manifest at `/mnt/brandy_nvme/jevert/durable/zybooks_captures/SWOSUCOMSC1053ZacharyFall2026/`, `course_metadata.yaml`, the 17 existing week plans, curriculum sequence/unit notes, lessons, Odyssey assignments/rubrics, and prior spine report. The durable TOC has 466 instructional sections in 32 chapters.

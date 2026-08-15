@@ -47,26 +47,30 @@ instructional_working_cadence:
   time: "1:00 PM"
   label: "Same as the official Banner meeting time above -- no separate planning cadence for this course."
 
-# Historical/control note reconciled 2026-08-12: the supplied course-specific Fall 2026 URL proves
-# the operational zyBook identifier, but not the display title, release,
-# roster, assignments, due dates, or LTI state. `Zachary` is vendor-supplied
-# and must remain exactly as written. Historical Canvas evidence remains
-# useful provenance, not current configuration evidence.
+# RECONCILED 2026-08-15: COMSC-1053 has no required textbook or external
+# course for Fall 2026. The prior zyBooks identifier and URL are retained
+# below only as dated historical provenance; they are not an adoption or
+# student requirement. `Zachary` is vendor-supplied and remains exactly as
+# originally supplied.
 textbook:
-  title: "TBD -- obtain the displayed title from the authorized Fall 2026 zyBooks page"
+  title: "No required textbook or external course for Fall 2026"
   authors: []
-  zybook_identifier: "SWOSUCOMSC1053ZacharyFall2026"
-  zybook_url: "https://learn.zybooks.com/zybook/SWOSUCOMSC1053ZacharyFall2026"
   main_chapters: []
   note: >-
-    Historical/control reference only. Fall 2026 COMSC-1053 does not require
-    ZyBooks or a paid textbook: its organizing path is course-owned Odyssey
-    work, shared Week 1/2 sources, and recommended no-cost references. This
-    URL does not establish visible title, release, roster, assignments, due
-    dates, or LTI state; do not infer any of them from archives.
+    Fall 2026 COMSC-1053 has no required textbook, paid resource, or external
+    course. Its organizing path is course-owned Odyssey work, shared Week 1/2
+    sources, and recommended no-cost references.
+  historical_zybooks_provenance:
+    reconciled: "2026-08-15"
+    zybook_identifier: "SWOSUCOMSC1053ZacharyFall2026"
+    zybook_url: "https://learn.zybooks.com/zybook/SWOSUCOMSC1053ZacharyFall2026"
+    note: >-
+      Superseded operational record retained as provenance from 2026-08-11.
+      It does not establish a visible title, release, roster, assignments,
+      due dates, LTI state, adoption, or student requirement.
 
 provenance:
   - source: "Jeremy's directly supplied Fall 2026 catalog/section record (jeremy_task_tracking/prompts/045_add_week_at_a_glance_for_other_three_classes.md)"
     covers: "course/official blocks"
   - source: "Jeremy, directly, 2026-08-11 (Fall 2026 zyBooks URL)"
-    covers: "textbook.zybook_identifier/textbook.zybook_url only"
+    covers: "textbook.historical_zybooks_provenance only (superseded as an operational record 2026-08-15)"

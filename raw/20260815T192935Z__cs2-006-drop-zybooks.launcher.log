@@ -1,0 +1,21 @@
+### cs2-006-drop-zybooks — Codex leaf via run_codex_leaf.sh (containerized, K4) ###
+### repo=/mnt/brandy_nvme/jevert/git/computer_science_2  model='default' ###
+gearbox-codex-20260815T192935Z-695730
+### confirmed dead: container gearbox-codex-20260815T192935Z-695730 is gone ###
+codex exit: 0  (137 = killed by the MAIN_TIMEOUT watchdog after 540s, OR by the TOOL_CALL_CEILING budget watchdog -- check for a 'BUDGET CEILING' line in $RAW to tell which)
+--- codex usage ---
+"usage":{"input_tokens":276778,"cached_input_tokens":244224,"cache_write_input_tokens":0,"output_tokens":7385,"reasoning_output_tokens":1484}
+--- codex final (brief summary) ---
+Completed the CS2 ZyBooks reconciliation.
+
+- Updated [course_metadata.yaml](/mnt/brandy_nvme/jevert/git/computer_science_2/course_metadata.yaml:50) to state no required textbook/external course, retaining the identifier and URL only as dated historical provenance.
+- Marked the former design pass as superseded in [reports/005_fall_2026_zybooks_design.md](/mnt/brandy_nvme/jevert/git/computer_science_2/reports/005_fall_2026_zybooks_design.md:3).
+- Added the requested full inventory/report: [reports/006_drop_zybooks_no_required_textbook.md](/mnt/brandy_nvme/jevert/git/computer_science_2/reports/006_drop_zybooks_no_required_textbook.md:1).
+- No grading, assignment structure, rubrics, or Reasoning Odyssey content changed.
+
+Validation: `git diff --check` passed. No pytest configuration or test files exist (0 found), so no pytest suite was run. YAML parser packages were unavailable in the environment; the edited YAML was manually inspected.--- (full stack, if needed: /mnt/brandy_nvme/jevert/git/computer_science_2/raw/20260815T192935Z__cs2-006-drop-zybooks.raw.txt) ---
+--- host pytest (AUTHORITY) ---
+
+no tests ran in 0.04s
+HOST EXIT: 5   RAW=/mnt/brandy_nvme/jevert/git/computer_science_2/raw/20260815T192935Z__cs2-006-drop-zybooks.raw.txt
+==> RED — read the raw; do not seal.
