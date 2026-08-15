@@ -1,4 +1,4 @@
-# Odyssey Gate — Week 3 — Cohesive Object Boundary (S01)
+# Reasoning Odyssey Gate — Week 3 — Cohesive Object Boundary (S01)
 
 **Gate status:** active
 

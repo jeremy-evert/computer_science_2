@@ -1,4 +1,4 @@
-# Odyssey Gate — Week 10 — Honest Visualization from Project Data (S09/S06/S08)
+# Reasoning Odyssey Gate — Week 10 — Honest Visualization from Project Data (S09/S06/S08)
 
 **Gate status:** active
 

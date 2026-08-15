@@ -1,8 +1,8 @@
-# A2 — Coding Odyssey Project
+# A2 — Reasoning Odyssey Project
 
 ## Purpose and boundary
 
-Coding Odyssey is CS2’s required authentic programming spine: a fresh
+Reasoning Odyssey is CS2’s required authentic programming spine: a fresh
 CS2-native codebase/world, inspired by prior experience but not a continuation
 of CS1 code. Pick one world—Frontier Settlement, Investigation Bureau,
 Starship Log, or Small Business—and let useful course capabilities serve the
@@ -22,7 +22,7 @@ build begins Week 3.
 | 9 | S04 compact GUI/events | thin Tkinter model/view feature, meaningful callback, and independent model test/trace |
 | 10 | S09 visualization | real world/project data, question, honest readable visual, chart-choice rationale |
 | 11 | S09 storytelling / flex | evidence-backed claim, limitation/uncertainty, and a design/operational decision; deeper structures optional |
-| 12–13 | S08 stabilization and culmination | tests, docs, design review, usable/recoverable project |
+| 12–13 | S08 synthesis, stabilization, and culmination | tests, docs, design review, usable/recoverable project; reflect on accumulated evidence rather than learn a new technical concept |
 | 14 | S08 workflow/reproducibility | history/recovery/collaboration/AI-review receipt; containers only after environment verification |
 
 A gate must fit the selected world. No universal hierarchy, recursion, chart,
@@ -39,7 +39,7 @@ choices. It is a project receipt, not duplicate homework.
 
 ## Week 16–17
 
-Week 16 is the shared Farkle/ML experience, not an Odyssey final checkpoint.
+Week 16 is the shared Farkle/ML experience, not a Reasoning Odyssey final checkpoint.
 Week 17 reflection draws on the final repository and World Bible; it is not a
 new technical build. See assignments/A5-final-reflection.md.
 

@@ -1,7 +1,7 @@
 # COMSC-1053 — Course Ethos and Weekly Contract
 
 CS2 is a supportive continuation course built around lecture, paired work,
-show-and-tell, AI fluency, professional development, and one Coding Odyssey
+show-and-tell, AI fluency, professional development, and one Reasoning Odyssey
 spine at greater technical depth. Shared Week 1 and Week 2 instructional
 bodies stay in their canonical repositories.
 
@@ -14,7 +14,7 @@ disclose AI help and verify every submitted change:
 **baseline → bounded proposal → diff → independent test → read/reason →
 accept or reject from evidence**.
 
-Weekly topic reinforcement occurs in Odyssey, not through a separate textbook
+Weekly topic reinforcement occurs in Reasoning Odyssey, not through a separate textbook
 problem-set treadmill. Short traces, decision cards, diagnostics, and pair
 exercises are useful deliberate practice but are not a second required
 curriculum. ZyBooks/Deitel are optional historical/control references, not

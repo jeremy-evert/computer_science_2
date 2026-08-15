@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 5 — Earned Substitution (S02)
+# Reasoning Odyssey gate rubric — Week 5 — Earned Substitution (S02)
 
 ## Capability evidence
 
@@ -14,4 +14,4 @@ For Week 05, assess the specific gate below without inflating scope:
 Where a true is-a relationship exists, demonstrate two subtypes receiving one shared operation with meaningfully different behavior; otherwise document why composition is the better design. Do not invent a hierarchy.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

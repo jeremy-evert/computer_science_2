@@ -1,0 +1,12 @@
+Reconciled CS2 to Reasoning Odyssey and wrote the required [reconciliation report](/mnt/brandy_nvme/jevert/git/computer_science_2/reports/005_reasoning_odyssey_fabric_reconciliation.md).
+
+Key points:
+
+- Preserved CS2’s Week 2 kickoff, four world options, World Bible, and existing gate sequence.
+- Reframed Weeks 12–13 as no-new-concept synthesis checkpoints with reflection in the existing World Bible.
+- Kept Week 2 ungraded and Week 16 retired/shared Farkle-ML.
+- Left historical/archive “Coding Odyssey” references unchanged and documented why.
+- Did not alter grading weights, point values, categories, or `course_metadata.yaml`.
+- Flagged the existing source gap: gate files lack explicit submission paths and point values, so none were invented.
+
+Validation: `git diff --check` passes. `pytest -q tests` collected 0 tests and exited 5 (“no tests ran”): 0 passed, 0 failed.

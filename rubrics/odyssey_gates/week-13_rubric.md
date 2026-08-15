@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 13 — Culmination Design Review (S01–S08)
+# Reasoning Odyssey synthesis-checkpoint rubric — Week 13 — Culmination Design Review (S01–S08)
 
 ## Capability evidence
 
@@ -11,7 +11,7 @@
 
 For Week 13, assess the specific gate below without inflating scope:
 
-Show major creative construction substantially complete. Submit a runnable slice, important tests, design rationale, usable documentation, and clean enough history for recovery/review.
+This synthesis checkpoint introduces no new technical concept. Show major creative construction substantially complete. Submit a runnable slice, important tests, design rationale, usable documentation, and clean enough history for recovery/review. The existing World Bible entry reflects on how the evidence supports the project’s readiness and what remains to recover or improve.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

@@ -1,4 +1,4 @@
-# Odyssey Gate — Week 7 — World-Fit Data Abstraction (S05)
+# Reasoning Odyssey Gate — Week 7 — World-Fit Data Abstraction (S05)
 
 **Gate status:** active
 

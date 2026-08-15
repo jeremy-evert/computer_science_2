@@ -1,0 +1,24 @@
+### cs2-005-reasoning-odyssey-fabric — Codex leaf via run_codex_leaf.sh (containerized, K4) ###
+### repo=/mnt/brandy_nvme/jevert/git/computer_science_2  model='default' ###
+gearbox-codex-20260815T165119Z-679608
+### confirmed dead: container gearbox-codex-20260815T165119Z-679608 is gone ###
+codex exit: 0  (137 = killed by the MAIN_TIMEOUT watchdog after 540s, OR by the TOOL_CALL_CEILING budget watchdog -- check for a 'BUDGET CEILING' line in $RAW to tell which)
+--- codex usage ---
+"usage":{"input_tokens":940784,"cached_input_tokens":879616,"cache_write_input_tokens":0,"output_tokens":12369,"reasoning_output_tokens":2534}
+--- codex final (brief summary) ---
+Reconciled CS2 to Reasoning Odyssey and wrote the required [reconciliation report](/mnt/brandy_nvme/jevert/git/computer_science_2/reports/005_reasoning_odyssey_fabric_reconciliation.md).
+
+Key points:
+
+- Preserved CS2’s Week 2 kickoff, four world options, World Bible, and existing gate sequence.
+- Reframed Weeks 12–13 as no-new-concept synthesis checkpoints with reflection in the existing World Bible.
+- Kept Week 2 ungraded and Week 16 retired/shared Farkle-ML.
+- Left historical/archive “Coding Odyssey” references unchanged and documented why.
+- Did not alter grading weights, point values, categories, or `course_metadata.yaml`.
+- Flagged the existing source gap: gate files lack explicit submission paths and point values, so none were invented.
+
+Validation: `git diff --check` passes. `pytest -q tests` collected 0 tests and exited 5 (“no tests ran”): 0 passed, 0 failed.--- (full stack, if needed: /mnt/brandy_nvme/jevert/git/computer_science_2/raw/20260815T165119Z__cs2-005-reasoning-odyssey-fabric.raw.txt) ---
+--- host pytest (AUTHORITY) ---
+/mnt/brandy_nvme/jevert/git/computer_science_2/.venv/bin/python: No module named pytest
+HOST EXIT: 1   RAW=/mnt/brandy_nvme/jevert/git/computer_science_2/raw/20260815T165119Z__cs2-005-reasoning-odyssey-fabric.raw.txt
+==> RED — read the raw; do not seal.

@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 8 — Search/Order Tradeoff (S05/S06)
+# Reasoning Odyssey gate rubric — Week 8 — Search/Order Tradeoff (S05/S06)
 
 ## Capability evidence
 
@@ -14,4 +14,4 @@ For Week 08, assess the specific gate below without inflating scope:
 Trace a lookup or ordering operation over real world state. Explain a qualitative cost/maintenance tradeoff and any sorted-data precondition. Do not add binary search unless the world earns it.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

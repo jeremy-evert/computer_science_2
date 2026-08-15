@@ -7,7 +7,7 @@ change, and test small Python programs with functions, collections, and
 introductory classes. Fall 2026 advances them through intentional object
 design, collaboration, data abstractions, honest data visualization and
 storytelling, a modest event-driven interface, and a reviewable professional
-workflow. The Coding Odyssey is the required
+workflow. The Reasoning Odyssey is the required
 authentic programming spine; it is a fresh CS2-native world, not a CS1 code
 continuation or a second weekly homework track.
 

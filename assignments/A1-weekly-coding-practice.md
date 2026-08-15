@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Coding Odyssey is the normal required authentic programming evidence for Fall
+Reasoning Odyssey is the normal required authentic programming evidence for Fall
 2026. It is one persistent CS2-native project, not a second mandatory
 standalone problem-set track.
 
@@ -10,12 +10,12 @@ standalone problem-set track.
 
 - Week 1: shared Success Foundations only.
 - Week 2: shared Local AI Lab readiness and bounded evidence reflection; an
-  ungraded world/genre seed is allowed, but no graded Odyssey build.
-- Weeks 3–14: the applicable Odyssey gate/review is the weekly technical
+  ungraded world/genre seed is allowed, but no graded Reasoning Odyssey build.
+- Weeks 3–14: the applicable Reasoning Odyssey gate/review is the weekly technical
   evidence. Major construction is substantially complete by Week 13; Week 14
   professionalizes/reviews the existing project.
 - Week 15: fully asynchronous and light; no technical gate.
-- Week 16: shared Farkle/ML applied fun, not an Odyssey checkpoint.
+- Week 16: shared Farkle/ML applied fun, not a Reasoning Odyssey checkpoint.
 - Week 17: reflection uses the repository as evidence; no new build.
 
 Short repetitions are welcome inside class or weekly learning: dispatch,

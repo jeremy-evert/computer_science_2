@@ -1,4 +1,4 @@
-# Odyssey Gate — Week 11 — Data Storytelling / Flex Clinic (S09 + S07)
+# Reasoning Odyssey Gate — Week 11 — Data Storytelling / Flex Clinic (S09 + S07)
 
 **Gate status:** active
 

@@ -1,4 +1,4 @@
-# Odyssey Gate — Week 9 — Compact GUI over Tested Model (S04)
+# Reasoning Odyssey Gate — Week 9 — Compact GUI over Tested Model (S04)
 
 **Gate status:** active
 

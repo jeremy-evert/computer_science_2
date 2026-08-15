@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 10 — Honest Visualization from Project Data (S09/S06/S08)
+# Reasoning Odyssey gate rubric — Week 10 — Honest Visualization from Project Data (S09/S06/S08)
 
 ## Capability evidence
 
@@ -18,4 +18,4 @@ alternative or visual pitfall, and retain runnable code/data or a reproducible
 trace. Plotting syntax alone is not the evidence.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

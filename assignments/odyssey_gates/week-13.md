@@ -1,10 +1,10 @@
-# Odyssey Gate — Week 13 — Culmination Design Review (S01–S08)
+# Reasoning Odyssey Synthesis Checkpoint — Week 13 — Culmination Design Review (S01–S08)
 
 **Gate status:** active
 
 ## Required evidence
 
-Show major creative construction substantially complete. Submit a runnable slice, important tests, design rationale, usable documentation, and clean enough history for recovery/review.
+This synthesis checkpoint introduces no new technical concept. Show major creative construction substantially complete. Submit a runnable slice, important tests, design rationale, usable documentation, and clean enough history for recovery/review. Reflect in the existing World Bible entry on how the evidence supports the project’s readiness and what remains to recover or improve.
 
 Keep one concise World Bible entry: what changed, evidence used, and any
 remaining debt. This is a small growth gate, not a weekly mini-project.

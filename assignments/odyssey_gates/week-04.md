@@ -1,4 +1,4 @@
-# Odyssey Gate — Week 4 — Collaborating Objects and Invariant (S01/S08)
+# Reasoning Odyssey Gate — Week 4 — Collaborating Objects and Invariant (S01/S08)
 
 **Gate status:** active
 

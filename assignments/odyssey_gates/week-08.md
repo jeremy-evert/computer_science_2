@@ -1,4 +1,4 @@
-# Odyssey Gate — Week 8 — Search/Order Tradeoff (S05/S06)
+# Reasoning Odyssey Gate — Week 8 — Search/Order Tradeoff (S05/S06)
 
 **Gate status:** active
 

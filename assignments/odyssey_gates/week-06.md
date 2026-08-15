@@ -1,4 +1,4 @@
-# Odyssey Gate — Week 6 — Contract and Swap (S03/S08)
+# Reasoning Odyssey Gate — Week 6 — Contract and Swap (S03/S08)
 
 **Gate status:** active
 

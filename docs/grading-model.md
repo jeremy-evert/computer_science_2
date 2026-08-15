@@ -2,7 +2,7 @@
 
 ## What is settled here
 
-CS2 uses no traditional technical tests. Coding Odyssey gates/reviews are the
+CS2 uses no traditional technical tests. Reasoning Odyssey gates/reviews are the
 required technical-practice spine; there is no second required standalone
 weekly problem-set track. Deliberate micro-practice may be in-class,
 low-stakes, optional, or bonus, but no bonus quantity is set here. The final
@@ -17,13 +17,13 @@ as a new decision in this reconciliation.
 | Period | Technical grading evidence |
 |---|---|
 | Week 1 | shared foundations; no CS2 gate |
-| Week 2 | shared local-AI readiness/evidence reflection; no graded Odyssey build |
+| Week 2 | shared local-AI readiness/evidence reflection; no graded Reasoning Odyssey build |
 | Weeks 3–9 | capability gates for S01–S06 and compact S04 GUI/event evidence |
 | Weeks 10–11 | S09 visualization/storytelling evidence; Week 11 remains a meaningful flex/refinement option, not mandatory recursion |
 | Weeks 12–13 | stabilization, peer/design review, major construction culmination |
 | Week 14 | source-management/collaboration/AI-review receipt; bounded container work only after runtime verification |
 | Week 15 | no required technical gate |
-| Week 16 | shared Farkle/ML applied experience, not an Odyssey checkpoint |
+| Week 16 | shared Farkle/ML applied experience, not a Reasoning Odyssey checkpoint |
 | Week 17 | final reflection using repository evidence |
 
 ## Remaining syllabus decisions

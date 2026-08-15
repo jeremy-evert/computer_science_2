@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 11 — Data Storytelling / Flex Clinic (S09 + S07)
+# Reasoning Odyssey gate rubric — Week 11 — Data Storytelling / Flex Clinic (S09 + S07)
 
 ## Capability evidence
 
@@ -20,4 +20,4 @@ equally valid. A recursive, linked, or nested structure is welcome only when
 it clarifies this world.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

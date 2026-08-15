@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 2 — Light World Seed (ungraded)
+# Reasoning Odyssey gate rubric — Week 2 — Light World Seed (ungraded)
 
 ## Capability evidence
 
@@ -11,7 +11,7 @@
 
 For Week 02, assess the specific gate below without inflating scope:
 
-Choose a genre/world and record a few possible nouns, flows, or questions only if it helps. This is optional light setup, not a technical gate, and no Odyssey construction is graded until Week 3.
+Choose a genre/world and record a few possible nouns, flows, or questions only if it helps. This is optional light setup, not a technical gate, and no Reasoning Odyssey construction is graded until Week 3.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

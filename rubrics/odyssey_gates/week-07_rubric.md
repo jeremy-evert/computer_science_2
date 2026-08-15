@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 7 — World-Fit Data Abstraction (S05)
+# Reasoning Odyssey gate rubric — Week 7 — World-Fit Data Abstraction (S05)
 
 ## Capability evidence
 
@@ -14,4 +14,4 @@ For Week 07, assess the specific gate below without inflating scope:
 Choose a real List ADT, stack, or queue flow. State the client operations, demonstrate LIFO/FIFO or list behavior with a trace, and explain why this abstraction fits better than treating Python list syntax as the concept.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

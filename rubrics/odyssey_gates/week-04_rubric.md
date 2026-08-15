@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 4 — Collaborating Objects and Invariant (S01/S08)
+# Reasoning Odyssey gate rubric — Week 4 — Collaborating Objects and Invariant (S01/S08)
 
 ## Capability evidence
 
@@ -14,4 +14,4 @@ For Week 04, assess the specific gate below without inflating scope:
 Refactor a real flow into collaborating objects using composition. Protect one invariant with a test/trace and explain why composition fits better than an unnecessary hierarchy.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

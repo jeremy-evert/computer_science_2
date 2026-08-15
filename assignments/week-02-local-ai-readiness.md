@@ -50,7 +50,7 @@ force for all CS2 work (`docs/course-ethos.md`,
 This activity is part of Week 2's existing weekly-reinforcement grading
 category (`assignments/A1-weekly-coding-practice.md`,
 `docs/grading-model.md`); no new grading weight is introduced here. Exact
-point allocation between this activity and the Week 2 Odyssey gate is not
+point allocation between this activity and the Week 2 Reasoning Odyssey gate is not
 yet decided and is not asserted by this file.
 
 ## Status

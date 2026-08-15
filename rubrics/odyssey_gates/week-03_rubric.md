@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 3 — Cohesive Object Boundary (S01)
+# Reasoning Odyssey gate rubric — Week 3 — Cohesive Object Boundary (S01)
 
 ## Capability evidence
 
@@ -14,4 +14,4 @@ For Week 03, assess the specific gate below without inflating scope:
 Build one cohesive world object with meaningful state and behavior. Show a focused test or trace and explain why the boundary belongs together. Include an AI evidence trail when AI helped.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

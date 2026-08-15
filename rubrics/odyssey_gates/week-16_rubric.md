@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 16 — Shared Farkle/ML Reservation
+# Reasoning Odyssey gate rubric — Week 16 — Shared Farkle/ML Reservation
 
 ## Capability evidence
 
@@ -11,7 +11,7 @@
 
 For Week 16, assess the specific gate below without inflating scope:
 
-No Odyssey checkpoint. This wrapper reserves the shared applied-fun experience: use CS2 design thinking to discuss state, actions, reward, repeated play, behavior change, and evidence. Shared lesson authoring remains upstream.
+No Reasoning Odyssey checkpoint. This wrapper reserves the shared applied-fun experience: use CS2 design thinking to discuss state, actions, reward, repeated play, behavior change, and evidence. Shared lesson authoring remains upstream.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

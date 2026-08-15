@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 14 — Professional Workflow Receipt (S08)
+# Reasoning Odyssey gate rubric — Week 14 — Professional Workflow Receipt (S08)
 
 ## Capability evidence
 
@@ -11,7 +11,7 @@
 
 For Week 14, assess the specific gate below without inflating scope:
 
-Using the real Odyssey repository, inspect history; recover/revert a bounded change safely; use branch/merge or equivalent collaboration; review a bounded AI change from diff/tests/reasoning; and record change, test, and recovery evidence. Containers are conceptual only until classroom runtime is verified.
+Using the real Reasoning Odyssey repository, inspect history; recover/revert a bounded change safely; use branch/merge or equivalent collaboration; review a bounded AI change from diff/tests/reasoning; and record change, test, and recovery evidence. Containers are conceptual only until classroom runtime is verified.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

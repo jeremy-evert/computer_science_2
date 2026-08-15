@@ -1,4 +1,4 @@
-# Odyssey gate rubric — Week 9 — Compact GUI over Tested Model (S04)
+# Reasoning Odyssey gate rubric — Week 9 — Compact GUI over Tested Model (S04)
 
 ## Capability evidence
 
@@ -17,4 +17,4 @@ the student explains the model/view boundary and event flow. Model behavior is
 tested or traced without trusting the GUI alone.
 
 Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Odyssey checkpoint.
+only and does not revive a final Reasoning Odyssey checkpoint.

@@ -1,4 +1,4 @@
-# Odyssey Gate — Week 5 — Earned Substitution (S02)
+# Reasoning Odyssey Gate — Week 5 — Earned Substitution (S02)
 
 **Gate status:** active
 
