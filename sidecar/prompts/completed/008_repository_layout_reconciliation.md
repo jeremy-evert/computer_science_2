@@ -1,5 +1,6 @@
 # Sidecar Prompt 008 — Repository layout reconciliation
 
+**Status:** CLOSED — accepted 2026-08-15, see `sidecar/reports/008_repository_layout_reconciliation.md`
 **Status:** BLOCKED ON PROMPT 007
 **Owner:** Foreman
 **Prerequisite:** accepted `sidecar/reports/007_repository_recon_and_context_map.md`

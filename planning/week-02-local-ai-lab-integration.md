@@ -57,5 +57,5 @@ shared module. Graded Reasoning Odyssey construction begins Week 3.
 ## Unresolved, not inferred
 
 - Exact Monday/Wednesday/Friday time allocation between exceptions and the local-AI lab.
-- Canvas/Savnac deployment of this module for CS2 (not performed by this stitch; see `reports/006_week2_local_ai_stitch.md`).
+- Canvas/Savnac deployment of this module for CS2 (not performed by this stitch; see `sidecar/reports/006_week2_local_ai_stitch.md`).
 - Final resolution of the `[WINDOWS CAPTURE: ...]` media placeholders, owned by `local_ai_lab_setup`.

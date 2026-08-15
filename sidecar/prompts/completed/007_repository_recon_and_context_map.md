@@ -1,5 +1,6 @@
 # Sidecar Prompt 007 — Repository recon and context map
 
+**Status:** CLOSED — accepted 2026-08-15, see `sidecar/reports/007_repository_recon_and_context_map.md`
 **Status:** OPEN
 **Owner:** Foreman
 **Mode:** read first, report only
