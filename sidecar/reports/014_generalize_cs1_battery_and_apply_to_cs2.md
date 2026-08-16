@@ -222,11 +222,37 @@ documented for CS1 in this campaign — not a system defect.
 
 ### Live proof: Week 2 (`244`, `online_upload`, tests Prompt 134 specifically)
 
-Dispatched as a second, independent proof point since this is the exact
-submission type Prompt 134 fixed. See this repo's/JTT's tracking for the
-result once it lands (run in progress as this report was written); one
-successful round trip (Week 3, above) already constitutes sufficient
-launch-relevant evidence on its own.
+First attempt found a real bug: `poller.py` called
+`harbor.api.extract_attachment_text(attachment, content)` against the real
+`(content: bytes, filename: str)` signature — Prompt 134's own fully-mocked
+tests never caught it since each mock only checked its own recorded (wrong)
+call shape, never the real function's contract. Separately, Harbor's
+`extract_attachment_text` never supported `.md`/`.txt` at all — only
+`.py`/`.pdf` — which would have silently defeated even a correctly-called
+fix, since CS2's real Week 2 submission is `local-ai-readiness.md`. Both
+fixed live: `course_foundry` `e56b2b8` (argument order + a new integration
+test using the real unmocked function so this class of bug can't hide
+behind mocks again), `harbor` `91c1e40` (`.md`/`.markdown`/`.txt`
+extraction support, mirroring the existing `.py` pattern).
+
+Re-ran the proof clean after both fixes (course id 3, assignment 244):
+
+| round | T0 submitted | T1 feedback visible |
+|---|---|---|
+| round 1 | 2026-08-16T13:51:42Z | 2026-08-16T14:04:59Z (~13m) |
+| round 2 (feedback-informed) | 2026-08-16T14:06:30Z | 2026-08-16T14:12:35Z (~6m) |
+
+Independently verified against live Canvas directly (`GET
+/api/v1/courses/3/assignments/244/submissions/6?include[]=submission_comments`,
+not the driver's own report): two real comments, `2026-08-16T14:07:36Z` and
+`2026-08-16T14:15:12Z`, matching dispatch receipt tags and scores exactly
+(13/20 then 14/20 — a real, non-static change after the feedback-informed
+resubmission). Same honest escalate-not-fabricate pattern as Week 3. This
+proves the `online_upload` submission path (Prompt 132) and the
+attachment-extraction grading path (Prompt 134 plus these two live-found
+fixes) work together end to end for CS2 — both of CS2's real submission
+types (`online_text_entry` and `online_upload`) are now proven, not just
+one.
 
 ## Foreman acceptance
 
