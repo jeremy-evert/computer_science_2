@@ -1,0 +1,11 @@
+{
+  "repository": "jeremy-evert/computer_science_1",
+  "commit": "b546ca2f846ea0c788ad17e5667b8b471efb33fa",
+  "vendored_on": "2026-08-16",
+  "source_blobs": {
+    "lessons/code/farkle/engine.py": "55a333c93346cb72d7b2e75b1c1b19ce117f9511",
+    "lessons/code/farkle/strategies.py": "c62cd13ad3e8bff8a0a3142e7cb9760756806d18",
+    "lessons/code/farkle/learner.py": "e22257215684e8602fab19c6bc608bf7b513879f",
+    "lessons/code/farkle/simulate.py": "564579f65b16d50d920c43aa68930f3e318d8497"
+  }
+}
