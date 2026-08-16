@@ -147,6 +147,34 @@ question. No question-tracking repository was changed here.
 - No Canvas, Savnac, ZyBooks, `course_foundry`, or production-system writes
   were performed.
 
+## Foreman verification (2026-08-15/16)
+
+Independently reviewed the full diff (37 files, `NAMING.md`/`README.md`/
+`ROADMAP.md`/`START_HERE.md`/`docs/repo-map.md`/templates, the grading model,
+all 12 Week 3–14 gate+rubric point declarations, and A3/A4/A6/A7). No CS1
+course-code/name/date residue found in course content (only in this report's
+own analysis prose, as expected). Confirmed via `git status` in
+`computer_science_1`, `professional_minds`, `ai_fluency`, `swosu_cs_curriculum`,
+`jeremy_task_tracking`, and `course_foundry` that this dispatch wrote only
+inside `computer_science_2/` and left `course_foundry`'s live overnight
+zero-submission drain untouched.
+
+**Candidate Jeremy question resolved by direct live precedent, not escalated:**
+checked Savnac course 1 (CS1) live via `GET /api/v1/courses/1/assignment_groups`
+— CS1's own "Coding Odyssey checkpoints" group is already deployed at
+`group_weight=15.0` today, proving Canvas/Savnac's weighted-group mechanism
+already handles a group whose member objects carry different point totals
+(standard Canvas behavior: a weighted group's contribution to the final grade
+is fixed at its `group_weight`; individual assignment points only set
+relative weight *within* the group). CS2's proposed 40/50/60-point Weeks
+6/9/14 checkpoints inside its own 15% group will behave identically once
+deployed the same way. No implementation or policy risk found; no
+`jeremy_task_tracking/questions/` entry needed for this item.
+
+**Verdict: ACCEPT.** Merging `golem/cs2-010-grading-parity` to `main` and
+moving `sidecar/prompts/010_steal_from_cs1_until_proven_wrong.md` to
+`sidecar/prompts/completed/`.
+
 ## Traceability and handoff
 
 The implementation is committed as `f855dfb10efd7ff0e9b6bf253071e36c6d16711e`.
