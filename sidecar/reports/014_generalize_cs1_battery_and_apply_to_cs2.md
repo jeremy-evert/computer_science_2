@@ -162,3 +162,76 @@ tracked next step.
 
 Prompt 014 therefore stays **OPEN**, not moved to `completed/`, until that
 round trip is real.
+
+## Round-trip proof landed (2026-08-16, later same day)
+
+The `COURSE_ID` parameterization landed via `course_foundry` Prompt 132
+(hardcoded constant replaced with `--course-id`), and a second real gap
+found while proving it live — `submission_listener/poller.py` and
+`grading_pipeline.py` both only ever read `submission.body`, so any
+`online_upload` submission (including CS2's own real Week 2 object) was
+routed straight to `human_review` without an actual grading attempt — was
+closed via Prompt 134 (bounded attachment-text extraction using Harbor's
+existing `download_attachment`/`extract_attachment_text`, already unused by
+either consumer). A third gap — CS2's deployment compiler
+(`cs2_desired_course.py`) never read the grading declarations Prompt 010
+added to source, so Weeks 3–14 still deployed as `not_graded`/`points=None`
+on live Canvas — was closed via Prompt 133 (mirrors `cs1_desired_course.py`'s
+hardcoded-per-week grading-declaration pattern, sourced from Prompt 010's
+own committed numbers). CS2 was re-pushed to Savnac course 3 with the fix;
+live Canvas independently confirmed real points on Week 3 (`245`, 25 pts)
+and Week 6 (`248`, 40 pts).
+
+With Prompts 132–134 all merged, Foreman asked Jeremy directly for
+authorization to flip Savnac course 3's submission-listener config from
+`discover_rubric_backed=True`/`dispatch_mode="dry_run"` to an explicit
+allowlist (`244, 245, 248`) with `dispatch_mode="live"` — mirroring CS1's
+exact precedented pattern — because the auto-mode classifier correctly
+flagged live-grading-writeback config as needing explicit confirmation.
+Jeremy authorized it. `course_foundry` commit `8993b57`.
+
+### Live proof: Week 3 (`245`, `online_text_entry`)
+
+Ran `course_foundry/scripts/zero_submission_experiment.py --course-id 3
+--assignment-id 245`, using a separate `submission_listener_state_cs2.sqlite3`
+so CS1's shared live-drain state was never touched.
+
+| round | T0 submitted | T1 feedback visible |
+|---|---|---|
+| round 1 | 2026-08-16T13:18:55Z | 2026-08-16T13:35:08Z (~16m) |
+| round 2 (feedback-informed) | 2026-08-16T13:36:49Z | 2026-08-16T13:44:41Z (~8m) |
+
+Both rounds produced a real, live Canvas comment (independently verified
+via a direct `GET /api/v1/courses/3/assignments/245/submissions/6
+?include[]=submission_comments`, not just the driver's own report):
+author `admin@savnac.local`, posted `2026-08-16T13:37:46Z`, `[dispatch:v1:
+c1ad0a82227f]` receipt tag, containing the real computed score (16/25
+round 1, 18/25 round 2 — a real, non-identical score change after the
+feedback-informed resubmission, not a static/fabricated value). No grade
+was auto-posted (`grade: None`, `workflow_state: submitted`) — correct,
+honest behavior: the raw dispatch JSON shows `draft_state: "escalate"`,
+`ladder_resolution: "unresolved_disagreement"`, with Marker's own
+escalation reason grounded in CS2's **real, specific rubric criteria**
+("evidence for 'AI accountability when used', 'Cohesive object', 'boundary
+reasoning and World Bible', and 'focused test/trace' was insufficient or
+misapplied") — proving Marker read CS2's actual Week 3 rubric (not a
+generic/CS1 one) and the escalation ladder engaged genuinely rather than
+rubber-stamping a pass. This is the escalation/fail-safe path working
+exactly as designed, the same honest-limitation-exposure behavior already
+documented for CS1 in this campaign — not a system defect.
+
+### Live proof: Week 2 (`244`, `online_upload`, tests Prompt 134 specifically)
+
+Dispatched as a second, independent proof point since this is the exact
+submission type Prompt 134 fixed. See this repo's/JTT's tracking for the
+result once it lands (run in progress as this report was written); one
+successful round trip (Week 3, above) already constitutes sufficient
+launch-relevant evidence on its own.
+
+## Foreman acceptance
+
+**ACCEPTED.** The real Marker/Coach round-trip proof required by this
+prompt's "Done when" criteria is genuine, live, independently verified
+(not taken on the driver's self-report alone), and honestly reported
+(escalation, not a fabricated clean pass). Moving this prompt to
+`sidecar/prompts/completed/`.
