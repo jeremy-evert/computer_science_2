@@ -97,10 +97,68 @@ timestamps without placing them in this report.
   embed its own SHA without changing that SHA. Foreman promotion remains
   pending.
 
-## Limitations and next action
+## Foreman host follow-up (2026-08-16)
 
-The container cannot prove real course-3 enrollment or a real Marker/Coach
-round trip. Foreman must run the bounded live adapter, preserve protected
-receipts, and append the observed aggregate counts/timestamps/evidence to the
-operational record before accepting Prompt 014. No next prompt was drafted or
-executed.
+### Fixed before merge
+
+The container's `scripts/cs2_battery.json` selected the wrong Week 2 source:
+`computer_science_2/assignments/odyssey_gates/week-02.md` is explicitly
+`optional_no_gate` ("Light World Seed", ungraded) — not the real graded Week
+2 object. The actual graded Week 2 readiness assignment is the shared
+`local_ai_lab_setup/curriculum/shared/week2/12_readiness_assignment.md` (20
+points, real rubric at `readiness_assignment_rubric.md`). Repointed
+`course_repo` at the git parent so the battery can select source/rubric
+pairs across sibling repos, corrected the three configured items to Week
+2 (shared, 20 pts) / Week 3 (25 pts) / Week 6 (40 pts), and widened the
+points regex to also recognize "Total: N points" (the readiness rubric's
+own phrasing). Verified: `plan` now reports the correct 20/25/40 points;
+mock suite still 4/4 green. Committed on the golem branch before merge
+(`swosu_cs_curriculum` `f950ac2`), merged to main (`c1ec9ff`), pushed.
+
+### Live enrollment — DONE
+
+Wrote `swosu_cs_curriculum/scripts/savnac_battery_adapter.py`, the
+credentialed host adapter the prompt called for (never runs in a
+container). It resolves `agent-student-*` Canvas user IDs from their
+existing CS1 (course 1) enrollment — this pool of real Savnac accounts
+already exists, this adapter never creates a new Canvas user — then calls
+`reconcile_pool` against course 3's live enrollment list and
+`harbor.api.create_enrollment` for anything missing.
+
+Ran it live on host (Savnac env sourced, `require_host_marker` guard
+passed): `{'requested': 2, 'already_active': 0, 'enrolled': 2,
+'untouched_existing_enrollments': 1}`. Independently re-verified via a
+direct `GET /api/v1/courses/3/enrollments`: `agent-student-1@savnac.local`
+(user 6) and `agent-student-2@savnac.local` (user 7) both show
+`enrollment_state=active` in course 3. Committed to `swosu_cs_curriculum`
+main directly (adapter is host-only infrastructure, not a proof artifact).
+
+### Bounded Marker/Coach round-trip proof — NOT YET DONE, real reason
+
+`course_foundry/scripts/zero_submission_experiment.py` (the CS1 campaign's
+proven round-trip driver, the tool this prompt's proof step was meant to
+reuse) hardcodes `COURSE_ID = 1` in roughly ten places and reads/writes
+`submission_listener_state.sqlite3` — the exact same state database the
+live overnight CS1 zero-submission queue drain (154-item campaign,
+`course_foundry` PID tracked separately) is actively using at the time of
+this pass. Pointing that script at course 3 today would require either (a)
+parameterizing `COURSE_ID` throughout the driver — real additional
+engineering, not a config tweak, and out of this prompt's built-tooling
+scope — or (b) running it against the shared state db concurrently with
+the live drain, which risks corrupting or confusing that in-flight,
+valuable campaign. Neither is safe to improvise under time pressure while
+the drain is running.
+
+**Decision: defer the live submission/grading round-trip proof rather than
+force it unsafely.** Central tooling, CS2 grading parity (Prompt 010), CS2
+Savnac imprint (Prompt 013's imprint step), and live course-3 enrollment
+are all real and done. The remaining gap is narrow and well-defined: either
+parameterize `zero_submission_experiment.py`'s `COURSE_ID` (and give it a
+non-shared state-db path per course) as a small follow-up, or simply wait
+for the overnight CS1 drain to finish before running an unparameterized
+course-3 proof by hand using the same underlying Marker/Coach pipeline. See
+`jeremy_task_tracking/TASKS.md`'s "CS2 Savnac parity push" section for the
+tracked next step.
+
+Prompt 014 therefore stays **OPEN**, not moved to `completed/`, until that
+round trip is real.
