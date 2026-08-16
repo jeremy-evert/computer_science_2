@@ -1,5 +1,8 @@
 # Reasoning Odyssey gate rubric — Week 8 — Search/Order Tradeoff (S05/S06)
 
+**Score: 25 points.** Real lookup/order fit 8; trace and precondition 7;
+cost/maintenance reasoning and World Bible 6; AI accountability when used 4.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

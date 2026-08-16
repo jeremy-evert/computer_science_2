@@ -1,5 +1,8 @@
 # Reasoning Odyssey gate rubric — Week 7 — World-Fit Data Abstraction (S05)
 
+**Score: 25 points.** World-fit abstraction 8; correct operation trace 7;
+client-operation reasoning and World Bible 6; AI accountability when used 4.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

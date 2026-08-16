@@ -1,5 +1,9 @@
 # Reasoning Odyssey gate rubric — Week 14 — Professional Workflow Receipt (S08)
 
+**Score: 60 points.** Bounded recovery/collaboration/review workflow 20;
+diff, tests, history, and receipt 15; evidence-backed Full Trail Debrief 15;
+AI review/accountability and World Bible 10.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

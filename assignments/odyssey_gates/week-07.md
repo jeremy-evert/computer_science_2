@@ -2,6 +2,12 @@
 
 **Gate status:** active
 
+**Grading:** 25 points; Weekly reinforcement assignment (25% group);
+`online_text_entry` plus code/evidence upload or repository link.
+
+Submit the world-fit list/stack/queue operation, trace, abstraction rationale,
+and World Bible entry.
+
 ## Required evidence
 
 Choose a real List ADT, stack, or queue flow. State the client operations, demonstrate LIFO/FIFO or list behavior with a trace, and explain why this abstraction fits better than treating Python list syntax as the concept.

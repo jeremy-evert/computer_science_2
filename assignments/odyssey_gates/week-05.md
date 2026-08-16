@@ -2,6 +2,12 @@
 
 **Gate status:** active
 
+**Grading:** 25 points; Weekly reinforcement assignment (25% group);
+`online_text_entry` plus code/evidence upload or repository link.
+
+Submit the genuine subtype substitution or the evidence-based composition
+decision, the differing behavior/trace, rationale, and World Bible entry.
+
 ## Required evidence
 
 Where a true is-a relationship exists, demonstrate two subtypes receiving one shared operation with meaningfully different behavior; otherwise document why composition is the better design. Do not invent a hierarchy.

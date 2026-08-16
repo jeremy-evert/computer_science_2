@@ -2,6 +2,13 @@
 
 **Gate status:** active
 
+**Grading:** 25 points; Weekly reinforcement assignment (25% group);
+`online_text_entry` plus code/evidence upload or repository link.
+
+Submit the composition refactor, invariant test/trace, rationale, and World
+Bible entry. Evidence must show collaborating objects and the protected
+invariant, not a toy hierarchy.
+
 ## Required evidence
 
 Refactor a real flow into collaborating objects using composition. Protect one invariant with a test/trace and explain why composition fits better than an unnecessary hierarchy.
