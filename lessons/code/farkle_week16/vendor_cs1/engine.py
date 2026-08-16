@@ -28,7 +28,6 @@ def score_roll(dice):
     counts = {value: dice.count(value) for value in range(1, 7)}
     points = 0
     dice_used = 0
-
     for value in range(1, 7):
         count = counts[value]
         if count >= 3:
@@ -36,7 +35,6 @@ def score_roll(dice):
             points += base * (2 ** (count - 3))
             dice_used += count
             counts[value] = 0
-
     points += counts[1] * 100
     dice_used += counts[1]
     points += counts[5] * 50
@@ -63,44 +61,33 @@ def take_turn(rng, strategy, total_score, target_score=DEFAULT_TARGET_SCORE,
               opponent_score=None, trace=None):
     dice_remaining = NUM_DICE
     turn_score = 0
-
     while True:
         dice = roll_dice(dice_remaining, rng)
         points, used = score_roll(dice)
-
         if trace is not None:
             trace.append(
                 f"  rolled {dice} -> scores {points} points using {used} of the dice"
             )
-
         if is_farkle(points):
             if trace is not None:
                 trace.append(
                     f"  FARKLE -- turn ends, {turn_score} points lost"
                 )
             return 0
-
         turn_score += points
         dice_remaining -= used
         if dice_remaining == 0:
             dice_remaining = NUM_DICE
             if trace is not None:
                 trace.append("  hot dice! rolling all 6 again")
-
         state = build_state(
             turn_score, dice_remaining, total_score, target_score, opponent_score
         )
         action = strategy(state)
-        if action not in ("roll", "bank"):
-            raise ValueError(
-                f"strategy returned {action!r}; expected 'roll' or 'bank'"
-            )
-
         if trace is not None:
             trace.append(
                 f"  turn score now {turn_score}, {dice_remaining} dice left "
                 f"-> strategy says {action.upper()}"
             )
-
         if action == "bank":
             return turn_score
