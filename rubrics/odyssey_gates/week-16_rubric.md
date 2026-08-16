@@ -1,17 +1,27 @@
-# Reasoning Odyssey gate rubric — Week 16 — Shared Farkle/ML Reservation
+# Reasoning Odyssey gate rubric — Week 16 — retired
 
-## Capability evidence
+There is no Week 16 Reasoning Odyssey checkpoint or new technical-final rubric.
 
-| Criterion | Meets expectation |
-|---|---|
-| World fit/build | The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded. |
-| Evidence | A test, trace, run, diff, or review receipt supports the claimed behavior. |
-| Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
-| AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
+The implemented Farkle + ML experience uses the separate light receipt:
 
-For Week 16, assess the specific gate below without inflating scope:
+`assignments/W16-farkle-ml-design-receipt.md`
 
-No Reasoning Odyssey checkpoint. This wrapper reserves the shared applied-fun experience: use CS2 design thinking to discuss state, actions, reward, repeated play, behavior change, and evidence. Shared lesson authoring remains upstream.
+If the standing grading model treats this artifact as shared participation/reflection evidence, evaluate only whether the student produced real, reproducible evidence and a defensible design judgment. Do not invent a new numeric weight here.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
-only and does not revive a final Reasoning Odyssey checkpoint.
+## Evidence qualities to look for
+
+- **Contract awareness:** student can name what stayed stable while strategy implementation changed.
+- **Reproducibility:** saved result includes seed, game count, strategy/configuration, and execution context.
+- **Honest evidence:** claim is supported by actual saved result/plot rather than a lucky anecdote.
+- **Tradeoff reasoning:** student distinguishes effectiveness, preparation cost, runtime cost, and software complexity instead of calling one number universally "best."
+- **Data storytelling:** chart answers a stated question, has a supported takeaway, and names a limitation.
+- **AI accountability:** if AI helped, student records proposal/use and independent evidence behind the accept/reject/revise decision.
+
+Do not grade on:
+
+- a required win rate;
+- using the most expensive strategy;
+- GPU/cloud access;
+- building a GUI;
+- implementing reinforcement-learning mathematics;
+- rewriting the Farkle engine.
