@@ -1,5 +1,9 @@
 # Reasoning Odyssey gate rubric — Week 5 — Earned Substitution (S02)
 
+**Score: 25 points.** Genuine substitution or composition decision 8;
+behavior/decision evidence 7; trade-off reasoning and World Bible 6; AI
+accountability when used 4.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

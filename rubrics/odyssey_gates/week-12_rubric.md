@@ -1,5 +1,10 @@
 # Reasoning Odyssey synthesis-checkpoint rubric — Week 12 — Stabilization and Peer-Review Preparation (S08)
 
+**Score: 25 points.** Stabilized world-fit slice 8; tests and runnable
+instructions 7; documentation/debt reasoning and World Bible 6; AI
+accountability when used 4. This is a weekly reinforcement gate, not one of
+the larger Weeks 6/9/14 checkpoints.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

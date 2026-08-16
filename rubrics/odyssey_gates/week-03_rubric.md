@@ -1,5 +1,8 @@
 # Reasoning Odyssey gate rubric — Week 3 — Cohesive Object Boundary (S01)
 
+**Score: 25 points.** Cohesive object 8; focused test/trace 7; boundary
+reasoning and World Bible 6; AI accountability when used 4.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

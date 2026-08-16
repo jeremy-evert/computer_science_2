@@ -1,5 +1,10 @@
 # Reasoning Odyssey synthesis-checkpoint rubric — Week 13 — Culmination Design Review (S01–S08)
 
+**Score: 25 points.** Substantially complete world-fit construction 8;
+run/tests/history 7; design rationale and documentation 6; AI accountability
+when used 4. This is a weekly reinforcement gate, not one of the larger
+Weeks 6/9/14 checkpoints.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

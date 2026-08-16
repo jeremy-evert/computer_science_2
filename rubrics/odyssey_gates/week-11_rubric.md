@@ -1,5 +1,9 @@
 # Reasoning Odyssey gate rubric — Week 11 — Data Storytelling / Flex Clinic (S09 + S07)
 
+**Score: 25 points.** Evidence-backed story or justified reinforcement 8;
+supporting evidence 7; limitation/decision reasoning and World Bible 6; AI
+accountability when used 4.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

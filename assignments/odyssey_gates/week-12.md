@@ -2,6 +2,12 @@
 
 **Gate status:** active
 
+**Grading:** 25 points; Weekly reinforcement assignment (25% group);
+`online_text_entry` plus code/evidence upload or repository link.
+
+Submit the stabilized slice, tests, runnable instructions, debt record,
+review-readiness explanation, and World Bible entry.
+
 ## Required evidence
 
 This synthesis checkpoint introduces no new technical concept. Freeze a substantial slice for review: improve tests, runnable instructions, documentation, and known-debt record. Reflect in the existing World Bible entry on what the accumulated evidence shows is ready for review and what debt remains. Feature growth should be modest and justified.

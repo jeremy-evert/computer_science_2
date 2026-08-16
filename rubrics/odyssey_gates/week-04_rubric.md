@@ -1,5 +1,8 @@
 # Reasoning Odyssey gate rubric — Week 4 — Collaborating Objects and Invariant (S01/S08)
 
+**Score: 25 points.** Composition fit 8; invariant test/trace 7; rationale
+and World Bible 6; AI accountability when used 4.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

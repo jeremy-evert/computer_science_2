@@ -2,6 +2,12 @@
 
 **Gate status:** active
 
+**Grading:** 25 points; Weekly reinforcement assignment (25% group);
+`online_text_entry` plus code/evidence/data upload or repository link.
+
+Submit the real data question, labeled visualization, rationale, pitfall,
+reproducible evidence, and World Bible entry.
+
 ## Required evidence
 
 State a question about real selected-world or project data. Produce one or

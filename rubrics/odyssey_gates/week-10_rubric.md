@@ -1,5 +1,9 @@
 # Reasoning Odyssey gate rubric — Week 10 — Honest Visualization from Project Data (S09/S06/S08)
 
+**Score: 25 points.** Real question and labeled visualization 8;
+reproducible evidence 7; representation/pitfall reasoning and World Bible 6;
+AI accountability when used 4.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

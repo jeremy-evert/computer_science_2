@@ -2,6 +2,12 @@
 
 **Gate status:** active
 
+**Grading:** 25 points; Weekly reinforcement assignment (25% group);
+`online_text_entry` plus code/evidence/data upload or repository link.
+
+Submit the evidence-backed story or justified reinforcement, limitation,
+decision, and World Bible entry.
+
 ## Required evidence
 
 Communicate a concise evidence-backed story from project/world data. Include

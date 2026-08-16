@@ -1,5 +1,8 @@
 # Reasoning Odyssey gate rubric — Week 9 — Compact GUI over Tested Model (S04)
 
+**Score: 50 points.** GUI/model event path 15; independent model test/trace
+15; model/view reasoning 10; demonstration, limitation, and World Bible 10.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

@@ -1,5 +1,9 @@
 # Reasoning Odyssey gate rubric — Week 6 — Contract and Swap (S03/S08)
 
+**Score: 40 points.** Working baby project and contract/swap 15; focused
+contract test 10; caller-boundary reasoning 10; demonstration, reflection,
+and World Bible 5.
+
 ## Capability evidence
 
 | Criterion | Meets expectation |

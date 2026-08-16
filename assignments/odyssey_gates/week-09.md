@@ -2,6 +2,12 @@
 
 **Gate status:** active
 
+**Grading:** 50 points; Reasoning Odyssey checkpoints (15% group);
+`online_text_entry` plus code/evidence upload or repository link.
+
+This larger checkpoint requires the GUI/model evidence below plus an
+independent model test or trace and World Bible entry.
+
 ## Required evidence
 
 Use the course Tkinter lab pattern to render real model state in a modest
