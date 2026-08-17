@@ -2,7 +2,7 @@
 
 ## Status
 
-**Canonical shared-core migration implemented and behaviorally validated on Brandy; final post-retirement validator receipt must be retained before promotion to `main`.**
+**GREEN — canonical shared-core consumer validated on Brandy after legacy-vendor retirement.**
 
 Week 16 is a playful synthesis week, not a new technical checkpoint.
 
@@ -74,7 +74,7 @@ Pre-migration Brandy receipt:
 
 The original CS2 implementation passed its regression tests and fixed suite before ownership changed.
 
-After switching active imports from the historical `vendor_cs1` snapshot to the generated canonical `farkle_ml` package, a second Brandy validation produced the same deterministic fixed-suite win rates for all five strategy configurations:
+After switching active imports from the historical `vendor_cs1` snapshot to the generated canonical `farkle_ml` package, Brandy validation produced the same deterministic fixed-suite win rates for all five strategy configurations:
 
 - `bank_at_300`: 0.640
 - `learner:2000`: 0.630
@@ -82,4 +82,20 @@ After switching active imports from the historical `vendor_cs1` snapshot to the 
 - `rollout:25`: 0.690
 - `rollout:100`: 0.680
 
-The old `vendor_cs1` compatibility directory was then retired. The final release gate is one more validator execution with the retirement guard active, followed by retention of that raw GREEN receipt.
+The old `vendor_cs1` compatibility directory was then retired and the strengthened validator was run again on Brandy.
+
+Final post-retirement receipt:
+
+`sidecar/runs/014_validation_20260817T001507Z.md`
+
+Final required checks were all GREEN:
+
+- generated shared snapshot hashes/provenance match the manifest;
+- active CS2 source/tests contain no `vendor_cs1` imports;
+- the legacy `vendor_cs1` snapshot is absent;
+- regression tests pass;
+- fixed-suite win rates exactly match the pre-migration Brandy behavioral fingerprint.
+
+Plotting remained an optional YELLOW because matplotlib was unavailable on Brandy. JSON/CSV evidence and required correctness remained GREEN.
+
+**Release classification: GREEN.**
