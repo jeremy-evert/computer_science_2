@@ -8,11 +8,12 @@ The student-facing lesson is `lessons/week-16-farkle-ml-experiment-bench.md`.
 
 The underlying implementation deliberately makes earlier CS2 ideas reappear in one inherited system:
 
-- function contract -> explicit swappable strategy collaborator;
-- composition around inherited behavior;
+- shared behavioral contract -> stable course-facing facade;
+- swappable strategy collaborators;
 - reproducible experiment configuration/results;
 - honest result ordering and visualization;
-- test/review/provenance discipline.
+- test/review/provenance discipline;
+- software ownership and maintenance boundaries.
 
 Computer Architecture contributes the cost/effectiveness question, but CS2 adds the engineering cost of extra software structure.
 
@@ -26,6 +27,8 @@ python scripts/validate_week16_farkle.py
 
 Do not demo live if the required tests are RED.
 
+The validator checks the generated `farkle_ml` hashes/provenance, rejects reintroduction of the retired `vendor_cs1` path, reruns the CS2 regression suite, and requires the deterministic fixed-suite outcomes to match the retained pre-migration Brandy baseline.
+
 A matplotlib failure is a named plotting YELLOW, not a reason to distrust the Farkle engine or experiment evidence. Use the CSV/JSON directly if plotting is unavailable.
 
 ## Suggested 50-minute flow A — inherit, contract, predict
@@ -36,13 +39,17 @@ Reuse the same simple bank/roll tension students can understand without ML vocab
 
 ### 10–20 min — inherited software
 
-Show `vendor_cs1/PROVENANCE.md` and `contract.py`.
+Show:
+
+- `lessons/code/farkle_ml/_SHARED_PROVENANCE.json`
+- `lessons/code/farkle_ml/contract.py`
+- `lessons/code/farkle_week16/contract.py`
 
 Ask:
 
-> What did CS2 add without changing the Farkle rules?
+> What does CS2 own here, and what should it deliberately not own?
 
-Land on the idea that the CS1 function already had a behavioral contract; CS2 makes the boundary explicit enough to support multiple collaborators and experiment tooling.
+Land on the idea that the shared repository owns computational truth, while CS2 owns the experiment lens, stable course-facing imports, visualization, and design judgment. The thin facade is useful precisely because it preserves a course seam without duplicating an implementation.
 
 ### 20–30 min — three ways to buy a decision
 
@@ -100,9 +107,13 @@ No. It is simulation/search at decision time. That contrast is useful: a trained
 
 Because sophistication is not the learning target. The transparent strategies let students inspect what complexity bought.
 
-### "Why is CS1 code inside CS2?"
+### "Why is the shared package copied into this repository?"
 
-The vendor directory is a deliberate standalone-course compromise with provenance and drift checks. CS1 remains canonical. A third repetition should trigger shared packaging/automation instead of another copy.
+It is a generated, hash-recorded compatibility snapshot produced by the canonical sync script so the course remains runnable from an ordinary standalone checkout. The source of truth is `jeremy-evert/Farkle_and_Machine_Learning`; manual copy/paste is not the update mechanism.
+
+### "Didn't CS2 used to vendor CS1 directly?"
+
+Yes. That was the useful second-consumer bridge that revealed the need for a shared owner. It was retired only after a real Brandy baseline and post-migration run produced identical deterministic fixed-suite outcomes.
 
 ## Optional enrichment
 
@@ -122,4 +133,4 @@ Do not require students to provision cloud accounts, use GPUs, or access Kuberne
 
 ## Fallback
 
-If the experiment runner is unavailable, use the latest real validation artifacts under `artifacts/week16_farkle/` and raw receipt under `sidecar/runs/`. Do **not** invent sample numbers. If no real validation artifact exists yet, treat Week 16 as not fully release-ready and run the validator on a known-good machine first.
+If the experiment runner is unavailable, use the latest retained real validation receipt under `sidecar/runs/` and any intentionally retained classroom evidence. Do **not** invent sample numbers. Runtime artifacts under `artifacts/` are scratch unless deliberately promoted as course material.
