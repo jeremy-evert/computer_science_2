@@ -9,7 +9,10 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "lessons" / "code"))
 
-from farkle_week16 import UPSTREAM_CS1_COMMIT  # noqa: E402
+from farkle_week16 import (  # noqa: E402
+    SHARED_REPOSITORY,
+    SHARED_SOURCE_COMMIT,
+)
 from farkle_week16.contract import FunctionStrategyAdapter, Strategy  # noqa: E402
 from farkle_week16.experiment import (  # noqa: E402
     ExperimentConfig,
@@ -17,8 +20,19 @@ from farkle_week16.experiment import (  # noqa: E402
     save_csv,
     save_json,
 )
-from farkle_week16.strategies import OneStepRolloutStrategy  # noqa: E402
-from farkle_week16.vendor_cs1 import engine, simulate, strategies  # noqa: E402
+from farkle_week16.strategies import (  # noqa: E402
+    LearnedTableStrategy,
+    OneStepRolloutStrategy,
+)
+from farkle_ml import engine, simulate, strategies  # noqa: E402
+from farkle_ml.contract import (  # noqa: E402
+    FunctionStrategyAdapter as SharedFunctionStrategyAdapter,
+    Strategy as SharedStrategy,
+)
+from farkle_ml.strategies import (  # noqa: E402
+    LearnedTableStrategy as SharedLearnedTableStrategy,
+    OneStepRolloutStrategy as SharedOneStepRolloutStrategy,
+)
 
 
 class BadStrategy(Strategy):
@@ -29,13 +43,23 @@ class BadStrategy(Strategy):
 
 
 class Week16FarkleTests(unittest.TestCase):
-    def test_upstream_provenance_is_pinned(self):
+    def test_shared_provenance_is_pinned(self):
         self.assertEqual(
-            UPSTREAM_CS1_COMMIT,
-            "b546ca2f846ea0c788ad17e5667b8b471efb33fa",
+            SHARED_REPOSITORY,
+            "jeremy-evert/Farkle_and_Machine_Learning",
+        )
+        self.assertEqual(
+            SHARED_SOURCE_COMMIT,
+            "d3a1ed379a652731b0b6237c33b4fe42c518ac9e",
         )
 
-    def test_vendored_public_rule_contract(self):
+    def test_cs2_facades_are_canonical_objects(self):
+        self.assertIs(Strategy, SharedStrategy)
+        self.assertIs(FunctionStrategyAdapter, SharedFunctionStrategyAdapter)
+        self.assertIs(LearnedTableStrategy, SharedLearnedTableStrategy)
+        self.assertIs(OneStepRolloutStrategy, SharedOneStepRolloutStrategy)
+
+    def test_shared_public_rule_contract(self):
         self.assertEqual(engine.NUM_DICE, 6)
         self.assertEqual(engine.DEFAULT_TARGET_SCORE, 4000)
         self.assertEqual(engine.score_roll([1, 5, 2, 3, 4, 6]), (150, 2))
@@ -92,6 +116,7 @@ class Week16FarkleTests(unittest.TestCase):
         self.assertEqual(first.farkle_rate_a, second.farkle_rate_a)
         self.assertEqual(first.starts_a, first.starts_b)
         self.assertEqual(first.training_turns_a, 100)
+        self.assertEqual(first.shared_source_commit, SHARED_SOURCE_COMMIT)
 
     def test_result_persistence_is_machine_readable(self):
         result = run_experiment(
@@ -103,6 +128,8 @@ class Week16FarkleTests(unittest.TestCase):
             csv_path = save_csv([result], tmp_path / "results.csv")
             data = json.loads(json_path.read_text(encoding="utf-8"))
             self.assertEqual(data["strategy_a"], "bank_at_300")
+            self.assertEqual(data["shared_repository"], SHARED_REPOSITORY)
+            self.assertEqual(data["shared_source_commit"], SHARED_SOURCE_COMMIT)
             self.assertIn("seconds_per_game", data)
             self.assertIn("strategy_a", csv_path.read_text(encoding="utf-8"))
 
