@@ -8,7 +8,7 @@ You already know how to build software. This week you inherit software that alre
 
 You are not rebuilding Farkle and you are not starting a new machine-learning unit.
 
-The shared Farkle rules, scoring engine, basic strategies, and transparent learner come from the CS1 version of this experience. CS2 adds explicit contracts, interchangeable strategy objects, reproducible experiment configuration/results, saved evidence, and honest data storytelling.
+The shared Farkle rules, scoring engine, basic strategies, transparent learner, and bounded rollout machinery come from the canonical `Farkle_and_Machine_Learning` package synchronized into `lessons/code/farkle_ml/`. CS2 adds the course-facing experiment configuration/results, saved evidence, visualization, and engineering judgment about software complexity and maintenance.
 
 ## Your experiment has four currencies
 
@@ -56,13 +56,16 @@ A design can win one currency and lose another.
 From the repository root, inspect:
 
 - `lessons/code/farkle_week16/contract.py`
-- `lessons/code/farkle_week16/vendor_cs1/PROVENANCE.md`
+- `lessons/code/farkle_ml/_SHARED_PROVENANCE.json`
+- `lessons/code/farkle_ml/contract.py`
 
 The important contract is tiny:
 
 ```text
 state -> strategy -> "roll" or "bank"
 ```
+
+The CS2 `contract.py` path is intentionally a thin facade over the canonical shared contract. That gives this course a stable place to discuss the abstraction without creating another implementation to maintain.
 
 The Farkle engine does not need to know whether the decision came from:
 
