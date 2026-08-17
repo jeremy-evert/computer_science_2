@@ -1,0 +1,149 @@
+% the-four-calls.tex
+%
+% Prompt 018: The Four Calls -- visual package. Title cards, comparison
+% screen, and the "Which call do you answer?" choice moment. Spoken
+% scripts live in sidecar/worlds/four_calls/scripts.md -- this deck is
+% the on-screen visual layer Jeremy presents/records against, not the
+% call content itself (the calls are performed, not read off a slide).
+%
+% Built on the Prompt 015 CS2 slide system -- no second presentation
+% style invented. Each world gets a restrained local accent color
+% (defined here, not added to the shared theme) so the four calls feel
+% like family members, not four unrelated design systems, per Prompt
+% 018's visual-package requirement.
+
+\documentclass[aspectratio=169]{beamer}
+\usepackage{../theme/cs2theme}
+\usepackage{../theme/cs2commands}
+
+% World accent colors -- local to this deck, matching each world
+% bible's "Visual identity" section. Not added to cs2theme.sty itself:
+% these are call-specific title-card accents, not classroom colors.
+\definecolor{worldfrontier}{HTML}{C9762B}      % amber -- matches cs2accent
+\definecolor{worldinvestigation}{HTML}{45505F} % slate -- matches cs2inkSoft
+\definecolor{worldstarship}{HTML}{2E8B9E}      % cool teal/cyan, distinct from cs2odyssey
+\definecolor{worldbusiness}{HTML}{4C7A3A}      % warm green
+
+\setcsweek{The Four Calls}
+
+\title{The Four Calls}
+\subtitle{Which call do you answer?}
+\author{Computer Science II \textbullet\ Dr. Jeremy P. Evert}
+\date{Fall 2026 \textbullet\ COMSC-1053}
+
+% Generic title-card frame builder for one world.
+% #1 = accent color, #2 = world line 1 (place name), #3 = world line 2 (institution/role)
+\newcommand{\worldtitlecard}[3]{
+\begin{frame}[plain]
+  \begin{center}
+    \vspace{2cm}
+    {\color{#1}\rule{6cm}{2pt}}\\[8mm]
+    {\Huge\bfseries\color{#1} #2}\\[4mm]
+    {\Large\color{cs2inkSoft} #3}\\[8mm]
+    {\color{#1}\rule{6cm}{2pt}}
+  \end{center}
+\end{frame}
+}
+
+\begin{document}
+
+% Shared opening
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}{Four Places Are About to Reach Out to You}
+  \cskicker{cs2primary}{SHARED OPENING}
+  \begin{center}
+    \large
+    Each one needs help.\\[2mm]
+    Each one will teach you the same things --\\[2mm]
+    but you'll learn them differently\\
+    depending on where you decide to spend your semester.
+  \end{center}
+  \vspace{4mm}
+  \begin{center}
+    \Large\color{cs2primary}\textbf{Watch. Listen. Then choose.}
+  \end{center}
+  \instructorcue{Spoken shared opening in full: see sidecar/worlds/four\_calls/README.md. Keep this shorter than any single call.}
+\end{frame}
+
+% Call One: Frontier Settlement
+\worldtitlecard{worldfrontier}{DOCKET CREEK}{FRONTIER SETTLEMENT}
+
+\begin{frame}[plain]
+  \vspace{3cm}
+  \begin{center}
+    {\Large\color{worldfrontier}\textbf{THE RECORDER'S OFFICE}}
+  \end{center}
+  \instructorcue{Closing card for Call One. Full script: sidecar/worlds/four\_calls/scripts.md.}
+\end{frame}
+
+% Call Two: Investigation Bureau
+\worldtitlecard{worldinvestigation}{MERIDIAN CASE BUREAU}{INVESTIGATION}
+
+\begin{frame}[plain]
+  \vspace{3cm}
+  \begin{center}
+    {\Large\color{worldinvestigation}\textbf{CASE RECORDS DIVISION}}
+  \end{center}
+  \instructorcue{Closing card for Call Two. Full script: sidecar/worlds/four\_calls/scripts.md.}
+\end{frame}
+
+% Call Three: Starship Log
+\worldtitlecard{worldstarship}{RSV KESTREL}{STARSHIP LOG}
+
+\begin{frame}[plain]
+  \vspace{3cm}
+  \begin{center}
+    {\Large\color{worldstarship}\textbf{SYSTEMS OFFICER, RSV KESTREL}}
+  \end{center}
+  \instructorcue{Closing card for Call Three. Full script: sidecar/worlds/four\_calls/scripts.md.}
+\end{frame}
+
+% Call Four: Small Business
+\worldtitlecard{worldbusiness}{DELGADO HARDWARE \& SUPPLY}{SMALL BUSINESS}
+
+\begin{frame}[plain]
+  \vspace{3cm}
+  \begin{center}
+    {\Large\color{worldbusiness}\textbf{THE BACK OFFICE}}
+  \end{center}
+  \instructorcue{Closing card for Call Four. Full script: sidecar/worlds/four\_calls/scripts.md.}
+\end{frame}
+
+% Comparison / choice screen
+\begin{frame}{Four Doors}
+  \cskicker{cs2accent}{A QUICK REMINDER, NOT THE FULL PITCH AGAIN}
+  \begin{itemize}
+    \item[] \textbf{\color{worldfrontier}Frontier Settlement} -- a growing settlement that's outrun its own record-keeping.
+    \item[] \textbf{\color{worldinvestigation}Investigation Bureau} -- a case bureau where the records don't always agree.
+    \item[] \textbf{\color{worldstarship}Starship Log} -- a working ship under real operational pressure.
+    \item[] \textbf{\color{worldbusiness}Small Business} -- a real business whose systems are buckling under growth.
+  \end{itemize}
+  \vspace{3mm}
+  \small\color{cs2inkSoft}
+  Choose the world you're most curious to return to. No door is
+  harder or easier. You're choosing context, not a different grading
+  standard. Overthinking this is unnecessary.
+\end{frame}
+
+% The choice moment
+\begin{frame}[plain]
+  \vspace{2.5cm}
+  \begin{center}
+    {\Huge\bfseries\color{cs2primary} Which call\\[2mm]do you answer?}
+  \end{center}
+\end{frame}
+
+% Closing message
+\begin{exitframe}{What Happens Next}
+  \Large\color{cs2primary}
+  \textbf{Your world has your answer now.}
+
+  \vspace{4mm}
+  \normalsize\normalfont\color{cs2ink}
+  You'll hear from them again.
+\end{exitframe}
+
+\end{document}

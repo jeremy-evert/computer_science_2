@@ -79,6 +79,15 @@ established.
 - **Unresolved thread:** None new -- see each world's section above for that world's still-dormant seeds, several of which are echoed as "something they don't know yet" in the matching Four Faces dossier.
 - **Safe to return?** Yes.
 
+### All four worlds -- The Four Calls, first student contact
+- **Introduced:** Prompt 018, 2026-08-17
+- **Characters involved:** Garrett Boone, Chief Nora Arana, Commander Elias Rourke, Frank Delgado
+- **What happened:** Each world's first in-character contact with students was scripted (`four_calls/scripts.md`), each planting exactly one small unresolved hook: Frontier's short mill grain count, Investigation's mismatched field-report timestamp, Starship's odd two-day-old sensor reading, Small Business's inventory coming up short twice this month.
+- **What students learned / experienced:** Once recorded and shown, students will have heard each call's premise and hook, but not any explanation of it -- by design.
+- **Software/world decision affected:** N/A.
+- **Unresolved thread:** All four hooks above remain open and available for any future world-specific injection to reference or ignore.
+- **Safe to return?** Yes -- these four hooks are the first ones explicitly promised to a student audience (even if only implicitly), so any future material that touches them should acknowledge that students may already be listening for a callback here.
+
 ---
 
 ## Cross-world notes
