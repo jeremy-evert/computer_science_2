@@ -1,0 +1,130 @@
+% cs2theme.sty
+%
+% Reusable Beamer theme for COMSC-1053 Computer Science II (Fall 2026).
+% Built by Prompt 015 as the shared visual foundation. Do not fork a
+% second theme per week -- extend this one.
+%
+% Design intent: modern, professional university CS course. Distinctive
+% but not theatrical. Legible on a mediocre classroom projector from the
+% back row of Stafford 259.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cs2theme}[2026/08/17 CS2 presentation theme]
+
+\RequirePackage{etoolbox}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+
+% ---------------------------------------------------------------------
+% Palette
+%
+% One primary ink color, one warm accent, one Odyssey accent, one World
+% Bible accent, and a neutral scale. Color is never the only carrier of
+% meaning (see STYLE_GUIDE.md, Accessibility) -- every accent below is
+% always paired with an icon, label, or distinct frame shape.
+% ---------------------------------------------------------------------
+\definecolor{cs2ink}{HTML}{1B2430}          % primary text / headers
+\definecolor{cs2inkSoft}{HTML}{45505F}      % secondary text
+\definecolor{cs2paper}{HTML}{FFFFFF}        % slide background
+\definecolor{cs2paperDim}{HTML}{F4F6F8}     % panel background
+\definecolor{cs2rule}{HTML}{D7DCE1}         % hairlines / dividers
+
+\definecolor{cs2primary}{HTML}{1F4B6E}      % deep university blue
+\definecolor{cs2primaryDark}{HTML}{123047}
+\definecolor{cs2accent}{HTML}{C9762B}       % warm amber accent (emphasis, "why this matters")
+\definecolor{cs2odyssey}{HTML}{1E7A6E}      % teal -- Reasoning Odyssey identity
+\definecolor{cs2worldbible}{HTML}{6B4B8A}   % violet -- World Bible identity
+\definecolor{cs2danger}{HTML}{B23A2E}       % failure/misconception red
+\definecolor{cs2good}{HTML}{2E7D46}         % correct/verified green
+\definecolor{cs2codebg}{HTML}{101820}       % code block background (dark panel on light slide)
+\definecolor{cs2codefg}{HTML}{E8EDF2}       % code block default text
+
+% ---------------------------------------------------------------------
+% Fonts
+%
+% Uses core LaTeX text fonts (no external font dependency, so this
+% compiles anywhere TeX Live is installed -- see README for the xelatex
+% upgrade path if a classroom-approved sans/mono pair is chosen later).
+% ---------------------------------------------------------------------
+\usefonttheme{professionalfonts}
+\renewcommand{\familydefault}{\sfdefault}
+
+% ---------------------------------------------------------------------
+% Base beamer geometry
+% ---------------------------------------------------------------------
+\mode<presentation>
+
+\setbeamersize{text margin left=12mm, text margin right=12mm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{background canvas}{bg=cs2paper}
+\setbeamercolor{normal text}{fg=cs2ink, bg=cs2paper}
+\setbeamercolor{frametitle}{fg=cs2paper, bg=cs2primary}
+\setbeamercolor{title}{fg=cs2primary}
+\setbeamercolor{author}{fg=cs2inkSoft}
+\setbeamercolor{date}{fg=cs2inkSoft}
+\setbeamercolor{structure}{fg=cs2primary}
+\setbeamercolor{itemize item}{fg=cs2accent}
+\setbeamercolor{itemize subitem}{fg=cs2primary}
+\setbeamercolor{block title}{fg=cs2paper, bg=cs2primary}
+\setbeamercolor{block body}{fg=cs2ink, bg=cs2paperDim}
+\setbeamerfont{frametitle}{size=\Large, series=\bfseries}
+\setbeamerfont{footline}{size=\tiny}
+\setbeamertemplate{itemize items}[circle]
+
+% Generous type: everything below is sized for projection, not for a
+% laptop screen. See STYLE_GUIDE.md "Readable at the back of the room."
+\setbeamerfont{normal text}{size=\normalsize}
+
+% ---------------------------------------------------------------------
+% Frame title bar
+% ---------------------------------------------------------------------
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.15cm,dp=0.35cm,leftskip=12mm,rightskip=12mm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+    \hfill
+    {\small\normalfont\insertframesubtitle}
+  \end{beamercolorbox}
+}
+
+% ---------------------------------------------------------------------
+% Footline: week / course / slide number. Small, out of the way, never
+% competing with content. Presenter cues (see cs2commands.sty
+% \instructorcue) live in beamer notes, not the footline.
+% ---------------------------------------------------------------------
+\newcommand{\csweeklabel}{}
+\newcommand{\setcsweek}[1]{\renewcommand{\csweeklabel}{#1}}
+\setcsweek{Week --}
+
+\setbeamertemplate{footline}{
+  \leavevmode
+  \hbox{
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,leftskip=12mm]{author in head/foot}
+      \color{cs2inkSoft}\scriptsize COMSC-1053 Computer Science II \, \textbullet\, \csweeklabel
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,right,rightskip=12mm]{date in head/foot}
+      \color{cs2inkSoft}\scriptsize\insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}
+  }
+}
+
+% ---------------------------------------------------------------------
+% Title page
+% ---------------------------------------------------------------------
+\setbeamertemplate{title page}{
+  \vfill
+  \begin{beamercolorbox}[wd=\paperwidth,sep=8mm,leftskip=12mm,rightskip=12mm]{title}
+    {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
+    \vspace{2mm}
+    {\large\color{cs2inkSoft}\insertsubtitle\par}
+    \vspace{6mm}
+    {\color{cs2accent}\rule{2.4cm}{1.6pt}}
+    \vspace{6mm}
+    {\usebeamerfont{author}\insertauthor\par}
+    {\usebeamerfont{date}\insertdate\par}
+  \end{beamercolorbox}
+  \vfill
+}
+
+\mode<all>

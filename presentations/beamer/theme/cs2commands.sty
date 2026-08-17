@@ -1,0 +1,328 @@
+% cs2commands.sty
+%
+% Reusable slide-pattern vocabulary for COMSC-1053 (Prompt 015). Loads
+% after cs2theme.sty. Defines the 21 slide patterns from the prompt as
+% Beamer frame environments, plus code/diagram standards and instructor
+% usability helpers.
+%
+% Usage in a weekly deck:
+%   \usepackage{theme/cs2theme}
+%   \usepackage{theme/cs2commands}
+%   \setcsweek{Week 4}
+%   \begin{conceptframe}{Encapsulation}
+%     ...
+%   \end{conceptframe}
+%
+% Not every pattern appears every week -- this is a vocabulary to choose
+% from, not a checklist to exhaust. See STYLE_GUIDE.md.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cs2commands}[2026/08/17 CS2 slide pattern library]
+
+\RequirePackage{cs2theme}
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\RequirePackage{tikz}
+\RequirePackage{array}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc,shadows}
+
+% =======================================================================
+% SECTION 1 -- Category kicker bar
+%
+% Every pattern below stamps a colored kicker bar under the frame title
+% so a category is recognizable at a glance even mid-lecture, without
+% relying on color alone: each kicker also carries a short text label.
+% =======================================================================
+
+\newcommand{\cskicker}[2]{%
+  % #1 = bar color, #2 = label text
+  \vspace{-2mm}
+  {\color{#1}\rule{\linewidth}{1.6pt}}\\[0.5mm]
+  {\scriptsize\color{#1}\textbf{#2}}\\[1.5mm]
+}
+
+% Generic pattern-frame builder. Keeps every environment below to one
+% line of definition so new patterns are cheap to add later.
+%
+% Deliberately does NOT pass [fragile] to the wrapped frame: Beamer's
+% fragile-frame verbatim scanner looks for a literal `\end{frame}` in
+% the raw source, and a `\end{frame}` reached only through this macro's
+% expansion is invisible to that scanner (confirmed by hand: any
+% [fragile] frame opened via \newenvironment indirection fails with
+% "Runaway argument? File ended while scanning use of \next.", even
+% with zero verbatim content in the frame). Patterns that need
+% \begin{lstlisting} therefore cannot use this builder -- see
+% Section 2's "code-bearing patterns" below for the required literal-
+% frame convention instead.
+\newcommand{\csdefinepattern}[3]{%
+  % #1 = environment name, #2 = kicker color, #3 = kicker label
+  \newenvironment{#1}[1]{%
+    \begin{frame}{##1}
+      \cskicker{#2}{#3}
+  }{%
+    \end{frame}
+  }
+}
+
+% =======================================================================
+% SECTION 2 -- The 21 patterns
+% =======================================================================
+
+% 1. Title / opening -- use \maketitle from the title-page template in
+%    cs2theme.sty; no separate environment needed.
+
+% 2. Today's destination
+\csdefinepattern{destinationframe}{cs2primary}{TODAY'S DESTINATION}
+
+% 3. Why this matters
+\csdefinepattern{whymattersframe}{cs2accent}{WHY THIS MATTERS}
+
+% 4. Core concept
+\csdefinepattern{conceptframe}{cs2primary}{CORE CONCEPT}
+
+% 5. Concept with diagram -- also cannot use \csdefinepattern: a
+% \begin{columns} pair nested with further \begin{concepttext}/
+% \begin{conceptdiagram} column environments inside a \newenvironment-
+% wrapped frame defeats Beamer's own frame-body collector the same way
+% [fragile] indirection does (confirmed by hand: any frame containing
+% a nested split-environment -- \begin{X} in the environment's start
+% code, matching \end{X} in its end code -- fails with the identical
+% "Runaway argument? File ended while scanning use of
+% \beamer@collect@@body" error, even with no verbatim content at all).
+% So: literal frame, kicker command, then the columns body environment:
+%
+%   \begin{frame}{Concept + Diagram: push/pop}
+%     \conceptdiagramkicker
+%     \begin{conceptdiagrambody}
+%       \begin{concepttext}...\end{concepttext}
+%       \begin{conceptdiagram}...\end{conceptdiagram}
+%     \end{conceptdiagrambody}
+%   \end{frame}
+\newcommand{\conceptdiagramkicker}{\cskicker{cs2primary}{CORE CONCEPT + DIAGRAM}}
+\newenvironment{conceptdiagrambody}{\begin{columns}[T]}{\end{columns}}
+\newenvironment{concepttext}{\begin{column}{0.46\textwidth}}{\end{column}}
+\newenvironment{conceptdiagram}{\begin{column}{0.5\textwidth}}{\end{column}}
+
+% ---------------------------------------------------------------------
+% Code-bearing patterns (6, 7, 8) and any pattern with nested
+% split-environments (5, 13): CANNOT use \csdefinepattern for the same
+% reason noted above and at \csdefinepattern's definition. They ship
+% as a kicker command each, meant to be called as the first line
+% inside a frame the deck author opens by
+% hand:
+%
+%   \begin{frame}[fragile]{Code Example: A Minimal Stack}
+%     \codeframekicker
+%     \begin{lstlisting}
+%       ...
+%     \end{lstlisting}
+%   \end{frame}
+% ---------------------------------------------------------------------
+
+% 6. Code example
+\newcommand{\codeframekicker}{\cskicker{cs2ink}{CODE EXAMPLE}}
+
+% 7. Code walkthrough (progressive reveal across overlays; use frame
+%    option [fragile,t] so overlays keep a stable top alignment)
+\newcommand{\codewalkthroughkicker}{\cskicker{cs2ink}{CODE WALKTHROUGH}}
+
+% 8. Predict before running
+\newcommand{\predictkicker}{\cskicker{cs2accent}{PREDICT BEFORE RUNNING}}
+
+% 9. Live coding prompt
+\csdefinepattern{livecodingframe}{cs2good}{LIVE CODING}
+
+% 10. Worked problem
+\csdefinepattern{workedproblemframe}{cs2primary}{WORKED PROBLEM}
+
+% 11. Think / pair / discuss
+\csdefinepattern{pairdiscussframe}{cs2good}{THINK \textbullet\ PAIR \textbullet\ DISCUSS}
+
+% 12. Common failure or misconception
+\csdefinepattern{misconceptionframe}{cs2danger}{COMMON FAILURE}
+
+% 13. Compare two approaches -- also code-bearing (each side is
+% normally a code sample), so the frame itself must be opened literally
+% with [fragile] by the deck author; \comparebody supplies the kicker
+% and the columns wrapper as an ordinary (non-frame) environment:
+%
+%   \begin{frame}[fragile]{Compare: Array-Backed vs. Linked Stack}
+%     \begin{comparebody}
+%       \begin{compareleft}{Array-backed}...\end{compareleft}
+%       \begin{compareright}{Linked-node}...\end{compareright}
+%     \end{comparebody}
+%   \end{frame}
+\newenvironment{comparebody}{%
+  \cskicker{cs2primary}{COMPARE TWO APPROACHES}
+  \begin{columns}[T]
+}{%
+  \end{columns}
+}
+\newenvironment{compareleft}[1]{\begin{column}{0.48\textwidth}\textbf{\color{cs2primary}#1}\vspace{1mm}\par}{\end{column}}
+\newenvironment{compareright}[1]{\begin{column}{0.48\textwidth}\textbf{\color{cs2accent}#1}\vspace{1mm}\par}{\end{column}}
+
+% 14. Design decision
+\csdefinepattern{designdecisionframe}{cs2primary}{DESIGN DECISION}
+
+% 15. AI collaboration / verification moment
+\csdefinepattern{aimomentframe}{cs2good}{AI COLLABORATION + VERIFICATION}
+
+% 16. Reasoning Odyssey connection
+\csdefinepattern{odysseyframe}{cs2odyssey}{REASONING ODYSSEY}
+
+% 17. World Bible entry
+\csdefinepattern{worldbibleframe}{cs2worldbible}{WORLD BIBLE ENTRY}
+
+% 18. Odyssey checkpoint / gate
+\csdefinepattern{odysseygateframe}{cs2odyssey}{ODYSSEY CHECKPOINT}
+
+% 19. Evidence students need to produce
+\csdefinepattern{evidenceframe}{cs2accent}{EVIDENCE TO PRODUCE}
+
+% 20. Recap
+\csdefinepattern{recapframe}{cs2ink}{RECAP}
+
+% 21. Exit question / next move
+\csdefinepattern{exitframe}{cs2primary}{EXIT QUESTION}
+
+% =======================================================================
+% SECTION 3 -- Code standards
+%
+% Python is this course's teaching language (matches CS1 and existing
+% CS2 lessons/code/). listings, not screenshots: code stays editable,
+% diffable, and rebuildable from source. No shell-escape dependency.
+% =======================================================================
+
+\lstdefinestyle{cs2python}{
+  language=Python,
+  backgroundcolor=\color{cs2codebg},
+  basicstyle=\ttfamily\bfseries\footnotesize\color{cs2codefg},
+  keywordstyle=\color{cs2accent},
+  commentstyle=\color{cs2rule}\itshape,
+  stringstyle=\color{cs2good},
+  numberstyle=\tiny\color{cs2inkSoft},
+  numbers=left,
+  numbersep=6pt,
+  frame=none,
+  rulecolor=\color{cs2rule},
+  breaklines=true,
+  showstringspaces=false,
+  tabsize=4,
+  xleftmargin=4mm,
+  xrightmargin=2mm,
+  framexleftmargin=4mm,
+  aboveskip=3mm,
+  belowskip=2mm,
+  captionpos=b,
+}
+\lstset{style=cs2python}
+
+% Mark the one or two lines students should notice, without shrinking
+% everything else into oblivion. Usage: emph the line number(s) via
+% listings' own `emphstyle`/`emph` keys per-listing, or wrap the
+% specific line(s) in \highlightline{...} inside a manual code block.
+\newcommand{\highlightline}[1]{\colorbox{cs2accent!30}{\strut #1}}
+
+% Before/after refactor pair -- two listings side by side, same style.
+\newenvironment{beforeafter}[2]{%
+  % #1 = "before" caption, #2 = "after" caption
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      {\small\color{cs2danger}\textbf{Before: #1}}\par\vspace{1mm}
+}{%
+    \end{column}
+  \end{columns}
+}
+\newcommand{\beforeafterswitch}[1]{%
+  % call between the two \begin{lstlisting} blocks; #1 = "after" caption
+  \end{column}
+  \begin{column}{0.48\textwidth}
+    {\small\color{cs2good}\textbf{After: #1}}\par\vspace{1mm}
+}
+
+% Broken/fixed is the same visual grammar as before/after, kept as an
+% alias so decks can use whichever reads more naturally in context.
+\let\brokenfixed\beforeafter
+\let\endbrokenfixed\endbeforeafter
+
+% =======================================================================
+% SECTION 4 -- Diagram standards (TikZ)
+%
+% One consistent visual grammar: filled boxes for classes/objects,
+% hollow-triangle arrows for inheritance ("is-a"), filled-diamond
+% arrows for composition ("has-a"), dashed arrows for interfaces/
+% contracts, solid arrows for control/data flow. Keep diagrams simple
+% enough to redraw on a whiteboard.
+% =======================================================================
+
+\tikzset{
+  cs2class/.style={
+    rectangle, rounded corners=1pt, draw=cs2primary, thick,
+    fill=cs2paperDim, minimum width=2.6cm, minimum height=0.9cm,
+    align=center, font=\ttfamily\small, drop shadow={opacity=0.15},
+  },
+  cs2interface/.style={
+    rectangle, rounded corners=1pt, draw=cs2worldbible, thick, dashed,
+    fill=cs2paperDim, minimum width=2.6cm, minimum height=0.9cm,
+    align=center, font=\ttfamily\small,
+  },
+  cs2flow/.style={
+    rectangle, rounded corners=6pt, draw=cs2odyssey, thick,
+    fill=white, minimum width=2.4cm, minimum height=0.9cm,
+    align=center, font=\small,
+  },
+  % is-a: UML hollow triangle arrowhead
+  cs2inherit/.style={-{Triangle[open, length=3mm, width=3mm]}, thick, draw=cs2primary},
+  % has-a: UML filled diamond at the owner end
+  cs2compose/.style={{Diamond[fill=cs2accent, length=3mm, width=2mm]}-, thick, draw=cs2accent},
+  % implements / contract: dashed line, hollow triangle
+  cs2implement/.style={-{Triangle[open, length=3mm, width=3mm]}, thick, dashed, draw=cs2worldbible},
+  % plain control/data flow
+  cs2dataflow/.style={-{Stealth[length=2.5mm]}, thick, draw=cs2odyssey},
+}
+
+% =======================================================================
+% SECTION 5 -- Instructor usability
+%
+% A visible, glanceable cue -- not a hidden speaker note nobody sees
+% from a single classroom display. Keep to one short line.
+% =======================================================================
+
+\newcommand{\instructorcue}[1]{%
+  \vspace{2mm}
+  {\small\color{cs2inkSoft}$\blacktriangleright$ \textit{Cue: #1}}%
+}
+
+% A deliberate "stop and let students work" marker -- visually distinct
+% from every content pattern above so it can never be mistaken for
+% lecture content.
+\newcommand{\stopandwork}[1]{%
+  \begin{center}
+    \begin{tikzpicture}
+      \node[draw=cs2good, thick, rounded corners=3pt, fill=cs2good!8,
+            minimum width=0.85\linewidth, minimum height=1.4cm,
+            align=center, font=\bfseries] {
+        \color{cs2good}STOP -- STUDENTS WORK NOW\\[1mm]
+        \normalfont\small\color{cs2ink} #1
+      };
+    \end{tikzpicture}
+  \end{center}
+}
+
+% World Bible entry card -- a visible record of student reasoning, not
+% decorative lore. Uses beamercolorbox (self-contained argument, no
+% brace-splitting across begin/end) rather than a raw TikZ \node, which
+% cannot safely have its content argument split across an environment's
+% begin/end code.
+\setbeamercolor{worldbible}{fg=cs2ink, bg=cs2worldbible!8}
+\newenvironment{worldbibleentry}[1]{%
+  % #1 = entry title, e.g. "Rule: Deck must not mutate during a Round"
+  \begin{beamercolorbox}[wd=\linewidth, sep=4mm]{worldbible}
+    {\bfseries\color{cs2worldbible} #1}\par\vspace{1mm}
+}{%
+  \end{beamercolorbox}
+  \vspace{2mm}
+}
+\newcommand{\wbfield}[2]{\textbf{#1:} #2\par}
+
+\endinput

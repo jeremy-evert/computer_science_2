@@ -1,3 +1,13 @@
 .venv/
 __pycache__/
 *.pyc
+
+# LaTeX build intermediates (see presentations/beamer/README.md)
+presentations/**/*.aux
+presentations/**/*.log
+presentations/**/*.nav
+presentations/**/*.out
+presentations/**/*.snm
+presentations/**/*.toc
+presentations/**/*.vrb
+presentations/**/*.pdf

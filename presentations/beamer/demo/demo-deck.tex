@@ -1,0 +1,299 @@
+% demo-deck.tex
+%
+% Prompt 015 demonstration deck. Exercises the CS2 slide system's major
+% pattern types on a small, deliberately generic example (a Stack ADT)
+% so the system can be validated without prematurely authoring real
+% course content. This is NOT Week 3, and NOT Welcome to the Odyssey --
+% see sidecar/prompts/015_build_cs2_slide_system.md, "Explicitly out of
+% scope."
+
+\documentclass[aspectratio=169]{beamer}
+\usepackage{../theme/cs2theme}
+\usepackage{../theme/cs2commands}
+
+\setcsweek{Demo Deck -- Prompt 015}
+
+\title{The CS2 Presentation System}
+\subtitle{A demonstration deck exercising the reusable slide grammar}
+\author{Computer Science II \textbullet\ Dr. Jeremy P. Evert}
+\date{Fall 2026 \textbullet\ Prompt 015 validation}
+
+\begin{document}
+
+% Pattern 1: Title / opening
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% Pattern 2: Today's destination
+\begin{destinationframe}{Today's Destination}
+  \begin{itemize}
+    \item Explain what a \textbf{Stack} guarantees, in your own words
+    \item Trace \texttt{push}/\texttt{pop} against a real call sequence
+    \item Predict, then verify, the output of a buggy stack-based function
+    \item Connect the Stack contract to this week's Odyssey checkpoint
+  \end{itemize}
+  \instructorcue{Write the four bullets on the board before slides go up -- it's the map for the whole class meeting.}
+\end{destinationframe}
+
+% Pattern 3: Why this matters
+\begin{whymattersframe}{Why This Matters}
+  Every undo button, every browser back-arrow, every call stack you've
+  ever silently trusted is a Stack.
+
+  \vspace{3mm}
+  \textbf{Today's claim:} once you can \emph{prove} a data structure's
+  contract instead of just using it, you can build your own -- and know
+  when someone else's is lying to you.
+\end{whymattersframe}
+
+% Pattern 4: Core concept
+\begin{conceptframe}{Core Concept: LIFO}
+  A \textbf{Stack} is a collection with exactly one required guarantee:
+
+  \begin{center}
+    \Large\color{cs2primary}\textbf{Last In, First Out}
+  \end{center}
+
+  \vspace{2mm}
+  Everything else -- array-backed, linked-list-backed, bounded,
+  unbounded -- is an \emph{implementation detail} the contract does not
+  promise you.
+\end{conceptframe}
+
+% Pattern 5: Concept with diagram
+\begin{frame}{Concept + Diagram: push/pop}
+\conceptdiagramkicker
+\begin{conceptdiagrambody}
+  \begin{concepttext}
+    A Stack exposes two required operations:
+    \begin{itemize}
+      \item \texttt{push(item)} -- add to the top
+      \item \texttt{pop()} -- remove and return the top
+    \end{itemize}
+    \vspace{2mm}
+    Both are $O(1)$ -- if yours isn't, check your backing structure.
+  \end{concepttext}
+  \begin{conceptdiagram}
+    \begin{tikzpicture}[node distance=2mm]
+      \node[cs2class] (c) {"c"};
+      \node[cs2class, above=of c] (b) {"b"};
+      \node[cs2class, above=of b] (a) {"a"};
+      \node[left=4mm of a] (top) {\small\color{cs2accent}\textbf{top}};
+      \draw[cs2dataflow] (top) -- (a);
+    \end{tikzpicture}
+  \end{conceptdiagram}
+\end{conceptdiagrambody}
+\end{frame}
+
+% Pattern 6: Code example
+\begin{frame}[fragile]{Code Example: A Minimal Stack}
+\codeframekicker
+\begin{lstlisting}
+class Stack:
+    def __init__(self):
+        self._items = []
+
+    def push(self, item):
+        self._items.append(item)
+
+    def pop(self):
+        return self._items.pop()
+\end{lstlisting}
+\end{frame}
+
+% Pattern 7: Code walkthrough (progressive reveal via overlays)
+\begin{frame}[fragile,t]{Code Walkthrough: Where's the Bug?}
+\codewalkthroughkicker
+\begin{onlyenv}<1>
+\begin{lstlisting}
+def undo_last_two(history):
+    history.pop()
+    history.pop()
+    return history
+\end{lstlisting}
+\end{onlyenv}
+\begin{onlyenv}<2>
+\begin{lstlisting}
+def undo_last_two(history):
+    history.pop()   # what if len(history) == 1?
+    history.pop()
+    return history
+\end{lstlisting}
+\end{onlyenv}
+\begin{onlyenv}<3>
+  \instructorcue{Let a student say the word "exception" before you confirm it. Don't just tell them.}
+  \vspace{2mm}
+  \textbf{Question:} what does \texttt{pop()} do on an empty Stack, and
+  who decided that?
+\end{onlyenv}
+\end{frame}
+
+% Pattern 8: Predict before running
+\begin{frame}[fragile]{Predict Before Running}
+\predictkicker
+\begin{lstlisting}
+s = Stack()
+s.push(1)
+s.push(2)
+s.push(3)
+print(s.pop())
+print(s.pop())
+\end{lstlisting}
+  \vspace{2mm}
+  \textbf{Predict:} what prints? Write it down before we run it.
+\end{frame}
+
+% Pattern 9: Live coding prompt
+\begin{livecodingframe}{Live Coding: Balanced Parentheses}
+  Together, build a function that uses a Stack to check whether
+  \texttt{"(a(b)c)"} has balanced parentheses and \texttt{"(a(b)c"} does not.
+
+  \instructorcue{Type it live. Let the first attempt be wrong.}
+\end{livecodingframe}
+
+% Pattern 10: Worked problem
+\begin{workedproblemframe}{Worked Problem: Reverse a String with a Stack}
+  \begin{enumerate}
+    \item Push every character of \texttt{"hello"} onto a Stack
+    \item Pop every character off, appending to a new string
+    \item What order does the new string come out in, and why?
+  \end{enumerate}
+\end{workedproblemframe}
+
+% Pattern 11: Think / pair / discuss
+\begin{pairdiscussframe}{Think \textbullet\ Pair \textbullet\ Discuss}
+  With your partner: could you implement a Queue using two Stacks?
+  \stopandwork{3 minutes. Sketch it on paper -- no code yet.}
+\end{pairdiscussframe}
+
+% Pattern 12: Common failure or misconception
+\begin{misconceptionframe}{Common Failure: "Stacks Are Just Lists"}
+  A Python \texttt{list} \emph{can implement} a Stack, but a Stack is not
+  a list.
+
+  \vspace{2mm}
+  If your code calls \texttt{.insert(0, x)} or indexes into the middle,
+  you have stopped using the Stack contract -- even if the underlying
+  object is still a \texttt{list}.
+\end{misconceptionframe}
+
+% Pattern 13: Compare two approaches
+\begin{frame}[fragile]{Compare: Array-Backed vs. Linked Stack}
+\begin{comparebody}
+  \begin{compareleft}{Array-backed (Python list)}
+\begin{lstlisting}
+class Stack:
+    def __init__(self):
+        self._d = []
+    def push(self, x):
+        self._d.append(x)
+    def pop(self):
+        return self._d.pop()
+\end{lstlisting}
+  \end{compareleft}
+  \begin{compareright}{Linked-node}
+\begin{lstlisting}
+class Node:
+    def __init__(self, v, nxt):
+        self.v, self.nxt = v, nxt
+
+class Stack:
+    def __init__(self):
+        self._top = None
+    def push(self, x):
+        self._top = Node(x, self._top)
+\end{lstlisting}
+  \end{compareright}
+\end{comparebody}
+\end{frame}
+
+% Pattern 14: Design decision
+\begin{designdecisionframe}{Design Decision: What Should pop() Do When Empty?}
+  Three real options -- and real libraries disagree:
+  \begin{itemize}
+    \item Raise an exception (Python's own \texttt{list.pop()})
+    \item Return a sentinel value like \texttt{None}
+    \item Block/wait for an item (some concurrent queue designs)
+  \end{itemize}
+  \vspace{2mm}
+  \textbf{Your World Bible must state which one your Stack chose, and why.}
+\end{designdecisionframe}
+
+% Pattern 15: AI collaboration / verification moment
+\begin{aimomentframe}{AI Collaboration Moment}
+  If you ask an AI tool to implement \texttt{Stack}, you still owe the
+  same chain every time:
+
+  \begin{center}
+    \small baseline $\rightarrow$ bounded proposal $\rightarrow$ diff
+    $\rightarrow$ independent test $\rightarrow$ read/reason
+    $\rightarrow$ accept or reject
+  \end{center}
+
+  \vspace{2mm}
+  An AI-generated \texttt{pop()} that silently returns \texttt{None} on
+  empty is a design decision it made \emph{for you} -- catch it.
+\end{aimomentframe}
+
+% Pattern 16: Reasoning Odyssey connection
+\begin{odysseyframe}{Reasoning Odyssey Connection}
+  Today's Stack work feeds directly into this week's Odyssey capability:
+  your software world needs something that remembers order and can undo
+  itself.
+
+  \vspace{2mm}
+  \textbf{Capability unlocked:} bounded, ordered, reversible state.
+\end{odysseyframe}
+
+% Pattern 17: World Bible entry
+\begin{worldbibleframe}{World Bible Entry}
+  \begin{worldbibleentry}{Rule: The Undo Stack Never Silently Drops State}
+    \wbfield{Assumption}{Every reversible action pushes exactly one entry.}
+    \wbfield{Invariant}{\texttt{len(undo\_stack) == number of applied actions}}
+    \wbfield{Revision}{2026-08-17: changed pop-on-empty from \texttt{None} to raising, after a paired-programming bug report.}
+  \end{worldbibleentry}
+\end{worldbibleframe}
+
+% Pattern 18: Odyssey checkpoint / gate
+\begin{odysseygateframe}{Odyssey Checkpoint: Ordered State}
+  \textbf{Gate requirement:} your software world must contain at least
+  one object whose behavior depends on \emph{order}, backed by a Stack
+  or Queue you implemented and tested yourself.
+
+  \vspace{2mm}
+  \small See \texttt{rubrics/odyssey\_gates/} for the full evidence shape --
+  this slide is the pointer, not the rubric.
+\end{odysseygateframe}
+
+% Pattern 19: Evidence students need to produce
+\begin{evidenceframe}{Evidence to Produce}
+  \begin{itemize}
+    \item A tested \texttt{Stack} class with \texttt{push}/\texttt{pop}
+    \item A World Bible entry naming your empty-pop design decision
+    \item One paired-programming note: what your partner caught
+  \end{itemize}
+\end{evidenceframe}
+
+% Pattern 20: Recap
+\begin{recapframe}{Recap}
+  \begin{itemize}
+    \item A Stack's only promise is LIFO -- implementation is a choice
+    \item \texttt{push}/\texttt{pop} should be $O(1)$
+    \item Empty-pop behavior is a design decision, not an accident
+    \item This feeds this week's ordered-state Odyssey checkpoint
+  \end{itemize}
+\end{recapframe}
+
+% Pattern 21: Exit question / next move
+\begin{exitframe}{Exit Question}
+  \Large\color{cs2primary}
+  \textbf{Could you explain to a partner, right now, why \texttt{list.pop(0)} is not the same promise as \texttt{list.pop()}?}
+
+  \vspace{4mm}
+  \normalsize\normalfont\color{cs2ink}
+  \textbf{Next move:} bring a paired sketch of your Stack's World Bible
+  entry to Wednesday.
+\end{exitframe}
+
+\end{document}
