@@ -2,7 +2,7 @@
 
 ## Status
 
-**Implemented source package; real-checkout validation receipt still required before release is fully GREEN.**
+**Canonical shared-core migration implemented and behaviorally validated on Brandy; final post-retirement validator receipt must be retained before promotion to `main`.**
 
 Week 16 is a playful synthesis week, not a new technical checkpoint.
 
@@ -10,7 +10,7 @@ Week 16 is a playful synthesis week, not a new technical checkpoint.
 
 > **How do we inherit a trustworthy program, preserve its contracts, compare different ways of making a Farkle decision, and decide whether added complexity and computation earned their keep?**
 
-CS1 owns the canonical Farkle rules/baseline learning experience. CS2 consumes a provenance-tracked hardened snapshot and adds a CS2-native experiment bench.
+The canonical `Farkle_and_Machine_Learning` repository owns the shared rules, engine, transparent learner, strategy contract, rollout machinery, and fair simulation. CS2 consumes a generated provenance-pinned snapshot under `lessons/code/farkle_ml/` and owns the course-specific experiment bench, visualization, and software-design interpretation.
 
 Student lesson:
 
@@ -26,7 +26,8 @@ Evidence receipt:
 
 Implementation:
 
-- `lessons/code/farkle_week16/`
+- canonical generated machine: `lessons/code/farkle_ml/`
+- CS2 course layer: `lessons/code/farkle_week16/`
 
 One-command validation:
 
@@ -37,7 +38,8 @@ One-command validation:
 The week brings back course ideas only where they fit naturally:
 
 - explicit contracts and swappable collaborators;
-- composition around inherited behavior;
+- thin adapters/facades around shared behavior;
+- software ownership and maintenance boundaries;
 - reproducible experiment configuration/result objects;
 - fixed strategy families with different preparation/runtime costs;
 - result ordering under different declared objectives;
@@ -64,6 +66,20 @@ Computer Architecture contributes the useful question "what does a better decisi
 - no Architecture tournament-platform requirement;
 - no new grading weight invented here.
 
-## Release yellow
+## Migration evidence
 
-The source, tests, validator, lesson, guide, and receipt are authored. A real checkout must execute `python scripts/validate_week16_farkle.py` and commit/retain the resulting raw receipt before the Week 16 implementation is advertised as fully validated.
+Pre-migration Brandy receipt:
+
+`sidecar/runs/014_validation_20260817T000431Z.md`
+
+The original CS2 implementation passed its regression tests and fixed suite before ownership changed.
+
+After switching active imports from the historical `vendor_cs1` snapshot to the generated canonical `farkle_ml` package, a second Brandy validation produced the same deterministic fixed-suite win rates for all five strategy configurations:
+
+- `bank_at_300`: 0.640
+- `learner:2000`: 0.630
+- `learner:20000`: 0.670
+- `rollout:25`: 0.690
+- `rollout:100`: 0.680
+
+The old `vendor_cs1` compatibility directory was then retired. The final release gate is one more validator execution with the retirement guard active, followed by retention of that raw GREEN receipt.
