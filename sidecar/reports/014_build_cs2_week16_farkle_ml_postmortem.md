@@ -1,7 +1,7 @@
 # Postmortem — CS2 Week 16 Farkle + ML experiment bench
 
 **Date:** 2026-08-16  
-**Status:** SHARED-CORE MIGRATION VALIDATED; FINAL RETIREMENT RECEIPT REQUIRED BEFORE `main`
+**Status:** GREEN — CANONICAL SHARED-CORE CONSUMER VALIDATED ON BRANDY
 
 ## Outcome
 
@@ -98,7 +98,7 @@ CS2 experiment layer -> farkle_ml -> canonical Farkle machine
 
 ### 4. Post-migration behavioral parity proved
 
-A second real Brandy run after the active-path migration produced:
+A real Brandy run after the active-path migration produced:
 
 - status **GREEN**;
 - shared hashes/provenance GREEN;
@@ -108,7 +108,7 @@ A second real Brandy run after the active-path migration produced:
 
 The deterministic win rates were exactly the same five values as the pre-migration baseline. Timing changed slightly, as wall-clock timing naturally can, but timing was never required to match.
 
-That is the important result: **computational ownership changed without changing the deterministic classroom behavior.**
+That proved the key migration claim: **computational ownership changed without changing deterministic classroom behavior.**
 
 ## Legacy vendor retirement
 
@@ -118,17 +118,42 @@ Only after the shared-core migration passed on Brandy was the historical:
 
 snapshot removed.
 
-The validator is now stricter and goes RED if:
+The validator was strengthened to go RED if:
 
-- the generated shared-package hashes drift from the manifest;
+- generated shared-package hashes drift from the manifest;
 - active CS2 source/tests import `vendor_cs1`;
 - the retired `vendor_cs1` directory reappears;
 - regression tests fail;
 - the fixed deterministic suite no longer matches the retained pre-migration behavioral fingerprint.
 
+The strengthened validator was then executed again on Brandy after retirement.
+
+Final retained receipt:
+
+`sidecar/runs/014_validation_20260817T001507Z.md`
+
+Final result:
+
+- shared snapshot hashes/provenance: **GREEN**;
+- active path free of `vendor_cs1` imports: **GREEN**;
+- legacy `vendor_cs1` directory absent: **GREEN**;
+- regression tests: **GREEN**;
+- fixed-suite parity: **GREEN**;
+- plotting: optional YELLOW because matplotlib was unavailable.
+
+The five final deterministic win rates remained:
+
+| strategy | win rate vs `bank_at_425` |
+|---|---:|
+| `bank_at_300` | 0.640 |
+| `learner:2000` | 0.630 |
+| `learner:20000` | 0.670 |
+| `rollout:25` | 0.690 |
+| `rollout:100` | 0.680 |
+
 This follows the migration rule:
 
-> **copy -> reconcile -> verify shared -> adopt consumer -> verify consumer -> retire duplicate**
+> **copy -> reconcile -> verify shared -> adopt consumer -> verify consumer -> retire duplicate -> verify retirement**
 
 ## Teaching interpretation
 
@@ -148,14 +173,12 @@ The Week 16 question remains:
 
 The required path remains CPU-first, free/open, bounded, and independent of GPU/cloud/Kubernetes access.
 
-## What remains before promotion to `main`
+## Closure
 
-Run the strengthened validator once more on Brandy after the legacy vendor retirement:
+The CS2 Farkle campaign is complete for this phase.
 
-```text
-python scripts/validate_week16_farkle.py
-```
+Current classification:
 
-Retain the resulting GREEN `sidecar/runs/014_validation_<timestamp>.md` receipt. If that gate passes, the migration is ready to promote to `main`.
+> **GREEN — CANONICAL SHARED-CORE CONSUMER VALIDATED ON BRANDY.**
 
-No additional Farkle architecture work is required in CS2 after that closure step.
+No additional Farkle architecture work is required in CS2 before promotion to `main`.
