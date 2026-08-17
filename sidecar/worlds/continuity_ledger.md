@@ -88,6 +88,15 @@ established.
 - **Unresolved thread:** All four hooks above remain open and available for any future world-specific injection to reference or ignore.
 - **Safe to return?** Yes -- these four hooks are the first ones explicitly promised to a student audience (even if only implicitly), so any future material that touches them should acknowledge that students may already be listening for a callback here.
 
+### All four worlds -- Transfer Portal policy established
+- **Introduced:** Prompt 020, 2026-08-17
+- **Characters involved:** Garrett Boone, Chief Nora Arana, Commander Elias Rourke, Frank Delgado (each world's transfer-flavor document, not a new scene).
+- **What happened:** World switching was resolved as course policy (`transfer_portal/README.md`): early transfers free and easy, later transfers via a short check-in, no restart, migration receipt joins the student's own World Bible. Each world got a one-line transfer-document flavor (Claim Transfer Record, Case Reassignment Form, Transfer Order, Change of Role Memo). `four_calls/README.md` and the Four Calls deck were both updated to close the previously-flagged unresolved question with one added sentence each.
+- **What students learned / experienced:** N/A -- this is a policy addition, not a scene; individual student transfers are recorded in *their own* World Bible, never in this internal ledger.
+- **Software/world decision affected:** N/A.
+- **Unresolved thread:** The exact early-transfer cutoff date is Jeremy's open decision (recommended: before the Week 6 checkpoint, not a source-backed date).
+- **Safe to return?** Yes -- this is standing policy, not a seed; no payoff to manage.
+
 ---
 
 ## Cross-world notes

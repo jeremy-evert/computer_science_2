@@ -99,23 +99,38 @@ prompt's explicit "do not perform production LMS writes" boundary.
   only valid values -- never accept an open text field for this
   choice.
 
-## World-switch policy -- unresolved, flagged rather than invented
+## World-switch policy -- resolved (Prompt 020)
 
-The current course source of truth (`../../../docs/grading-model.md`,
-`../../../assignments/A2-coding-odyssey-project.md`,
-`../../../ROADMAP.md`) does not state whether a student may switch
-their chosen world after selecting it, or by when a switch would need
-to happen. Per the prompt's explicit instruction, this is flagged as
-an open decision for Jeremy rather than invented here. Until resolved,
-the closing message (below) does not commit to either policy.
+**Students may switch worlds.** Early in the semester it's easy and
+free; later it just starts with a short check-in with Jeremy. Nobody
+restarts -- the student's software and World Bible history carry
+forward. Full policy: `../transfer_portal/README.md`.
+
+Per that prompt's explicit instruction not to over-explain the
+transfer process during initial world selection, the choice-moment
+guidance (above, "The choice moment") now includes exactly one added
+sentence about this rather than the full policy -- see the updated
+choice-screen guidance below.
+
+**Updated choice-screen guidance, spoken/on-screen:**
+
+> Choose the world you're most curious to return to. Don't choose
+> based on perceived difficulty -- there isn't a harder or easier
+> door here. You're choosing context, not a different grading
+> standard. If you discover you chose wrong, there's a Transfer
+> Portal -- you can move without losing the work you've already
+> earned. Overthinking this is unnecessary.
 
 ## Closing message (after the choice is recorded)
 
-> "Your world has your answer now. You'll hear from them again."
+> "Your world has your answer now. You'll hear from them again. And if
+> it turns out to be the wrong door -- the Transfer Portal is always
+> there."
 
-Deliberately brief -- protects the surprise (no roadmap of future
-contact), confirms the choice was received, and implies continuity
-without describing it.
+Still deliberately brief -- protects the surprise (no roadmap of
+future contact, no explanation of the migration receipt here), confirms
+the choice was received, and now also confirms the choice isn't a
+trap, without turning the moment into a terms-of-service screen.
 
 ## Production checklist (for Jeremy, when recording)
 
