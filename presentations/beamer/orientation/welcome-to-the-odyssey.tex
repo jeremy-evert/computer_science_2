@@ -1,0 +1,193 @@
+% welcome-to-the-odyssey.tex
+%
+% Prompt 016: Welcome to the Reasoning Odyssey. Student-facing orientation
+% deck explaining the shared academic fabric of A2 (the Reasoning Odyssey)
+% -- NOT a weekly teaching deck, NOT world-specific lore. See
+% sidecar/prompts/016_welcome_to_reasoning_odyssey.md, "Architectural
+% firewall": this deck is layer 2 of 3 (class slides / THIS / world
+% playgrounds). World names and one-line flavor below are drawn from the
+% current source of truth (assignments/A2-coding-odyssey-project.md);
+% no lore, characters, or hooks are invented here -- that is Prompt
+% 017/018 territory.
+%
+% Built on the Prompt 015 CS2 slide system -- no second presentation
+% style invented. See ../STYLE_GUIDE.md for the pattern vocabulary and
+% the literal-frame convention required for patterns 5/6/7/8/13 (unused
+% in this deck; no code or diagrams needed for an orientation talk).
+
+\documentclass[aspectratio=169]{beamer}
+\usepackage{../theme/cs2theme}
+\usepackage{../theme/cs2commands}
+
+\setcsweek{Orientation -- Welcome to the Odyssey}
+
+\title{Welcome to the Reasoning Odyssey}
+\subtitle{The shared spine underneath everything you'll build this semester}
+\author{Computer Science II \textbullet\ Dr. Jeremy P. Evert}
+\date{Fall 2026 \textbullet\ COMSC-1053}
+
+\begin{document}
+
+% 1. Title / opening
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% 2. Today's destination
+\begin{destinationframe}{Today's Destination}
+  \begin{itemize}
+    \item Understand what the Reasoning Odyssey actually is
+    \item See what "one software world, all semester" means in practice
+    \item Meet the World Bible and understand why it matters
+    \item Understand how gates and checkpoints work
+    \item Choose which world you'll build in
+  \end{itemize}
+  \instructorcue{This is the whole semester's shape in fifteen minutes. Slow down -- this is the only time you get to set expectations before the work starts.}
+\end{destinationframe}
+
+% 3. Why this matters
+\begin{whymattersframe}{CS2 Is Not a Stack of Disconnected Assignments}
+  Most programming courses hand you a new, unrelated exercise every week.
+  Finish it, forget it, move on.
+
+  \vspace{3mm}
+  \textbf{This course does something different.} You are going to build
+  \emph{one} software world, and every week's work either grows it,
+  tests it, or forces you to defend a decision you made weeks ago.
+\end{whymattersframe}
+
+% 4. Core concept
+\begin{conceptframe}{You Are Growing One World, Not Finishing Assignments}
+  \begin{center}
+    \large\color{cs2primary}
+    \textbf{You are going to build one software world all semester.}
+  \end{center}
+  \vspace{2mm}
+  It will start simple. Then we are going to stress it, break
+  assumptions, add capabilities, and make you explain why it still
+  deserves to exist.
+
+  \vspace{3mm}
+  \small That is not a metaphor -- it is literally how the weekly work
+  is structured.
+\end{conceptframe}
+
+% 5. Design decision -- choices have consequences
+\begin{designdecisionframe}{Your Choices Create Consequences}
+  \begin{itemize}
+    \item Early choices establish structure
+    \item Later capabilities put pressure on earlier designs
+    \item Assumptions may fail -- and that's expected, not a mistake
+    \item You will refactor, collect evidence, and explain decisions
+    \item An earlier design choice may matter again in Week 12
+  \end{itemize}
+  \vspace{2mm}
+  \textbf{This continuity is a feature of the course, not an accident.}
+\end{designdecisionframe}
+
+% 6. World Bible entry
+\begin{worldbibleframe}{The World Bible Remembers}
+  \begin{worldbibleentry}{What the World Bible Actually Is}
+    \wbfield{Purpose}{A short living project record: charter, current state, one line per week on what changed or broke, known debt, tests/evidence, and important design choices.}
+    \wbfield{Not}{Decorative lore. Not busywork. Not a second homework track.}
+    \wbfield{Why it matters}{When Week 12 exposes a consequence of a Week 4 decision, this is what you consult -- and what you cite in your defense.}
+  \end{worldbibleentry}
+\end{worldbibleframe}
+
+% 7. Evidence to produce -- weekly gates
+\begin{evidenceframe}{Weekly Gates Produce Evidence of Progress}
+  Weeks 3--5, 7--8, and 10--13: a small, gradable evidence package, not a
+  second problem-set track. Each gate asks for:
+  \begin{enumerate}
+    \item the world-fit implementation or design change
+    \item a focused run, test, trace, or demonstration
+    \item a short explanation of the decision and trade-off
+    \item your World Bible entry, plus AI evidence when AI helped
+  \end{enumerate}
+  \vspace{2mm}
+  \small 25 points each. Reasoning and explanation matter alongside working code.
+\end{evidenceframe}
+
+% 18. Odyssey checkpoint -- larger checkpoints
+\begin{odysseygateframe}{Checkpoints Ask You to Defend a Larger Capability}
+  Three larger checkpoints sit apart from the weekly gates -- bigger
+  evidence packages, not just bigger point values:
+  \begin{itemize}
+    \item \textbf{Week 6} (40 pts) -- a baby-project contract and swap
+    \item \textbf{Week 9} (50 pts) -- a GUI/model or data-story synthesis
+    \item \textbf{Week 14} (60 pts) -- a professional workflow receipt and full trail debrief
+  \end{itemize}
+  \vspace{2mm}
+  \small See \texttt{rubrics/odyssey\_gates/} for the full evidence shape --
+  this slide is the pointer, not the rubric.
+\end{odysseygateframe}
+
+% 9. Shared destination
+\begin{conceptframe}{Every World Shares the Same Destination}
+  \begin{center}
+    \large\color{cs2primary}\textbf{No world is the easy world.}\\
+    \large\color{cs2primary}\textbf{No world is the advanced world.}
+  \end{center}
+  \vspace{3mm}
+  Every world targets the same CS2 learning outcomes, the same gates,
+  the same checkpoints, and the same grading model. You are choosing
+  \emph{context and flavor} -- not a different standard.
+\end{conceptframe}
+
+% 10. Four doors, spoiler-light
+\begin{frame}{Choose the World You'll Build In}
+  \cskicker{cs2accent}{FOUR WORLDS, ONE DESTINATION}
+  \begin{columns}[T]
+    \begin{column}{0.24\textwidth}
+      \begin{center}
+        \textbf{\color{cs2primary}Frontier Settlement}\\[1mm]
+        \small\color{cs2inkSoft} Build the services a new settlement needs to survive and grow.
+      \end{center}
+    \end{column}
+    \begin{column}{0.24\textwidth}
+      \begin{center}
+        \textbf{\color{cs2primary}Investigation Bureau}\\[1mm]
+        \small\color{cs2inkSoft} Build the casework and workflow tools an investigator actually relies on.
+      \end{center}
+    \end{column}
+    \begin{column}{0.24\textwidth}
+      \begin{center}
+        \textbf{\color{cs2primary}Starship Log}\\[1mm]
+        \small\color{cs2inkSoft} Build the systems that keep a ship's operations running -- and logged.
+      \end{center}
+    \end{column}
+    \begin{column}{0.24\textwidth}
+      \begin{center}
+        \textbf{\color{cs2primary}Small Business}\\[1mm]
+        \small\color{cs2inkSoft} Build the inventory and transaction tools a real small business needs.
+      \end{center}
+    \end{column}
+  \end{columns}
+  \vspace{4mm}
+  \small\color{cs2inkSoft}\centering
+  That's all you need to know today. The rest, you'll find out by building there.
+\end{frame}
+
+% 11. How to choose
+\begin{pairdiscussframe}{How to Choose Without Overthinking It}
+  Don't rank them by difficulty -- they're not ranked that way.
+
+  \vspace{2mm}
+  Ask yourself one question: \textbf{which of these four would I
+  actually enjoy coming back to, week after week, for a whole semester?}
+
+  \stopandwork{2 minutes. Talk to the person next to you about which door you're leaning toward -- and why.}
+\end{pairdiscussframe}
+
+% 12. What happens next
+\begin{exitframe}{What Happens Next}
+  \Large\color{cs2primary}
+  \textbf{Pick your world. Week 3 is where the first gate opens.}
+
+  \vspace{4mm}
+  \normalsize\normalfont\color{cs2ink}
+  Everything from here forward assumes you've chosen -- so choose
+  something you'll want to keep building.
+\end{exitframe}
+
+\end{document}
