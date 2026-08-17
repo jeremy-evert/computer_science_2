@@ -111,6 +111,8 @@ def main():
 
     snapshot_errors = _validate_shared_snapshot()
     vendor_imports = _validate_active_path_has_no_vendor_imports()
+    legacy_vendor = CODE / "farkle_week16" / "vendor_cs1"
+    legacy_vendor_present = legacy_vendor.exists()
 
     test_command = [
         sys.executable, "-m", "unittest", "discover",
@@ -144,12 +146,21 @@ def main():
             "GREEN — active CS2 source/tests contain no vendor_cs1 imports"
         )
 
+    if legacy_vendor_present:
+        required_checks.append(
+            "RED — retired lessons/code/farkle_week16/vendor_cs1 directory still exists"
+        )
+    else:
+        required_checks.append(
+            "GREEN — legacy vendor_cs1 snapshot retired after shared-core validation"
+        )
+
     required_checks.append(
         f"{'GREEN' if tests.returncode == 0 else 'RED'} — regression tests exit={tests.returncode}"
     )
 
     receipt = receipt_dir / f"014_validation_{stamp}.md"
-    if snapshot_errors or vendor_imports or tests.returncode != 0:
+    if snapshot_errors or vendor_imports or legacy_vendor_present or tests.returncode != 0:
         _write_failure(receipt, stamp, tests, test_log, required_checks)
         print(receipt)
         return 1
