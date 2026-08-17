@@ -1,4 +1,8 @@
-"""Reproducible CS2 Week 16 Farkle experiment runner."""
+"""Reproducible CS2 Week 16 Farkle experiment runner.
+
+CS2 owns the experiment framing and cost currencies. The Farkle machine itself
+comes from the provenance-pinned canonical ``farkle_ml`` package.
+"""
 
 from dataclasses import asdict, dataclass
 import csv
@@ -7,10 +11,10 @@ from pathlib import Path
 import platform
 import time
 
-from . import SCHEMA_VERSION, UPSTREAM_CS1_COMMIT
+from . import SCHEMA_VERSION, SHARED_REPOSITORY, SHARED_SOURCE_COMMIT
 from .contract import FunctionStrategyAdapter
 from .strategies import LearnedTableStrategy, OneStepRolloutStrategy
-from .vendor_cs1 import learner, simulate, strategies as cs1_strategies
+from farkle_ml import learner, simulate, strategies as shared_strategies
 
 
 @dataclass(frozen=True)
@@ -35,7 +39,8 @@ class BuiltStrategy:
 @dataclass
 class ExperimentResult:
     schema_version: str
-    upstream_cs1_commit: str
+    shared_repository: str
+    shared_source_commit: str
     python_version: str
     execution_context: str
     seed: int
@@ -67,7 +72,7 @@ class ExperimentResult:
 def strategy_menu():
     return {
         "bank_at_N": "Human threshold; e.g. bank_at_425. Near-zero preparation.",
-        "learner:N": "Transparent CS1 table trained for N solo turns.",
+        "learner:N": "Transparent shared table trained for N solo turns.",
         "rollout:N": "One-step simulation using N sampled next rolls per decision.",
     }
 
@@ -93,7 +98,7 @@ def build_strategy(specification, seed):
         training_turns = 0
 
     else:
-        function = cs1_strategies.resolve_strategy(specification)
+        function = shared_strategies.resolve_strategy(specification)
         strategy = FunctionStrategyAdapter(function)
         model_size = 0
         training_turns = 0
@@ -128,7 +133,8 @@ def run_experiment(config):
 
     return ExperimentResult(
         schema_version=SCHEMA_VERSION,
-        upstream_cs1_commit=UPSTREAM_CS1_COMMIT,
+        shared_repository=SHARED_REPOSITORY,
+        shared_source_commit=SHARED_SOURCE_COMMIT,
         python_version=platform.python_version(),
         execution_context=config.execution_context,
         seed=config.seed,
@@ -169,8 +175,10 @@ def result_row(result):
 def save_json(result, path):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(result_row(result), indent=2, sort_keys=True) + "\n",
-                    encoding="utf-8")
+    path.write_text(
+        json.dumps(result_row(result), indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
     return path
 
 
@@ -188,7 +196,7 @@ def save_csv(results, path):
 
 
 def default_suite(games=500, seed=1):
-    """Small fixed menu for classroom comparison; caller may choose a subset."""
+    """CS2 fixed suite preserved across the shared-core migration."""
     return [
         ExperimentConfig("bank_at_300", games=games, seed=seed),
         ExperimentConfig("learner:2000", games=games, seed=seed + 10),
