@@ -70,11 +70,20 @@ established.
 - **Unresolved thread:** The bulk/case-quantity assumption gap is planted but not yet surfaced. Yolanda's regular-customer recurring-order comment is planted but not yet surfaced.
 - **Safe to return?** Yes -- both seeds are dormant and available whenever pedagogically useful.
 
+### All four worlds -- Four Faces personas deepened
+- **Introduced:** Prompt 019, 2026-08-17
+- **Characters involved:** Garrett Boone, Chief Nora Arana, Commander Elias Rourke, Frank Delgado
+- **What happened:** Jeremy's four named personas (first introduced in Prompt 017) each received a full dossier under `four_faces/`: authority, relationships, flaws, entrance patterns, continuity hooks, a student-relationship arc, and sample scripts. Chief Arana and Investigation's cast gained a first name (Nora).
+- **What students learned / experienced:** N/A -- internal only.
+- **Software/world decision affected:** N/A.
+- **Unresolved thread:** None new -- see each world's section above for that world's still-dormant seeds, several of which are echoed as "something they don't know yet" in the matching Four Faces dossier.
+- **Safe to return?** Yes.
+
 ---
 
 ## Cross-world notes
 
-None yet -- no cross-world events exist as of Prompt 017. If a future
-injection ever deliberately references more than one world (not
+None yet -- no cross-world events exist as of Prompt 017/019. If a
+future injection ever deliberately references more than one world (not
 currently planned or recommended), log it here with an explicit note
 on why the firewall between world tracks still holds.
