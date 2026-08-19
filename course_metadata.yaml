@@ -21,6 +21,23 @@ course:
   requisites: "COMSC-1033"
   catalog_offering_note: "Traditional, in-person section"
 
+  # Compatibility aliases for the guarded production reconcile. These mirror
+  # the official fields above; tests round-trip this real file through
+  # scripts/cs2_production.py::_contract so the two consumers cannot silently
+  # drift apart again.
+  title: "Computer Science II"
+  course_code: "COMSC-1053"
+  section: "1417"
+
+# Compatibility mappings consumed by scripts/cs2_production.py::_contract.
+# They intentionally repeat the official values above rather than inventing a
+# second course identity.
+term:
+  name: "Fall 2026"
+
+instructor:
+  name: "Dr. Jeremy P. Evert"
+
 # Official Banner/catalog facts, preserved verbatim.
 official:
   modality: "Traditional (in-person)"
