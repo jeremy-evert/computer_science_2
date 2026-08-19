@@ -1,11 +1,22 @@
 import importlib.util
 from pathlib import Path
 
-SCRIPT = Path(__file__).resolve().parents[1] / "scripts/cs2_production.py"
+ROOT = Path(__file__).resolve().parents[1]
+SCRIPT = ROOT / "scripts/cs2_production.py"
+LAUNCHER = ROOT / "sidecar/launch_flo.sh"
 spec = importlib.util.spec_from_file_location("cs2_production", SCRIPT)
 module = importlib.util.module_from_spec(spec)
 assert spec.loader is not None
 spec.loader.exec_module(module)
+
+
+def test_contract_round_trips_real_course_metadata():
+    assert module._contract() == {
+        "title": "Computer Science II",
+        "section_identity": "COMSC-1053-1417",
+        "term": "Fall 2026",
+        "instructor": "Dr. Jeremy P. Evert",
+    }
 
 
 def test_candidate_match_requires_name_section_and_fall_2026_term():
@@ -58,3 +69,18 @@ def test_savnac_acceptance_shape_is_pinned():
     assert module.EXPECTED_MODULE_COUNT == 16
     assert module.EXPECTED_OBJECT_COUNT == 155
     assert module.EXPECTED_ASSIGNMENT_GROUP_COUNT == 14
+
+
+def test_flo_launcher_provisions_every_repo_cs2_compiler_reads():
+    text = LAUNCHER.read_text()
+    for repo in (
+        "computer_science_2",
+        "course_foundry",
+        "harbor",
+        "imprint",
+        "local_ai_lab_setup",
+        "ai_fluency",
+        "professional_minds",
+        "computer_science_1",
+    ):
+        assert repo in text
