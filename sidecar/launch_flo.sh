@@ -44,6 +44,24 @@ CAMPAIGN_ID="$(date -u +%Y%m%dT%H%M%SZ)-$$"
 CAMPAIGN_ROOT="$WORK_BASE/$CAMPAIGN_ID"
 mkdir -p "$CAMPAIGN_ROOT"
 
+# This is the complete set consumed by the current CS2 production path:
+# - CS2 source + production machinery
+# - shared compiler/API/reconcile repos
+# - Week 2 local AI lab source
+# - Monday Moment and Professional Minds source
+# - two generic gradebook pages currently sourced read-only from CS1
+# CS1 is a pinned input only. This launcher never edits its ordinary checkout.
+RUNWAY_REPOS=(
+    computer_science_2
+    course_foundry
+    harbor
+    imprint
+    local_ai_lab_setup
+    ai_fluency
+    professional_minds
+    computer_science_1
+)
+
 clone_origin() {
     local name="$1"
     local source="$SOURCE_ROOT/../$name"
@@ -57,7 +75,7 @@ clone_origin() {
     [[ -z "$(git -C "$CAMPAIGN_ROOT/$name" status --porcelain)" ]] || fail "fresh $name clone is unexpectedly dirty"
 }
 
-for repo in computer_science_2 course_foundry harbor imprint local_ai_lab_setup; do
+for repo in "${RUNWAY_REPOS[@]}"; do
     clone_origin "$repo"
 done
 
@@ -66,7 +84,7 @@ FLO_ROOT="$CAMPAIGN_ROOT/computer_science_2"
 
 # Prove that every dependency is a clean origin snapshot before Claude starts.
 echo ">>> Clean Flo production runway"
-for repo in computer_science_2 course_foundry harbor imprint local_ai_lab_setup; do
+for repo in "${RUNWAY_REPOS[@]}"; do
     printf '    %-24s %s\n' "$repo" "$(git -C "$CAMPAIGN_ROOT/$repo" rev-parse --short=12 HEAD)"
 done
 
@@ -80,8 +98,9 @@ Repository: $FLO_ROOT
 Production workspace root: $CAMPAIGN_ROOT
 
 This is a launcher-created isolated workspace cloned from repository origins. The ordinary checkouts under $SOURCE_ROOT/.. may contain active CS1 or other human work; they are out of scope and must remain untouched.
+The ai_fluency, professional_minds, and computer_science_1 clones in this isolated workspace are pinned read-only source inputs required by the current CS2 compiler. Do not modify them. Computer Science 1 remains outside your work lane.
 Production writes are forbidden until the prompt's explicit human gate.
-Computer Architecture and Computer Science 1 are out of bounds.
+Computer Architecture and Computer Science 1 are out of bounds for changes.
 Do not make an unpromoted Luna branch a prerequisite unless fresh CS2 evidence proves a real dependency blocker.
 Jeremy is not the message bus: keep the full preflight-to-closeout job in this one seat.
 EOF
