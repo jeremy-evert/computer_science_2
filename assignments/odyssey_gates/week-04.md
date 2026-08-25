@@ -11,6 +11,9 @@ invariant, not a toy hierarchy.
 
 ## Required evidence
 
+Reopen the Week 3 object. Now ask what happens when that object cannot do
+meaningful work alone — what does it need to collaborate with, and why?
+
 Refactor a real flow into collaborating objects using composition. Protect one invariant with a test/trace and explain why composition fits better than an unnecessary hierarchy.
 
 Keep one concise World Bible entry: what changed, evidence used, and any

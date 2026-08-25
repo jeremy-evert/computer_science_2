@@ -8,8 +8,12 @@ of CS1 code. Pick one world—Frontier Settlement, Investigation Bureau,
 Starship Log, or Small Business—and let useful course capabilities serve the
 world rather than forcing a checklist.
 
-Week 2 permits only light, ungraded genre/world seeding. The first graded
-build begins Week 3.
+Week 2 permits only light, ungraded genre/world seeding, in which the
+student writes World Bible v0.1: a short premise, cast of nouns, one flow,
+three software questions, known unknowns, and a prediction of which nouns
+might become objects. Later gates revise this seed rather than replace it —
+Week 3 tests the object predictions directly. The first graded build begins
+Week 3.
 
 ## Growth path
 
