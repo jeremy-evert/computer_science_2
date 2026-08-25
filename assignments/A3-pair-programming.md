@@ -1,5 +1,7 @@
 # Paired-programming report (A3)
 
+> **RETIRED (Prompt 030, 2026-08-25 — Decision 029 optional-Commons pivot).** This is no longer required, graded CS2 coursework; it is preserved here as provenance only. Pair programming and Show & Tell remain in-class practices with no Canvas assignment, reflection, receipt, or online equivalent. See `docs/grading-model.md` and `sidecar/reports/030_optional_commons_pivot_cs2_safe_execution.md`.
+
 ## Purpose
 
 Practice explaining object design, tests, and trade-offs aloud while reading a

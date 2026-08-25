@@ -102,29 +102,22 @@ The schedule may be adjusted when needed. Substantive changes will be communicat
 
 ## Grading
 
+**Updated (Prompt 030, 2026-08-25 — Decision 029 optional-Commons pivot):** AI Fluency (Monday Moment), Professional Minds (Wacky Wednesday / Fun Friday), and the Paired-Programming/Show-and-Tell/Feedback paperwork (A3/A4/A7) are no longer required, graded CS2 coursework. Pair programming and Show & Tell remain regular in-class practices — you'll still do them — there is just no separate Canvas assignment, reflection, or report attached to them anymore. Related enrichment content remains available, optionally, in Computing Commons. Professional Pathway (A6) work similarly moves to the optional/enrichment side. Week 1 Semester Kickoff credit you've already earned is preserved as bonus credit outside the required grade below.
+
 | Category | Weight |
 |---|---:|
-| Semester kickoff week | 5% |
-| Monday Moment quiz | 5% |
-| Wacky Wednesday reflection | 5% |
-| Fun Friday reflection | 5% |
-| Paired-programming report (A3) | 5% |
-| Friday feedback report (A7) | 5% |
-| Show-and-Tell reflection (A4) | 5% |
-| Weekly reinforcement / Odyssey gates | 25% |
-| Reasoning Odyssey checkpoints | 15% |
-| Final reflection paper (A5) | 8% |
-| Professional pathway – Week 14 update | 5% |
-| Professional pathway – Week 15 submission | 5% |
-| Attendance & participation | 5% |
+| Weekly reinforcement / Odyssey gates | 45% |
+| Reasoning Odyssey checkpoints | 30% |
+| Final reflection paper (A5) | 15% |
+| Attendance & participation | 8% |
 | Course evaluation | 2% |
 | **Total** | **100%** |
 
-**Grading scale:** A = 90–100%; B = 80–89%; C = 70–79%; D = 60–69%; F = below 60%. Rubrics and course-specific drop/revision rules are owned by the current repository grading model.
+**Grading scale:** A = 90–100%; B = 80–89%; C = 70–79%; D = 60–69%; F = below 60%. Rubrics and course-specific drop/revision rules are owned by the current repository grading model (`docs/grading-model.md`).
 
 ## Attendance and participation
 
-Attendance and participation support the collaborative design, pair-work, demonstration, and feedback portions of CS2 and are 5% of the course grade. Attendance is recorded at scheduled meetings. If attendance will be difficult, communicate early so the work can remain connected to the course rather than silently accumulating.
+Attendance and participation support the collaborative design, pair-work, demonstration, and feedback portions of CS2 and are 8% of the course grade. Attendance is recorded at scheduled meetings. If attendance will be difficult, communicate early so the work can remain connected to the course rather than silently accumulating.
 
 ## Late work, revision, and recovery
 

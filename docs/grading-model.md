@@ -1,11 +1,25 @@
 # COMSC-1053 — Grading Model (Fall 2026 source model)
 
-This is the CS2 source model for a 100% grade. It adopts the established
-weekly cadence and category split while keeping the evidence, gate criteria,
-and technical progression native to CS2. It is a source document; no Canvas,
-Savnac, or student-system write is implied.
+**Status update (Prompt 030, 2026-08-25 — Decision 029 optional-Commons pivot):** the shared/paperwork categories below (Monday Moment quiz, Wacky Wednesday, Fun Friday, Paired-programming report/A3, Friday feedback report/A7, Show-and-Tell reflection/A4, Professional Pathway/A6) are **retired from the required CS2 grade**, per `swosu_cs_curriculum/decisions/029_fall_2026_optional_computing_commons_pivot.md`. Pair programming and Show & Tell remain in-class teaching practices only — no assignment, reflection, receipt, or online mirror. AI Fluency/Monday Moment and Professional Minds content remains available to students only through optional Computing Commons (course `24298`), not as required CS2 coursework. See "New required grading model" below for the current target. The original full-cadence model is preserved further down this file as historical/superseded context, not as the active design.
 
-## Final weights
+## New required grading model (current target, Prompt 030)
+
+| Required CS2 category | Weight |
+|---|---:|
+| Weekly CS2 reinforcement / Reasoning Odyssey gates | 45% |
+| Reasoning Odyssey checkpoints | 30% |
+| Final reflection | 15% |
+| Attendance & participation | 8% |
+| Course evaluation | 2% |
+| **Required-course total** | **100%** |
+
+Week 1 Semester Kickoff credit already earned/submitted by enrolled students is preserved but sits **outside** this required 100% as historical bonus credit — it is not clawed back, regraded, or folded into the new split. No live Canvas weight change has been made to implement this target yet; live weight migration is a later, separately gated deployment step requiring a before/after impact preview that proves no enrolled student loses credit (see `sidecar/reports/030_optional_commons_pivot_cs2_safe_execution.md`).
+
+This keeps 90% of the required grade on native CS2 technical work/evidence (weekly gates + checkpoints), preserves a small participation/evaluation component, and replaces the retired mash-in categories with the course's own material rather than inventing filler to hit a target count.
+
+## Superseded: original full-cadence model (historical, not the active design)
+
+This was the CS2 source model prior to the Decision 029 pivot. It adopted the established weekly cadence and category split shared across all four courses. Preserved here for provenance; do not build from this table going forward.
 
 | Category | Weight | Canvas/Savnac object shape | Graded weeks |
 |---|---:|---|---|
@@ -25,10 +39,7 @@ Savnac, or student-system write is implied.
 | Course evaluation | 2% | End-of-term completion object | End of term |
 | **Total** | **100%** | | |
 
-The percentages are intentionally explicit. They preserve the full cadence:
-no category is silently omitted or folded into another one. The exact
-Canvas/Savnac object IDs, due dates, late rules, and drop-lowest behavior
-remain deployment questions and are not invented here.
+The percentages above were intentionally explicit: no category was silently omitted or folded into another. This table is retained for historical reference only — the "New required grading model" section above is the current target.
 
 ## Odyssey gate grading shape
 
