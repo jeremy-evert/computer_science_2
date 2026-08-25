@@ -16,11 +16,13 @@ invent due work here.
 
 ## Weekly rhythm
 
+**Updated (Decision 029, 2026-08-25):** AI Fluency/Monday Moment and Professional Minds are optional Computing Commons enrichment, not required CS2 coursework. Pair programming and Show & Tell remain real in-class practices with no separate Canvas assignment, reflection, or receipt — retired categories A3/A4/A7 do not get recreated in new weeks.
+
 | Day | Strand | Active work |
 |---|---|---|
-| Monday | Monday Moment — shared AI Fluency I | Technical lesson and worked evidence |
-| Wednesday | Wacky Wednesday — shared Professional Minds | Paired programming and A3 |
-| Friday | Fun Friday — shared Professional Minds | Show-and-Tell, A4, and A7 |
+| Any day | CS2 technical lesson | Reasoning Odyssey Gate/Checkpoint work for the week |
+
+Optional enrichment (not graded, not required): AI Fluency Monday Moment (`../ai_fluency/ai_i/`), Professional Minds readings — point students to Computing Commons if useful, do not build a home-course assignment for either.
 
 Read [`START_HERE.md`](../START_HERE.md) once for ownership boundaries and
 the full course contract.

@@ -18,22 +18,23 @@ what remains uncertain.
 
 ## The weekly rhythm
 
-| Day | Short strand | Active work |
+**Updated (Decision 029, 2026-08-25):** the required CS2 grade is straight-ahead technical work. AI Fluency and Professional Minds are optional Computing Commons enrichment, not graded CS2 coursework. Pair programming and Show & Tell are real in-class practices — you'll still do them — with no separate assignment, reflection, or receipt attached (A3/A4/A7 are retired).
+
+| Day | Focus | Active work |
 |---|---|---|
-| Monday | Shared AI Fluency I Monday Moment | CS2 technical lesson |
-| Wednesday | Shared Professional Minds | Paired programming and A3 |
-| Friday | Shared Professional Minds | Show-and-Tell, A4, and A7 |
+| Any day | CS2 technical work | Reasoning Odyssey Gate/Checkpoint for the week |
 
 ## The standing assignments
 
 | Assignment | Role |
 |---|---|
-| A3 | Individual paired-programming report |
-| A4 | Own-work Show-and-Tell reflection |
 | A5 | Final reflection and closure |
-| A6 | Week 14 update and Week 15 portfolio completion |
-| A7 | Feedback given during Show and Tell |
-| Odyssey gates | Weekly technical evidence and larger Weeks 6/9/14 checkpoints |
+| Odyssey gates | Weekly technical evidence (45% of the required grade) |
+| Odyssey checkpoints | Larger Weeks 6/9/14 checkpoints (30%) |
+| Attendance & participation | 8% |
+| Course evaluation | 2% |
+
+Week 1 Semester Kickoff credit already earned is preserved as historical bonus outside this required split. A6 (Professional Pathway) is retired from required CS2 coursework; see optional Computing Commons if that content is still useful to a student.
 
 For what is due in a particular week, use that week's module Overview and
 `planning/week-NN.md`. Shared source bodies remain in their owning
