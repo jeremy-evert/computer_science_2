@@ -1,4 +1,4 @@
-# Week 15 — Mexico: Asynchronous, Light, and Self-Contained
+# Week 15 — Buffer: Asynchronous, Light, and Self-Contained
 
 No required live meeting, new technical concept, displaced material, or new
 Odyssey feature sprint. Students may optionally clean up documentation,
