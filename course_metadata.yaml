@@ -1,0 +1,93 @@
+# Computer Science II — durable course metadata
+#
+# Tracked source of truth for COMSC-1053's Fall 2026 offering, added
+# prompt 045 (`jeremy_task_tracking/prompts/
+# 045_add_week_at_a_glance_for_other_three_classes.md`) so the shared
+# `course_foundry.course_information_page` generator (built prompt 044 for
+# Computer Architecture, reused here rather than rebuilt) can push a
+# durable Course Information page to Savnac course 3. Every field below
+# traces to the official catalog/section record Jeremy supplied verbatim
+# in prompt 045. Nothing here is inferred.
+
+course:
+  code: "COMSC-1053"
+  name: "Computer Science II"
+  credits: 3
+  term: "Fall 2026"
+  section_number: "COMSC-1053-1417"
+  start_date: "2026-08-17"
+  end_date: "2026-12-11"
+  instructor: "Dr. Jeremy P. Evert"
+  requisites: "COMSC-1033"
+  catalog_offering_note: "Traditional, in-person section"
+
+  # Compatibility aliases for the guarded production reconcile. These mirror
+  # the official fields above; tests round-trip this real file through
+  # scripts/cs2_production.py::_contract so the two consumers cannot silently
+  # drift apart again.
+  title: "Computer Science II"
+  course_code: "COMSC-1053"
+  section: "1417"
+
+# Compatibility mappings consumed by scripts/cs2_production.py::_contract.
+# They intentionally repeat the official values above rather than inventing a
+# second course identity.
+term:
+  name: "Fall 2026"
+
+instructor:
+  name: "Dr. Jeremy P. Evert"
+
+# Official Banner/catalog facts, preserved verbatim.
+official:
+  modality: "Traditional (in-person)"
+  location: "Gen. Thomas P. Stafford Center, Room 259"
+  meeting_pattern: "M/W/F 1:00 PM - 1:50 PM"
+  catalog_description: >-
+    This course is a continuation of Computer Science I. Object-oriented
+    programming concepts such as class inheritance, encapsulation and
+    polymorphism are covered. Topics covered include abstract classes;
+    interfaces; GUI programming, event-driven programming, data
+    abstraction through use of classic data structures list, stack and
+    queue, and object-oriented thinking and design. Emphasis will be on
+    program design, modularity, debugging, and documentation. Source code
+    management is practiced in paired programming projects.
+
+# CS2 is a traditional in-person section with a real Banner meeting time --
+# unlike Computer Architecture, there is no official/planning-cadence
+# ambiguity to disambiguate. This block is populated with the same real
+# meeting pattern for schema consistency with the shared Course
+# Information generator (which expects this key), not because CS2 has a
+# separate "working" rhythm distinct from its official one.
+instructional_working_cadence:
+  days: "Monday / Wednesday / Friday"
+  time: "1:00 PM"
+  label: "Same as the official Banner meeting time above -- no separate planning cadence for this course."
+
+# RECONCILED 2026-08-15: COMSC-1053 has no required textbook or external
+# course for Fall 2026. The prior zyBooks identifier and URL are retained
+# below only as dated historical provenance; they are not an adoption or
+# student requirement. `Zachary` is vendor-supplied and remains exactly as
+# originally supplied.
+textbook:
+  title: "No required textbook or external course for Fall 2026"
+  authors: []
+  main_chapters: []
+  note: >-
+    Fall 2026 COMSC-1053 has no required textbook, paid resource, or external
+    course. Its organizing path is course-owned Odyssey work, shared Week 1/2
+    sources, and recommended no-cost references.
+  historical_zybooks_provenance:
+    reconciled: "2026-08-15"
+    zybook_identifier: "SWOSUCOMSC1053ZacharyFall2026"
+    zybook_url: "https://learn.zybooks.com/zybook/SWOSUCOMSC1053ZacharyFall2026"
+    note: >-
+      Superseded operational record retained as provenance from 2026-08-11.
+      It does not establish a visible title, release, roster, assignments,
+      due dates, LTI state, adoption, or student requirement.
+
+provenance:
+  - source: "Jeremy's directly supplied Fall 2026 catalog/section record (jeremy_task_tracking/prompts/045_add_week_at_a_glance_for_other_three_classes.md)"
+    covers: "course/official blocks"
+  - source: "Jeremy, directly, 2026-08-11 (Fall 2026 zyBooks URL)"
+    covers: "textbook.historical_zybooks_provenance only (superseded as an operational record 2026-08-15)"
