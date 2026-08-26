@@ -10,7 +10,7 @@ Read-only visual acceptance against `sidecar/reports/cs2_grace_visual_qa_manifes
 
 ## P1 defect (now resolved)
 
-**Week 15 page (`cs2-week-15-overview-3`) heading contained the word "Mexico"** — leaked verbatim from an internal planning-doc codename (`planning/week-15.md`'s working title, "Week 15 — Mexico: Asynchronous, Light, and Self-Contained," referring to Jeremy's own personal Thanksgiving travel plans, not course content). Inappropriate for student-facing production content.
+**Week 15 page (`cs2-week-15-overview-3`) heading contained the word "Mexico"** — leaked verbatim from an internal planning-doc codename (`planning/week-15.md`'s working title, "Week 15 — Mexico: Asynchronous, Light, and Self-Contained"). The word had no course-content meaning and was inappropriate for student-facing production content.
 
 **Fix (april, this pass):**
 - Source already corrected: commit `9a47e91013c787a36cd4dcff74a927d80b8a9e53` changed `planning/week-15.md`'s H1 from "Week 15 — Mexico: ..." to "Week 15 — Buffer: ...".
