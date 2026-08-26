@@ -16,5 +16,10 @@ share one operation but behave meaningfully differently.
 
 Where a true is-a relationship exists, demonstrate two subtypes receiving one shared operation with meaningfully different behavior; otherwise document why composition is the better design. Do not invent a hierarchy.
 
+Continue the testing habit from Weeks 3-4: a small automated test that
+exercises the shared operation on each subtype is the clearest way to prove
+the behavior actually differs. A log line is welcome again here if it
+genuinely helps show which subtype ran and why — optional, not required.
+
 Keep one concise World Bible entry: what changed, evidence used, and any
 remaining debt. This is a small growth gate, not a weekly mini-project.

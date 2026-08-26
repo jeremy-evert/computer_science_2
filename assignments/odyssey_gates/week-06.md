@@ -14,7 +14,7 @@ This is your first checkpoint — pause and look back across Weeks 3-5: what
 does your world's growing system actually depend on right now? Pick one of
 those dependencies and turn it into an explicit contract.
 
-Define a collaborator promise, use an ABC/abstract method as an explicit example, and swap two conforming collaborators in a focused contract test. Explain the caller boundary; Protocol is optional comparison only.
+Define a collaborator promise, use an ABC/abstract method as an explicit example, and swap two conforming collaborators in a focused contract test — the same `unittest` habit from Weeks 3-5, now proving the contract holds regardless of which concrete collaborator is plugged in. Explain the caller boundary; Protocol is optional comparison only.
 
 Keep one concise World Bible entry: what changed, evidence used, and any
 remaining debt. This is a small growth gate, not a weekly mini-project.

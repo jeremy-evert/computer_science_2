@@ -23,12 +23,14 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 ### START HERE
 - Python Tutorial — Classes: https://docs.python.org/3/tutorial/classes.html
   - Focus on class/instance objects, instance variables, and methods rather than reading every section.
+- Python `unittest` documentation: https://docs.python.org/3/library/unittest.html
+  - **Moved here from Week 12.** Focus on `TestCase`, one focused `assert*` call, and running a test file directly — not the full framework. This is where the semester's testing habit begins, not a preview of a later unit.
 
 ### Reinforce if useful
 - Python Tutorial — Classes, especially class vs. instance variables: https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables
 - Course-owned Week 3 gate and four-world examples remain the primary applied material.
 
-**Why this fits:** students need a clean language-level model of objects before judging whether their Week 2 predicted nouns deserve object boundaries.
+**Why this fits:** students need a clean language-level model of objects before judging whether their Week 2 predicted nouns deserve object boundaries — and the smallest object worth keeping is also the smallest object worth testing, so the testing habit starts on real material instead of a toy example later in the semester.
 
 ---
 
@@ -41,11 +43,13 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
   - Revisit object attributes and methods while reading the Week 4 course-owned collaborating-object example.
 
 ### Reinforce if useful
+- Python `logging` HOWTO (basic level only): https://docs.python.org/3/howto/logging.html
+  - **Moved earlier from Week 12.** This is the earliest point in the semester where collaboration and an enforced invariant give logging something authentic to record. Optional this week, not a new requirement — read just enough to add one or two log calls at the invariant check.
 - Python Data Model overview: https://docs.python.org/3/reference/datamodel.html
   - Instructor-selected excerpts only; do not assign the entire reference chapter.
 - Course-owned Week 4 composition/invariant examples are the primary teaching source.
 
-**Why this fits:** official Python docs explain the mechanics; the course must teach the design judgment of composition and invariants.
+**Why this fits:** official Python docs explain the mechanics; the course must teach the design judgment of composition and invariants. Logging fits here rather than earlier because there is finally a real collaboration/state-transition worth recording.
 
 ---
 
@@ -161,14 +165,14 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 **Course question:** What evidence would convince another programmer that this slice works and is understandable?
 
 ### START HERE
-- Python `unittest` documentation: https://docs.python.org/3/library/unittest.html
-  - Focus on test cases, specific assertions, and independent repeatability.
+- The student's own accumulated tests, logs, and World Bible from Weeks 3-11 are the primary material this week — **not new reading.** `unittest` and `logging` were introduced at Weeks 3 and 4; this week deepens and stabilizes that existing practice rather than teaching either for the first time.
 
 ### Reinforce if useful
-- Python logging basic tutorial: https://docs.python.org/3/howto/logging.html
+- Python `unittest` documentation, revisited: https://docs.python.org/3/library/unittest.html
+- Python `logging` HOWTO, revisited: https://docs.python.org/3/howto/logging.html
 - Existing project tests, README, and runnable evidence are primary.
 
-**Why this fits:** stabilization is evidence work. Students should improve the project's ability to prove behavior rather than add ornamental features.
+**Why this fits:** stabilization is evidence work. Students should improve the project's ability to prove behavior rather than add ornamental features — and by Week 12 they already have real tests and logs of their own to improve, not a blank page.
 
 ---
 
