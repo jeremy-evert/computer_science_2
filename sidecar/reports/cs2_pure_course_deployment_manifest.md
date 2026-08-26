@@ -1,6 +1,8 @@
 # CS2 deterministic deployment manifest — required graded objects
 
-Campaign: Olivia's `owner_20260825_cs2_dsct_pure_course_recovery_map_april.md`. This is the exact, source-verified list of live Canvas objects still needed to complete the pure-CS2 required grade. `create_assignment`/`update_assignment` are blocked in the current session (confirmed twice, not retried further per mission doctrine) — this manifest is the deployment queue for a later authorized pass, mechanical once run.
+**STATUS: DEPLOYED 2026-08-25 (final production closeout, owner commit `bc98456b798451c91b3c72f167dc78545e36c85b`).** All 14 rows below now exist live in Canvas — see `sidecar/reports/cs2_final_production_closeout.md` for exact assignment IDs, readback verification, and the grade-impact preview. `create_assignment` was re-tested at the start of that closeout pass and was no longer blocked (the block encountered in the earlier recovery/landing passes was session-specific, not permanent). This file is preserved as the original planning manifest / historical record of what was queued and why.
+
+Campaign: Olivia's `owner_20260825_cs2_dsct_pure_course_recovery_map_april.md`. This is the exact, source-verified list of live Canvas objects that were needed to complete the pure-CS2 required grade.
 
 Course: `74031`. Existing live assignment groups (verified live 2026-08-25, all currently empty except Assignments/Semester kickoff week — see `sidecar/reports/030_optional_commons_pivot_cs2_safe_execution.md`): `156885` Weekly reinforcement assignment (25% live, target 45%), `156886` Reasoning Odyssey checkpoints (15% live, target 30%), `156887` Final reflection paper (8% live, target 15%), `156890` Attendance & participation (5% live, target 8%), `156891` Course evaluation (2%, already correct). **Group weight changes are explicitly deferred** — not part of this manifest's authorization — until the objects below exist and a before/after grade-impact preview is computed.
 
