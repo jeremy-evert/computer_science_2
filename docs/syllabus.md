@@ -69,7 +69,7 @@ Materials used in connection with this course may be subject to copyright protec
 
 - Semester kickoff and shared Week 2 readiness work.
 - Weekly CS2-native Reasoning Odyssey gates in a fresh student-chosen world.
-- Larger Odyssey checkpoints in Weeks 6, 9, and 14.
+- Larger Odyssey checkpoints in Weeks 7, 10, and 15.
 - Paired-programming, Show-and-Tell, peer feedback, and professional-learning reflections.
 - Professional-pathway updates in Weeks 14–15.
 - Final reflection in Week 17; no traditional technical final exam.
@@ -82,19 +82,19 @@ Assignments are evidence-bearing work. Students should show what they tried, wha
 |---:|---|---|
 | 1 | Success Foundations | Shared semester kickoff. |
 | 2 | Local AI bench | Build/verify the local bench; proposal/diff/test/read/accept-or-reject habit. |
-| 3 | Cohesive encapsulated objects | Object boundaries and tests. |
-| 4 | Composition, invariants, refactoring | Collaborating objects, evidence, rationale. |
-| 5 | Inheritance and polymorphism | Compare real substitution with composition. |
-| 6 | Contracts + Checkpoint 1 | Swappable collaborators and contract testing. |
-| 7 | Lists, stacks, queues | World-fit abstraction and operation traces. |
-| 8 | Search/order tradeoffs | Trace and justify a real-state choice. |
-| 9 | Model/view GUI + Checkpoint 2 | Modest Tkinter view, callback, independently tested model. |
-| 10 | Honest data visualization | Real data question, readable chart, defensible choice. |
-| 11 | Data storytelling / Flex Clinic | Evidence-backed claim, limitation, decision. |
-| 12 | Stabilize for peer review | Tests, docs, runnable slice. |
-| 13 | Major construction culmination | Design review, completion, recoverable history. |
-| 14 | Source management + Checkpoint 3 | Recovery/collaboration/AI review receipt. |
-| 15 | Asynchronous wind-down | Closure/catch-up; no new feature or technical gate. |
+| 3 | Found Your World (World Bible v0.1) | Ungraded — pick a world, write the seed. |
+| 4 | Cohesive encapsulated objects | Object boundaries and tests. |
+| 5 | Composition, invariants, refactoring | Collaborating objects, evidence, rationale. |
+| 6 | Inheritance and polymorphism | Compare real substitution with composition. |
+| 7 | Contracts + Checkpoint 1 | Swappable collaborators and contract testing. |
+| 8 | Lists, stacks, queues | World-fit abstraction and operation traces. |
+| 9 | Search/order tradeoffs | Trace and justify a real-state choice. |
+| 10 | Model/view GUI + Checkpoint 2 | Modest Tkinter view, callback, independently tested model. |
+| 11 | Honest data visualization | Real data question, readable chart, defensible choice. |
+| 12 | Data storytelling / Flex Clinic | Evidence-backed claim, limitation, decision. |
+| 13 | Stabilize for peer review | Tests, docs, runnable slice. |
+| 14 | Major construction culmination | Design review, completion, recoverable history. |
+| 15 | Source management + Checkpoint 3 | Recovery/collaboration/AI review receipt. |
 | 16 | Farkle + Machine Learning | Shared applied experience. |
 | 17 | Reflection and closure | Repository as evidence; no technical final exam. |
 

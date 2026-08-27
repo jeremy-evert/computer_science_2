@@ -1,9 +1,8 @@
-# Reasoning Odyssey synthesis-checkpoint rubric — Week 12 — Stabilization and Peer-Review Preparation (S08)
+# Reasoning Odyssey gate rubric — Week 12 — Data Storytelling / Flex Clinic (S09 + S07)
 
-**Score: 25 points.** Stabilized world-fit slice 8; tests and runnable
-instructions 7; documentation/debt reasoning and World Bible 6; AI
-accountability when used 4. This is a weekly reinforcement gate, not one of
-the larger Weeks 6/9/14 checkpoints.
+**Score: 25 points.** Evidence-backed story or justified reinforcement 8;
+supporting evidence 7; limitation/decision reasoning and World Bible 6; AI
+accountability when used 4.
 
 ## Capability evidence
 
@@ -16,7 +15,13 @@ the larger Weeks 6/9/14 checkpoints.
 
 For Week 12, assess the specific gate below without inflating scope:
 
-This synthesis checkpoint introduces no new technical concept. Freeze a substantial slice for review: improve tests, runnable instructions, documentation, and known-debt record. The existing World Bible entry reflects on what the accumulated evidence shows is ready for review and what debt remains. Feature growth should be modest and justified.
+The student communicates a concise evidence-backed story from project/world
+data. A visual appears only when it serves the story; the student names a
+limitation, uncertainty, or alternative interpretation and makes or defends a
+design or operational decision. If the project is not yet data-rich, a
+meaningful reinforcement of prior design, data, GUI, or testing work is
+equally valid. A recursive, linked, or nested structure is welcome only when
+it clarifies this world.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

@@ -1,8 +1,7 @@
-# Reasoning Odyssey gate rubric — Week 10 — Honest Visualization from Project Data (S09/S06/S08)
+# Reasoning Odyssey gate rubric — Week 10 — Compact GUI over Tested Model (S04)
 
-**Score: 25 points.** Real question and labeled visualization 8;
-reproducible evidence 7; representation/pitfall reasoning and World Bible 6;
-AI accountability when used 4.
+**Score: 50 points.** GUI/model event path 15; independent model test/trace
+15; model/view reasoning 10; demonstration, limitation, and World Bible 10.
 
 ## Capability evidence
 
@@ -15,11 +14,10 @@ AI accountability when used 4.
 
 For Week 10, assess the specific gate below without inflating scope:
 
-The student states a question about real selected-world or project data and
-produces one or more readable, labeled visualization(s) that answer it. They
-explain why the representation is defensible, identify one misleading
-alternative or visual pitfall, and retain runnable code/data or a reproducible
-trace. Plotting syntax alone is not the evidence.
+Use the course Tkinter lab pattern to render real model state in a modest
+view. At least one meaningful user event/callback invokes a model operation;
+the student explains the model/view boundary and event flow. Model behavior is
+tested or traced without trusting the GUI alone.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

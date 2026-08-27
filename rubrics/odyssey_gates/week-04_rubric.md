@@ -1,7 +1,7 @@
-# Reasoning Odyssey gate rubric — Week 4 — Collaborating Objects and Invariant (S01/S08)
+# Reasoning Odyssey gate rubric — Week 4 — Cohesive Object Boundary (S01)
 
-**Score: 25 points.** Composition fit 8; invariant test/trace 7; rationale
-and World Bible 6; AI accountability when used 4.
+**Score: 25 points.** Cohesive object 8; focused test/trace 7; boundary
+reasoning and World Bible 6; AI accountability when used 4.
 
 ## Capability evidence
 
@@ -14,7 +14,7 @@ and World Bible 6; AI accountability when used 4.
 
 For Week 04, assess the specific gate below without inflating scope:
 
-Refactor a real flow into collaborating objects using composition. Protect one invariant with a test/trace and explain why composition fits better than an unnecessary hierarchy.
+Build one cohesive world object with meaningful state and behavior. Show a focused test or trace and explain why the boundary belongs together. Include an AI evidence trail when AI helped.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

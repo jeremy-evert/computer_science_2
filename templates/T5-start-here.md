@@ -30,7 +30,7 @@ what remains uncertain.
 |---|---|
 | A5 | Final reflection and closure |
 | Odyssey gates | Weekly technical evidence (45% of the required grade) |
-| Odyssey checkpoints | Larger Weeks 6/9/14 checkpoints (30%) |
+| Odyssey checkpoints | Larger Weeks 7/10/15 checkpoints (30%) |
 | Attendance & participation | 8% |
 | Course evaluation | 2% |
 

@@ -1,8 +1,9 @@
-# Reasoning Odyssey gate rubric — Week 14 — Professional Workflow Receipt (S08)
+# Reasoning Odyssey synthesis-checkpoint rubric — Week 14 — Culmination Design Review (S01–S08)
 
-**Score: 60 points.** Bounded recovery/collaboration/review workflow 20;
-diff, tests, history, and receipt 15; evidence-backed Full Trail Debrief 15;
-AI review/accountability and World Bible 10.
+**Score: 25 points.** Substantially complete world-fit construction 8;
+run/tests/history 7; design rationale and documentation 6; AI accountability
+when used 4. This is a weekly reinforcement gate, not one of the larger
+Weeks 7/10/15 checkpoints.
 
 ## Capability evidence
 
@@ -15,7 +16,7 @@ AI review/accountability and World Bible 10.
 
 For Week 14, assess the specific gate below without inflating scope:
 
-Using the real Reasoning Odyssey repository, inspect history; recover/revert a bounded change safely; use branch/merge or equivalent collaboration; review a bounded AI change from diff/tests/reasoning; and record change, test, and recovery evidence. Containers are conceptual only until classroom runtime is verified.
+This synthesis checkpoint introduces no new technical concept. Show major creative construction substantially complete. Submit a runnable slice, important tests, design rationale, usable documentation, and clean enough history for recovery/review. The existing World Bible entry reflects on how the evidence supports the project’s readiness and what remains to recover or improve.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

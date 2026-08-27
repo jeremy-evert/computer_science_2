@@ -1,20 +1,20 @@
-# Reasoning Odyssey Gate — Week 10 — Honest Visualization from Project Data (S09/S06/S08)
+# Reasoning Odyssey Gate — Week 10 — Compact GUI over Tested Model (S04)
 
 **Gate status:** active
 
-**Grading:** 25 points; Weekly reinforcement assignment (25% group);
-`online_text_entry` plus code/evidence/data upload or repository link.
+**Grading:** 50 points; Reasoning Odyssey checkpoints (15% group);
+`online_text_entry` plus code/evidence upload or repository link.
 
-Submit the real data question, labeled visualization, rationale, pitfall,
-reproducible evidence, and World Bible entry.
+This larger checkpoint requires the GUI/model evidence below plus an
+independent model test or trace and World Bible entry.
 
 ## Required evidence
 
-State a question about real selected-world or project data. Produce one or
-more readable, labeled visualization(s) that answer it, explain why the
-representation is defensible, and identify one misleading alternative or
-visual pitfall. Retain runnable code/data or a reproducible trace; plotting
-syntax alone is not the evidence.
+Use the course Tkinter lab pattern to render real model state in a modest
+view. Implement at least one meaningful user event/callback that invokes a
+model operation, and explain the model/view boundary and event flow. Show
+that the model behavior can be tested or traced without trusting the GUI
+alone.
 
 Keep one concise World Bible entry: what changed, evidence used, and any
 remaining debt. This is a small growth gate, not a weekly mini-project.

@@ -8,7 +8,7 @@ course-source truth for that progression and its evidence/rubrics.
 
 Start with [`START_HERE.md`](START_HERE.md), then use [`ROADMAP.md`](ROADMAP.md)
 and [`docs/repo-map.md`](docs/repo-map.md) to understand current ownership.
-Grading categories and the Week 3–14 gate/checkpoint shape are in
+Grading categories and the Week 4–15 gate/checkpoint shape are in
 [`docs/grading-model.md`](docs/grading-model.md).
 
 Shared Week 1, Week 2, AI Fluency I, and Professional Minds material is

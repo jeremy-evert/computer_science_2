@@ -1,7 +1,4 @@
-# Reasoning Odyssey gate rubric — Week 3 — Cohesive Object Boundary (S01)
-
-**Score: 25 points.** Cohesive object 8; focused test/trace 7; boundary
-reasoning and World Bible 6; AI accountability when used 4.
+# Reasoning Odyssey gate rubric — Week 3 — Light World Seed (ungraded)
 
 ## Capability evidence
 
@@ -14,7 +11,7 @@ reasoning and World Bible 6; AI accountability when used 4.
 
 For Week 03, assess the specific gate below without inflating scope:
 
-Build one cohesive world object with meaningful state and behavior. Show a focused test or trace and explain why the boundary belongs together. Include an AI evidence trail when AI helped.
+Choose a genre/world and record a few possible nouns, flows, or questions only if it helps. This is optional light setup, not a technical gate, and no Reasoning Odyssey construction is graded until Week 4.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

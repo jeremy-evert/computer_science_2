@@ -15,8 +15,9 @@ the course's weekly spine and its reusable assessment templates easy to find.
   professional-pathway portfolio.
 - `assignments/odyssey_gates/week-NN.md` and
   `rubrics/odyssey_gates/week-NN_rubric.md` — paired weekly evidence and
-  scoring documents. Week 2 is setup; Weeks 3–14 are graded evidence with the
-  larger checkpoints called out in the grading model; Week 16 is a retired
+  scoring documents. Week 2 is Local AI Lab setup; Week 3 is the ungraded
+  World Bible seed; Weeks 4–15 are graded evidence with the larger
+  checkpoints called out in the grading model; Week 16 is a retired
   shared-strand reservation.
 - `monday_moments/` contains only the local pointer/template. Canonical
   Monday Moment content for Fall 2026 remains `../ai_fluency/ai_i/`.

@@ -8,26 +8,26 @@ of CS1 code. Pick one world—Frontier Settlement, Investigation Bureau,
 Starship Log, or Small Business—and let useful course capabilities serve the
 world rather than forcing a checklist.
 
-Week 2 permits only light, ungraded genre/world seeding, in which the
+Week 3 permits only light, ungraded genre/world seeding, in which the
 student writes World Bible v0.1: a short premise, cast of nouns, one flow,
 three software questions, known unknowns, and a prediction of which nouns
 might become objects. Later gates revise this seed rather than replace it —
-Week 3 tests the object predictions directly. The first graded build begins
-Week 3.
+Week 4 tests the object predictions directly. The first graded build begins
+Week 4.
 
 ## Growth path
 
 | Weeks | Purpose | Required evidence |
 |---|---|---|
-| 3–4 | S01 sound collaborating objects, composition, invariants | bounded build, test/trace, boundary rationale |
-| 5 | S02 earned inheritance/polymorphism | real substitution or reason composition fits better |
-| 6 | S03 contracts | swappable collaborator, contract test, explanation |
-| 7–8 | S05/S06 data abstractions and tradeoffs | world-fit list/stack/queue flow and search/order reasoning |
-| 9 | S04 compact GUI/events | thin Tkinter model/view feature, meaningful callback, and independent model test/trace |
-| 10 | S09 visualization | real world/project data, question, honest readable visual, chart-choice rationale |
-| 11 | S09 storytelling / flex | evidence-backed claim, limitation/uncertainty, and a design/operational decision; deeper structures optional |
-| 12–13 | S08 synthesis, stabilization, and culmination | tests, docs, design review, usable/recoverable project; reflect on accumulated evidence rather than learn a new technical concept |
-| 14 | S08 workflow/reproducibility | history/recovery/collaboration/AI-review receipt; containers only after environment verification |
+| 4–5 | S01 sound collaborating objects, composition, invariants | bounded build, test/trace, boundary rationale |
+| 6 | S02 earned inheritance/polymorphism | real substitution or reason composition fits better |
+| 7 | S03 contracts | swappable collaborator, contract test, explanation |
+| 8–9 | S05/S06 data abstractions and tradeoffs | world-fit list/stack/queue flow and search/order reasoning |
+| 10 | S04 compact GUI/events | thin Tkinter model/view feature, meaningful callback, and independent model test/trace |
+| 11 | S09 visualization | real world/project data, question, honest readable visual, chart-choice rationale |
+| 12 | S09 storytelling / flex | evidence-backed claim, limitation/uncertainty, and a design/operational decision; deeper structures optional |
+| 13–14 | S08 synthesis, stabilization, and culmination | tests, docs, design review, usable/recoverable project; reflect on accumulated evidence rather than learn a new technical concept |
+| 15 | S08 workflow/reproducibility | history/recovery/collaboration/AI-review receipt; containers only after environment verification |
 
 A gate must fit the selected world. No universal hierarchy, recursion, chart,
 or search/sort checklist exists. Examples include settlement services, case

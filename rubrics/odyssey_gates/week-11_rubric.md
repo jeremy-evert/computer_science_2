@@ -1,8 +1,8 @@
-# Reasoning Odyssey gate rubric — Week 11 — Data Storytelling / Flex Clinic (S09 + S07)
+# Reasoning Odyssey gate rubric — Week 11 — Honest Visualization from Project Data (S09/S06/S08)
 
-**Score: 25 points.** Evidence-backed story or justified reinforcement 8;
-supporting evidence 7; limitation/decision reasoning and World Bible 6; AI
-accountability when used 4.
+**Score: 25 points.** Real question and labeled visualization 8;
+reproducible evidence 7; representation/pitfall reasoning and World Bible 6;
+AI accountability when used 4.
 
 ## Capability evidence
 
@@ -15,13 +15,11 @@ accountability when used 4.
 
 For Week 11, assess the specific gate below without inflating scope:
 
-The student communicates a concise evidence-backed story from project/world
-data. A visual appears only when it serves the story; the student names a
-limitation, uncertainty, or alternative interpretation and makes or defends a
-design or operational decision. If the project is not yet data-rich, a
-meaningful reinforcement of prior design, data, GUI, or testing work is
-equally valid. A recursive, linked, or nested structure is welcome only when
-it clarifies this world.
+The student states a question about real selected-world or project data and
+produces one or more readable, labeled visualization(s) that answer it. They
+explain why the representation is defensible, identify one misleading
+alternative or visual pitfall, and retain runnable code/data or a reproducible
+trace. Plotting syntax alone is not the evidence.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

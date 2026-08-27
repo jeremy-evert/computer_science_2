@@ -1,19 +1,20 @@
-# Reasoning Odyssey Gate — Week 8 — Search/Order Tradeoff (S05/S06)
+# Reasoning Odyssey Gate — Week 8 — World-Fit Data Abstraction (S05)
 
 **Gate status:** active
 
 **Grading:** 25 points; Weekly reinforcement assignment (25% group);
 `online_text_entry` plus code/evidence upload or repository link.
 
-Submit the real lookup/order trace, trade-off explanation, precondition if
-any, and World Bible entry.
+Submit the world-fit list/stack/queue operation, trace, abstraction rationale,
+and World Bible entry.
 
 ## Required evidence
 
-Reopen the structure you built in Week 7. Now trace a real lookup or
-ordering operation over it, using your own world's actual state.
+Look at your world's real flow (from Week 3) again. Somewhere in it, things
+almost certainly pile up, wait in line, or need to be processed in some
+order — that is your Week 8 flow.
 
-Trace a lookup or ordering operation over real world state — a test that asserts the correct result is the strongest form of this trace, continuing the same testing habit. Explain a qualitative cost/maintenance tradeoff and any sorted-data precondition. Do not add binary search unless the world earns it.
+Choose a real List ADT, stack, or queue flow. State the client operations, and demonstrate LIFO/FIFO or list behavior with a small automated test — continuing the habit from Weeks 4-7, not a new kind of evidence. Explain why this abstraction fits better than treating Python list syntax as the concept.
 
 Keep one concise World Bible entry: what changed, evidence used, and any
 remaining debt. This is a small growth gate, not a weekly mini-project.

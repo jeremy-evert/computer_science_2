@@ -1,9 +1,9 @@
-# Reasoning Odyssey synthesis-checkpoint rubric — Week 13 — Culmination Design Review (S01–S08)
+# Reasoning Odyssey synthesis-checkpoint rubric — Week 13 — Stabilization and Peer-Review Preparation (S08)
 
-**Score: 25 points.** Substantially complete world-fit construction 8;
-run/tests/history 7; design rationale and documentation 6; AI accountability
-when used 4. This is a weekly reinforcement gate, not one of the larger
-Weeks 6/9/14 checkpoints.
+**Score: 25 points.** Stabilized world-fit slice 8; tests and runnable
+instructions 7; documentation/debt reasoning and World Bible 6; AI
+accountability when used 4. This is a weekly reinforcement gate, not one of
+the larger Weeks 7/10/15 checkpoints.
 
 ## Capability evidence
 
@@ -16,7 +16,7 @@ Weeks 6/9/14 checkpoints.
 
 For Week 13, assess the specific gate below without inflating scope:
 
-This synthesis checkpoint introduces no new technical concept. Show major creative construction substantially complete. Submit a runnable slice, important tests, design rationale, usable documentation, and clean enough history for recovery/review. The existing World Bible entry reflects on how the evidence supports the project’s readiness and what remains to recover or improve.
+This synthesis checkpoint introduces no new technical concept. Freeze a substantial slice for review: improve tests, runnable instructions, documentation, and known-debt record. The existing World Bible entry reflects on what the accumulated evidence shows is ready for review and what debt remains. Feature growth should be modest and justified.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

@@ -1,7 +1,7 @@
-# Reasoning Odyssey gate rubric — Week 9 — Compact GUI over Tested Model (S04)
+# Reasoning Odyssey gate rubric — Week 9 — Search/Order Tradeoff (S05/S06)
 
-**Score: 50 points.** GUI/model event path 15; independent model test/trace
-15; model/view reasoning 10; demonstration, limitation, and World Bible 10.
+**Score: 25 points.** Real lookup/order fit 8; trace and precondition 7;
+cost/maintenance reasoning and World Bible 6; AI accountability when used 4.
 
 ## Capability evidence
 
@@ -14,10 +14,7 @@
 
 For Week 09, assess the specific gate below without inflating scope:
 
-Use the course Tkinter lab pattern to render real model state in a modest
-view. At least one meaningful user event/callback invokes a model operation;
-the student explains the model/view boundary and event flow. Model behavior is
-tested or traced without trusting the GUI alone.
+Trace a lookup or ordering operation over real world state. Explain a qualitative cost/maintenance tradeoff and any sorted-data precondition. Do not add binary search unless the world earns it.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

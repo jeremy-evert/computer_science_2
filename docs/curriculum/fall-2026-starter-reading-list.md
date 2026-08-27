@@ -16,7 +16,7 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 
 ---
 
-## Week 3 — Cohesive encapsulated objects
+## Week 4 — Cohesive encapsulated objects
 
 **Course question:** What state and behavior genuinely belong together in one object?
 
@@ -24,36 +24,36 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 - Python Tutorial — Classes: https://docs.python.org/3/tutorial/classes.html
   - Focus on class/instance objects, instance variables, and methods rather than reading every section.
 - Python `unittest` documentation: https://docs.python.org/3/library/unittest.html
-  - **Moved here from Week 12.** Focus on `TestCase`, one focused `assert*` call, and running a test file directly — not the full framework. This is where the semester's testing habit begins, not a preview of a later unit.
+  - **Moved here from Week 13.** Focus on `TestCase`, one focused `assert*` call, and running a test file directly — not the full framework. This is where the semester's testing habit begins, not a preview of a later unit.
 
 ### Reinforce if useful
 - Python Tutorial — Classes, especially class vs. instance variables: https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables
-- Course-owned Week 3 gate and four-world examples remain the primary applied material.
+- Course-owned Week 4 gate and four-world examples remain the primary applied material.
 
-**Why this fits:** students need a clean language-level model of objects before judging whether their Week 2 predicted nouns deserve object boundaries — and the smallest object worth keeping is also the smallest object worth testing, so the testing habit starts on real material instead of a toy example later in the semester.
+**Why this fits:** students need a clean language-level model of objects before judging whether their Week 3 predicted nouns deserve object boundaries — and the smallest object worth keeping is also the smallest object worth testing, so the testing habit starts on real material instead of a toy example later in the semester.
 
 ---
 
-## Week 4 — Composition, invariants, refactoring
+## Week 5 — Composition, invariants, refactoring
 
 **Course question:** What happens when one object cannot responsibly do the whole job alone?
 
 ### START HERE
 - Python Tutorial — Classes: https://docs.python.org/3/tutorial/classes.html
-  - Revisit object attributes and methods while reading the Week 4 course-owned collaborating-object example.
+  - Revisit object attributes and methods while reading the Week 5 course-owned collaborating-object example.
 
 ### Reinforce if useful
 - Python `logging` HOWTO (basic level only): https://docs.python.org/3/howto/logging.html
-  - **Moved earlier from Week 12.** This is the earliest point in the semester where collaboration and an enforced invariant give logging something authentic to record. Optional this week, not a new requirement — read just enough to add one or two log calls at the invariant check.
+  - **Moved earlier from Week 13.** This is the earliest point in the semester where collaboration and an enforced invariant give logging something authentic to record. Optional this week, not a new requirement — read just enough to add one or two log calls at the invariant check.
 - Python Data Model overview: https://docs.python.org/3/reference/datamodel.html
   - Instructor-selected excerpts only; do not assign the entire reference chapter.
-- Course-owned Week 4 composition/invariant examples are the primary teaching source.
+- Course-owned Week 5 composition/invariant examples are the primary teaching source.
 
 **Why this fits:** official Python docs explain the mechanics; the course must teach the design judgment of composition and invariants. Logging fits here rather than earlier because there is finally a real collaboration/state-transition worth recording.
 
 ---
 
-## Week 5 — Earned inheritance and polymorphism
+## Week 6 — Earned inheritance and polymorphism
 
 **Course question:** Is this truly an `is-a` relationship where substitution works, or should the design remain composition?
 
@@ -62,13 +62,13 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 
 ### Reinforce if useful
 - Python built-ins `isinstance()` / `issubclass()` are introduced in the same inheritance section.
-- Re-read the Week 4 composition decision before choosing inheritance.
+- Re-read the Week 5 composition decision before choosing inheritance.
 
 **Why this fits:** students see Python's actual inheritance behavior while the course supplies the stricter rule that inheritance must be earned by meaningful substitution.
 
 ---
 
-## Week 6 — Contracts and swappable collaborators
+## Week 7 — Contracts and swappable collaborators
 
 **Course question:** Can different collaborators satisfy the same explicit contract and be swapped without breaking the client?
 
@@ -80,11 +80,11 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 - Python Tutorial — Inheritance: https://docs.python.org/3/tutorial/classes.html#inheritance
 - `typing.Protocol` may be shown as an optional comparison, not the required path: https://docs.python.org/3/library/typing.html#typing.Protocol
 
-**Why this fits:** Week 6's frozen contract explicitly centers `abc.ABC` / `@abstractmethod`, with Protocol only as optional comparison.
+**Why this fits:** Week 7's frozen contract explicitly centers `abc.ABC` / `@abstractmethod`, with Protocol only as optional comparison.
 
 ---
 
-## Week 7 — List, stack, and queue abstractions
+## Week 8 — List, stack, and queue abstractions
 
 **Course question:** What operations does the problem need, and which abstraction makes those operations honest and predictable?
 
@@ -100,7 +100,7 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 
 ---
 
-## Week 8 — Search, order, and maintenance tradeoffs
+## Week 9 — Search, order, and maintenance tradeoffs
 
 **Course question:** What do we gain by keeping data ordered, and what does maintaining that order cost?
 
@@ -111,11 +111,11 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 - Python Sorting HOWTO: https://docs.python.org/3/howto/sorting.html
 - Python `bisect` — maintaining sorted lists: https://docs.python.org/3/library/bisect.html
 
-**Why this fits:** Week 8 is not an algorithm-recitation contest; students need enough search/order mechanics to justify a real choice in their world's state.
+**Why this fits:** Week 9 is not an algorithm-recitation contest; students need enough search/order mechanics to justify a real choice in their world's state.
 
 ---
 
-## Week 9 — Compact GUI and event path
+## Week 10 — Compact GUI and event path
 
 **Course question:** Can a small view trigger meaningful behavior while the model remains independently testable?
 
@@ -130,7 +130,7 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 
 ---
 
-## Week 10 — Honest data visualization
+## Week 11 — Honest data visualization
 
 **Course question:** What question are we asking, and what visual representation answers it without misleading the reader?
 
@@ -141,11 +141,11 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 - Matplotlib Plot Types: https://matplotlib.org/stable/plot_types/index.html
 - Python `csv` module for plain-Python data input: https://docs.python.org/3/library/csv.html
 
-**Why this fits:** Week 10 needs enough plotting fluency to choose and defend a chart, while keeping the emphasis on question, evidence, labels, scale, and limitations rather than library trivia.
+**Why this fits:** Week 11 needs enough plotting fluency to choose and defend a chart, while keeping the emphasis on question, evidence, labels, scale, and limitations rather than library trivia.
 
 ---
 
-## Week 11 — Data storytelling / Flex Clinic
+## Week 12 — Data storytelling / Flex Clinic
 
 **Course question:** What claim does the evidence support, what does it not support, and what decision follows?
 
@@ -154,29 +154,29 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 
 ### Reinforce if useful
 - Matplotlib text and annotations: https://matplotlib.org/stable/users/explain/text/annotations.html
-- Week 10's actual chart and project data are more important than new reading this week.
+- Week 11's actual chart and project data are more important than new reading this week.
 
 **Why this fits:** this week is about evidence-backed explanation and limitations, not accumulating more plotting APIs.
 
 ---
 
-## Week 12 — Stabilize and prepare peer review
+## Week 13 — Stabilize and prepare peer review
 
 **Course question:** What evidence would convince another programmer that this slice works and is understandable?
 
 ### START HERE
-- The student's own accumulated tests, logs, and World Bible from Weeks 3-11 are the primary material this week — **not new reading.** `unittest` and `logging` were introduced at Weeks 3 and 4; this week deepens and stabilizes that existing practice rather than teaching either for the first time.
+- The student's own accumulated tests, logs, and World Bible from Weeks 4-12 are the primary material this week — **not new reading.** `unittest` and `logging` were introduced at Weeks 4 and 5; this week deepens and stabilizes that existing practice rather than teaching either for the first time.
 
 ### Reinforce if useful
 - Python `unittest` documentation, revisited: https://docs.python.org/3/library/unittest.html
 - Python `logging` HOWTO, revisited: https://docs.python.org/3/howto/logging.html
 - Existing project tests, README, and runnable evidence are primary.
 
-**Why this fits:** stabilization is evidence work. Students should improve the project's ability to prove behavior rather than add ornamental features — and by Week 12 they already have real tests and logs of their own to improve, not a blank page.
+**Why this fits:** stabilization is evidence work. Students should improve the project's ability to prove behavior rather than add ornamental features — and by Week 13 they already have real tests and logs of their own to improve, not a blank page.
 
 ---
 
-## Week 13 — Major construction culmination
+## Week 14 — Major construction culmination
 
 **Course question:** Can the project demonstrate meaningful completion while remaining testable, explainable, and recoverable?
 
@@ -188,11 +188,11 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 - Python Tutorial — Classes: https://docs.python.org/3/tutorial/classes.html
 - The student's own accumulated World Bible, tests, traces, and design evidence are the central reading this week.
 
-**Why this fits:** Week 13 is synthesis. Adding a new content unit would compete with the work students need to finish and defend.
+**Why this fits:** Week 14 is synthesis. Adding a new content unit would compete with the work students need to finish and defend.
 
 ---
 
-## Week 14 — Source management and bounded reproducibility
+## Week 15 — Source management and bounded reproducibility
 
 **Course question:** Can another person inspect, recover, review, and reproduce the important parts of this work?
 
@@ -205,13 +205,12 @@ This file expands `docs/curriculum/fall-2026-resource-map.md` into a practical w
 - GitHub Docs — Pull requests: https://docs.github.com/en/pull-requests
 - Docker Docs — Get Started: https://docs.docker.com/get-started/ — **link/reference only unless classroom runtime has been independently verified**.
 
-**Why this fits:** Week 14 assesses real repository evidence, recovery, collaboration, review, and bounded reproducibility. Containers remain subordinate to verified classroom reality.
+**Why this fits:** Week 15 assesses real repository evidence, recovery, collaboration, review, and bounded reproducibility. Containers remain subordinate to verified classroom reality.
 
 ---
 
-## Weeks 15–17 — closure
+## Weeks 16–17 — closure
 
-- **Week 15:** no new required reading; asynchronous buffer/catch-up.
 - **Week 16:** use the course-owned/shared Farkle + ML wrapper and evidence instructions; do not bolt on a new textbook chapter.
 - **Week 17:** no technical reading requirement; reflection uses the student's repository and semester evidence.
 
@@ -227,4 +226,4 @@ A future improvement pass may replace or add a resource when it does at least on
 4. is more accessible, current, or classroom-friendly;
 5. better supports the Reasoning Odyssey evidence for that week.
 
-Do **not** reopen the frozen Week 3–14 capability spine merely because a better reading is discovered.
+Do **not** reopen the frozen Week 4–15 capability spine merely because a better reading is discovered.

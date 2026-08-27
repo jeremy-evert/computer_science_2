@@ -1,20 +1,25 @@
-# Reasoning Odyssey Gate — Week 6 — Contract and Swap (S03/S08)
+# Reasoning Odyssey Gate — Week 6 — Earned Substitution (S02)
 
 **Gate status:** active
 
-**Grading:** 40 points; Reasoning Odyssey checkpoints (15% group);
+**Grading:** 25 points; Weekly reinforcement assignment (25% group);
 `online_text_entry` plus code/evidence upload or repository link.
 
-This larger checkpoint is not a weekly gate. Submit the working baby project,
-contract test, explanation, demonstration, reflection, and World Bible entry.
+Submit the genuine subtype substitution or the evidence-based composition
+decision, the differing behavior/trace, rationale, and World Bible entry.
 
 ## Required evidence
 
-This is your first checkpoint — pause and look back across Weeks 3-5: what
-does your world's growing system actually depend on right now? Pick one of
-those dependencies and turn it into an explicit contract.
+Reopen your Week 5 collaborating objects. Look across them (and the rest of
+your Week 3 cast) for a true is-a relationship — a family of things that
+share one operation but behave meaningfully differently.
 
-Define a collaborator promise, use an ABC/abstract method as an explicit example, and swap two conforming collaborators in a focused contract test — the same `unittest` habit from Weeks 3-5, now proving the contract holds regardless of which concrete collaborator is plugged in. Explain the caller boundary; Protocol is optional comparison only.
+Where a true is-a relationship exists, demonstrate two subtypes receiving one shared operation with meaningfully different behavior; otherwise document why composition is the better design. Do not invent a hierarchy.
+
+Continue the testing habit from Weeks 4-5: a small automated test that
+exercises the shared operation on each subtype is the clearest way to prove
+the behavior actually differs. A log line is welcome again here if it
+genuinely helps show which subtype ran and why — optional, not required.
 
 Keep one concise World Bible entry: what changed, evidence used, and any
 remaining debt. This is a small growth gate, not a weekly mini-project.

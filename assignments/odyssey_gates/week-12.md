@@ -1,16 +1,21 @@
-# Reasoning Odyssey Synthesis Checkpoint — Week 12 — Stabilization and Peer-Review Preparation (S08)
+# Reasoning Odyssey Gate — Week 12 — Data Storytelling / Flex Clinic (S09 + S07)
 
 **Gate status:** active
 
 **Grading:** 25 points; Weekly reinforcement assignment (25% group);
-`online_text_entry` plus code/evidence upload or repository link.
+`online_text_entry` plus code/evidence/data upload or repository link.
 
-Submit the stabilized slice, tests, runnable instructions, debt record,
-review-readiness explanation, and World Bible entry.
+Submit the evidence-backed story or justified reinforcement, limitation,
+decision, and World Bible entry.
 
 ## Required evidence
 
-This synthesis checkpoint introduces no new technical concept. Freeze a substantial slice for review: improve tests, deepen any logging you have already been using so it still tells an honest story, improve runnable instructions, documentation, and known-debt record. None of this is new — it is the testing and logging habits from Weeks 3-8, applied more carefully. Reflect in the existing World Bible entry on what the accumulated evidence shows is ready for review and what debt remains. Feature growth should be modest and justified.
+Communicate a concise evidence-backed story from project/world data. Include
+a visual only when it serves the story; name a limitation, uncertainty, or
+alternative interpretation; and make or defend a design or operational
+decision. If the project is not yet data-rich, a meaningful reinforcement of
+prior design, data, GUI, or testing work is equally valid. A recursive,
+linked, or nested structure is welcome only when it clarifies this world.
 
 Keep one concise World Bible entry: what changed, evidence used, and any
 remaining debt. This is a small growth gate, not a weekly mini-project.

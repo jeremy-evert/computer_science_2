@@ -30,8 +30,8 @@ we can work together slowly, safely, and confidently.
 
 This is not a new assignment. It is how the existing Reasoning Odyssey
 evidence (test/trace, AI accountability, World Bible entry) is meant to be
-read: unit testing begins at Week 3, as soon as a real testable object
-exists; a first small logging habit begins around Week 4, once collaborating
+read: unit testing begins at Week 4, as soon as a real testable object
+exists; a first small logging habit begins around Week 5, once collaborating
 objects and an enforced invariant make a program event worth recording;
 prompts are retained as provenance for a proposal, never as evidence by
 themselves; and the World Bible entry stays the one recurring receipt —
@@ -42,6 +42,7 @@ was made — rather than a second parallel report stream.
 
 Week 1 is Success Foundations (semester_kickoff_week). Week 2 is Build and
 Verify Your Local AI Lab (local_ai_lab_setup and windows_classroom), with a
-CS2 thin wrapper. Week 15 is asynchronous/light, Week 16 reserves shared
-Farkle/ML applied fun, and Week 17 is reflection/closure. No Savnac/Canvas
-deployment is implied by this source document.
+CS2 thin wrapper. Week 3 introduces the Reasoning Odyssey world and World
+Bible v0.1 (ungraded). Week 16 reserves shared Farkle/ML applied fun, and
+Week 17 is reflection/closure. No Savnac/Canvas deployment is implied by
+this source document.

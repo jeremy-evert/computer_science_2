@@ -44,9 +44,10 @@ inputs from CS2's perspective.
 ## How this fits the Reasoning Odyssey
 
 The local-AI readiness artifact is the sole required technical experience in
-Week 2. `assignments/odyssey_gates/week-02.md` permits only an ungraded,
-light world seed. It is not an exceptions gate and does not compete with the
-shared module. Graded Reasoning Odyssey construction begins Week 3.
+Week 2 — the Reasoning Odyssey world seed now lives in Week 3
+(`assignments/odyssey_gates/week-03.md`, ungraded) rather than layered into
+Week 2. It is not an exceptions gate and does not compete with the shared
+module. Graded Reasoning Odyssey construction begins Week 4.
 
 ## What is intentionally not copied here
 

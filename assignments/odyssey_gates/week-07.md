@@ -1,20 +1,20 @@
-# Reasoning Odyssey Gate — Week 7 — World-Fit Data Abstraction (S05)
+# Reasoning Odyssey Gate — Week 7 — Contract and Swap (S03/S08)
 
 **Gate status:** active
 
-**Grading:** 25 points; Weekly reinforcement assignment (25% group);
+**Grading:** 40 points; Reasoning Odyssey checkpoints (15% group);
 `online_text_entry` plus code/evidence upload or repository link.
 
-Submit the world-fit list/stack/queue operation, trace, abstraction rationale,
-and World Bible entry.
+This larger checkpoint is not a weekly gate. Submit the working baby project,
+contract test, explanation, demonstration, reflection, and World Bible entry.
 
 ## Required evidence
 
-Look at your world's real flow (from Week 2) again. Somewhere in it, things
-almost certainly pile up, wait in line, or need to be processed in some
-order — that is your Week 7 flow.
+This is your first checkpoint — pause and look back across Weeks 4-6: what
+does your world's growing system actually depend on right now? Pick one of
+those dependencies and turn it into an explicit contract.
 
-Choose a real List ADT, stack, or queue flow. State the client operations, and demonstrate LIFO/FIFO or list behavior with a small automated test — continuing the habit from Weeks 3-6, not a new kind of evidence. Explain why this abstraction fits better than treating Python list syntax as the concept.
+Define a collaborator promise, use an ABC/abstract method as an explicit example, and swap two conforming collaborators in a focused contract test — the same `unittest` habit from Weeks 4-6, now proving the contract holds regardless of which concrete collaborator is plugged in. Explain the caller boundary; Protocol is optional comparison only.
 
 Keep one concise World Bible entry: what changed, evidence used, and any
 remaining debt. This is a small growth gate, not a weekly mini-project.

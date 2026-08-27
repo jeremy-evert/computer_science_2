@@ -9,12 +9,13 @@ standalone problem-set track.
 ## Required work and deliberate practice
 
 - Week 1: shared Success Foundations only.
-- Week 2: shared Local AI Lab readiness and bounded evidence reflection; an
-  ungraded world/genre seed is allowed, but no graded Reasoning Odyssey build.
-- Weeks 3–14: the applicable Reasoning Odyssey gate/review is the weekly technical
-  evidence. Major construction is substantially complete by Week 13; Week 14
+- Week 2: shared Local AI Lab readiness and bounded evidence reflection; no
+  graded Reasoning Odyssey build.
+- Week 3: ungraded world/genre seed (Found Your World / World Bible v0.1);
+  no graded Reasoning Odyssey build yet.
+- Weeks 4–15: the applicable Reasoning Odyssey gate/review is the weekly technical
+  evidence. Major construction is substantially complete by Week 14; Week 15
   professionalizes/reviews the existing project.
-- Week 15: fully asynchronous and light; no technical gate.
 - Week 16: shared Farkle/ML applied fun, not a Reasoning Odyssey checkpoint.
 - Week 17: reflection uses the repository as evidence; no new build.
 

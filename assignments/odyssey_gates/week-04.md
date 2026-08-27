@@ -1,33 +1,32 @@
-# Reasoning Odyssey Gate — Week 4 — Collaborating Objects and Invariant (S01/S08)
+# Reasoning Odyssey Gate — Week 4 — Cohesive Object Boundary (S01)
 
 **Gate status:** active
 
 **Grading:** 25 points; Weekly reinforcement assignment (25% group);
 `online_text_entry` plus code/evidence upload or repository link.
 
-Submit the composition refactor, invariant test/trace, rationale, and World
-Bible entry. Evidence must show collaborating objects and the protected
-invariant, not a toy hierarchy.
+Submit the object, focused test/trace, boundary explanation, and World Bible
+entry. The rubric scores the actual object boundary and behavior described
+below; no unrelated feature is required.
 
 ## Required evidence
 
-Reopen the Week 3 object. Now ask what happens when that object cannot do
-meaningful work alone — what does it need to collaborate with, and why?
+Reopen your Week 3 World Bible v0.1. Look at the objects you predicted. Pick
+one candidate and test whether it actually deserves a cohesive object
+boundary — you are not required to build the object you were most attached
+to; a predicted noun that turns out not to hold up is a legitimate finding,
+not a failure.
 
-Refactor a real flow into collaborating objects using composition. Continue
-the Week 3 `unittest` habit: protect one invariant with an automated test
-that fails when the invariant is broken and passes when it holds.
-
-This is also the earliest natural point for a first small logging habit:
-collaborating objects and an enforced invariant mean something real is
-happening across a boundary, worth a record. Add one or two calls to the
-standard-library `logging` module at the point where the invariant is
-checked or enforced, recording what happened — not a test (which checks a
-claim) but a trace another person could read afterward to reconstruct what
-occurred. Logging is optional polish this week, not a separate requirement;
-the test remains the required evidence.
-
-Explain why composition fits better than an unnecessary hierarchy.
+Build one cohesive world object with meaningful state and behavior. This is
+where the semester's testing habit begins: use Python's `unittest` module
+(or an already-covered equivalent) to write one small automated test —
+construct the object, exercise one meaningful behavior, and assert the
+expected state or result. Run the test yourself, independently of any
+manual walkthrough, and confirm it passes. In your World Bible entry, say in
+one sentence what the test proves and what it does not prove. Explain why
+the object's boundary belongs together. Include an AI evidence trail when AI
+helped — if you used AI, keep the useful prompt/request itself as
+provenance; the test is still what proves the behavior, not the prompt.
 
 Keep one concise World Bible entry: what changed, evidence used, and any
 remaining debt. This is a small growth gate, not a weekly mini-project.

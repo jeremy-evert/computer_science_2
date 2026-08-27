@@ -1,7 +1,8 @@
-# Reasoning Odyssey gate rubric — Week 7 — World-Fit Data Abstraction (S05)
+# Reasoning Odyssey gate rubric — Week 7 — Contract and Swap (S03/S08)
 
-**Score: 25 points.** World-fit abstraction 8; correct operation trace 7;
-client-operation reasoning and World Bible 6; AI accountability when used 4.
+**Score: 40 points.** Working baby project and contract/swap 15; focused
+contract test 10; caller-boundary reasoning 10; demonstration, reflection,
+and World Bible 5.
 
 ## Capability evidence
 
@@ -14,7 +15,7 @@ client-operation reasoning and World Bible 6; AI accountability when used 4.
 
 For Week 07, assess the specific gate below without inflating scope:
 
-Choose a real List ADT, stack, or queue flow. State the client operations, demonstrate LIFO/FIFO or list behavior with a trace, and explain why this abstraction fits better than treating Python list syntax as the concept.
+Define a collaborator promise, use an ABC/abstract method as an explicit example, and swap two conforming collaborators in a focused contract test. Explain the caller boundary; Protocol is optional comparison only.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

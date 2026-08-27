@@ -1,7 +1,7 @@
-# Reasoning Odyssey gate rubric — Week 8 — Search/Order Tradeoff (S05/S06)
+# Reasoning Odyssey gate rubric — Week 8 — World-Fit Data Abstraction (S05)
 
-**Score: 25 points.** Real lookup/order fit 8; trace and precondition 7;
-cost/maintenance reasoning and World Bible 6; AI accountability when used 4.
+**Score: 25 points.** World-fit abstraction 8; correct operation trace 7;
+client-operation reasoning and World Bible 6; AI accountability when used 4.
 
 ## Capability evidence
 
@@ -14,7 +14,7 @@ cost/maintenance reasoning and World Bible 6; AI accountability when used 4.
 
 For Week 08, assess the specific gate below without inflating scope:
 
-Trace a lookup or ordering operation over real world state. Explain a qualitative cost/maintenance tradeoff and any sorted-data precondition. Do not add binary search unless the world earns it.
+Choose a real List ADT, stack, or queue flow. State the client operations, demonstrate LIFO/FIFO or list behavior with a trace, and explain why this abstraction fits better than treating Python list syntax as the concept.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

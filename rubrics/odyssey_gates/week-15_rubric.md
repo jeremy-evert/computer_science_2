@@ -1,8 +1,8 @@
-# Reasoning Odyssey gate rubric — Week 6 — Earned Substitution (S02)
+# Reasoning Odyssey gate rubric — Week 15 — Professional Workflow Receipt (S08)
 
-**Score: 25 points.** Genuine substitution or composition decision 8;
-behavior/decision evidence 7; trade-off reasoning and World Bible 6; AI
-accountability when used 4.
+**Score: 60 points.** Bounded recovery/collaboration/review workflow 20;
+diff, tests, history, and receipt 15; evidence-backed Full Trail Debrief 15;
+AI review/accountability and World Bible 10.
 
 ## Capability evidence
 
@@ -13,9 +13,9 @@ accountability when used 4.
 | Reasoning | The student explains the chosen boundary, abstraction, contract, event model, or workflow decision in plain language. |
 | AI accountability | When AI was used, the student shows proposal, diff, independent test, reading/reasoning, and an accept/reject decision. |
 
-For Week 06, assess the specific gate below without inflating scope:
+For Week 15, assess the specific gate below without inflating scope:
 
-Where a true is-a relationship exists, demonstrate two subtypes receiving one shared operation with meaningfully different behavior; otherwise document why composition is the better design. Do not invent a hierarchy.
+Using the real Reasoning Odyssey repository, inspect history; recover/revert a bounded change safely; use branch/merge or equivalent collaboration; review a bounded AI change from diff/tests/reasoning; and record change, test, and recovery evidence. Containers are conceptual only until classroom runtime is verified.
 
 Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.

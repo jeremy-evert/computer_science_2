@@ -1,8 +1,7 @@
-# Reasoning Odyssey gate rubric — Week 5 — Earned Substitution (S02)
+# Reasoning Odyssey gate rubric — Week 5 — Collaborating Objects and Invariant (S01/S08)
 
-**Score: 25 points.** Genuine substitution or composition decision 8;
-behavior/decision evidence 7; trade-off reasoning and World Bible 6; AI
-accountability when used 4.
+**Score: 25 points.** Composition fit 8; invariant test/trace 7; rationale
+and World Bible 6; AI accountability when used 4.
 
 ## Capability evidence
 
@@ -15,7 +14,7 @@ accountability when used 4.
 
 For Week 05, assess the specific gate below without inflating scope:
 
-Where a true is-a relationship exists, demonstrate two subtypes receiving one shared operation with meaningfully different behavior; otherwise document why composition is the better design. Do not invent a hierarchy.
+Refactor a real flow into collaborating objects using composition. Protect one invariant with a test/trace and explain why composition fits better than an unnecessary hierarchy.
 
-Week 02 is ungraded setup. Week 16 is shared-strand participation/evidence
+Week 03 is ungraded setup. Week 16 is shared-strand participation/evidence
 only and does not revive a final Reasoning Odyssey checkpoint.
