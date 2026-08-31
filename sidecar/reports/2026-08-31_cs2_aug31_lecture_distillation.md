@@ -101,4 +101,7 @@ module immediately before additive writes; publish only authorized items; and
 read back type, position, and published state. The fixed-region roster crop
 held for this CS2 recording geometry without dropping an essential frame.
 
-Commit and push verification are recorded in the final handoff.
+Implementation commit: `250a3511e1dc8099f08952f882f33c96c96c093c`. It was
+pushed successfully to `origin/anna/cs2-aug31-lecture-distillation`; remote
+`ls-remote` returned the same SHA. This report-only follow-up commit records
+that verification.
