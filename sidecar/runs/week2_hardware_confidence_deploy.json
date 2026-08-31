@@ -1,0 +1,49 @@
+{
+  "course_id": 74031,
+  "module_id": 218887,
+  "before_items": [
+    {
+      "id": 1529982,
+      "position": 1,
+      "title": "CS2 Week 02 -- Found Your World (World Bible v0.1)"
+    }
+  ],
+  "after_items": [
+    {
+      "id": 1531231,
+      "position": 1,
+      "title": "Week 2 \u2014 Hardware Confidence + Small Models"
+    },
+    {
+      "id": 1531232,
+      "position": 2,
+      "title": "Slides \u2014 Hardware Confidence, Small Models, and the Bite Ladder"
+    },
+    {
+      "id": 1531233,
+      "position": 3,
+      "title": "Walkthrough \u2014 How to Get Started"
+    },
+    {
+      "id": 1531234,
+      "position": 4,
+      "title": "Next: Computing Commons Aider Days (Local AI)"
+    },
+    {
+      "id": 1529982,
+      "position": 5,
+      "title": "CS2 Week 02 -- Found Your World (World Bible v0.1)"
+    }
+  ],
+  "created": {
+    "lecture_page_url": "week-2-hardware-confidence-+-small-models",
+    "walkthrough_page_url": "week-2-how-to-get-started-walkthrough",
+    "uploaded_file_id": 6578290,
+    "uploaded_file_display_name": "hardware-confidence.pdf",
+    "lecture_item_id": 1531231,
+    "slides_item_id": 1531232,
+    "walkthrough_item_id": 1531233,
+    "aider_link_item_id": 1531234,
+    "world_bible_item_new_position": 5
+  }
+}

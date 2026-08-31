@@ -1,0 +1,174 @@
+% hardware-confidence.tex
+%
+% Week 2 opening deck: Hardware Confidence, Small Models, and the Bite
+% Ladder. Precedes "Found Your World (World Bible v0.1)" in the live
+% CS2 Week 2 module as an on-ramp, not a replacement. Uses the CS2
+% Beamer slide system (see ../STYLE_GUIDE.md).
+
+\documentclass[aspectratio=169]{beamer}
+\usepackage{../theme/cs2theme}
+\usepackage{../theme/cs2commands}
+
+\setcsweek{Week 2}
+
+\title{Hardware Confidence, Small Models, and the Bite Ladder}
+\subtitle{Your computer is more powerful than you think}
+\author{Computer Science II \textbullet\ Dr. Jeremy P. Evert}
+\date{Fall 2026}
+
+\begin{document}
+
+\begin{frame}[plain]\titlepage\end{frame}
+
+\begin{destinationframe}{Today's Destination}
+  \begin{itemize}
+    \item Reframe the question from ``Can my computer run AI?'' to \textbf{``What AI can my computer run well?''}
+    \item Name the five variables that decide whether an AI-assisted task goes well: hardware, model, task size, context, verification
+    \item Learn the \textbf{Bite Ladder}: how to size a task to a model instead of sizing a model to a myth
+    \item Start the course loop: \texttt{GOAL -> BASELINE -> AIDER -> DIFF -> PROOF -> COMMIT}
+  \end{itemize}
+  \instructorcue{Write ``Can my computer run AI?'' on the board, cross it out, replace with ``What AI can my computer run well?'' before slides go up.}
+\end{destinationframe}
+
+\begin{whymattersframe}{Why This Matters}
+  Every semester, some students believe their laptop disqualifies them
+  from serious AI-assisted work, and some students believe a bigger
+  model rescues a vague request. Both beliefs are wrong, and both are
+  expensive.
+
+  \vspace{3mm}
+  \textbf{Today's claim:} the machine is powerful, but \emph{you} are
+  the multiplier. Love AI more. Trust AI less.
+\end{whymattersframe}
+
+\begin{conceptframe}{The Reframe}
+  \begin{center}
+    \Large \textcolor{gray}{\textit{``Can my computer run AI?''}}
+
+    \vspace{4mm}
+    \Large\color{cs2primary}\textbf{``What AI can my computer run well?''}
+  \end{center}
+
+  \vspace{3mm}
+  ``It runs'' and ``it runs usefully'' are different claims. The first
+  is about hardware. The second is about you.
+\end{conceptframe}
+
+\begin{conceptframe}{Hardware Vocabulary, Fast}
+  \begin{itemize}
+    \item \textbf{CPU} -- general-purpose; always present; fine for small models and orchestration
+    \item \textbf{RAM} -- system memory; a model that does not fit here does not run on CPU alone
+    \item \textbf{GPU} -- parallel math; turns minutes into seconds for model inference
+    \item \textbf{VRAM} -- GPU-local memory; the real ceiling on which model sizes are practical
+    \item \textbf{Quantization} -- compressing a model's numbers so it fits in less VRAM, at a small, usually acceptable, quality cost
+  \end{itemize}
+\end{conceptframe}
+
+\begin{conceptframe}{The Five Variables}
+  A task goes well or badly because of an interaction, not one number:
+
+  \begin{itemize}
+    \item \textbf{Hardware} -- what you can run at all
+    \item \textbf{Model} -- what the loaded model is actually good at
+    \item \textbf{Task size} -- how much you asked for in one bite
+    \item \textbf{Context} -- how much surrounding code/text the model must hold
+    \item \textbf{Verification} -- how you will know if the answer was right
+  \end{itemize}
+
+  \vspace{2mm}
+  A bigger model does not rescue a task that is too big, too vague, or unverified.
+\end{conceptframe}
+
+\begin{misconceptionframe}{Common Misconception}
+  ``I need the biggest model I can load, so I get the best answer.''
+
+  \vspace{3mm}
+  The goal is the \textbf{smallest sufficient model for the bite} --
+  not the largest model your hardware can technically hold. A small
+  model on a small, well-specified task is often faster, cheaper, and
+  just as trustworthy as a large model on the same bite.
+\end{misconceptionframe}
+
+\begin{conceptframe}{The Bite Ladder}
+  \begin{enumerate}
+    \item Give the model one small, bounded task
+    \item Inspect the diff -- read every changed line
+    \item Run an independent test -- not the model's own claim
+    \item If it held, take one rung up: slightly larger task or context
+    \item If it broke, that is the boundary -- back off, don't blame the model alone
+  \end{enumerate}
+
+  \vspace{2mm}
+  You are discovering a real model/hardware/workflow boundary, not
+  reciting a benchmark slogan.
+\end{conceptframe}
+
+\begin{conceptframe}{Local vs. Remote: Two Legitimate Architectures}
+  \begin{itemize}
+    \item \textbf{Local inference} -- model runs on your machine; private, offline-capable, bounded by your hardware
+    \item \textbf{Remote inference} -- your machine is a cockpit; the model runs elsewhere over the network
+  \end{itemize}
+
+  \vspace{2mm}
+  A tablet or nontraditional device is not disqualified -- it is a
+  cockpit. It may run a small model locally when practical, or connect
+  to a remote Linux/model environment when that is the stronger
+  architecture. This class does not promise unsupported native Aider
+  behavior on iPadOS.
+\end{conceptframe}
+
+\begin{odysseyframe}{The Course Loop}
+  \begin{center}
+    \Large\color{cs2primary}
+    \texttt{GOAL -> BASELINE -> AIDER -> DIFF -> PROOF -> COMMIT}
+  \end{center}
+
+  \vspace{3mm}
+  This is how every AI-assisted change in this course gets trusted:
+  state the goal, see the failing baseline, let Aider propose a bounded
+  change, read the diff, run independent proof, then commit.
+\end{odysseyframe}
+
+\begin{aimomentframe}{Trust Is Earned, Not Assumed}
+  \begin{center}
+    \large small model \textrightarrow\ small bite \textrightarrow\ inspect diff \textrightarrow\ test \textrightarrow\ trust earned
+  \end{center}
+
+  \vspace{2mm}
+  Model output is a proposal. Verified software-engineering evidence --
+  the diff you read and the test you ran -- is what you actually get to
+  trust.
+\end{aimomentframe}
+
+\begin{evidenceframe}{Evidence to Produce}
+  \begin{itemize}
+    \item An honest inventory of your own hardware (CPU/RAM/GPU/VRAM, managed machine or personal)
+    \item Proof a model answered locally or through the approved architecture
+    \item One tiny bounded Aider task, its diff, and an independent test result
+    \item A short note on where your confidence held and where it dropped
+  \end{itemize}
+\end{evidenceframe}
+
+\begin{recapframe}{Recap}
+  \begin{itemize}
+    \item Ask what your computer can run well, not whether it can run AI
+    \item Five variables, not one: hardware, model, task size, context, verification
+    \item Smallest sufficient model for the bite, climbed one rung at a time
+    \item \texttt{GOAL -> BASELINE -> AIDER -> DIFF -> PROOF -> COMMIT}
+  \end{itemize}
+\end{recapframe}
+
+\begin{exitframe}{Start Here Today}
+  \begin{enumerate}
+    \item Inventory what you have
+    \item Choose your managed-machine or own-machine path
+    \item Reach the Computing Commons Local AI setup/verification road
+    \item Prove a model answers -- locally or through the approved architecture
+    \item Run one tiny bounded Aider task, inspect the diff, run independent proof
+  \end{enumerate}
+
+  \vspace{2mm}
+  \textbf{Next:} the Week 2 walkthrough and the Computing Commons Aider Days road.
+\end{exitframe}
+
+\end{document}
