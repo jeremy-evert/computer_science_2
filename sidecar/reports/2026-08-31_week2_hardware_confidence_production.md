@@ -38,6 +38,17 @@ After (5 items):
 | 4 | 1531234 | ExternalUrl | Next: Computing Commons Aider Days (Local AI) |
 | 5 | 1529982 | Page | CS2 Week 02 -- Found Your World (World Bible v0.1) — unchanged content, repositioned only |
 
+## Defect found and fixed during verification
+
+Canvas creates `ExternalUrl` module items with `published: false` by
+default (unlike `Page` and `File` items, which came back published from
+this run's create call). The item-4 "Next: Computing Commons Aider Days"
+link was therefore invisible to students immediately after the initial
+deploy. Found during the acceptance readback pass, fixed with one
+`update_module_item` call setting `module_item[published]=true`,
+confirmed by re-fetching the item (`published: true`). All 5 items are
+published as of this report.
+
 ## Artifacts
 
 - Lecture page: `https://swosu.instructure.com/courses/74031/pages/week-2-hardware-confidence-+-small-models` — published, 4646-char body, opened and read back.

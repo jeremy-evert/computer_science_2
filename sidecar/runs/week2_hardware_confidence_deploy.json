@@ -45,5 +45,6 @@
     "walkthrough_item_id": 1531233,
     "aider_link_item_id": 1531234,
     "world_bible_item_new_position": 5
-  }
+  },
+  "publish_fix": "ExternalUrl module items default to published:false on create; explicitly published all created ExternalUrl items after initial deploy (see report)."
 }
