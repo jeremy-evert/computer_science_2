@@ -1,0 +1,9 @@
+label,gpu,architecture,cpu,cpu_logical_cores,vram_gb,observed_latency_s,successful_calls,error_timeout_count,curation
+Machine A,RTX 5080,Blackwell,Intel Core Ultra 7 265,20,16,2.48,90,0,student_safe
+Machine B,RTX 2080 Super,Turing,AMD Ryzen 9 3950X,32,8,5.79,87,3,student_safe
+Machine C,GTX 1660 Ti Max-Q,Turing,Intel Core i7-9750H,12,6,7.02,90,0,student_safe
+Machine D,Tesla T4,Turing,Intel Xeon Gold 6252,96,15,9.69,90,0,student_safe
+Machine E,RTX 5060 Ti,Blackwell,Intel (Windows),20,8,10.80,84,6,caveated
+Machine F,RTX 3060 Ti,Ampere,Intel (Windows),24,8,12.51,90,0,caveated
+Machine G,GTX 1060 3GB,Pascal,AMD (Windows),24,3,14.73,15,0,caveated
+Machine H,GTX 1080,Pascal,Intel Core i7-8700K,12,8,15.35,90,0,caveated
