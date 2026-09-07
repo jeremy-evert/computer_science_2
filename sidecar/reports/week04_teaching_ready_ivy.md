@@ -70,7 +70,8 @@ follow-up is needed before any deployment; no deployment was attempted.
 ## Handoff
 
 The source package is ready for Anna review, with the resolver limitation
-explicitly carried as YELLOW. The branch must be pushed without merging or
-promotion.
+explicitly carried as YELLOW. Commit `bfd217c` was pushed to
+`origin/ivy/cs2-week04-buildout` as a new normal branch ref; no merge or
+promotion was performed.
 
 IVY CS2 W4 READY FOR ANNA
