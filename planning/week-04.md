@@ -1,6 +1,7 @@
-# Week 4 — Collaborating Objects, Composition, and Invariants (S01/S08)
+# Week 4 — Cohesive Object Boundary (S01)
 
-Refactor objects to collaborate through composition, protect one meaningful
-invariant, and use tests/evidence to explain the change. Give composition a
-real alternative before inheritance. **Odyssey:** tested refactor, rationale,
-and AI proposal/diff/test/read/accept-or-reject record when AI is used.
+Reopen a Week 3 object prediction and test whether one candidate deserves a
+cohesive boundary with meaningful state and behavior. Use a focused
+`unittest` test or trace and explain what the boundary belongs together.
+**Odyssey:** first graded build, with AI proposal/diff/test/read/accept-or-
+reject evidence when AI is used.

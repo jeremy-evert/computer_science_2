@@ -1,7 +1,6 @@
-# Week 6 — Contracts and Swappable Collaborators (S03/S08)
+# Week 6 — Earned Substitution (S02)
 
-Teach promise/contract thinking before Python mechanisms: callers depend on
-what a collaborator can do, not concrete details. Show `abc.ABC` and
-`@abstractmethod`; structural/duck typing or `typing.Protocol` is optional
-comparison, not a typing unit. **Odyssey:** swappable collaborator, contract
-test, and explanation.
+Look for a genuine `is-a` relationship in the growing world. Demonstrate two
+subtypes receiving one shared operation with meaningfully different behavior,
+or document why composition is the better design. **Odyssey:** use a focused
+test/trace and do not invent a hierarchy.

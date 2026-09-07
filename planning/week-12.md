@@ -1,5 +1,7 @@
-# Week 12 — Stabilize, Document, and Prepare Peer Review (S08)
+# Week 12 — Data Storytelling / Flex Clinic (S09 + S07)
 
-Feature construction winds down. Improve test quality, documentation,
-runnable instructions, and a major slice for review. **Odyssey:** review-ready
-slice with test evidence, design note, and known-debt list.
+Communicate a concise evidence-backed story from project/world data, adding a
+visual only when it serves the story. Name a limitation or uncertainty and
+make or defend a design or operational decision. If the project is not yet
+data-rich, meaningful reinforcement of prior design, data, GUI, or testing is
+equally valid. **Odyssey:** story or justified refinement with World Bible.

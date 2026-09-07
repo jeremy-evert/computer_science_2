@@ -1,8 +1,6 @@
-# Week 9 — Compact GUI and Event Flow (S04)
+# Week 9 — Search/Order Tradeoff (S05/S06)
 
-Use the course-owned Tkinter micro-lab
-(`lessons/week-09-tkinter-model-view-lab.md`) to separate a tested domain
-model from a modest view. **Odyssey:** render real model state, route at
-least one meaningful user event through a callback to a model operation, and
-show model behavior independently through a test or trace. This is a compact
-supporting experience, not a desktop-app engineering unit.
+Trace a real lookup or ordering operation over the world's state. Explain the
+qualitative cost/maintenance tradeoff and any sorted-data precondition;
+binary search is not required unless the world earns it. **Odyssey:** a
+genuine trace or test, choice, and rationale.

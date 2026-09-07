@@ -1,6 +1,8 @@
-# Week 15 — Buffer: Asynchronous, Light, and Self-Contained
+# Week 15 — Professional Workflow Receipt (S08)
 
-No required live meeting, new technical concept, displaced material, or new
-Odyssey feature sprint. Students may optionally clean up documentation,
-catch up, organize a portfolio, or make a professional reflection. Nothing
-technical is due beyond clearly posted self-contained optional work.
+Use the real Odyssey repository to inspect history, recover or revert a
+bounded change safely, collaborate through branches/merges or an equivalent
+workflow, and review an AI-assisted change from diff, tests, and reasoning.
+Record the change, test, and recovery evidence in the World Bible. Containers
+remain conceptual until classroom runtime is verified. **Odyssey:** larger
+workflow checkpoint, not a new feature sprint.
