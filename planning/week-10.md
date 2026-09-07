@@ -1,9 +1,7 @@
-# Week 10 — Honest Data Visualization (S09/S06/S08)
+# Week 10 — Compact GUI over Tested Model (S04)
 
-Use the course-owned data-storytelling micro-lab
-(`lessons/week-10-data-storytelling-micro-lab.md`) to move from a question to
-real world/project data, a readable visualization, and a justified chart
-choice. **Odyssey:** choose a representation because it answers a question;
-label it honestly, retain runnable evidence, and identify one misleading
-alternative or visual pitfall. Matplotlib is the small default path; plain
-Python collections/CSV remain sufficient and pandas is not required.
+Use the course-owned Tkinter micro-lab to render real model state in a modest
+view and route one meaningful user event through a callback to a model
+operation. Keep the model/view boundary clear and demonstrate model behavior
+independently through a test or trace. **Odyssey:** larger checkpoint, not a
+desktop-app engineering unit.

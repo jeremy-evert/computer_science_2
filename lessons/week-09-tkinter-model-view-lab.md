@@ -29,12 +29,12 @@ rules do not belong only in callbacks.
 
 ## Tiny optional micro-practice menu
 
-- Week 4: composition-versus-inheritance decision card.
-- Week 5: two-object polymorphic-dispatch trace.
-- Week 6: swap a fake collaborator against a contract test.
-- Week 7: push/pop and enqueue/dequeue trace using a real world flow.
-- Week 8: search/order trace and maintenance-cost discussion.
-- Week 9: predict what the callback changes before running it.
+- Week 5: composition-versus-inheritance decision card.
+- Week 6: two-object polymorphic-dispatch trace.
+- Week 7: swap a fake collaborator against a contract test.
+- Week 8: push/pop and enqueue/dequeue trace using a real world flow.
+- Week 9: search/order trace and maintenance-cost discussion.
+- Week 10: predict what the callback changes before running it.
 
 These are in-class, pair, low-stakes, or optional supports. They are not a
 parallel required problem-set sequence.

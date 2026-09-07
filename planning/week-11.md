@@ -1,9 +1,7 @@
-# Week 11 — Data Storytelling / Flex Clinic (S09 + S07/reinforcement)
+# Week 11 — Honest Visualization from Project Data (S09/S06/S08)
 
-This is a pressure-release valve. Use project evidence and a visualization
-only when they help communicate a supported claim, its limitation or
-uncertainty, and a design or operational decision. If earlier work needs
-reinforcement, deepen it instead. A recursive, linked, nested, or tree-like
-representation remains a valid world-fit extension, never an artificial
-requirement. **Odyssey:** an evidence-backed story or a meaningful
-reinforcement/refinement with justification.
+Start with a question about real selected-world or project data, then produce
+a readable, labeled visualization and defend the representation. Retain
+runnable evidence and identify one misleading alternative or visual pitfall;
+plain Python collections/CSV and Matplotlib are sufficient. **Odyssey:**
+question, visual, rationale, limitation, and World Bible evidence.

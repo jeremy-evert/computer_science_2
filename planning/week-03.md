@@ -1,6 +1,6 @@
-# Week 3 — Cohesive Encapsulated Objects (S01)
+# Week 3 — Found Your World (World Bible v0.1)
 
-Students use existing class syntax to model a real world with cohesive
-objects, clear state/behavior boundaries, and a focused test. Teach good
-objects—not beginner syntax from scratch. **Odyssey:** first graded build,
-object map, bounded behavior, test/trace, and design explanation.
+Students choose a world and write a short World Bible seed: premise, cast of
+nouns, one real flow, software questions, known unknowns, and predicted
+objects. This is ungraded setup, not a technical build. **Odyssey:** keep the
+seed concise and open to revision when Week 4 tests an object boundary.

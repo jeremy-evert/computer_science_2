@@ -1,6 +1,6 @@
-# Week 7 — Data Abstractions: List, Stack, Queue (S05)
+# Week 7 — Contract and Swap (S03/S08)
 
-Distinguish Python’s `list` from the List ADT, and stack LIFO/queue FIFO
-contracts from their possible representations. **Odyssey:** select a
-world-fit undo/history, pending-work/event, roster/order, or inventory flow;
-trace allowed operations and explain the abstraction.
+Make one collaborator promise explicit with `abc.ABC` and an abstract method,
+then swap two conforming collaborators in a focused contract test. Explain
+the caller boundary; `typing.Protocol` is an optional comparison. **Odyssey:**
+working baby-project checkpoint, demonstration, reflection, and World Bible.

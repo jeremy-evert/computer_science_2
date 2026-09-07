@@ -73,7 +73,7 @@ The Farkle engine does not need to know whether the decision came from:
 - a table trained from experience;
 - a bounded simulation.
 
-That is the Week 6 idea of a swappable collaborator showing up in a real inherited system.
+That is the Week 7 idea of a swappable collaborator showing up in a real inherited system.
 
 Run the menu:
 

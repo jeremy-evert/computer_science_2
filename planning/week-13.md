@@ -1,6 +1,6 @@
-# Week 13 — Major Odyssey Culmination and Design Review (S01–S08)
+# Week 13 — Stabilization and Peer-Review Preparation (S08)
 
-Major creative construction is substantially complete this week. Students
-conduct a design review with meaningful collaborating objects, relevant
-capabilities, tests, usable documentation, and clean/recoverable history.
-This is not a giant final-exam performance.
+Freeze a substantial slice for review. Improve tests, deepen existing logging
+where it tells an honest story, make instructions runnable, improve
+documentation, and record known debt. **Odyssey:** review-ready evidence and
+World Bible reflection; feature growth stays modest and justified.
