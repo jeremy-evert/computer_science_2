@@ -15,12 +15,26 @@ canonical checkout.
 Weeks 1, 2, and 16 were not changed. No assignment gate or rubric file was
 changed.
 
+**Integration note (added by Ivy, not the Codex worker):** the worker's own
+`planning/week-04.md` rewrite was correct on topic but has since been
+dropped from this branch. A separate, already-accepted bite
+(`ivy/cs2-week04-buildout-v2` @ `7c1a3c8`) rewrote the same file more fully
+— full student path table, cross-reference tokens, AI Fluency section — and
+both branches were based on `origin/main` independently, so merging both
+unchanged would have produced a real conflict on this one file at
+merge-to-main time. Reverted this branch's `planning/week-04.md` to
+`origin/main`'s content (dropping this bite's own week-4 edit only) so
+whichever of the two branches merges first, the other applies cleanly;
+`ivy/cs2-week04-buildout-v2`'s version is the one that should win for
+Week 4. Every other week (3, 5–15) and the two lesson-reference fixes below
+are unaffected and remain this bite's own work.
+
 ## Before / after
 
 | Week | Old `planning/` topic | Current gate/rubric topic | Result |
 |---:|---|---|---|
 | 3 | Cohesive Encapsulated Objects | Found Your World / Light World Seed (ungraded) | Rewritten |
-| 4 | Collaborating Objects, Composition, and Invariants | Cohesive Object Boundary | Rewritten |
+| 4 | Collaborating Objects, Composition, and Invariants | Cohesive Object Boundary | Superseded — see note below |
 | 5 | Earned Inheritance and Polymorphism | Collaborating Objects and Invariant | Rewritten |
 | 6 | Contracts and Swappable Collaborators | Earned Substitution | Rewritten |
 | 7 | Data Abstractions: List, Stack, Queue | Contract and Swap | Rewritten |
