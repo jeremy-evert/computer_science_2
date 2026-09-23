@@ -32,6 +32,30 @@ class TestCookingAppliance(unittest.TestCase):
 
         self.assertTrue(result)
 
+    def test_grill_can_cook_burgers(self):
+        grill = Grill()
+
+        result = grill.can_cook("burgers")
+
+        self.assertTrue(result)
+
+    def test_grill_cannot_cook_cake(self):
+        grill = Grill()
+
+        result = grill.can_cook("cake")
+
+        self.assertFalse(result)
+
+    def test_grill_reports_direct_heat(self):
+        grill = Grill()
+
+        result = grill.cooking_method()
+
+        self.assertEqual(
+            result,
+            "direct heat"
+        )
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

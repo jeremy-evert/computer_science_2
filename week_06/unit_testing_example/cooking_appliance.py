@@ -11,3 +11,10 @@ class Grill:
 
     def cook(self, food):
         return f"The grill sears the {food}."
+
+    def can_cook(self, food):
+        return food == "burgers"    
+
+    def cooking_method(self):
+        return "direct heat"
+    
