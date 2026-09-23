@@ -1,6 +1,6 @@
 ﻿import unittest
 
-from cooking_appliance import Grill, Oven
+from cooking_appliance import Grill, Oven, prepare_meal
 
 
 class TestCookingAppliance(unittest.TestCase):
@@ -54,6 +54,25 @@ class TestCookingAppliance(unittest.TestCase):
         self.assertEqual(
             result,
             "direct heat"
+        )
+
+    def test_prepare_meal_uses_each_appliances_cook_behavior(self):
+        appliances = [
+            Oven(),
+            Grill(),
+        ]
+
+        results = [
+            prepare_meal(appliance, "corn")
+            for appliance in appliances
+        ]
+
+        self.assertEqual(
+            results,
+            [
+                "The oven bakes the corn.",
+                "The grill sears the corn.",
+            ]
         )
 
 
