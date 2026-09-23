@@ -75,6 +75,19 @@ class TestCookingAppliance(unittest.TestCase):
             ]
         )
 
+    def test_prepare_meal_accepts_an_appliance_it_has_never_seen(self):
+        # Guards against the stupid-but-passing implementation that checks
+        # isinstance(appliance, Oven): a class that did not exist when
+        # prepare_meal was written must work without editing prepare_meal.
+        class Smoker:
+            def cook(self, food):
+                return f"The smoker smokes the {food}."
+
+        self.assertEqual(
+            prepare_meal(Smoker(), "corn"),
+            "The smoker smokes the corn."
+        )
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
