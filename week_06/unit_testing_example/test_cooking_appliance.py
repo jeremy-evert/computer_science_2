@@ -25,6 +25,13 @@ class TestCookingAppliance(unittest.TestCase):
             "The grill sears the bread."
         )
 
+    def test_oven_can_cook_pizza(self):
+        oven = Oven()
+
+        result = oven.can_cook("pizza")
+
+        self.assertTrue(result)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
