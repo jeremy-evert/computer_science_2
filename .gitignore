@@ -1,3 +1,5 @@
 .venv/
 __pycache__/
 *.pyc
+# Regenerable validation artifacts
+artifacts/week16_farkle/
