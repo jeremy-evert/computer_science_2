@@ -1,0 +1,18 @@
+1. **Week 1 source on current main:** `planning/week-01.md` defines **Success Foundations** (Aug. 17–21): shared, human-centered orientation—not CS2 technical instruction. Monday focuses on succeeding this semester; Wednesday on degree/path; Friday on career/life direction. It has no CS2 gate, diagnostic, Odyssey work, or world-building. The shared kickoff grading category is 5%. Canonical content is owned by `semester_kickoff_week`, not this repo.
+
+2. **Desired-plan/compiler:** The recorded CS2 compiler is `course_foundry.cs2_desired_course.cs2_savnac_desired_course`. It intentionally builds **nothing for Week 1**; it starts with CS2-owned material later in the semester. Week 1 is explicitly excluded to preserve `semester_kickoff_week` ownership. The available workspace does not contain a `course_foundry` checkout to inspect directly, so this is based on the current CS2 deployment records.
+
+3. **Already live in Savnac course 3:** Report 021 confirms Week 1 is live and published: a Monday kickoff module plus Wednesday, Friday, and A07 Advisor units, with the required shared content reachable. All 20 course modules were published; the course had 121 assignments, 69 pages, and 15 assignment groups totaling 100%. The known defect is ordering: Monday is position 1, but Wednesday/Friday/A07 sort after Week 17 (positions 18–20). No dead links were found in the student walk.
+
+   There is evidence CS2 existed on real production Canvas historically: this repo contains archived production Canvas snapshots through Spring 2026 (most recently course 71247). However, there is **no evidence that the current Fall 2026 source/compiler was ever pushed to production**; Report 021 explicitly confirms its writes and reads were Savnac-only. I could not identify the Fall 2026 production course ID, so it must be confirmed rather than assumed.
+
+4. **Minimum needed for production Week 1 today:** Deploy the canonical `semester_kickoff_week` package—not the CS2 builder—to the confirmed Fall 2026 CS2 production course; ensure the Monday, Wednesday, Friday, and A07 Advisor units are published and ordered consecutively at the top; publish their required linked pages/assignments; retain the 5% kickoff grading group; and use the planned Aug. 17/19/21 dates (or approved operational equivalents). Then verify student-visible links and module navigation. The CS2 compiler alone cannot accomplish this because it does not own Week 1.
+
+5. **Command:** There is no valid CS2 production dry-run/push command to give Foreman today. The known command family is Savnac-only:
+
+   ```bash
+   python -m course_foundry.savnac_deploy dry-run --course cs2
+   python -m course_foundry.savnac_deploy push --course cs2 --confirm-live --prune-scope none
+   ```
+
+   Those must not be repurposed for production. The report identifies `production_deploy.py` as CS1-only by design, and no CS2-specific production-gated equivalent is evidenced here. A production-safe, target-confirming deploy tool must be built first—covering the shared Week 1 owner and preventing destructive CS2 pruning—before Foreman can run a production command.
