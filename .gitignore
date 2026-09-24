@@ -11,3 +11,6 @@ presentations/**/*.snm
 presentations/**/*.toc
 presentations/**/*.vrb
 presentations/**/*.pdf
+
+# Sensitive raw recon output (possible student data); local only
+sidecar/raw/20260818T155325Z__cs2-week1-recon.raw.txt
