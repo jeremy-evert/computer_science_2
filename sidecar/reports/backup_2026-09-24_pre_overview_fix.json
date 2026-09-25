@@ -1,0 +1,666 @@
+{
+  "front_page": {
+    "url": "start-here-this-week",
+    "title": "Start Here \u2014 This Week",
+    "body": "<h1 id=\"start-here--you-are-in-week-6\">Start Here \u2014 you are in Week 6</h1>\n<nav class=\"week-rail\" aria-label=\"Course weeks\" style=\"display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0;\"><span class=\"week-rail-caption\" style=\"font-size:0.85em;color:#666;margin-right:4px;\">Weeks</span><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/week-1-success-foundations\" title=\"Week 1\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/week-1-success-foundations\" data-api-returntype=\"Page\">1</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/week-2-build-and-verify-your-local-ai-lab\" title=\"Week 2\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/week-2-build-and-verify-your-local-ai-lab\" data-api-returntype=\"Page\">2</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-03-overview-found-your-world-slash-world-bible-v0-dot-1\" title=\"Week 3\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-03-overview-found-your-world-slash-world-bible-v0-dot-1\" data-api-returntype=\"Page\">3</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-04-overview-cohesive-object-boundary\" title=\"Week 4\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-04-overview-cohesive-object-boundary\" data-api-returntype=\"Page\">4</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-05-overview-5\" title=\"Week 5\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-05-overview-5\" data-api-returntype=\"Page\">5</a><span class=\"week-rail-chip week-rail-current\" title=\"Week 6\" style=\"display:inline-block;padding:5px 10px;border:2px solid #2b3a55;border-radius:999px;text-decoration:none;color:#fff;background:#2b3a55;font-size:0.9em;\"><strong>6</strong></span><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-07-overview-5\" title=\"Week 7\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-07-overview-5\" data-api-returntype=\"Page\">7</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-08-overview-5\" title=\"Week 8\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-08-overview-5\" data-api-returntype=\"Page\">8</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-09-overview-4\" title=\"Week 9\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-09-overview-4\" data-api-returntype=\"Page\">9</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-10-overview-4\" title=\"Week 10\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-10-overview-4\" data-api-returntype=\"Page\">10</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-11-overview-4\" title=\"Week 11\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-11-overview-4\" data-api-returntype=\"Page\">11</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-12-overview-5\" title=\"Week 12\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-12-overview-5\" data-api-returntype=\"Page\">12</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-13-overview-4\" title=\"Week 13\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-13-overview-4\" data-api-returntype=\"Page\">13</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-14-overview-5\" title=\"Week 14\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-14-overview-5\" data-api-returntype=\"Page\">14</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-15-overview-3\" title=\"Week 15\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-15-overview-3\" data-api-returntype=\"Page\">15</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-16-overview-5\" title=\"Week 16\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-16-overview-5\" data-api-returntype=\"Page\">16</a><a class=\"week-rail-chip\" href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-17-overview-4\" title=\"Week 17\" style=\"display:inline-block;padding:5px 10px;border:1px solid #999;border-radius:999px;text-decoration:none;color:#17335c;background:#eef0f2;font-size:0.9em;\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-17-overview-4\" data-api-returntype=\"Page\">17</a></nav>\n<p><strong>This week: Earned Substitution.</strong> Reopen your Week 5 collaborating objects and look for a genuine is-a relationship \u2014 then either demonstrate two subtypes sharing one operation with meaningfully different behavior, or document why composition (last week's answer) is still the better design. Either is a full pass.</p>\n<div style=\"background:#fff4e5;border:1px solid #f0c674;border-left:5px solid #b8860b;border-radius:8px;padding:10px 14px;margin:10px 0 18px 0\"><strong>Due date not yet set in Canvas.</strong> Weekly gates in this course are normally due Friday 11:59pm \u2014 this one hasn't had a date entered yet. Don't treat that as \"due Friday\" until it actually shows a date here; check back before the week is over.</div>\n<h2 id=\"go-here-first\">Go here first</h2>\n<ul>\n<li><strong><a href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-06-overview-5\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-06-overview-5\" data-api-returntype=\"Page\">Week 6 \u2014 Overview</a></strong> \u2014 what \"is-a\" and composition mean here, a worked example, and the full rubric.</li>\n<li><strong><a href=\"https://swosu.instructure.com/courses/74031/assignments/914177\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/assignments/914177\" data-api-returntype=\"Assignment\">Week 6 gate assignment \u2014 Earned Substitution</a></strong> \u2014 25 points. Where you submit.</li>\n<li><strong><a href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-05-overview-5\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-05-overview-5\" data-api-returntype=\"Page\">Week 5 \u2014 Overview</a></strong> \u2014 need a refresher on your collaborating objects first? Start here.</li>\n</ul>\n<h2 id=\"quick-answers\">Quick answers</h2>\n<ul>\n<li><strong>What was my Week 4 object?</strong> Whatever single object you built in <a href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-04-overview-cohesive-object-boundary\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-04-overview-cohesive-object-boundary\" data-api-returntype=\"Page\">Week 4 (Cohesive Object Boundary)</a>. Week 5 then had you split that flow into two or more <strong>collaborating</strong> objects \u2014 that's the code Week 6 actually reopens.</li>\n<li><strong>What are collaborating objects?</strong> Two or more separate objects that work together to get something done, where no single one of them can do the whole job alone (e.g. last week's Vault and Keyholder \u2014 see the Week 5 overview's \"Two-Key Vault\" example).</li>\n<li><strong>What is composition?</strong> Building an object out of other objects it <em>has</em> (has-a) rather than objects it <em>is</em> (is-a). A Vault <em>has-a</em> lock; it is not a kind of Guard. Composition is usually the safer default \u2014 Week 6 asks you to only reach for inheritance when a real is-a relationship earns it.</li>\n<li><strong>What does this week's test need to do?</strong> Not an invariant test (that was Week 5) \u2014 this week, if you found a real is-a relationship, write one test that calls the shared operation on each subtype and asserts the behavior actually differs. If you decided composition was still right, your evidence is whatever trace/test shows the composed collaboration working, plus your written reasoning for why you didn't build a hierarchy.</li>\n<li><strong>Do you have an example?</strong> Yes \u2014 see the <a href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-06-overview-5\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-06-overview-5\" data-api-returntype=\"Page\">Week 6 overview</a>'s illustrative example. It's optional scaffolding, not the required scenario \u2014 any honest is-a-or-not decision in your own world earns full credit.</li>\n</ul>\n<h2 id=\"optional--computing-commons\">Optional \u2014 Computing Commons</h2>\n<p>The <a href=\"https://swosu.instructure.com/courses/24298\">SWOSU\nComputing Commons</a> is the shared space for the weekly\n<strong>podcasts</strong>, <strong>AI Fluency</strong>, and\n<strong>professional-learning</strong> material. It is not required for\nthis course, but it is there if you want it.</p>\n<h2 id=\"everything-else\">Everything else</h2>\n<p>Every week of the semester is in <strong><a href=\"https://swosu.instructure.com/courses/74031/modules\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/modules\" data-api-returntype=\"[Module]\">Modules</a></strong> \u2014 scroll to the week\nyou need. Canvas remains the authoritative place for due dates,\nsubmissions, and grades.</p>\n\n<p><a href=\"https://swosu.instructure.com/courses/74031/pages/cs-2-planning-block-map\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs-2-planning-block-map\" data-api-returntype=\"Page\">CS 2 Planning Block Map</a></p>\n"
+  },
+  "pages": {
+    "cs2-week-04-overview-cohesive-object-boundary": {
+      "title": "CS2 Week 04 \u2014 Overview (Cohesive Object Boundary)",
+      "body": "<h1 id=\"week-4--cohesive-object-boundary\">Week 4 \u2014 Cohesive Object\nBoundary</h1>\n<p><strong>Monday, September 7 was Labor Day \u2014 no Monday class.</strong>\nUse the Monday bridge to reopen your Week 3 World Bible, choose one\npredicted object, and prepare the smallest boundary question you can\ntest on Wednesday. You do not need a larger design to make up the missed\nmeeting.</p>\n<h2 id=\"this-weeks-question\">This week's question</h2>\n<p><strong>When does a predicted noun actually deserve to be its own\nobject?</strong></p>\n<p>Reopen your <a href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-03-overview-found-your-world-slash-world-bible-v0-dot-1\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-03-overview-found-your-world-slash-world-bible-v0-dot-1\" data-api-returntype=\"Page\">Week 3 World\nBible</a>. Pick <strong>one</strong> candidate from your\npredicted-object list and test whether it earns a <em>cohesive\nboundary</em> \u2014 an object that owns related state and the behavior that\nbelongs with that state. A prediction that does not hold up is a\nlegitimate finding, not a failure.</p>\n<h2 id=\"what-you-do\">What you do</h2>\n<table>\n<thead>\n<tr class=\"header\">\n<th>Day</th>\n<th>Center</th>\n<th>Evidence you keep</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td>Wednesday</td>\n<td>Reopen and test one prediction</td>\n<td>candidate noun, responsibility/boundary notes, smallest object\ndiff</td>\n</tr>\n<tr class=\"even\">\n<td>Friday</td>\n<td>Verify and defend the boundary</td>\n<td>independently run <code>unittest</code>, its result, a one-sentence\nWorld Bible update</td>\n</tr>\n</tbody>\n</table>\n<p>This is where the semester's testing habit begins: one small\nautomated <code>unittest</code> \u2014 construct the object, exercise one\nmeaningful behavior, assert the result \u2014 run by you, independently of\nany manual walkthrough.</p>\n<h2 id=\"where-to-go\">Where to go</h2>\n<ol type=\"1\">\n<li>Read the <a href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-04-cohesive-object-boundary-lesson\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-04-cohesive-object-boundary-lesson\" data-api-returntype=\"Page\">Week\n4 lesson \u2014 Cohesive Object Boundary</a>.</li>\n<li>Post your work in the <a href=\"https://swosu.instructure.com/courses/74031/discussion_topics/542906\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/discussion_topics/542906\" data-api-returntype=\"Discussion\">Week 4\nOdyssey Gate discussion</a> (25 points; graded discussion \u2014 post your\nwork, then reply to a classmate; the rubric in that discussion is the\nscoring contract).</li>\n</ol>\n<p>If AI helps: save the request, inspect the proposal and diff, read\nthe changed code, run the test yourself, and record an evidence-based\naccept/reject decision. <strong>The test \u2014 not the AI's claim \u2014 proves\nthe behavior.</strong></p>\n<div style=\"margin:22px 0;padding:16px 18px;border:1px dashed #999;border-radius:8px;background:#fbf6ea;\">\n  <h2 style=\"margin-top:0;\">Optional \u2014 try this first: The Tavern Tab</h2>\n  <p>A tavern keeps a running tab for each patron. A <code>TavernTab</code> owns <code>patron_name</code> and <code>balance</code>:</p>\n  <ul>\n    <li><code>add_charge(amount)</code> raises <code>ValueError</code> if <code>amount &lt;= 0</code>; otherwise increases the balance.</li>\n    <li><code>pay(amount)</code> raises <code>ValueError</code> if <code>amount &lt;= 0</code>. If <code>amount &gt; balance</code>, it zeroes the balance and <strong>returns the overpayment as change</strong>; otherwise it reduces the balance by <code>amount</code> and returns <code>0</code>.</li>\n  </ul>\n  <p>The reasoning beat, same shape as this week's real gate: does <code>TavernTab</code> deserve a cohesive boundary, or is it just a named number? And does the settlement's full ledger of every patron's tab belong <em>inside</em> <code>TavernTab</code> itself? (No \u2014 name why: a single tab owns one patron's balance and the rules for changing it; the ledger of every tab is a different responsibility \u2014 a collection this object doesn't need to know about.)</p>\n  <p>One test to write: charge 10, pay 3 \u2192 balance 7. Pay 20 \u2192 balance 0, change 10.</p>\n  <p><em>This is a separate, lightweight, optional warm-up \u2014 the SupplyCrate worked example above is still the serious spine for this week's gate.</em></p>\n</div>\n\n<h2 id=\"optional\">Optional</h2>\n<p>The <a href=\"https://swosu.instructure.com/courses/24298\">SWOSU\nComputing Commons</a> carries the weekly podcasts, AI Fluency, and\nprofessional-learning material \u2014 not required for this course, but there\nif you want it.</p>\n\n<p><em>Next week: Inheritance and Polymorphism \u2014 and specifically when\n<strong>not</strong> to reach for them. Composition often fits a\ncollaboration better than an unnecessary hierarchy; the\n<a href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-05-overview-5\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-05-overview-5\" data-api-returntype=\"Page\">Week 5 overview</a>\nframes exactly that choice.</em></p>\n"
+    },
+    "cs2-week-05-overview-5": {
+      "title": "CS2 Week 05 -- Overview",
+      "body": "<h2>Reasoning Odyssey Gate \u2014 Week 5 \u2014 Collaborating Objects and Invariant (S01/S08)</h2>\n<p><strong>What are we learning?</strong> How objects work together \u2014 composition (has-a), collaborating objects, and protecting an invariant with a test. Just as important: recognizing when a job needs a partner object rather than a bigger single class or a hierarchy.</p>\n<p><strong>What am I building/changing?</strong> Refactor a real flow in your world into two or more collaborating objects using composition. Pick one thing that must always be true across that collaboration \u2014 an invariant \u2014 and protect it with an automated test that fails when it is broken and passes when it holds. Continue the Week 4 <code>unittest</code> habit. An optional first <code>logging</code> line at the invariant boundary is welcome, not required.</p>\n<p><strong>How does my world connect?</strong> Reopen your Week 4 object. Ask what it cannot do meaningfully alone \u2014 what does it need to collaborate with, and why? Composition, not a hierarchy: a Vault <em>has-a</em> lock; it is not a kind of Guard.</p>\n<p><strong>What evidence do I keep?</strong> One concise World Bible entry: what changed, what evidence you used, and any remaining debt. Explain in plain language why composition fits better here than an unnecessary hierarchy.</p>\n<h3>Whimsy hook \u2014 The Two-Key Vault</h3>\n<p>A vault that no single object can open. There is a <code>Vault</code> and two <code>Keyholder</code>s, and the rule the whole system exists to guarantee is: <em>the vault never opens unless both keyholders turn at the same time</em>. Neither object is a kind of the other \u2014 they collaborate. Build the collaboration, then write the test that proves one key alone can never open it. Break the invariant on purpose and watch the test catch you.</p>\n<h3>Success criteria (25 points)</h3>\n<table border=\"1\" cellpadding=\"6\"><tbody>\n<tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr>\n<tr><td>Composition fit</td><td>8</td><td>The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded.</td></tr>\n<tr><td>Invariant test / trace</td><td>7</td><td>An automated test fails when the invariant is broken and passes when it holds.</td></tr>\n<tr><td>Rationale / World Bible</td><td>6</td><td>Explains, in plain language, why composition fits better than an unnecessary hierarchy.</td></tr>\n<tr><td>AI accountability</td><td>4</td><td>When AI was used: proposal, diff, independent test, reasoning, accept/reject decision.</td></tr>\n</tbody></table>\n<p><strong>What exactly do I turn in?</strong> The graded discussion for this gate \u2014 post your collaboration code (or a link), your invariant test, and your one-line World Bible entry, then reply to at least one classmate.</p>\n<p><strong>What carries forward?</strong> Week 6 takes the special case: where a real is-a relationship exists among your collaborating objects, inheritance and polymorphism let two subtypes share one operation with meaningfully different behavior. Week 7\u2019s checkpoint then looks back across Weeks 4\u20136.</p>"
+    },
+    "cs2-week-06-overview-5": {
+      "title": "CS2 Week 06 -- Overview",
+      "body": "<h2>Reasoning Odyssey Gate \u2014 Week 6 \u2014 Earned Substitution (S02)</h2>\n<p><strong>What are we learning?</strong> Inheritance and polymorphism, earned rather than assumed \u2014 recognizing when two things in your world genuinely share an operation but behave differently (a real <em>is-a</em> relationship), versus when they just happen to look similar and should stay separate, composed objects instead.</p>\n<p><strong>What am I building/changing?</strong> Reopen your <a href=\"https://swosu.instructure.com/courses/74031/pages/cs2-week-05-overview-5\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-05-overview-5\" data-api-returntype=\"Page\">Week 5 collaborating objects</a> (and the rest of your Week 3 cast). Look for a true <em>is-a</em> relationship \u2014 a family of things that share one operation but behave meaningfully differently. Where one genuinely exists, demonstrate two subtypes receiving that one shared operation with meaningfully different behavior. Where it doesn't, document why composition (Week 5's has-a) is still the better design instead. Either answer is a full pass \u2014 <strong>do not invent a hierarchy just to have one.</strong></p>\n<p><strong>How does my world connect?</strong> Continue the <code>unittest</code> habit from Weeks 4-5: a small automated test that calls the shared operation on each subtype is the clearest way to prove the behavior actually differs. A log line at the point of substitution is welcome again if it helps show which subtype ran and why \u2014 optional, not required.</p>\n<p><strong>What evidence do I keep?</strong> One concise World Bible entry: what changed, what evidence you used, and any remaining debt.</p>\n<h3>Illustrative example (optional \u2014 not the required scenario)</h3>\n<p>Any reasonable is-a-or-not decision in your own world is a full pass; you don't need this exact shape. One way to see the difference:</p>\n<p>A <code>Guard</code> and a <code>Turret</code> in a Frontier-Settlement-style world both need to <code>respond_to_intruder()</code> \u2014 but a Guard walks toward the threat and a Turret rotates and fires. That's a genuine is-a: both really are \"things that respond to intruders,\" just differently. Two subtypes, one shared operation, meaningfully different behavior \u2014 write one test that calls <code>respond_to_intruder()</code> on each and asserts the different outcome.</p>\n<p>Contrast that with last week's Vault: a <code>Vault</code> and a <code>Keyholder</code> are not two kinds of the same thing \u2014 a Vault doesn't respond to intruders the way a Keyholder does, they collaborate on a shared invariant instead. That's why Week 5 stayed composition. The test for you this week: pick a candidate pair from your own world and ask honestly which shape it actually is, not which one is more exciting to build.</p>\n<h3>Success criteria (25 points)</h3>\n<table border=\"1\" cellpadding=\"6\"><tbody>\n<tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr>\n<tr><td>Genuine substitution or composition decision</td><td>8</td><td>The bounded change is meaningful for the selected world; no artificial hierarchy is rewarded.</td></tr>\n<tr><td>Behavior / decision evidence</td><td>7</td><td>A test, trace, run, diff, or review receipt supports the claimed behavior.</td></tr>\n<tr><td>Trade-off reasoning / World Bible</td><td>6</td><td>Explains the substitution-or-composition decision in plain language.</td></tr>\n<tr><td>AI accountability</td><td>4</td><td>When AI was used: proposal, diff, independent test, reasoning, accept/reject decision.</td></tr>\n</tbody></table>\n<p><strong>What exactly do I turn in?</strong> The <a href=\"https://swosu.instructure.com/courses/74031/assignments/914177\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/assignments/914177\" data-api-returntype=\"Assignment\">Week 6 gate assignment</a> \u2014 your subtype-or-composition code (or a link), your test, and your one-line World Bible entry.</p>\n<p><strong>What carries forward?</strong> Week 7 is your first checkpoint (40 points) \u2014 it pauses and looks back across Weeks 4-6 at what your world's growing system actually depends on, and turns one real dependency into an explicit contract.</p>\n"
+    },
+    "cs2-week-07-overview-5": {
+      "title": "CS2 Week 07 -- Overview",
+      "body": "<h2>Reasoning Odyssey Gate -- Week 7 -- World-Fit Data Abstraction (S05)</h2><p><strong>What are we learning?</strong> List/stack/queue abstractions -- choosing the right structure for how things actually move through your world.</p><p><strong>What am I building/changing?</strong> Choose a real List ADT, stack, or queue flow. State the client operations, and demonstrate LIFO/FIFO or list behavior with a small automated test -- continuing the habit from Weeks 3-6, not a new kind of evidence. Explain why this abstraction fits better than treating Python list syntax as the concept.</p><p><strong>How does my world connect?</strong> Look at your world real flow (from Week 2) again -- somewhere in it, things pile up, wait in line, or need to be processed in order.</p><p><strong>What evidence do I keep?</strong> Keep one concise World Bible entry: what changed, evidence used, and any remaining debt.</p><h3>Success criteria (25 points)</h3><table border=\"1\" cellpadding=\"6\"><tbody><tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr><tr><td>World-fit abstraction</td><td>8</td><td>The chosen structure is meaningful for the selected world, not an arbitrary example.</td></tr><tr><td>Correct operation trace</td><td>7</td><td>A test/trace demonstrates the claimed LIFO/FIFO/list behavior.</td></tr><tr><td>Client-operation reasoning / World Bible</td><td>6</td><td>Explains why this abstraction fits better than raw list syntax.</td></tr><tr><td>AI accountability</td><td>4</td><td>When AI was used: proposal, diff, independent test, reasoning, accept/reject decision.</td></tr></tbody></table><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Week 8 reopens this exact structure to trace a real lookup/ordering operation over it.</p>"
+    },
+    "cs2-week-08-overview-5": {
+      "title": "CS2 Week 08 -- Overview",
+      "body": "<h2>Reasoning Odyssey Gate -- Week 8 -- Search/Order Tradeoff (S05/S06)</h2><p><strong>What are we learning?</strong> Search and ordering tradeoffs -- the cost/maintenance reasoning behind choosing (or not choosing) a sorted structure.</p><p><strong>What am I building/changing?</strong> Trace a lookup or ordering operation over real world state -- a test that asserts the correct result is the strongest form of this trace, continuing the same testing habit. Explain a qualitative cost/maintenance tradeoff and any sorted-data precondition. Do not add binary search unless the world earns it.</p><p><strong>How does my world connect?</strong> Reopen the structure you built in Week 7 -- do not build a new one just for this gate.</p><p><strong>What evidence do I keep?</strong> Keep one concise World Bible entry: what changed, evidence used, and any remaining debt.</p><h3>Success criteria (25 points)</h3><table border=\"1\" cellpadding=\"6\"><tbody><tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr><tr><td>Real lookup/order fit</td><td>8</td><td>The operation is meaningful for the selected world, over real state.</td></tr><tr><td>Trace and precondition</td><td>7</td><td>A trace/test demonstrates the operation; any sorted-data precondition is named.</td></tr><tr><td>Cost/maintenance reasoning / World Bible</td><td>6</td><td>Explains the qualitative tradeoff in plain language.</td></tr><tr><td>AI accountability</td><td>4</td><td>When AI was used: proposal, diff, independent test, reasoning, accept/reject decision.</td></tr></tbody></table><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Week 9 checkpoint builds a compact GUI over your accumulated, tested model -- it needs a real model to render.</p>"
+    },
+    "cs2-week-09-overview-4": {
+      "title": "CS2 Week 09 -- Overview",
+      "body": "<h2>Reasoning Odyssey Gate -- Week 9 -- Compact GUI over Tested Model (S04) -- CHECKPOINT 2</h2><p><strong>What are we learning?</strong> GUI/model-view separation -- rendering real state in a modest view without trusting the GUI as your only evidence.</p><p><strong>What am I building/changing?</strong> This checkpoint (50 points) needs your accumulated, tested model from Weeks 3-8 to render. Use the course Tkinter lab pattern to render real model state in a modest view, with at least one meaningful user event/callback that invokes a model operation. Show the model behavior can be tested or traced without trusting the GUI alone.</p><p><strong>How does my world connect?</strong> This gate cannot be completed without the system you have already built -- there is nothing to put in a window otherwise.</p><p><strong>What evidence do I keep?</strong> Keep one concise World Bible entry: what changed, evidence used, and any remaining debt.</p><h3>Success criteria (50 points)</h3><table border=\"1\" cellpadding=\"6\"><tbody><tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr><tr><td>GUI/model event path</td><td>15</td><td>A real event/callback invokes a real model operation.</td></tr><tr><td>Independent model test/trace</td><td>15</td><td>The model behavior is verified without trusting the GUI display.</td></tr><tr><td>Model/view reasoning</td><td>10</td><td>Explains the model/view boundary and event flow in plain language.</td></tr><tr><td>Demonstration, limitation, World Bible</td><td>10</td><td>Working demonstration, named limitation, and a concise World Bible entry.</td></tr></tbody></table><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Weeks 10-11 turn your accumulated project data into an honest visualization and a defensible story.</p>"
+    },
+    "cs2-week-10-overview-4": {
+      "title": "CS2 Week 10 -- Overview",
+      "body": "<h2>Reasoning Odyssey Gate -- Week 10 -- Honest Visualization from Project Data (S09/S06/S08)</h2><p><strong>What are we learning?</strong> Honest data visualization -- choosing a defensible representation and naming what it could mislead someone into believing.</p><p><strong>What am I building/changing?</strong> State a real question about your own selected-world/project data. Produce one or more readable, labeled visualizations that answer it, explain why the representation is defensible, and identify one misleading alternative or visual pitfall. Retain runnable code/data or a reproducible trace -- plotting syntax alone is not the evidence.</p><p><strong>How does my world connect?</strong> This uses your own accumulated project data -- the same system you have been building since Week 3.</p><p><strong>What evidence do I keep?</strong> Keep one concise World Bible entry: what changed, evidence used, and any remaining debt.</p><h3>Success criteria (25 points)</h3><table border=\"1\" cellpadding=\"6\"><tbody><tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr><tr><td>Real question / labeled visualization</td><td>8</td><td>A genuine question about the student own data, answered with a readable, labeled chart.</td></tr><tr><td>Reproducible evidence</td><td>7</td><td>Runnable code/data or a reproducible trace is retained, not just an image.</td></tr><tr><td>Representation/pitfall reasoning / World Bible</td><td>6</td><td>Explains why the representation is defensible and names one pitfall.</td></tr><tr><td>AI accountability</td><td>4</td><td>When AI was used: proposal, diff, independent test, reasoning, accept/reject decision.</td></tr></tbody></table><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Week 11 either extends this data story or, if the project is not yet data-rich, reinforces prior design/GUI/testing work instead.</p>"
+    },
+    "cs2-week-11-overview-4": {
+      "title": "CS2 Week 11 -- Overview",
+      "body": "<h2>Reasoning Odyssey Gate -- Week 11 -- Data Storytelling / Flex Clinic (S09 + S07)</h2><p><strong>What are we learning?</strong> Evidence-backed storytelling -- communicating a claim from data (or, if not yet data-rich, reinforcing and defending prior work).</p><p><strong>What am I building/changing?</strong> Communicate a concise evidence-backed story from your project/world data. Include a visual only when it serves the story. Name a limitation, uncertainty, or alternative interpretation, and make or defend a design or operational decision. If your project is not yet data-rich, a meaningful reinforcement of prior design, data, GUI, or testing work is equally valid.</p><p><strong>How does my world connect?</strong> Builds directly on Week 10 own data, or falls back to strengthening whatever you have already built.</p><p><strong>What evidence do I keep?</strong> Keep one concise World Bible entry: what changed, evidence used, and any remaining debt.</p><h3>Success criteria (25 points)</h3><table border=\"1\" cellpadding=\"6\"><tbody><tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr><tr><td>Evidence-backed story / justified reinforcement</td><td>8</td><td>A real claim, backed by the student own evidence, or a meaningful reinforcement.</td></tr><tr><td>Supporting evidence</td><td>7</td><td>Concrete evidence backs the claim or reinforcement.</td></tr><tr><td>Limitation/decision reasoning / World Bible</td><td>6</td><td>Names a limitation or uncertainty and defends a real decision.</td></tr><tr><td>AI accountability</td><td>4</td><td>When AI was used: proposal, diff, independent test, reasoning, accept/reject decision.</td></tr></tbody></table><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Week 12 begins the synthesis/stabilization pass over everything built so far -- nothing new is introduced, the existing system is reviewed and hardened.</p>"
+    },
+    "cs2-week-12-overview-5": {
+      "title": "CS2 Week 12 -- Overview",
+      "body": "<h2>Reasoning Odyssey Synthesis Checkpoint -- Week 12 -- Stabilization and Peer-Review Preparation (S08)</h2><p><strong>What are we learning?</strong> No new technical concept this week -- stabilization, testing discipline, and honest debt-tracking.</p><p><strong>What am I building/changing?</strong> Freeze a substantial slice for review: improve tests, deepen any logging you have already been using so it still tells an honest story, improve runnable instructions, documentation, and known-debt record. None of this is new -- it is the testing and logging habits from Weeks 3-8, applied more carefully. Feature growth should be modest and justified.</p><p><strong>How does my world connect?</strong> This is your whole system to date -- everything from Weeks 3-11 is now the subject.</p><p><strong>What evidence do I keep?</strong> Keep one concise World Bible entry: what changed, evidence used, and any remaining debt.</p><h3>Success criteria (25 points)</h3><table border=\"1\" cellpadding=\"6\"><tbody><tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr><tr><td>Stabilized world-fit slice</td><td>8</td><td>A real, meaningful slice of the accumulated system is frozen and stable.</td></tr><tr><td>Tests and runnable instructions</td><td>7</td><td>Tests and clear instructions let someone else run the project.</td></tr><tr><td>Documentation/debt reasoning / World Bible</td><td>6</td><td>Honest documentation and a real known-debt record.</td></tr><tr><td>AI accountability</td><td>4</td><td>When AI was used: proposal, diff, independent test, reasoning, accept/reject decision.</td></tr></tbody></table><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Week 13 continues the same stabilization push toward a substantially complete culmination.</p>"
+    },
+    "cs2-week-13-overview-4": {
+      "title": "CS2 Week 13 -- Overview",
+      "body": "<h2>Reasoning Odyssey Synthesis Checkpoint -- Week 13 -- Culmination Design Review (S01-S08)</h2><p><strong>What are we learning?</strong> No new technical concept this week -- showing major creative construction substantially complete, with a clean recoverable history.</p><p><strong>What am I building/changing?</strong> Show your major creative construction substantially complete: a runnable slice, important tests, design rationale, usable documentation, and clean enough history for recovery/review. Your existing World Bible entry reflects on how the evidence supports the project readiness and what remains to recover or improve.</p><p><strong>How does my world connect?</strong> Still the same accumulated system from Weeks 3-12, now pushed toward substantial completion.</p><p><strong>What evidence do I keep?</strong> Keep one concise World Bible entry: what changed, evidence used, and any remaining debt.</p><h3>Success criteria (25 points)</h3><table border=\"1\" cellpadding=\"6\"><tbody><tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr><tr><td>Substantially complete world-fit construction</td><td>8</td><td>The project is genuinely near-complete for its scope, not a late start.</td></tr><tr><td>Run/tests/history</td><td>7</td><td>The project runs, has real tests, and has a usable commit history.</td></tr><tr><td>Design rationale and documentation</td><td>6</td><td>Clear documentation explaining the real design choices made.</td></tr><tr><td>AI accountability</td><td>4</td><td>When AI was used: proposal, diff, independent test, reasoning, accept/reject decision.</td></tr></tbody></table><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Week 14 uses this same real repository directly for a professional recovery/collaboration workflow receipt.</p>"
+    },
+    "cs2-week-14-overview-5": {
+      "title": "CS2 Week 14 -- Overview",
+      "body": "<h2>Reasoning Odyssey Gate -- Week 14 -- Professional Workflow Receipt (S08) -- CHECKPOINT 3</h2><p><strong>What are we learning?</strong> Professional workflow -- reading your own project history, recovering safely from a bounded mistake, and reviewing an AI-proposed change like a professional would. This is where the semester engineering habits come together, not where they first appear.</p><p><strong>What am I building/changing?</strong> Using the real Reasoning Odyssey repository you have been building since Week 3 -- with its tests, its occasional log lines, its retained prompts, and its running World Bible -- inspect its history; recover/revert a bounded change safely; use branch/merge or equivalent collaboration; review a bounded AI change from diff/tests/reasoning; and record change, test, and recovery evidence. Containers are conceptual only until classroom runtime is verified.</p><p><strong>How does my world connect?</strong> This gate is literally your own accumulated repository from Weeks 3-13 -- there is no separate artifact to build.</p><p><strong>What evidence do I keep?</strong> Keep one concise World Bible entry: what changed, evidence used, and any remaining debt.</p><h3>Success criteria (60 points)</h3><table border=\"1\" cellpadding=\"6\"><tbody><tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr><tr><td>Bounded recovery/collaboration/review workflow</td><td>20</td><td>A real recovery/revert, branch/merge, or equivalent collaboration action.</td></tr><tr><td>Diff, tests, history, and receipt</td><td>15</td><td>Concrete evidence: diffs, test results, and history entries.</td></tr><tr><td>Evidence-backed Full Trail Debrief</td><td>15</td><td>A clear account of what happened, checked against evidence, not narrative alone.</td></tr><tr><td>AI review/accountability and World Bible</td><td>10</td><td>A bounded AI change reviewed from diff/tests/reasoning, plus a concise World Bible entry.</td></tr></tbody></table><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Week 15 is a light, optional, asynchronous week. Weeks 16-17 are the shared Farkle+ML experience and the final reflection.</p>"
+    },
+    "cs2-week-15-overview-3": {
+      "title": "CS2 Week 15 -- Overview",
+      "body": "<h2>Week 15 -- Buffer: Asynchronous, Light, and Self-Contained</h2><p><strong>What are we learning?</strong> Nothing new this week. This is a deliberately light, asynchronous week with no required live meeting.</p><p><strong>What am I building/changing?</strong> Nothing required. You may optionally clean up documentation, catch up on any earlier gate, organize your World Bible/repository into a portfolio shape, or write a professional reflection.</p><p><strong>How does my world connect?</strong> If you use this week, use it on the same system you have already been building -- not a new project.</p><p><strong>What evidence do I keep?</strong> Nothing is required this week. Anything you do clean up or catch up on is worth noting in your World Bible.</p><p><strong>What exactly do I turn in?</strong> Nothing is due this week beyond clearly posted, self-contained optional work if you choose to do any.</p><p><strong>What carries forward?</strong> Week 16 is the shared Farkle + Machine Learning experience; Week 17 is your final reflection.</p>"
+    },
+    "cs2-week-16-overview-5": {
+      "title": "CS2 Week 16 -- Overview",
+      "body": "<h2>Week 16 -- Farkle + Machine Learning</h2><p><strong>What are we learning?</strong> A shared applied experience across all Fall 2026 courses: using CS2 design thinking to evaluate a strategy contract with real evidence, not on which strategy 'feels' better.</p><p><strong>What am I building/changing?</strong> This is shared-strand participation/evidence, not a weekly mini-project and not a fourth Odyssey checkpoint. Identify a stable strategy contract, compare two provided strategy/configuration choices, preserve reproducible evidence, and read/generate one honest chart.</p><p><strong>How does my world connect?</strong> This week steps outside your world on purpose -- it is the one shared experience across the whole course, not a Reasoning Odyssey gate.</p><p><strong>What evidence do I keep?</strong> An optional one-sentence World Bible line naming what changed your design judgment and the evidence that changed it -- no additional Odyssey artifact is required.</p><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Week 17 is your final reflection, drawing on the full repository and World Bible -- not a new technical build.</p>"
+    },
+    "cs2-week-17-overview-4": {
+      "title": "CS2 Week 17 -- Overview",
+      "body": "<h2>Week 17 -- Final Reflection and Closure (A5)</h2><p><strong>What are we learning?</strong> Nothing new -- this reflection stands in place of a traditional technical exam. Your Odyssey repository is the evidence of the journey, not a Week-17 feature sprint.</p><p><strong>What am I building/changing?</strong> Nothing technical. Choose five reflection prompts, with at least one from each of four categories: Growth and joy; Bugs and judgment; Community and tools; Identity and next steps.</p><p><strong>How does my world connect?</strong> Review your own World Bible for enough context that another person could understand how your project actually evolved -- use concrete evidence from it where helpful.</p><p><strong>What evidence do I keep?</strong> Your finished World Bible/repository is itself the evidence; this reflection is the closing entry.</p><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Nothing -- this closes the semester-long Reasoning Odyssey.</p>"
+    }
+  },
+  "module_items": {
+    "218888": [
+      {
+        "id": 1533008,
+        "position": 1,
+        "title": "CS2 Week 04 \u2014 Overview (Cohesive Object Boundary)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218888,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1533008",
+        "page_url": "cs2-week-04-overview-cohesive-object-boundary",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-04-overview-cohesive-object-boundary",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1533009,
+        "position": 2,
+        "title": "CS2 Week 04 \u2014 Cohesive Object Boundary (Lesson)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218888,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1533009",
+        "page_url": "cs2-week-04-cohesive-object-boundary-lesson",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-04-cohesive-object-boundary-lesson",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1533417,
+        "position": 3,
+        "title": "Reasoning Odyssey Gate -- Week 4 -- Cohesive Object Boundary (Discussion)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Discussion",
+        "module_id": 218888,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1533417",
+        "content_id": 542906,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/discussion_topics/542906",
+        "published": true,
+        "unpublishable": false
+      },
+      {
+        "id": 1529994,
+        "position": 4,
+        "title": "Reasoning Odyssey Gate -- Week 4 (moved -- see the discussion above)",
+        "indent": 1,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218888,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1529994",
+        "content_id": 914175,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914175",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1536089,
+        "position": 5,
+        "title": "Computer Science II (CS2) \u2014 2026-09-11 Recording 6e1d40d94979 \u2014 Recap & Notes",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218888,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1536089",
+        "page_url": "computer-science-ii-cs2-2026-09-11-recording-6e1d40d94979-recap-and-notes",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/computer-science-ii-cs2-2026-09-11-recording-6e1d40d94979-recap-and-notes",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1536107,
+        "position": 6,
+        "title": "Computer Science II (CS2) \u2014 2026-09-14 Recording ab8df4bd46a8 \u2014 Recap & Notes",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218888,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1536107",
+        "page_url": "computer-science-ii-cs2-2026-09-14-recording-ab8df4bd46a8-recap-and-notes",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/computer-science-ii-cs2-2026-09-14-recording-ab8df4bd46a8-recap-and-notes",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218889": [
+      {
+        "id": 1530010,
+        "position": 1,
+        "title": "CS2 Week 04 \u2014 Overview (Cohesive Object Boundary)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218889,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530010",
+        "page_url": "cs2-week-04-overview-cohesive-object-boundary",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-04-overview-cohesive-object-boundary",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1534045,
+        "position": 2,
+        "title": "Reasoning Odyssey Gate \u2014 Week 5 \u2014 Collaborating Objects and Invariant (S01/S08)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Discussion",
+        "module_id": 218889,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1534045",
+        "content_id": 543064,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/discussion_topics/543064",
+        "published": true,
+        "unpublishable": false
+      },
+      {
+        "id": 1529995,
+        "position": 3,
+        "title": "Reasoning Odyssey Gate -- Week 5 (moved -- see the discussion above)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218889,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1529995",
+        "content_id": 914176,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914176",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1534774,
+        "position": 5,
+        "title": "Sept. 14 Class -- Recording, Recap & Notes",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218889,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1534774",
+        "page_url": "sept-14-class-recording-recap-and-notes",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/sept-14-class-recording-recap-and-notes",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1536240,
+        "position": 6,
+        "title": "Wednesday, Sept. 16 Class \u2014 Recording, Recap & Notes",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218889,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1536240",
+        "page_url": "wednesday-sept-16-class-recording-recap-and-notes",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/wednesday-sept-16-class-recording-recap-and-notes",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1535944,
+        "position": 7,
+        "title": "Computer Science II (CS2) \u2014 2026-09-18 Recording e4ab12fbba07 \u2014 Recap & Notes",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218889,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1535944",
+        "page_url": "computer-science-ii-cs2-2026-09-18-recording-e4ab12fbba07-recap-and-notes",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/computer-science-ii-cs2-2026-09-18-recording-e4ab12fbba07-recap-and-notes",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1536235,
+        "position": 8,
+        "title": "Computer Science II (CS2) \u2014 2026-09-21 Recording 1362744e3751 \u2014 Recap & Notes",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218889,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1536235",
+        "page_url": "computer-science-ii-cs2-2026-09-21-recording-1362744e3751-recap-and-notes",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/computer-science-ii-cs2-2026-09-21-recording-1362744e3751-recap-and-notes",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218890": [
+      {
+        "id": 1537421,
+        "position": 1,
+        "title": "Sept. 23 Class \u2014 Recording, Recap & Notes",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218890,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1537421",
+        "page_url": "sept-23-class-recording-recap-and-notes",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/sept-23-class-recording-recap-and-notes",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1530011,
+        "position": 2,
+        "title": "CS2 Week 05 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218890,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530011",
+        "page_url": "cs2-week-05-overview-5",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-05-overview-5",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1529996,
+        "position": 3,
+        "title": "Reasoning Odyssey Gate -- Week 6 -- Earned Substitution (S02)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218890,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1529996",
+        "content_id": 914177,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914177",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218891": [
+      {
+        "id": 1530012,
+        "position": 1,
+        "title": "CS2 Week 06 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218891,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530012",
+        "page_url": "cs2-week-06-overview-5",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-06-overview-5",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1529997,
+        "position": 2,
+        "title": "Reasoning Odyssey Gate -- Week 7 -- Contract and Swap (S03/S08)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218891,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1529997",
+        "content_id": 914178,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914178",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218892": [
+      {
+        "id": 1530013,
+        "position": 1,
+        "title": "CS2 Week 07 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218892,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530013",
+        "page_url": "cs2-week-07-overview-5",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-07-overview-5",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1529998,
+        "position": 2,
+        "title": "Reasoning Odyssey Gate -- Week 8 -- World-Fit Data Abstraction (S05)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218892,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1529998",
+        "content_id": 914179,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914179",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218893": [
+      {
+        "id": 1530014,
+        "position": 1,
+        "title": "CS2 Week 08 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218893,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530014",
+        "page_url": "cs2-week-08-overview-5",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-08-overview-5",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1529999,
+        "position": 2,
+        "title": "Reasoning Odyssey Gate -- Week 9 -- Search/Order Tradeoff (S05/S06)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218893,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1529999",
+        "content_id": 914180,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914180",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218894": [
+      {
+        "id": 1530015,
+        "position": 1,
+        "title": "CS2 Week 09 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218894,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530015",
+        "page_url": "cs2-week-09-overview-4",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-09-overview-4",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1530000,
+        "position": 2,
+        "title": "Reasoning Odyssey Gate -- Week 10 -- Compact GUI over Tested Model (S04)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218894,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530000",
+        "content_id": 914181,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914181",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218895": [
+      {
+        "id": 1530016,
+        "position": 1,
+        "title": "CS2 Week 10 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218895,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530016",
+        "page_url": "cs2-week-10-overview-4",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-10-overview-4",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1530001,
+        "position": 2,
+        "title": "Reasoning Odyssey Gate -- Week 11 -- Honest Visualization from Project Data (S09/S06/S08)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218895,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530001",
+        "content_id": 914182,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914182",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218896": [
+      {
+        "id": 1530017,
+        "position": 1,
+        "title": "CS2 Week 11 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218896,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530017",
+        "page_url": "cs2-week-11-overview-4",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-11-overview-4",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1530002,
+        "position": 2,
+        "title": "Reasoning Odyssey Gate -- Week 12 -- Data Storytelling / Flex Clinic (S09 + S07)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218896,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530002",
+        "content_id": 914183,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914183",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218897": [
+      {
+        "id": 1530018,
+        "position": 1,
+        "title": "CS2 Week 12 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218897,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530018",
+        "page_url": "cs2-week-12-overview-5",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-12-overview-5",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1530003,
+        "position": 2,
+        "title": "Reasoning Odyssey Synthesis Checkpoint -- Week 13 -- Stabilization and Peer-Review Preparation (S08)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218897,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530003",
+        "content_id": 914184,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914184",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218898": [
+      {
+        "id": 1530019,
+        "position": 1,
+        "title": "CS2 Week 13 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218898,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530019",
+        "page_url": "cs2-week-13-overview-4",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-13-overview-4",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1530004,
+        "position": 2,
+        "title": "Reasoning Odyssey Synthesis Checkpoint -- Week 14 -- Culmination Design Review (S01-S08)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218898,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530004",
+        "content_id": 914185,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914185",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218899": [
+      {
+        "id": 1530020,
+        "position": 1,
+        "title": "CS2 Week 14 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218899,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530020",
+        "page_url": "cs2-week-14-overview-5",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-14-overview-5",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1530005,
+        "position": 2,
+        "title": "Reasoning Odyssey Gate -- Week 15 -- Professional Workflow Receipt (S08)",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218899,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530005",
+        "content_id": 914186,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914186",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218900": [
+      {
+        "id": 1529977,
+        "position": 1,
+        "title": "CS2 Week 15 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218900,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1529977",
+        "page_url": "cs2-week-15-overview-3",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-15-overview-3",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218901": [
+      {
+        "id": 1530021,
+        "position": 1,
+        "title": "CS2 Week 16 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218901,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530021",
+        "page_url": "cs2-week-16-overview-5",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-16-overview-5",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1530006,
+        "position": 2,
+        "title": "Week 16 -- Farkle + Machine Learning Evidence Receipt",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218901,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530006",
+        "content_id": 914187,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914187",
+        "published": true,
+        "unpublishable": true
+      }
+    ],
+    "218902": [
+      {
+        "id": 1530022,
+        "position": 1,
+        "title": "CS2 Week 17 -- Overview",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Page",
+        "module_id": 218902,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530022",
+        "page_url": "cs2-week-17-overview-4",
+        "publish_at": null,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-17-overview-4",
+        "published": true,
+        "unpublishable": true
+      },
+      {
+        "id": 1530007,
+        "position": 2,
+        "title": "A5 -- Final Reflection and Closure",
+        "indent": 0,
+        "quiz_lti": false,
+        "type": "Assignment",
+        "module_id": 218902,
+        "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530007",
+        "content_id": 914188,
+        "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914188",
+        "published": true,
+        "unpublishable": true
+      }
+    ]
+  }
+}
