@@ -1,6 +1,4 @@
-"""
-The quick brown fox jumps over the lazy dog.
-Run the numbered Contract and Swap teaching example.
+"""Run the numbered Week 7 Contract and Swap teaching example.
 
 Suggested reading order: see 00_start_here.md.
 

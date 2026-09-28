@@ -12,5 +12,12 @@ presentations/**/*.toc
 presentations/**/*.vrb
 presentations/**/*.pdf
 
+# Week 7 handout build intermediates (the final PDF is tracked)
+week_07/*.aux
+week_07/*.fdb_latexmk
+week_07/*.fls
+week_07/*.log
+week_07/*.out
+
 # Sensitive raw recon output (possible student data); local only
 sidecar/raw/20260818T155325Z__cs2-week1-recon.raw.txt

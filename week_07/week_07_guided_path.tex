@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,pdftitle={Week 7 Guided Path: Contract and Swap}}
+\setlist{nosep,leftmargin=*}
+\definecolor{navy}{HTML}{17365D}
+\definecolor{softblue}{HTML}{EAF2FB}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\heading}[1]{\vspace{0.6em}\noindent\colorbox{softblue}{\parbox{\dimexpr\linewidth-2\fboxsep}{\large\bfseries\color{navy}#1}}\vspace{0.25em}}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Week 7 Guided Path: Contract and Swap}\\[0.35em]
+{\large COMSC-1053 \quad|\quad Reasoning Odyssey Gate}
+\end{center}
+
+\noindent\textbf{The goal.} Your program already depends on other objects.
+This week you will find one real dependency, write down its promise as an
+explicit abstract base class (ABC), plug in two different collaborators, and
+prove the caller can work with either one. You are not building a second
+project. You are making a small, honest improvement to the world you built in
+Weeks 4--6.
+
+\heading{What you will make}
+\begin{enumerate}
+  \item An \textbf{ABC} with one abstract operation that states the collaborator's promise.
+  \item Two concrete collaborators that inherit from the ABC, preserve meaningful state, and behave differently.
+  \item One caller that depends on the promise instead of branching on concrete types.
+  \item One focused \texttt{unittest} that uses the same caller and request with both collaborators.
+  \item A short World Bible update explaining the change, evidence, and remaining debt.
+\end{enumerate}
+
+\heading{First, see the complete example}
+The numbered Frontier Settlement lesson is one guided example. It is not a
+template to copy. Its \code{ExpeditionPlanner} asks a \code{SupplySource} for a
+\code{SupplyQuote}. A \code{SettlementWarehouse} and a \code{TradingPost} both
+provide quotes, but their rules differ: the trading post protects a reserve.
+
+\begin{center}
+\begin{tabular}{@{}r l p{3.45in}@{}}
+\toprule
+\textbf{Step} & \textbf{File} & \textbf{Question it answers}\\
+\midrule
+1 & \code{step\_01\_values.py} & What values and errors cross this boundary?\\
+2 & \code{step\_02\_contracts.py} & What must every supply source promise?\\
+3 & \code{step\_03\_validation.py} & What inputs are valid before delegation?\\
+4 & \code{step\_04\_warehouse.py} & How can one source keep meaningful state?\\
+5 & \code{step\_05\_trading\_post.py} & How can another source follow a different rule?\\
+6 & \code{step\_06\_planner.py} & What work belongs to the caller boundary?\\
+7 & \code{step\_07\_tests.py} & What evidence proves the shared promise?\\
+8 & \code{step\_08\_demo.py} & What does a visible swap look like?\\
+9 & \code{step\_09\_world\_bible.py} & What changed and what debt remains?\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Run it from the Week 7 directory:
+\begin{verbatim}
+python class_example.py test
+python class_example.py demo
+python class_example.py bible
+\end{verbatim}
+The first command runs 34 tests. The test file is deliberately named
+\code{step\_07\_tests.py}, so use this entry point rather than generic test
+discovery at the directory root.
+
+\heading{The idea in plain language}
+An explicit contract tells the caller what it may trust. In the example, the
+caller may trust that a supply source can answer \code{quote\_supply(...)} with
+a valid \code{SupplyQuote}. It may \emph{not} assume the source is a warehouse,
+a trading post, or any future kind of source.
+
+The caller boundary is the moment \code{ExpeditionPlanner} hands a request to
+the collaborator and accepts a result back. A good boundary does three jobs:
+\begin{itemize}
+  \item validates request data before it crosses out;
+  \item checks the returned value still satisfies the promise; and
+  \item adds useful context if the collaborator fails.
+\end{itemize}
+This is why the caller has no warehouse-specific or trading-post-specific
+branch. Swapping a collaborator changes behavior without rewriting the caller.
+
+\heading{Build your own version}
+\begin{enumerate}
+  \item Look back at your Weeks 4--6 world. Find a dependency that already
+  exists in the program. Ask: What does my caller need from this object?
+  \item State that need as a narrow promise. Prefer one operation with a
+  meaningful return value over a broad interface.
+  \item Create an \code{ABC} and mark the operation with \code{@abstractmethod}.
+  \item Create two concrete subclasses. Give each its own state and rule so a
+  substitution changes behavior for a real reason.
+  \item Update the caller to receive the collaborator and use only the contract.
+  \item Write the focused swap test. Use the same caller operation and input for
+  each collaborator; assert only what the contract promises.
+  \item Run the tests, demonstrate the result, and record the design decision in
+  your World Bible.
+\end{enumerate}
+
+\heading{A focused test looks for a promise, not a sentence}
+A brittle test checks a warehouse's exact wording. A contract test checks the
+result that every valid collaborator promises. The key shape is:
+\begin{verbatim}
+for source in [warehouse, trading_post]:
+    planner = ExpeditionPlanner(source)
+    decision = planner.evaluate_supply_request(...)
+    self.assertIsInstance(decision, SupplyDecision)
+\end{verbatim}
+Add collaborator-specific tests separately when you need to prove a particular
+rule, such as the trading post's reserve. That keeps the shared contract test
+honest and keeps your failures easy to understand.
+
+\heading{Your graded discussion post (40 points)}
+Your post is a shared learning resource: classmates can see it. Link your
+repository or attach the code, then write a concise explanation with:
+\begin{center}
+\begin{tabular}{@{}p{1.6in}r p{3.45in}@{}}
+\toprule
+\textbf{Evidence} & \textbf{Points} & \textbf{What a reader should find}\\
+\midrule
+Real contract and two collaborators & 15 & An ABC, abstract operation, and two stateful implementations with genuinely different behavior.\\
+Focused swap test & 10 & The same caller and request work with both collaborators; the assertion matches the shared promise.\\
+Caller-boundary explanation & 10 & Plain-language explanation of validation, delegation, returned-value checking, and failure context.\\
+Demonstration and World Bible & 5 & A runnable result plus what changed, evidence used, and remaining debt.\\
+\bottomrule
+\end{tabular}
+\end{center}
+Then reply constructively to at least two classmates. Refer to a specific
+design or test, ask a useful question, or name an idea you can carry into your
+own program. Do not post private information about yourself or anyone else.
+
+\heading{Optional reference worlds}
+The folders beginning \code{contract\_swap\_example} and the
+\code{week\_07\_contract\_and\_swap} folder are optional, self-contained
+illustrations in other settings. Read one only if it helps. They are neither
+extra assignments nor code to copy. The numbered Frontier Settlement path is
+the one complete walkthrough.
+
+\vfill
+\noindent\textit{A strong Week 7 submission is small, specific, tested, and
+honest about what it still does not solve.}
+\end{document}
