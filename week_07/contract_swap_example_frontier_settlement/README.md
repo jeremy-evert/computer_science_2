@@ -9,21 +9,19 @@ either, and explain the caller boundary in plain language. `typing.
 Protocol` is an optional comparison only, never the graded mechanism.
 
 This is **one of four worked examples, not a template to copy-paste.**
-It uses the course's own Frontier Settlement world (Docket Creek --
-`sidecar/worlds/frontier_settlement.md`), one of the four established
-Reasoning Odyssey worlds, and a made-up dependency inside it. Your own
-submission should use your own real Weeks 4-6 dependency, in whichever
-world you're actually running (this one or your own), not this one.
+It uses the course's own Frontier Settlement world (Docket Creek), one of
+the four established Reasoning Odyssey worlds, and a made-up dependency
+inside it. Your own submission should use your own real Weeks 4-6
+dependency, in whichever world you're actually running (this one or your
+own), not this one.
 
 ## The real dependency
 
-Docket Creek's own world bible names this exact problem under "Contracts
-/interfaces": *"two neighboring claims merging their separate,
-incompatible ledger formats into one."* By Week 7, the town has more than
-one office that can receive a new well-claim -- the Well Board keeps its
-own ledger, and the Trade Post logs claims through its barter-credit
-system. Nothing today makes explicit that **both offices need to answer
-the same promise**: file the claim, confirm who filed it and how much.
+By Week 7, the town has more than one office that can receive a new
+well-claim -- the Well Board keeps its own ledger, and the Trade Post
+logs claims through its barter-credit system. Nothing today makes
+explicit that **both offices need to answer the same promise**: file the
+claim, confirm who filed it and how much.
 
 ## Run it
 
@@ -67,7 +65,7 @@ line, the caller trusts the contract, not the office.
 
 ```python
 def test_register_claim_holds_the_contract_for_either_office(self):
-    claimant = "Merrow"
+    claimant = "Dena Harlow"
     gallons_per_day = 40
     intakes = [WellBoardIntake(), TradePostIntake()]
 
@@ -107,9 +105,9 @@ appear) -- never which office's wording won.
 > office), both pass, plus a test showing the ABC blocks an unstaffed
 > office at construction time. Remaining debt: no reconciliation path
 > exists yet for the same claimant filing at both offices for the same
-> water source -- that's a real Docket Creek problem (see the world
-> bible's "seeds" section on Old Tobin's paper ledger disagreeing with
-> the digital one) but out of scope for this gate.
+> water source, or for detecting when the two offices' records disagree
+> about the same claim -- a real problem for a growing town, out of
+> scope for this gate.
 
 ## What this is not
 

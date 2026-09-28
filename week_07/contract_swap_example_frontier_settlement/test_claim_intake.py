@@ -13,21 +13,21 @@ class TestClaimIntake(unittest.TestCase):
     def test_well_board_files_the_claim(self):
         intake = WellBoardIntake()
 
-        result = register_claim(intake, "Merrow", 40)
+        result = register_claim(intake, "Dena Harlow", 40)
 
         self.assertEqual(
             result,
-            "Well Board record: Merrow claims 40 gal/day"
+            "Well Board record: Dena Harlow claims 40 gal/day"
         )
 
     def test_trade_post_files_the_claim(self):
         intake = TradePostIntake()
 
-        result = register_claim(intake, "Merrow", 40)
+        result = register_claim(intake, "Dena Harlow", 40)
 
         self.assertEqual(
             result,
-            "Trade Post ledger: Merrow - 40 gal/day allocation logged"
+            "Trade Post ledger: Dena Harlow - 40 gal/day allocation logged"
         )
 
     def test_register_claim_holds_the_contract_for_either_office(self):
@@ -35,7 +35,7 @@ class TestClaimIntake(unittest.TestCase):
         # genuinely different record formats, one contract -- every
         # confirmation must name the claimant and the amount, regardless
         # of which office recorded it.
-        claimant = "Merrow"
+        claimant = "Dena Harlow"
         gallons_per_day = 40
         intakes = [WellBoardIntake(), TradePostIntake()]
 
@@ -53,9 +53,9 @@ class TestClaimIntake(unittest.TestCase):
             def file_claim(self, claimant, gallons_per_day):
                 return f"Road dispatch filing: {claimant} requests {gallons_per_day} gal/day"
 
-        result = register_claim(RoadDispatchIntake(), "Old Tobin", 15)
+        result = register_claim(RoadDispatchIntake(), "Silas Grey", 15)
 
-        self.assertIn("Old Tobin", result)
+        self.assertIn("Silas Grey", result)
         self.assertIn("15", result)
 
     def test_the_contract_is_enforced_not_just_documented(self):
