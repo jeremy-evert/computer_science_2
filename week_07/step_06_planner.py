@@ -2,6 +2,7 @@
 
 from step_01_values import (
     ContractViolationError,
+    DecisionStatus,
     SupplyDecision,
     SupplyQuote,
     SupplySourceError,
@@ -27,7 +28,7 @@ class ExpeditionPlanner:
     2. It asks the collaborator for a quote.
     3. It adds context if the collaborator fails.
     4. It verifies that the returned object satisfies the contract.
-    5. It approves or declines the request.
+    5. It fully approves, partially approves, or declines the request.
     6. It records the completed decision.
 
     The planner does not need warehouse-specific or trading-post-specific
@@ -97,7 +98,7 @@ class ExpeditionPlanner:
 
         if quote.can_fulfill:
             decision = SupplyDecision(
-                approved=True,
+                status=DecisionStatus.APPROVED,
                 location=validated_location,
                 item_name=validated_item,
                 requested_quantity=validated_quantity,
@@ -108,9 +109,22 @@ class ExpeditionPlanner:
                     f"{quote.source_name}. {quote.reason}"
                 ),
             )
+        elif quote.can_partially_fulfill:
+            decision = SupplyDecision(
+                status=DecisionStatus.PARTIALLY_APPROVED,
+                location=validated_location,
+                item_name=validated_item,
+                requested_quantity=validated_quantity,
+                approved_quantity=quote.available_quantity,
+                source_name=quote.source_name,
+                explanation=(
+                    f"Request partially approved using "
+                    f"{quote.source_name}. {quote.reason}"
+                ),
+            )
         else:
             decision = SupplyDecision(
-                approved=False,
+                status=DecisionStatus.DECLINED,
                 location=validated_location,
                 item_name=validated_item,
                 requested_quantity=validated_quantity,
@@ -204,6 +218,24 @@ class ExpeditionPlanner:
                 f"availability for {location}."
             )
 
+        if not isinstance(quote.can_partially_fulfill, bool):
+            raise ContractViolationError(
+                "SupplyQuote.can_partially_fulfill must be Boolean."
+            )
+
+        expected_can_partially_fulfill = (
+            0 < quote.available_quantity < requested_quantity
+        )
+
+        if (
+            quote.can_partially_fulfill
+            != expected_can_partially_fulfill
+        ):
+            raise ContractViolationError(
+                "SupplyQuote.can_partially_fulfill contradicts the "
+                f"reported availability for {location}."
+            )
+
         if (
             not isinstance(quote.reason, str)
             or not quote.reason.strip()
@@ -216,4 +248,3 @@ class ExpeditionPlanner:
 # ============================================================
 # REUSABLE CONTRACT TESTS
 # ============================================================
-

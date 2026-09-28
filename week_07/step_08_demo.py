@@ -11,11 +11,7 @@ def display_decision(decision: SupplyDecision) -> None:
     domain objects.
     """
 
-    status = (
-        "APPROVED"
-        if decision.approved
-        else "DECLINED"
-    )
+    status = decision.status.name
 
     print(f"Decision: {status}")
     print(f"Location: {decision.location}")
@@ -135,7 +131,7 @@ def run_demonstration() -> None:
         "10 units were available."
     )
     print(
-        "The trading post declined the request because "
+        "The trading post partially approved 5 units because "
         "5 units were protected."
     )
     print(
@@ -147,4 +143,3 @@ def run_demonstration() -> None:
 # ============================================================
 # CONCISE WORLD BIBLE ENTRY
 # ============================================================
-

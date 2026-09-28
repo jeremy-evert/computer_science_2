@@ -8,10 +8,10 @@ This refactoring uses short, numbered teaching steps. Read or run them in this o
 4. `step_04_warehouse.py` — the first stateful implementation.
 5. `step_05_trading_post.py` — the second implementation and its different rule.
 6. `step_06_planner.py` — the caller boundary, decision-making, and enforcement.
-7. `step_07_tests.py` — tests that prove the shared contract and the swap.
+7. `step_07_tests.py` — tests that prove the shared contract, full and
+   partial fulfillment, and the swap.
 8. `step_08_demo.py` — the runnable narrative demonstration.
 9. `step_09_world_bible.py` — the design reflection.
 
 `class_example.py` remains the entry point. It still supports `all`, `test`,
 `demo`, and `bible`; it now only coordinates the numbered modules.
-

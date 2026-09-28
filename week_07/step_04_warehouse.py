@@ -131,6 +131,9 @@ class SettlementWarehouse(SupplySource):
 
         available_quantity = self.quantity_on_hand(item_name)
         can_fulfill = available_quantity >= requested_quantity
+        can_partially_fulfill = (
+            0 < available_quantity < requested_quantity
+        )
 
         if can_fulfill:
             reason = (
@@ -149,6 +152,7 @@ class SettlementWarehouse(SupplySource):
             requested_quantity=requested_quantity,
             available_quantity=available_quantity,
             can_fulfill=can_fulfill,
+            can_partially_fulfill=can_partially_fulfill,
             reason=reason,
         )
 

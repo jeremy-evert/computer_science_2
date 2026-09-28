@@ -25,8 +25,9 @@ different rules about what they are willing to provide.
 
 An expedition requests supplies. The planner validates the request and asks
 its current supply source for a quote. The source examines its own state and
-returns a structured SupplyQuote. The planner verifies the quote, approves or
-declines the request, and records the resulting decision.
+returns a structured SupplyQuote. The planner verifies the quote, fully
+approves, partially approves, or declines the request, and records the
+resulting decision.
 
 4. THREE SOFTWARE QUESTIONS
 
@@ -62,8 +63,8 @@ EVIDENCE
 
 Reusable unittest contract tests run against both implementations. A focused
 swap test sends the same request through the same caller. The warehouse
-approves seven units, while the trading post declines because it protects a
-reserve.
+approves seven units, while the trading post partially approves five because
+it protects a reserve.
 
 CALLER BOUNDARY
 
@@ -90,4 +91,3 @@ def display_world_bible() -> None:
 # ============================================================
 # TEST RUNNER AND PROGRAM ENTRY POINT
 # ============================================================
-

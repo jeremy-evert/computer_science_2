@@ -1,6 +1,7 @@
 """Step 1: the values and errors shared by the whole example."""
 
 from dataclasses import dataclass
+from enum import Enum
 
 class ContractViolationError(RuntimeError):
     """
@@ -19,6 +20,14 @@ class SupplySourceError(RuntimeError):
 # ============================================================
 
 
+class DecisionStatus(Enum):
+    """The three possible outcomes of a supply request."""
+
+    APPROVED = "approved"
+    PARTIALLY_APPROVED = "partially_approved"
+    DECLINED = "declined"
+
+
 @dataclass(frozen=True)
 class SupplyQuote:
     """
@@ -26,6 +35,9 @@ class SupplyQuote:
 
     A structured value is safer than returning an arbitrary string because
     the caller can inspect named fields and enforce the contract.
+
+    ``can_partially_fulfill`` is true only when the source has some, but not
+    all, of the requested supply available.
     """
 
     source_name: str
@@ -33,6 +45,7 @@ class SupplyQuote:
     requested_quantity: int
     available_quantity: int
     can_fulfill: bool
+    can_partially_fulfill: bool
     reason: str
 
 
@@ -42,14 +55,14 @@ class SupplyDecision:
     Final decision owned by the ExpeditionPlanner.
 
     The supply source provides evidence through a SupplyQuote.
-    The planner owns the actual approval decision.
+    The planner owns the actual approval decision and records whether it was
+    full, partial, or declined.
     """
 
-    approved: bool
+    status: DecisionStatus
     location: str
     item_name: str
     requested_quantity: int
     approved_quantity: int
     source_name: str
     explanation: str
-

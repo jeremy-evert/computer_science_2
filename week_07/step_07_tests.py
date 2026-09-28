@@ -2,7 +2,13 @@
 
 import unittest
 
-from step_01_values import ContractViolationError, SupplyDecision, SupplyQuote, SupplySourceError
+from step_01_values import (
+    ContractViolationError,
+    DecisionStatus,
+    SupplyDecision,
+    SupplyQuote,
+    SupplySourceError,
+)
 from step_02_contracts import SupplySource, SupplySourceProtocol
 from step_04_warehouse import SettlementWarehouse
 from step_05_trading_post import TradingPost
@@ -94,6 +100,25 @@ class SupplySourceContractTests:
 
         self.assertEqual(
             quote.can_fulfill,
+            expected_result,
+        )
+
+    def test_contract_partial_fulfillment_matches_availability(self):
+        source = self.make_source()
+
+        quote = source.quote_supply(
+            location="North Ridge",
+            item_name="water",
+            requested_quantity=11,
+        )
+
+        expected_result = (
+            0 < quote.available_quantity
+            < quote.requested_quantity
+        )
+
+        self.assertEqual(
+            quote.can_partially_fulfill,
             expected_result,
         )
 
@@ -218,8 +243,15 @@ class TestContractAndSwap(unittest.TestCase):
 
                 decisions.append(decision)
 
-        self.assertTrue(decisions[0].approved)
-        self.assertFalse(decisions[1].approved)
+        self.assertEqual(
+            decisions[0].status,
+            DecisionStatus.APPROVED,
+        )
+        self.assertEqual(
+            decisions[1].status,
+            DecisionStatus.PARTIALLY_APPROVED,
+        )
+        self.assertEqual(decisions[1].approved_quantity, 5)
 
         self.assertNotEqual(
             decisions[0].source_name,
@@ -245,6 +277,7 @@ class TestContractAndSwap(unittest.TestCase):
                     requested_quantity=requested_quantity,
                     available_quantity=requested_quantity,
                     can_fulfill=True,
+                    can_partially_fulfill=False,
                     reason="The test source has enough supply.",
                 )
 
@@ -261,7 +294,7 @@ class TestContractAndSwap(unittest.TestCase):
             source,
             SupplySourceProtocol,
         )
-        self.assertTrue(decision.approved)
+        self.assertEqual(decision.status, DecisionStatus.APPROVED)
 
 
 # ============================================================
@@ -330,6 +363,7 @@ class TestSettlementWarehouseBehavior(unittest.TestCase):
         self.assertFalse(
             later_quote.can_fulfill
         )
+        self.assertTrue(later_quote.can_partially_fulfill)
 
     def test_warehouse_records_completed_issues(self):
         warehouse = SettlementWarehouse(
@@ -388,6 +422,7 @@ class TestTradingPostBehavior(unittest.TestCase):
         self.assertFalse(
             quote.can_fulfill
         )
+        self.assertTrue(quote.can_partially_fulfill)
 
     def test_trading_post_tracks_quote_activity(self):
         trading_post = TradingPost(
@@ -497,7 +532,7 @@ class TestCallerBoundary(unittest.TestCase):
             requested_quantity=3,
         )
 
-        self.assertTrue(decision.approved)
+        self.assertEqual(decision.status, DecisionStatus.APPROVED)
         self.assertEqual(
             decision.approved_quantity,
             3,
@@ -591,6 +626,7 @@ class TestCallerBoundary(unittest.TestCase):
                     requested_quantity=requested_quantity,
                     available_quantity=10,
                     can_fulfill=True,
+                    can_partially_fulfill=False,
                     reason="The source quoted the wrong item.",
                 )
 
@@ -621,6 +657,7 @@ class TestCallerBoundary(unittest.TestCase):
                     requested_quantity=requested_quantity,
                     available_quantity=1,
                     can_fulfill=True,
+                    can_partially_fulfill=True,
                     reason="The source claims it has enough.",
                 )
 
@@ -631,6 +668,69 @@ class TestCallerBoundary(unittest.TestCase):
         with self.assertRaises(
             ContractViolationError
         ):
+            planner.evaluate_supply_request(
+                location="North Ridge",
+                item_name="water",
+                requested_quantity=3,
+            )
+
+    def test_caller_partially_approves_available_supply(self):
+        limited_warehouse = SettlementWarehouse(
+            name="Outpost Warehouse",
+            inventory={"water": 5},
+        )
+        planner = ExpeditionPlanner(limited_warehouse)
+
+        decision = planner.evaluate_supply_request(
+            location="North Ridge",
+            item_name="water",
+            requested_quantity=7,
+        )
+
+        self.assertEqual(
+            decision.status,
+            DecisionStatus.PARTIALLY_APPROVED,
+        )
+        self.assertEqual(decision.requested_quantity, 7)
+        self.assertEqual(decision.approved_quantity, 5)
+
+    def test_caller_declines_when_no_supply_is_available(self):
+        empty_warehouse = SettlementWarehouse(
+            name="Empty Warehouse",
+            inventory={"water": 0},
+        )
+        planner = ExpeditionPlanner(empty_warehouse)
+
+        decision = planner.evaluate_supply_request(
+            location="North Ridge",
+            item_name="water",
+            requested_quantity=7,
+        )
+
+        self.assertEqual(decision.status, DecisionStatus.DECLINED)
+        self.assertEqual(decision.approved_quantity, 0)
+
+    def test_caller_rejects_contradictory_partial_quote(self):
+        class DishonestSupplySource:
+            def quote_supply(
+                self,
+                location,
+                item_name,
+                requested_quantity,
+            ):
+                return SupplyQuote(
+                    source_name="Dishonest Source",
+                    item_name=item_name,
+                    requested_quantity=requested_quantity,
+                    available_quantity=1,
+                    can_fulfill=False,
+                    can_partially_fulfill=False,
+                    reason="The source denies partial availability.",
+                )
+
+        planner = ExpeditionPlanner(DishonestSupplySource())
+
+        with self.assertRaises(ContractViolationError):
             planner.evaluate_supply_request(
                 location="North Ridge",
                 item_name="water",
@@ -650,4 +750,3 @@ class TestCallerBoundary(unittest.TestCase):
 # ============================================================
 # WORKING DEMONSTRATION
 # ============================================================
-
