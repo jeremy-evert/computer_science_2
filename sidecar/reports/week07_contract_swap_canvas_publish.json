@@ -1,0 +1,87 @@
+{
+  "page": {
+    "url": "worked-example-contract-and-swap-week-7",
+    "title": "Worked Example -- Contract and Swap (Week 7)",
+    "created_at": "2026-09-28T17:05:18Z",
+    "editing_roles": "teachers",
+    "page_id": 457086,
+    "last_edited_by": {
+      "id": 24406,
+      "anonymous_id": "ity",
+      "display_name": "Jeremy Paul Evert",
+      "avatar_image_url": "https://swosu.instructure.com/images/messages/avatar-50.png",
+      "html_url": "https://swosu.instructure.com/courses/74031/users/24406",
+      "pronouns": null
+    },
+    "published": true,
+    "hide_from_students": false,
+    "front_page": false,
+    "html_url": "https://swosu.instructure.com/courses/74031/pages/worked-example-contract-and-swap-week-7",
+    "todo_date": null,
+    "publish_at": null,
+    "updated_at": "2026-09-28T17:05:18Z",
+    "locked_for_user": false,
+    "body": "<h2>Worked example: Contract and Swap (Week 7)</h2><p><strong>This is one example of what meets the Week 7 bar, not a template to copy.</strong> It uses a made-up kitchen world (the same one from the Week 6 unit-testing example) and a made-up dependency. Your own submission should use your own real Weeks 4\u20136 dependency \u2014 this page shows the shape, not the content, of a passing answer.</p><p>This is the <em>model</em>, not the <a href=\"https://swosu.instructure.com/courses/74031/assignments/1529997\" data-api-endpoint=\"https://swosu.instructure.com/api/v1/courses/74031/assignments/1529997\" data-api-returntype=\"Assignment\">graded checkpoint assignment</a> itself.</p><h3>Looking back across the kitchen's own Weeks 4-6</h3><p>Week 6's example built <code>Oven</code> and <code>Grill</code> \u2014 two appliances that share one operation, <code>cook(food)</code>, with meaningfully different behavior. That world now has a growing system: appliances that cook. What does it actually depend on right now that hasn't been made explicit yet?</p><p><strong>Answer: it depends on some way to tell someone the order is ready.</strong> Today that's implicit \u2014 nothing in the kitchen world says <em>how</em> \"ready\" gets announced. That's the real dependency this example turns into a contract.</p><h3>The contract</h3><p>The promise: <strong>whatever answers <code>notify(order_name)</code> must return a message that actually names the order.</strong> That's the whole contract \u2014 not \"rings a bell,\" not \"prints a ticket.\" The caller doesn't get to assume either of those; it only gets to assume the order gets named.</p><h3>Two conforming, genuinely different collaborators + the caller boundary</h3><p><code>KitchenBell</code> and <code>TicketPrinter</code> do nothing alike internally \u2014 one \"rings,\" one \"prints\" \u2014 but both satisfy the same promise. <code>announce_order_ready</code> never asks which kind of notifier it got; it only knows it has <em>something</em> that can <code>notify</code>. That line, where the caller stops caring about the concrete type and starts trusting the contract instead, is the caller boundary.</p><pre><code class=\"language-python\">from abc import ABC, abstractmethod\n\n\nclass OrderNotifier(ABC):\n    \"\"\"Contract: tell someone an order is ready. Every concrete notifier\n    must return a message that actually names the order -- the caller\n    below depends on that, not on which device answers it.\"\"\"\n\n    @abstractmethod\n    def notify(self, order_name: str) -&gt; str:\n        raise NotImplementedError\n\n\nclass KitchenBell(OrderNotifier):\n\n    def notify(self, order_name: str) -&gt; str:\n        return f\"Ring! Order ready: {order_name}\"\n\n\nclass TicketPrinter(OrderNotifier):\n\n    def notify(self, order_name: str) -&gt; str:\n        return f\"Printed ticket: {order_name} READY\"\n\n\ndef announce_order_ready(notifier: OrderNotifier, order_name: str) -&gt; str:\n    return notifier.notify(order_name)\n</code></pre><h3>The focused swap test \u2014 the actual graded evidence</h3><p>One caller, two different concrete collaborators, one loop, one assertion that only checks what the contract actually promises (the order name shows up) \u2014 not what any one implementation happens to say (\"Ring!\" vs. \"Printed\"). That is what \"proves the contract holds for either\" means in practice.</p><p>Two more tests, in the same spirit as Week 6's guard test: one hands the caller a brand-new conforming collaborator it never saw coming (proves the substitution is earned, not assumed), and one shows the contract is <em>enforced</em>, not just documented \u2014 Python itself refuses to build an incomplete collaborator, which a <code>typing.Protocol</code> version would not have caught at construction time. That's why the gate treats <code>Protocol</code> as optional comparison, not the graded mechanism.</p><pre><code class=\"language-python\">import unittest\n\nfrom order_notifier import (\n    KitchenBell,\n    OrderNotifier,\n    TicketPrinter,\n    announce_order_ready,\n)\n\n\nclass TestOrderNotifier(unittest.TestCase):\n\n    def test_kitchen_bell_announces_the_order(self):\n        bell = KitchenBell()\n\n        result = announce_order_ready(bell, \"table 4 burger\")\n\n        self.assertEqual(\n            result,\n            \"Ring! Order ready: table 4 burger\"\n        )\n\n    def test_ticket_printer_announces_the_order(self):\n        printer = TicketPrinter()\n\n        result = announce_order_ready(printer, \"table 4 burger\")\n\n        self.assertEqual(\n            result,\n            \"Printed ticket: table 4 burger READY\"\n        )\n\n    def test_announce_order_ready_holds_the_contract_for_either_collaborator(self):\n        # The focused swap test: same caller, two different concrete\n        # collaborators, one contract -- every notify() message must\n        # actually name the order, regardless of which device answers it.\n        order_name = \"table 4 burger\"\n        notifiers = [KitchenBell(), TicketPrinter()]\n\n        for notifier in notifiers:\n            with self.subTest(notifier=type(notifier).__name__):\n                result = announce_order_ready(notifier, order_name)\n                self.assertIn(order_name, result)\n\n    def test_announce_order_ready_accepts_a_notifier_it_has_never_seen(self):\n        # Guards against a caller that secretly special-cases KitchenBell or\n        # TicketPrinter: a brand-new conforming collaborator, written after\n        # announce_order_ready, must still work without editing it.\n        class Pager(OrderNotifier):\n            def notify(self, order_name: str) -&gt; str:\n                return f\"Buzz buzz: {order_name} is up\"\n\n        result = announce_order_ready(Pager(), \"table 9 salad\")\n\n        self.assertIn(\"table 9 salad\", result)\n\n    def test_the_contract_is_enforced_not_just_documented(self):\n        # What abc.ABC buys over a plain duck-typed class or\n        # typing.Protocol: an incomplete collaborator cannot even be\n        # constructed, so the contract can't be silently half-broken.\n        class SilentSpeaker(OrderNotifier):\n            pass\n\n        with self.assertRaises(TypeError):\n            SilentSpeaker()\n\n\nif __name__ == \"__main__\":\n    unittest.main(verbosity=2)\n</code></pre><h3>Real output \u2014 actually run, not claimed</h3><pre><code class=\"language-text\">test_announce_order_ready_accepts_a_notifier_it_has_never_seen (test_order_notifier.TestOrderNotifier.test_announce_order_ready_accepts_a_notifier_it_has_never_seen) ... ok\ntest_announce_order_ready_holds_the_contract_for_either_collaborator (test_order_notifier.TestOrderNotifier.test_announce_order_ready_holds_the_contract_for_either_collaborator) ... ok\ntest_kitchen_bell_announces_the_order (test_order_notifier.TestOrderNotifier.test_kitchen_bell_announces_the_order) ... ok\ntest_the_contract_is_enforced_not_just_documented (test_order_notifier.TestOrderNotifier.test_the_contract_is_enforced_not_just_documented) ... ok\ntest_ticket_printer_announces_the_order (test_order_notifier.TestOrderNotifier.test_ticket_printer_announces_the_order) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n</code></pre><h3>World Bible entry</h3><p>The fictional student who built this would record, in their own World Bible (\"a short living project record: charter, current state, one line per week saying what changed/broke, known debt, tests/evidence, and important design choices\"):</p><blockquote><p><strong>Week 7.</strong> The kitchen world's order-ready announcement was implicit through Weeks 4\u20136 \u2014 nothing said <em>how</em> \"ready\" gets communicated, it just happened inline wherever cooking finished. Made that dependency explicit as an <code>OrderNotifier</code> contract (<code>abc.ABC</code> + <code>@abstractmethod notify</code>), with <code>KitchenBell</code> and <code>TicketPrinter</code> as two genuinely different conforming collaborators, and <code>announce_order_ready</code> as the caller that only trusts the contract, never the concrete type. Evidence: the swap test and the guard test, both pass, plus a test showing the ABC actually blocks an incomplete collaborator at construction time, not just at call time. Remaining debt: no third real-world notifier channel exists yet (e.g. a text/SMS notifier); the contract is proven for two, not stress-tested for a genuinely async one. <code>typing.Protocol</code> was considered and rejected for this gate specifically because it would not have caught the incomplete collaborator at construction time.</p></blockquote><h3>What this is not</h3><p>Not a second graded assignment. Not a hierarchy, recursion, queue, GUI, or algorithm \u2014 the rubric explicitly warns against that kind of artificial scope, and this example deliberately stays as small as real student work should be: one contract, two collaborators, one caller, one swap test. Pick your <strong>own</strong> real Weeks 4\u20136 dependency for your actual submission; this kitchen world is illustration, not the assignment.</p><p><em>Full source (both files) also lives in the course repository under <code>week_07/contract_swap_example/</code> for anyone who wants to run it themselves, but everything needed to read and understand it is on this page.</em></p>"
+  },
+  "module_item": {
+    "id": 1538284,
+    "position": 2,
+    "title": "Worked Example -- Contract and Swap (Week 7)",
+    "indent": 0,
+    "quiz_lti": false,
+    "type": "Page",
+    "module_id": 218891,
+    "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1538284",
+    "page_url": "worked-example-contract-and-swap-week-7",
+    "publish_at": null,
+    "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/worked-example-contract-and-swap-week-7",
+    "published": true,
+    "unpublishable": true
+  },
+  "final_items": [
+    {
+      "id": 1537536,
+      "position": 1,
+      "title": "CS2 Week 07 -- Overview",
+      "indent": 0,
+      "quiz_lti": false,
+      "type": "Page",
+      "module_id": 218891,
+      "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1537536",
+      "page_url": "cs2-week-07-overview-6",
+      "publish_at": null,
+      "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-07-overview-6",
+      "published": true,
+      "unpublishable": true
+    },
+    {
+      "id": 1538284,
+      "position": 2,
+      "title": "Worked Example -- Contract and Swap (Week 7)",
+      "indent": 0,
+      "quiz_lti": false,
+      "type": "Page",
+      "module_id": 218891,
+      "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1538284",
+      "page_url": "worked-example-contract-and-swap-week-7",
+      "publish_at": null,
+      "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/worked-example-contract-and-swap-week-7",
+      "published": true,
+      "unpublishable": true
+    },
+    {
+      "id": 1529997,
+      "position": 3,
+      "title": "Reasoning Odyssey Gate -- Week 7 -- Contract and Swap (S03/S08)",
+      "indent": 0,
+      "quiz_lti": false,
+      "type": "Assignment",
+      "module_id": 218891,
+      "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1529997",
+      "content_id": 914178,
+      "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914178",
+      "published": true,
+      "unpublishable": true
+    }
+  ]
+}
