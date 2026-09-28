@@ -84,43 +84,84 @@ class SupplySourceContractTests:
         self.assertIsInstance(quote.reason, str)
         self.assertTrue(quote.reason.strip())
 
-    def test_contract_fulfillment_matches_availability(self):
-        source = self.make_source()
+    def test_contract_outcomes_drive_expected_decisions(self):
+        """
+        Every source drives the caller through the same three outcomes.
 
-        quote = source.quote_supply(
-            location="North Ridge",
-            item_name="water",
-            requested_quantity=3,
+        Implementations may offer different quantities, but the caller can
+        interpret every valid quote through this shared contract.
+        """
+
+        cases = (
+            (
+                "full fulfillment",
+                "water",
+                3,
+                True,
+                False,
+                DecisionStatus.APPROVED,
+            ),
+            (
+                "partial fulfillment",
+                "water",
+                11,
+                False,
+                True,
+                DecisionStatus.PARTIALLY_APPROVED,
+            ),
+            (
+                "no fulfillment",
+                "flour",
+                3,
+                False,
+                False,
+                DecisionStatus.DECLINED,
+            ),
         )
 
-        expected_result = (
-            quote.available_quantity
-            >= quote.requested_quantity
-        )
+        for (
+            outcome_name,
+            item_name,
+            requested_quantity,
+            expected_full,
+            expected_partial,
+            expected_status,
+        ) in cases:
+            with self.subTest(outcome=outcome_name):
+                source = self.make_source()
+                planner = ExpeditionPlanner(source)
 
-        self.assertEqual(
-            quote.can_fulfill,
-            expected_result,
-        )
+                decision = planner.evaluate_supply_request(
+                    location="North Ridge",
+                    item_name=item_name,
+                    requested_quantity=requested_quantity,
+                )
 
-    def test_contract_partial_fulfillment_matches_availability(self):
-        source = self.make_source()
+                quote = source.quote_supply(
+                    location="North Ridge",
+                    item_name=item_name,
+                    requested_quantity=requested_quantity,
+                )
 
-        quote = source.quote_supply(
-            location="North Ridge",
-            item_name="water",
-            requested_quantity=11,
-        )
+                self.assertEqual(quote.can_fulfill, expected_full)
+                self.assertEqual(
+                    quote.can_partially_fulfill,
+                    expected_partial,
+                )
+                self.assertEqual(decision.status, expected_status)
 
-        expected_result = (
-            0 < quote.available_quantity
-            < quote.requested_quantity
-        )
-
-        self.assertEqual(
-            quote.can_partially_fulfill,
-            expected_result,
-        )
+                if expected_status is DecisionStatus.APPROVED:
+                    self.assertEqual(
+                        decision.approved_quantity,
+                        requested_quantity,
+                    )
+                elif expected_status is DecisionStatus.PARTIALLY_APPROVED:
+                    self.assertEqual(
+                        decision.approved_quantity,
+                        quote.available_quantity,
+                    )
+                else:
+                    self.assertEqual(decision.approved_quantity, 0)
 
 
 class TestSettlementWarehouseContract(

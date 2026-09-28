@@ -10,7 +10,11 @@ class SupplySource(ABC):
     Explicit nominal contract for a supply source.
 
     A supply source promises that it can examine a request and return a
-    SupplyQuote.
+    SupplyQuote. The quote distinguishes three availability outcomes:
+
+    - enough supply for the whole request;
+    - some, but not all, of the requested supply; or
+    - no supply for the request.
 
     SettlementWarehouse and TradingPost are both genuine kinds of supply
     sources. They satisfy the same operation but use different state and
@@ -26,6 +30,9 @@ class SupplySource(ABC):
     ) -> SupplyQuote:
         """
         Return a SupplyQuote for a validated supply request.
+
+        The caller uses the quote to fully approve, partially approve, or
+        decline the request without needing to know this source's rules.
         """
         raise NotImplementedError
 
@@ -43,6 +50,9 @@ class SupplySourceProtocol(Protocol):
     An object can satisfy this Protocol by providing quote_supply(), even if
     it does not inherit from SupplySource.
 
+    Its SupplyQuote must use the same full, partial, or unavailable meanings
+    as the explicit contract.
+
     The ABC is the explicit teaching example. The Protocol demonstrates that
     Python can also recognize a contract by behavior rather than ancestry.
     """
@@ -59,4 +69,3 @@ class SupplySourceProtocol(Protocol):
 # ============================================================
 # SHARED VALIDATION HELPERS
 # ============================================================
-
