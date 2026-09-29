@@ -9,23 +9,20 @@ either, and explain the caller boundary in plain language. `typing.
 Protocol` is an optional comparison only, never the graded mechanism.
 
 This is **one of four worked examples, not a template to copy-paste.**
-It uses the course's own Starship Log world (the RSV Kestrel --
-`sidecar/worlds/starship_log.md`), one of the four established Reasoning
-Odyssey worlds, and a made-up dependency inside it. Your own submission
-should use your own real Weeks 4-6 dependency, in whichever world you're
-actually running (this one or your own), not this one.
+It uses the course's own Starship Log world (the RSV Kestrel), one of
+the four established Reasoning Odyssey worlds, and a made-up dependency
+inside it. Your own submission should use your own real Weeks 4-6
+dependency, in whichever world you're actually running (this one or your
+own), not this one.
 
 ## The real dependency
 
-The Kestrel's own world bible names this exact problem under "Contracts/
-interfaces": *"two subsystems built to different eras' interface
-standards that need a shared contract to communicate."* By Week 7, the
-ship's log needs status readings from more than one generation of sensor
-hardware -- an older legacy array that writes flat log lines, and a
-newer array that reports structured readings. Nothing today makes
-explicit that **both generations need to answer the same promise**:
-report the subsystem's status, and say which subsystem it's talking
-about.
+By Week 7, the ship's log needs status readings from more than one
+generation of sensor hardware -- an older legacy array that writes flat
+log lines, and a newer array that reports structured readings. Nothing
+today makes explicit that **both generations need to answer the same
+promise**: report the subsystem's status, and say which subsystem it's
+talking about.
 
 ## Run it
 
@@ -51,8 +48,8 @@ the subsystem. Not the reading's own format -- just that.
 
 `LegacySensorArray` returns a flat `LOG :: name :: NOMINAL` line;
 `NextGenSensorArray` returns a structured, dict-shaped reading. Both
-satisfy the same promise, in a way that reflects the real "different
-eras' interface standards" problem the world bible names.
+satisfy the same promise, despite being built to genuinely different
+interface standards.
 
 ## The caller boundary
 
@@ -64,8 +61,8 @@ def log_subsystem_status(reporter: SubsystemReporter, subsystem_name: str) -> st
 `log_subsystem_status` never asks which generation of hardware produced
 the reading. It only knows it has something that can `report_status`.
 Past that line, the ship's log trusts the contract, not the hardware
-era -- which matters here specifically because, per the world bible,
-"the Kestrel is too far out" to double-check by hand.
+era -- which matters here specifically because the Kestrel is too far
+out for anyone to double-check a reading by hand.
 
 ## The focused swap test
 
@@ -110,10 +107,8 @@ standards, one assertion that checks only what the contract promises
 > `ExperimentalSensorPod`), both pass, plus a test showing the ABC blocks
 > an uncalibrated array at construction time. Remaining debt: no
 > escalation path exists yet for when two subsystems' readings disagree
-> about the same physical quantity -- that's the Kestrel's actual next
-> problem (see the world bible's seed about a diagnostic assumption that
-> stops holding once a sensor disagrees with physical readings), not
-> this gate's.
+> about the same physical quantity -- a real problem for the mission,
+> out of scope for this gate.
 
 ## What this is not
 

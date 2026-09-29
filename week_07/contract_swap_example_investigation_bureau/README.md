@@ -10,21 +10,18 @@ Protocol` is an optional comparison only, never the graded mechanism.
 
 This is **one of four worked examples, not a template to copy-paste.**
 It uses the course's own Investigation Bureau world (Meridian Case
-Bureau -- `sidecar/worlds/investigation_bureau.md`), one of the four
-established Reasoning Odyssey worlds, and a made-up dependency inside
-it. Your own submission should use your own real Weeks 4-6 dependency,
-in whichever world you're actually running (this one or your own), not
-this one.
+Bureau), one of the four established Reasoning Odyssey worlds, and a
+made-up dependency inside it. Your own submission should use your own
+real Weeks 4-6 dependency, in whichever world you're actually running
+(this one or your own), not this one.
 
 ## The real dependency
 
-The Bureau's own world bible names this exact problem under "Contracts/
-interfaces": *"two agencies' field-report formats that don't match and
-need a shared contract to reconcile."* By Week 7, evidence can arrive two
-ways -- logged directly by Case Records Division, or submitted from the
-field by an investigator like Reyes, in a rougher format that's "pending
-records review." Nothing today makes explicit that **both intake paths
-need to answer the same promise**: log the item, name it and describe it.
+By Week 7, evidence can arrive two ways -- logged directly by Case
+Records Division, or submitted from the field by an investigator, in a
+rougher format that's "pending records review." Nothing today makes
+explicit that **both intake paths need to answer the same promise**: log
+the item, name it and describe it.
 
 ## Run it
 
@@ -111,10 +108,8 @@ never which division's format won.
 > the guard test (a brand-new `NightShiftLogger`), both pass, plus a test
 > showing the ABC blocks an unverified division at construction time.
 > Remaining debt: no reconciliation logic exists yet for what happens
-> when Records and a field report disagree about the same item -- that's
-> the Bureau's actual next problem (see the world bible's seed about
-> Investigator Reyes's timestamp not quite matching the log), not this
-> gate's.
+> when Records and a field report disagree about the same item -- a real
+> problem for the Bureau, out of scope for this gate.
 
 ## What this is not
 
