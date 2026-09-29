@@ -65,12 +65,17 @@ yourself or another student in the post.
 These are short, independent illustrations of the same target, not additional
 assignments and not templates to copy:
 
+- `week_07_contract_and_swap/` -- a polished, alternate Growth Reporter
+  reference with its own README, tests, demo, and World Bible (stateful
+  collaborators, matching the current gate)
 - `contract_swap_example/` -- kitchen notifications
-- `contract_swap_example_frontier_settlement/` -- well-claim intake
 - `contract_swap_example_investigation_bureau/` -- evidence logging
 - `contract_swap_example_starship_log/` -- subsystem reporting
-- `week_07_contract_and_swap/` -- a polished, alternate Growth Reporter
-  reference with its own README, tests, demo, and World Bible
+
+The last three predate the stateful-collaborator update and use simple
+stateless collaborators -- still a valid illustration of the contract/
+caller-boundary/swap-test shape, just not a model for the "stateful"
+requirement specifically. Use `week_07_contract_and_swap/` for that.
 
 Read one only if its setting helps you understand the idea. The numbered path
 above is the complete guided lesson.
