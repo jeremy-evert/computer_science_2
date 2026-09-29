@@ -1,5 +1,15 @@
 # Week 7 — Contract and Swap, in the Frontier Settlement world
 
+**Note: pre-stateful-update illustration.** The Week 7 gate now requires
+two genuinely *stateful* conforming collaborators (see
+`assignments/odyssey_gates/week-07.md` and `week_07/week_07_contract_and_swap/`
+for the current, stateful reference example built by Jeremy, which is
+also set in a Frontier Settlement world). The collaborators below
+(`WellBoardIntake`, `TradePostIntake`) are stateless -- written before
+that update. Still a valid illustration of the contract/caller-boundary/
+swap-test shape, just superseded, not broken; use
+`week_07/week_07_contract_and_swap/` as the primary reference.
+
 **Week 7 target (`assignments/odyssey_gates/week-07.md`, "Contract and
 Swap (S03/S08)"):** pick a real dependency from your own world's Weeks
 4-6 growth, turn it into an explicit contract with `abc.ABC` +
