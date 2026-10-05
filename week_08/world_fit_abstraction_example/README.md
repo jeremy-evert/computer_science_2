@@ -13,6 +13,8 @@ Files: `kitchen_flow.py` (about 95 lines), `test_kitchen_flow.py` (8 tests).
 Run from this directory: `python -m pytest -v` and `python kitchen_flow.py` (the trace).
 Pytest was used here, so `pip install pytest` if a student machine lacks it.
 
+**Honesty note:** the finished suite was run and passes (8 tests). The step-by-step red/green sequence below is a *teaching script* describing what you should see when you rebuild it live; the individual red runs were not performed while authoring. Run each step yourself on screen so the failures you show are real.
+
 ## Walkthrough (~20 minutes)
 
 ### 1. The world and the operations (3 min)
@@ -25,7 +27,7 @@ before any code. Same for the undo stack: **push, pop, peek, is_empty, size**.
 Open `test_kitchen_flow.py` empty. Add one test at a time, run it, watch it go red (import error or
 missing method), then write the dumbest code that makes it green. The file is in teaching order:
 
-| Step | Test | Red because | Smallest fix |
+| Step | Test | Expected red (when run live) | Smallest fix |
 |---|---|---|---|
 | 1 | new line `is_empty()`, `size() == 0` | no `kitchen_flow` module | `TicketLine` with `__init__`, `is_empty`, `size` |
 | 2 | soup enqueued before burger comes out first | no `enqueue`/`dequeue` | `append` and `pop(0)` |
