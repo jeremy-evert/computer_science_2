@@ -25,6 +25,12 @@ committed and pushed. If it is not in `origin`, it did not happen.**
   Uncommitted work is the only unacceptable state.
 - Never commit secrets, student data, or databases (`*.db`, `*.sqlite*` are
   ignored on purpose). Track the schema and notes, not the data.
+- Finish, then clean up (Jeremy, 2026-10-09). Do the work on `main`, or on a
+  branch/worktree only when it is truly needed. When the work is done, merge
+  it to `main`, push, and delete the branch (local and remote) and remove any
+  worktree. Do not leave stray branches or half-finished side work behind. A
+  branch may stay only for an explicit, recorded reason (e.g. a student's own
+  branch). Every agent is responsible for its own cleanup.
 - Before ending a turn, run `git status` and confirm the tree is clean and
   `origin/main` matches. Report what was pushed, or say plainly what was not.
 
