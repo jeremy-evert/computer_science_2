@@ -5,6 +5,11 @@ can be improved next time. Not yet student-facing. If any of this becomes
 Canvas material it must be a graded discussion, and peers will see the work
 (see `../../AGENTS.md`).
 
+Companion document: the full lab guide written up from this session is
+`../../lessons/week-08-tdd-sqlite-mission-queue.md` (instructor guide, student
+walkthrough, and prompt library). These notes are the short, in-repo cycle
+record; the guide is the polished version.
+
 ## Session rules (set by Jeremy)
 
 1. One failing test at a time. Never more than one new test per step.
