@@ -27,3 +27,6 @@ week_07/*.out
 
 # Sensitive raw recon output (possible student data); local only
 sidecar/raw/20260818T155325Z__cs2-week1-recon.raw.txt
+
+# Regenerable validation artifacts
+artifacts/week16_farkle/
