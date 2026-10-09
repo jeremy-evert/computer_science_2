@@ -1,6 +1,12 @@
 .venv/
 __pycache__/
 *.pyc
+.pytest_cache/
+
+# Local SQLite databases (e.g. week_08 starship_project)
+*.db
+*.sqlite
+*.sqlite3
 
 # LaTeX build intermediates (see presentations/beamer/README.md)
 presentations/**/*.aux
