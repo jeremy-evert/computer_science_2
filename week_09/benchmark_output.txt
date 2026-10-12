@@ -1,0 +1,26 @@
+=== HARDWARE PROFILE ===
+Run timestamp: 2026-10-12T13:15:52.769891
+Processor: Intel64 Family 6 Model 183 Stepping 1, GenuineIntel
+Machine: AMD64
+OS: Windows 11
+Logical cores: 24
+Python version: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Python executable: C:\Users\evertj\AppData\Local\Programs\Python\Python312\python.exe
+CPU loop proxy (higher = faster machine): 20,646,132 iterations/second
+Peak memory used by this process (KB): 20432
+Free physical memory (KB): 4069112
+
+=== BENCHMARK RESULTS ===
+n = 100,000 items, 200 lookups
+Linear search, unsorted:   0.2841 s
+Sort once:                 0.0137 s
+Bisect search, sorted:     0.000116 s
+Sort + bisect total:       0.0138 s
+Sorting first wins after 200 lookups.
+Precondition: bisect is only correct on sorted data.
+
+=== WORLD BIBLE ENTRY ===
+Week 9: compared linear lookup with sort-once + bisect on the same data.
+Tradeoff: sorting costs up front; it pays off only with many lookups,
+and the sorted order must be maintained as data changes.
+Hardware: Intel64 Family 6 Model 183 Stepping 1, GenuineIntel | 24 cores | Run: 2026-10-12T13:15:52.769891
