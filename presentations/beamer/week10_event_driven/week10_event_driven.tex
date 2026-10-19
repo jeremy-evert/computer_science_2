@@ -1,0 +1,245 @@
+% week10_event_driven.tex -- CS2 Week 10 Monday, Oct 19 2026.
+% Event-driven programming: Tkinter and a web page over the same Inventory model.
+% Code is copied from week_10/compact_gui/ (inventory.py, test_inventory.py, view.py, view_web.py).
+\documentclass[aspectratio=169]{beamer}
+\usepackage{../theme/cs2theme}
+\usepackage{../theme/cs2commands}
+
+\setcsweek{Week 10}
+
+\title{Event-Driven Programming}
+\subtitle{Tkinter and a web page, same logic}
+\author{Computer Science II \textbullet\ Dr. Jeremy P. Evert}
+\date{October 19, 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+  \note{Headline today is event-driven programming, not Tkinter. Tkinter is one vehicle, a web page is another. The logic underneath is the same, and Python setup trouble is not the lesson.}
+\end{frame}
+
+\begin{destinationframe}{Today's destination}
+  \begin{itemize}
+    \item Map an event: source, handler, state, output.
+    \item Trace it from the event to the refreshed display.
+    \item Test the rule with no UI.
+    \item Verify the handler only routes.
+    \item Swap the front end without touching the model.
+  \end{itemize}
+  \instructorcue{Say it out loud: the front end is a vehicle. The model is what we keep.}
+  \note{If time runs short, cut the dependencies slide, never the trace. The gate is the Week 10 checkpoint; this deck is the pointer to the idea, not the rubric.}
+\end{destinationframe}
+
+\begin{conceptframe}{What is an event-driven program?}
+  \begin{description}
+    \item[Cycle] Something happens $\rightarrow$ a handler runs $\rightarrow$ state changes $\rightarrow$ the display refreshes.
+    \item[Examples] A key press, a timer, a network packet, a button click, a web request.
+  \end{description}
+  \instructorcue{Ask: which of these have you already written a handler for?}
+  \note{The program does not drive the order; events do. The loop (Tk mainloop, a server loop) waits, and calls your handler when something arrives.}
+\end{conceptframe}
+
+\begin{conceptframe}{Cousins beyond GUIs}
+  \begin{description}
+    \item[Hardware interrupts] A device signals; the CPU runs a handler. That handler is a callback.
+    \item[State machines] FPGA and digital designs often react to input signals and change state.
+  \end{description}
+  \instructorcue{Say ``cousins.'' Same shape of idea, different machinery.}
+  \note{Be careful here. Do not say CPUs or FPGAs come from event-driven programming. They are cousins: a signal arrives, a defined response runs, state changes. That resemblance is why the pattern feels familiar in hardware courses.}
+\end{conceptframe}
+
+\begin{frame}{Map the event: Inventory restock}
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\hline
+\textbf{Event} & Restock is requested \\
+\textbf{Source} & Button click (Tkinter) or POST /restock (web) \\
+\textbf{Handler} & \texttt{on\_restock} or \texttt{do\_POST} \\
+\textbf{State} & The model's \texttt{items} list \\
+\textbf{Output} & ``Items: n'' shown to the user \\
+\hline
+\end{tabular}
+\end{center}
+\instructorcue{Have students fill in this table for their own world noun first.}
+\note{Five words to map any event. Students reuse this table in the World Bible entry.}
+\end{frame}
+
+\begin{frame}[fragile]{The model stays the same}
+\lstset{basicstyle=\ttfamily\scriptsize}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{lstlisting}
+# inventory.py
+class Inventory:
+    def __init__(self):
+        self.items = []
+
+    def restock(self, name):
+        self.items.append(name)
+        return len(self.items)
+
+    def count(self):
+        return len(self.items)
+\end{lstlisting}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{lstlisting}
+# test_inventory.py
+class InventoryTest(unittest.TestCase):
+    def test_restock_adds_one(self):
+        inv = Inventory()
+        self.assertEqual(inv.restock("rope"), 1)
+        self.assertEqual(inv.count(), 1)
+
+    def test_three_restocks(self):
+        inv = Inventory()
+        for _ in range(3):
+            inv.restock("rope")
+        self.assertEqual(inv.count(), 3)
+\end{lstlisting}
+\end{column}
+\end{columns}
+\note{Run the test live: python3 -m unittest. It passes with no UI, no window, no server. Both test file imports are `import unittest` and `from inventory import Inventory`, trimmed here to fit.}
+\end{frame}
+
+\begin{frame}[fragile]{Pass 1: the Tkinter view}
+\lstset{basicstyle=\ttfamily\scriptsize}
+\predictkicker
+\begin{lstlisting}
+import tkinter as tk
+from inventory import Inventory
+
+model, root = Inventory(), tk.Tk()
+text = tk.StringVar(value="Items: 0")
+tk.Label(root, textvariable=text).pack()
+
+def on_restock():
+    n = model.restock("rope")   # route to the model
+    text.set(f"Items: {n}")     # then refresh the view
+
+tk.Button(root, text="Restock", command=on_restock).pack()
+root.mainloop()
+\end{lstlisting}
+  \textbf{Predict:} three clicks on Restock. What does the label say?
+  \note{Answer: Items: 3. The number lives in the model, the label only shows it. This is view.py from week_10/compact_gui; the file guards mainloop with if __name__ == "__main__".}
+\end{frame}
+
+\begin{frame}[fragile]{Pass 2: a web page view}
+\lstset{basicstyle=\ttfamily\tiny}
+\begin{lstlisting}
+model = Inventory()
+
+PAGE = """<!doctype html><title>Inventory</title>
+<p>Items: {n}</p>
+<form method="post" action="/restock"><button>Restock</button></form>"""
+
+class Handler(BaseHTTPRequestHandler):
+    def do_POST(self):
+        if self.path == "/restock":
+            n = model.restock("rope")     # route to the model
+            print(f"request -> handler -> model.restock -> {n} items")
+            self.send_response(303)       # then refresh the view
+            self.send_header("Location", "/")
+            self.end_headers()
+        else:
+            self.send_error(404)
+\end{lstlisting}
+  \textbf{Same Inventory.} Python standard library only (\texttt{http.server}); run \texttt{python3 view\_web.py}, open \texttt{localhost:8000}.
+  \note{This is view_web.py from week_10/compact_gui, with do_GET and the page-writing helper left out to fit the slide. Point out: the handler body has the same two jobs as on_restock. Route to the model, then refresh.}
+\end{frame}
+
+\begin{frame}{Same logic, two front ends}
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\hline
+ & \textbf{Tkinter} & \textbf{Web page} \\
+\hline
+\textbf{Event source} & Button click & POST /restock \\
+\textbf{Handler wiring} & \texttt{command=on\_restock} & \texttt{do\_POST} \\
+\textbf{Display} & \texttt{text.set} on a label & Page shows the count \\
+\hline
+\textbf{Unchanged} & \multicolumn{2}{l}{\texttt{Inventory}, its test, the restock rule} \\
+\hline
+\end{tabular}
+\end{center}
+\instructorcue{Ask: what did we have to edit in inventory.py to add the web page? (Nothing.)}
+\note{The top three rows are what changed. The last row is what the whole design is for.}
+\end{frame}
+
+\begin{frame}[fragile]{Trace the event in each}
+\codeframekicker
+\textbf{Tkinter:} click $\rightarrow$ callback $\rightarrow$ model.restock $\rightarrow$ 1 $\rightarrow$ refresh
+
+\vspace{2mm}
+\textbf{Web:} request $\rightarrow$ handler $\rightarrow$ model.restock $\rightarrow$ 1 $\rightarrow$ response
+\begin{lstlisting}
+request -> handler -> model.restock -> 1 items
+\end{lstlisting}
+\instructorcue{Students paste their own trace into the World Bible as evidence.}
+\note{The web line is printed by view_web.py itself. For Tkinter, add a print in on_restock the way last session's trace slide did. After one event, the count is 1 in both. This trace is the evidence artifact for the World Bible.}
+\end{frame}
+
+\begin{frame}[fragile]{Debug and verify: break the boundary}
+\begin{comparebody}
+  \begin{compareleft}{Boundary broken}
+\begin{lstlisting}
+items = []   # view owns data
+def on_restock():
+    items.append("rope")
+    n = len(items)
+    text.set(f"Items: {n}")
+\end{lstlisting}
+  \end{compareleft}
+  \begin{compareright}{Boundary kept}
+\begin{lstlisting}
+model = Inventory()
+def on_restock():
+    n = model.restock("rope")
+    text.set(f"Items: {n}")
+\end{lstlisting}
+  \end{compareright}
+\end{comparebody}
+\instructorcue{If you cannot test a rule without the UI, the rule is in the wrong place.}
+\note{Ask how to test the left version without a window. The refactor is moving two lines. A handler should only route: call one model method, then refresh.}
+\end{frame}
+
+\begin{frame}{Dependencies are an avenue, not the point}
+  \begin{itemize}
+    \item Tkinter needs \texttt{python3-tk} on Ubuntu.
+    \item The web version needs nothing beyond Python.
+    \item Setup trouble is incidental. The model and its test run either way.
+  \end{itemize}
+  \instructorcue{If a laptop will not open a window, switch to the web pass and keep going.}
+  \note{Keep this to one minute. Tell students where to look (check_my_setup.sh in week_10/compact_gui) and move on. Do not turn the class into an installation clinic.}
+\end{frame}
+
+\begin{designdecisionframe}{Peer swap and World Bible}
+  \textbf{Contract test:} trade model files with a partner, then run \texttt{python3 contract\_test.py their\_module}.
+  \begin{itemize}
+    \item It prints ``contract holds'': your front end works on their model.
+    \item It fails: decide whose method names or return values should change.
+  \end{itemize}
+  \textbf{World Bible entry:} the rule you moved out of a handler, and your trace.
+  \note{contract_test.py is in week_10/compact_gui. It checks restock and count exist, restock returns an int, and count is 1 after one restock. The failure is the lesson. The World Bible entry records the rule moved, the date, and the trace.}
+\end{designdecisionframe}
+
+\begin{recapframe}{Recap}
+  \begin{itemize}
+    \item An event runs a handler, the handler changes state, the display refreshes.
+    \item The model and its test do not change when the front end does.
+    \item Handlers route; rules live in the model.
+    \item Tkinter and a web page are two vehicles for one design.
+  \end{itemize}
+\end{recapframe}
+
+\begin{exitframe}{Exit question}
+  \Large\color{cs2primary}
+  \textbf{Which part of your program would you keep if the front end changed tomorrow, and why?}
+
+  \vspace{4mm}
+  \normalsize\normalfont\color{cs2ink}
+  \textbf{Gate:} due Friday 11:59 PM Central.
+\end{exitframe}
+
+\end{document}
