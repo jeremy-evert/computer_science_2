@@ -21,10 +21,10 @@ label.pack()                                # pack = put the label in the window
 #   model    : model.restock(...) changes the data and returns the new count
 #   view     : text.set(...) changes what the label shows
 def on_restock():
-    n = model.restock("rope")        # 1. ROUTE the event to the model (the rules live there)
+    n = model.restock("shovel")        # 1. ROUTE the event to the model (the rules live there)
     text.set(f"Items: {n}")          # 2. REFRESH the view with the model's answer
 
-button = tk.Button(root, text="Restock", command=on_restock)   # OBJECT of class Button
+button = tk.Button(root, text="Restock Shovel", command=on_restock)   # OBJECT of class Button
 #   command=on_restock  <- THE PAIR: this button click is wired to this handler.
 #   Note: on_restock has NO parentheses. We hand Tkinter the function to call later.
 button.pack()
