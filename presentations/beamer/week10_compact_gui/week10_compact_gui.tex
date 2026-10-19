@@ -1,0 +1,216 @@
+% week10_compact_gui.tex -- CS2 Week 10 Monday, Oct 19 2026.
+% Reasoning Odyssey S04: Compact GUI over a tested model.
+% Sources: planning/week-10.md; lessons/week-10-tkinter-model-view-lab.md.
+\documentclass[aspectratio=169]{beamer}
+\usepackage{../theme/cs2theme}
+\usepackage{../theme/cs2commands}
+
+\setcsweek{Week 10}
+
+\title{A Window Is Just a Customer of Your Model}
+\subtitle{Compact GUI over a tested model (S04)}
+\author{Computer Science II \textbullet\ Dr. Jeremy P. Evert}
+\date{October 19, 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+  \note{Monday of Week 10. The whole class is one idea: the model must work and be provable with no window open. The view is thin. Everything today uses a ten-line model, one label, one button.}
+\end{frame}
+
+\begin{destinationframe}{Today's destination}
+  \begin{itemize}
+    \item A small model class that passes a \texttt{unittest} \emph{without} opening a window.
+    \item A Tkinter view: one label, one button, one callback.
+    \item The trace: click $\rightarrow$ callback $\rightarrow$ model method $\rightarrow$ new state $\rightarrow$ label updated.
+    \item Break the boundary on purpose, then refactor it back.
+  \end{itemize}
+  \instructorcue{Say the goal out loud: we are not building a desktop app, we are keeping the boundary clean.}
+  \note{The plan says larger checkpoint, not a desktop-app engineering unit. Keep the GUI modest. If time runs short, cut the stretch and the 10,000-items discussion, never the trace. Why it matters: a bug you can only see by clicking cannot be tested, and rules that live in the callback die when the window changes. Tie back to the Week 7 contract.}
+\end{destinationframe}
+
+\begin{conceptframe}{Core concept: model, view, callback}
+  \begin{description}
+    \item[Model] Holds the state and the rules. Knows nothing about Tkinter.
+    \item[View] Shows the state. Has no rules of its own.
+    \item[Callback] The only bridge: receives one event, calls \emph{one} model method, then refreshes the view.
+  \end{description}
+  \instructorcue{Ask: where does ``you cannot remove an item that is not there'' belong? (Model.)}
+  \note{Domain rules never live only in a callback. If a student puts a rule in the callback, it is a candidate for the break-the-boundary slide later.}
+\end{conceptframe}
+
+\begin{frame}{Concept + diagram: who knows about whom}
+\conceptdiagramkicker
+\begin{conceptdiagrambody}
+  \begin{concepttext}
+    The view \emph{calls} the model.\\[2mm]
+    The model never imports Tkinter and never calls the view.\\[2mm]
+    That one-way arrow is the whole design.
+  \end{concepttext}
+  \begin{conceptdiagram}
+    \begin{tikzpicture}[node distance=14mm]
+      \node[cs2class] (view) {View (Tkinter)};
+      \node[cs2class, below=of view] (model) {Model};
+      \draw[cs2dataflow] (view) -- node[right, font=\footnotesize]{calls} (model);
+    \end{tikzpicture}
+  \end{conceptdiagram}
+\end{conceptdiagrambody}
+\note{Draw it on the board too. One arrow, downward. If a student wants the model to update the label directly, that is the arrow going the wrong way.}
+\end{frame}
+
+\begin{frame}[fragile]{Model first: ten lines, no window}
+\codeframekicker
+\begin{lstlisting}
+class Inventory:
+    def __init__(self):
+        self.items = []
+
+    def restock(self, name):
+        self.items.append(name)
+        return len(self.items)
+
+    def count(self):
+        return len(self.items)
+\end{lstlisting}
+\instructorcue{Swap in your own world: roster, case file, crew list, shop stock.}
+\note{Use whichever world noun the class likes. The method name matters later for the peer swap, so keep restock and count unless students choose a better pair and agree on it.}
+\end{frame}
+
+\begin{frame}[fragile]{The test passes with no window}
+\codeframekicker
+\begin{lstlisting}
+import unittest
+from inventory import Inventory
+
+class InventoryTest(unittest.TestCase):
+    def test_restock_adds_one(self):
+        inv = Inventory()
+        self.assertEqual(inv.restock("rope"), 1)
+        self.assertEqual(inv.count(), 1)
+
+if __name__ == "__main__":
+    unittest.main()
+\end{lstlisting}
+\note{Run it live. Point out: no tkinter import anywhere, and it runs on a server with no display. That is the evidence that the model stands on its own.}
+\end{frame}
+
+\begin{frame}[fragile]{Predict before running: the view}
+\predictkicker
+\begin{lstlisting}
+import tkinter as tk
+from inventory import Inventory
+model, root = Inventory(), tk.Tk()
+text = tk.StringVar(value="Items: 0")
+tk.Label(root, textvariable=text).pack()
+def on_restock():
+    n = model.restock("rope")   # route to the model
+    text.set(f"Items: {n}")     # then refresh the view
+tk.Button(root, text="Restock", command=on_restock).pack()
+root.mainloop()
+\end{lstlisting}
+  \textbf{Predict:} three clicks on Restock. What does the label say?
+  \note{Answer: Items: 3. Ask a second question: where is the number stored, the label or the model? (Model. The label only shows it.) Point out the callback has two lines and no decisions. If a student needs an if, ask whether it is a domain rule; if yes, move it into the model and test it.}
+\end{frame}
+
+\begin{frame}[fragile]{Trace the event}
+\codeframekicker
+\begin{lstlisting}
+def on_restock():
+    print("click -> callback")
+    n = model.restock("rope")
+    print(f"model.restock -> {n} items")
+    text.set(f"Items: {n}")
+    print("label updated")
+\end{lstlisting}
+  \textbf{One click:} click $\rightarrow$ callback $\rightarrow$ model.restock $\rightarrow$ 1 item $\rightarrow$ label updated
+  \instructorcue{Students paste their own trace into the World Bible as evidence.}
+  \note{This trace is the evidence artifact for today. Remove the prints afterwards if you like, but keep a copy of the output.}
+\end{frame}
+
+\begin{misconceptionframe}{Common failure: ``the GUI is the program''}
+  \textbf{Symptom:} the only way to know if it works is to run the window and click.
+
+  \vspace{2mm}
+  \textbf{Fix:} write the model test first. If you cannot test a rule without a window, the rule is in the wrong place.
+  \note{Let students say it before you do. This is the most common Week 10 failure: logic hidden in command=lambda.}
+\end{misconceptionframe}
+
+\begin{frame}[fragile]{Break the boundary on purpose}
+\begin{comparebody}
+  \begin{compareleft}{Boundary broken}
+\begin{lstlisting}
+items = []   # view owns data
+def on_restock():
+    items.append("rope")
+    n = len(items)
+    text.set(f"Items: {n}")
+\end{lstlisting}
+  \end{compareleft}
+  \begin{compareright}{Boundary kept}
+\begin{lstlisting}
+model = Inventory()
+def on_restock():
+    n = model.restock("rope")
+    text.set(f"Items: {n}")
+\end{lstlisting}
+  \end{compareright}
+\end{comparebody}
+\instructorcue{Ask: how would you test the left version without a window?}
+\note{Do this live: start from the left version, ask the class what breaks when we want a test, then refactor into the right. The refactor is moving two lines, which is the point: it is cheap if you do it now.}
+\end{frame}
+
+\begin{pairdiscussframe}{Think \textbullet\ Pair \textbullet\ Discuss}
+  Pick the single most useful action in \emph{your} world: add a colonist, close a case, restock an item. Name the model method, then the one label and one button that would call it.
+  \stopandwork{5 minutes. Write the method name and the label text on paper. No Tkinter yet.}
+  \note{Circulate. Look for method names that describe a domain action, not a GUI action. add_colonist is good, on_button_click is not.}
+\end{pairdiscussframe}
+
+\begin{designdecisionframe}{Peer swap: plug in your partner's model}
+  Trade model files with a partner who used the \emph{same method names}. Run your view on their model.
+  \begin{itemize}
+    \item It works: the contract held (your Week 7 contract test, again).
+    \item It fails: the method names or return values differ. Decide which side should change.
+  \end{itemize}
+  \note{A very small contract test: assert hasattr(model, "restock") and isinstance(model.restock("x"), int). The failure is the lesson, not an accident to avoid.}
+\end{designdecisionframe}
+
+\begin{worldbibleframe}{World Bible entry}
+  \begin{worldbibleentry}{Rule: The view never holds the rules}
+    \wbfield{Assumption}{Every change to world state goes through one model method.}
+    \wbfield{Invariant}{The model test passes with no window; the label always shows the model's value.}
+    \wbfield{Revision}{Date, and what you moved out of a callback into the model.}
+  \end{worldbibleentry}
+  \note{Students record one rule they moved, with the date. This is the World Bible evidence for the week, together with the click trace.}
+\end{worldbibleframe}
+
+\begin{odysseygateframe}{Odyssey checkpoint note}
+  \textbf{This week's checkpoint:} render real model state in a modest view and route one meaningful event through a callback to a model operation. Keep the boundary clear and show the model works on its own.
+
+  \vspace{2mm}
+  \textbf{Evidence:} a model class with a window-free \texttt{unittest}; your one-label, one-button view; the click trace in your World Bible.
+
+  \vspace{2mm}
+  \small Larger checkpoint, not a desktop-app engineering unit. See the Week 10 gate in Canvas for the rubric; this slide is the pointer, not the rubric.
+  \note{Remind them the gate is due Friday 11:59 PM Central. Stretch for fast students: a second event (a text entry that filters the list) or a model undo. Honest limit: with 10,000 items this label-only view is painful, which leads to Week 11 visualization. Do not promise features beyond one label, one button, one callback.}
+\end{odysseygateframe}
+
+\begin{recapframe}{Recap}
+  \begin{itemize}
+    \item Model first, and prove it with a test that needs no window.
+    \item The callback routes one event to one model method, then refreshes.
+    \item Rules in the view are a bug you cannot test.
+    \item Same method names make models swappable (Week 7 contract).
+  \end{itemize}
+\end{recapframe}
+
+\begin{exitframe}{Exit question}
+  \Large\color{cs2primary}
+  \textbf{Name one rule in your world that must live in the model, and say how you would test it without opening a window.}
+
+  \vspace{4mm}
+  \normalsize\normalfont\color{cs2ink}
+  \textbf{Next move:} bring a working model and its test to Wednesday.
+\end{exitframe}
+
+\end{document}
