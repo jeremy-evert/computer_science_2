@@ -1,4 +1,4 @@
-# Week 10 micro-lab — From question to honest visual to useful story
+# Week 11 micro-lab — From question to honest visual to useful story
 
 ## Purpose
 
@@ -14,7 +14,7 @@ homework assignment.
 From the repository root, run:
 
 ```text
-python lessons/week-10-data-storytelling-micro-lab.py
+python lessons/week-11-data-storytelling-micro-lab.py
 ```
 
 The script reads `lessons/data/frontier-resource-levels.csv` and writes

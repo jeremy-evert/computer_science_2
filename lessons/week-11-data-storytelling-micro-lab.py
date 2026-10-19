@@ -1,4 +1,4 @@
-"""Create the Week 10 Frontier Settlement visualization micro-lab output."""
+"""Create the Week 11 Frontier Settlement visualization micro-lab output."""
 
 import csv
 from pathlib import Path

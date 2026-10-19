@@ -1,4 +1,4 @@
-# Week 9 micro-lab — Compact Tkinter model, view, and event
+# Week 10 micro-lab — Compact Tkinter model, view, and event
 
 ## Goal
 
