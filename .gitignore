@@ -30,3 +30,52 @@ sidecar/raw/20260818T155325Z__cs2-week1-recon.raw.txt
 
 # Regenerable validation artifacts
 artifacts/week16_farkle/
+
+# --- Scrub 2026-10-20: categories that must never return (student data / secrets) ---
+# Saved OneDrive/SharePoint pages carry access tokens and emails
+FA26.html
+jevertj.html
+/index.html.bak
+*.mhtml
+# Canvas exports/snapshots (signed file URLs, answer keys, student-authored files)
+archive/
+canvas-*-snapshot-*.json
+*snapshot*.json
+# Student files, rosters, grades, submissions
+FA_2026/
+**/submissions/
+**/student_work/
+**/roster*
+**/gradebook*
+**/grades*.csv
+*.xlsx
+# Recordings and transcripts
+*.vtt
+*.srt
+*.mp4
+*.m4a
+*.mp3
+*.wav
+*.mov
+*_transcript*
+# Raw agent run output and logs
+sidecar/runs/
+sidecar/raw/
+*.raw.txt
+*.log
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*.token
+secrets*
+# Models and big binaries
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.zip
+chroma*/
