@@ -31,7 +31,7 @@ Prompt 013 itself anticipated.
    one honest navigation defect disclosed (see Report 021's YELLOW list),
    not hidden.
 3. **No production Canvas or ZyBooks write occurred.** Confirmed --
-   `CANVAS_API_BASE_URL` was `http://192.168.122.172:3000` (the Savnac host
+   `CANVAS_API_BASE_URL` was `http://<savnac-host>:3000` (the Savnac host
    marker) for every write in this session; `require_host_marker` in
    `imprint/config.py` would have raised rather than silently proceeding
    against any other host. Zero ZyBooks references found anywhere in the

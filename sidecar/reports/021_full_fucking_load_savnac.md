@@ -22,7 +22,7 @@
 - `imprint.reconcile.push_course` -- existing reconcile/prune engine.
 - `imprint.config.require_host_marker` -- the Savnac-vs-production host
   guard; enforced on every call in this session via `SAVNAC_HOST_MARKER =
-  "192.168.122.172"`.
+  "<savnac-host>"`.
 
 Credentials sourced from `~/.config/canvas/savnac.env` (Savnac-specific;
 never `~/.config/canvas/canvas.env`, which defaults to production
@@ -212,7 +212,7 @@ this session verified live in Savnac.
 ## Explicit confirmation
 
 **No production SWOSU Canvas write occurred.** Every write and read this
-session targeted `http://192.168.122.172:3000` (the Savnac host), enforced
+session targeted `http://<savnac-host>:3000` (the Savnac host), enforced
 by `imprint.config.require_host_marker` on every call; the default
 production base URL (`https://swosu.instructure.com`) was never reached.
 No ZyBooks write occurred. No credential value was read aloud, logged, or

@@ -34,7 +34,7 @@ action was performed.
 
 ## Validation
 
-- `git fetch origin` via `git -c core.sshCommand='ssh -F /home/jevert/.ssh/config' fetch origin`: passed.
+- `git fetch origin` via `git -c core.sshCommand='ssh -F ~/.ssh/config' fetch origin`: passed.
 - Exact contract checks:
   - `git show origin/main:assignments/odyssey_gates/week-04.md | head -1` →
     `# Reasoning Odyssey Gate — Week 4 — Cohesive Object Boundary (S01)`

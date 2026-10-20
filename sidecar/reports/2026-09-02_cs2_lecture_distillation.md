@@ -7,7 +7,7 @@ Target module: `218887`, `CS2 Week 3 -- Found Your World (World Bible v0.1)`
 ## Source and transcript
 
 Protected MP4 on April:
-`/home/jevert/lecture_pipeline/protected_raw/2026-09-02/cs2/Fall 2026 Computer Science II (COMSC-1053-1417)-20260902_130052-Meeting Recording.mp4`
+`~/lecture_pipeline/protected_raw/2026-09-02/cs2/Fall 2026 Computer Science II (COMSC-1053-1417)-20260902_130052-Meeting Recording.mp4`
 
 MP4 SHA-256: `76fae0209b9e38d9abe12f4eb552f69790ac0abc02917607968bae3431f47f14`
 (matches the hash taken on maise before transfer; the maise copy was deleted

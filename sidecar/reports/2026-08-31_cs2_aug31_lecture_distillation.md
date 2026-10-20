@@ -8,7 +8,7 @@ Assigned run: `ba5d401476d8c6e0bb0d8e354ab80d99`
 ## Source and transcript
 
 Protected MP4 on April:
-`/home/jevert/lecture_pipeline/protected_raw/2026-08-31/cs2/Fall 2026 Computer Science II (COMSC-1053-1417)-20260831_130202-Meeting Recording.mp4`
+`~/lecture_pipeline/protected_raw/2026-08-31/cs2/Fall 2026 Computer Science II (COMSC-1053-1417)-20260831_130202-Meeting Recording.mp4`
 
 Expected MP4 SHA-256: `afc89f0576d77068d61ff54da139994a4113e29a30ddeb1e3980a9bc507f3b74`.
 Fresh primary transcript: `whisper-ctranslate2 0.5.7`, `medium.en`, English,
