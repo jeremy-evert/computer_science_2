@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "title": "Honest Charts from Project Data",
+  "series_type": "instructor-private-podcast",
+  "course": "CS2",
+  "week": 11,
+  "prepared_date": "2026-10-20",
+  "note": "Estimated duration is not a render proof. Verify duration from the completed Kokoro receipt.",
+  "source_repository": "jeremy-evert/computer_science_2",
+  "source_branch": "audio/cs2-week11-honest-visualization-20261026",
+  "sources": [
+    "Computer Science Two planning/week-11.md",
+    "Computer Science Two lessons/week-11-data-storytelling-micro-lab.md and lessons/week-11-data-storytelling-micro-lab.py",
+    "Computer Science Two lessons/data/frontier-resource-levels.csv",
+    "Computer Science Two assignments/odyssey_gates/week-11.md and rubrics/odyssey_gates/week-11_rubric.md",
+    "Computer Science Two planning and Odyssey/capability planning documents, including report 007"
+  ],
+  "voice_map": {
+    "DANA": "af_sarah",
+    "MARIA": "af_heart"
+  },
+  "episodes": [
+    {
+      "number": "01",
+      "title": "Honest Charts from Project Data",
+      "source": "scripts/01_honest_charts_from_project_data.md",
+      "sha256": "b0773e7174285e36d833f49d4e1b5d2b2c1558355cda7df2e988d49ffc5acb5f",
+      "spoken_words": 2227,
+      "estimated_minutes": 14.8
+    }
+  ],
+  "publication_status": "NOT RENDERED, NOT PUBLISHED, NOT PHONE VERIFIED"
+}
