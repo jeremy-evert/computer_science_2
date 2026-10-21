@@ -79,3 +79,6 @@ secrets*
 *.pt
 *.zip
 chroma*/
+
+# ShoulderTap recordings are protected (student voices; >100MB) -- never publish
+/recordings/
