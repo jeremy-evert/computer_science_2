@@ -1,7 +1,7 @@
 """Generate and validate the Fall 2026 semester topic map.
 
 Run from the repository root:
-    python .views/generate_semester_topic_map.py
+    python views/generate_semester_topic_map.py
 
 The repository remains the source of truth. This script stores only a small
 view specification and emits Obsidian's documented Canvas JSON format.
@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / ".views" / "semester-topic-map.canvas"
+OUT = ROOT / "views" / "semester-topic-map.canvas"
 
 
 def text(node_id: str, x: int, y: int, width: int, height: int, value: str) -> dict:

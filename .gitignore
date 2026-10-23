@@ -82,3 +82,6 @@ chroma*/
 
 # ShoulderTap recordings are protected (student voices; >100MB) -- never publish
 /recordings/
+
+# Obsidian workspace/cache are personal; the canvas in views/ is tracked
+.obsidian/
