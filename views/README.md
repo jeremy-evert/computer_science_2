@@ -49,3 +49,5 @@ This uses Obsidian's own CLI (Settings → General → Advanced → Command line
 - Canvas edge labels do not scale with zoom the way cards do, so a long label spills over neighboring cards. Labels are therefore one word (`documented` / `inferred`); the reason is written in the target card.
 
 Check layout without Obsidian: `python views/generate_semester_topic_map.py --svg out.svg` (stdlib only).
+
+History of this work, decisions, and findings: [NOTES.md](NOTES.md).
