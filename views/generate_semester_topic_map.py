@@ -1,7 +1,7 @@
 """Generate and validate the Fall 2026 semester topic map.
 
 Run from the repository root:
-    python views/generate_semester_topic_map.py
+    python views/generate_semester_topic_map.py [--svg out.svg]
 
 The repository remains the source of truth. This script stores only a small
 view specification and emits Obsidian's documented Canvas JSON format.
@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import json
 import math
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -113,16 +114,19 @@ SOURCES = [
     ("src-test", "planning/week-02.md", "Evidence loop"),
 ]
 
-# (id, from, to, label, color). Order inside a column is vertical; between
-# columns it is one right→left hop from the last card to the next column's first.
+# (id, from, to, kind, reason, color). kind is the whole edge label: Obsidian draws
+# labels at a size that does not shrink with zoom, so anything longer than one word
+# spills over neighboring cards. The reason is written into the target card instead.
+# Order inside a column is vertical; between columns it is one right→left hop from
+# the last card to the next column's first.
 LINKS = [
-    ("e12", "g1", "g2", "documented: enables collaboration", ""),
-    ("e23", "g2", "g3", "documented: is-a must be earned", ""),
-    ("e34", "g3", "g4", "documented: shared behavior", ""),
-    ("e45", "g4", "g5", "inferred: interfaces → data", "2"),
-    ("e56", "g5", "g6", "documented: data before search/order", ""),
-    ("e67", "g6", "g7", "inferred: model feeds GUI", "2"),
-    ("e78", "g7", "g8", "documented: project → story", ""),
+    ("e12", "g1", "g2", "documented", "a boundary enables collaboration", ""),
+    ("e23", "g2", "g3", "documented", "avoid hierarchy until is-a is earned", ""),
+    ("e34", "g3", "g4", "documented", "shared behavior supports contract thinking", ""),
+    ("e45", "g4", "g5", "inferred", "interfaces make data implementations discussable", "2"),
+    ("e56", "g5", "g6", "documented", "data abstraction precedes search/order", ""),
+    ("e67", "g6", "g7", "inferred", "a tested model supplies GUI state", "2"),
+    ("e78", "g7", "g8", "documented", "project evidence continues into story", ""),
 ]
 
 
@@ -133,11 +137,15 @@ def build() -> dict:
     top = y + nodes[-1]["height"] + ROW_GAP
 
     bottoms = []
+    builds_on = {dst: f"{kind} · builds on card {src[1:]}: {reason}"
+                 for _, src, dst, kind, reason, _ in LINKS}
     for col, (phase, cards) in enumerate(PHASES):
         cy = top
         nodes.append(text(f"phase{col + 1}", COLS[col], cy, CARD_W, f"# {phase}"))
         cy += nodes[-1]["height"] + ROW_GAP // 2
         for node_id, body in cards:
+            if node_id in builds_on:
+                body += "\n\nArrow in: " + builds_on[node_id]
             nodes.append(text(node_id, COLS[col], cy, CARD_W, body))
             cy += nodes[-1]["height"] + ROW_GAP
         bottoms.append(cy)
@@ -151,7 +159,7 @@ def build() -> dict:
 
     column_of = {card[0]: c for c, (_, cards) in enumerate(PHASES) for card in cards}
     edges = []
-    for edge_id, src, dst, label, color in LINKS:
+    for edge_id, src, dst, label, _reason, color in LINKS:
         if column_of[src] == column_of[dst]:
             edges.append(edge(edge_id, src, dst, label, "bottom", "top", color))
         else:
@@ -191,7 +199,7 @@ def crossings(canvas: dict) -> list[str]:
         # The line, and the box a curved edge stays inside, must avoid other cards.
         box = (min(a[0], b[0]), min(a[1], b[1]), max(a[0], b[0]), max(a[1], b[1]))
         mid = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2)
-        lw = len(item.get("label", "")) * 8 + 24
+        lw = len(item.get("label", "")) * 10 + 24
         label_box = (mid[0] - lw / 2, mid[1] - 16, mid[0] + lw / 2, mid[1] + 16)
         for node in canvas["nodes"]:
             ends = node["id"] in (item["fromNode"], item["toNode"])
@@ -225,9 +233,45 @@ def validate(canvas: dict) -> None:
     json.dumps(canvas)
 
 
+def to_svg(canvas: dict) -> str:
+    """Plain SVG of the layout (stdlib only) so it can be looked at without Obsidian."""
+    from xml.sax.saxutils import escape
+    by_id = {n["id"]: n for n in canvas["nodes"]}
+    w = max(n["x"] + n["width"] for n in canvas["nodes"]) + 40
+    h = max(n["y"] + n["height"] for n in canvas["nodes"]) + 40
+    out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 {w} {h}" width="{w // 2}">',
+           '<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">'
+           '<path d="M0,0 L8,4 L0,8 z" fill="#555"/></marker></defs>']
+    for n in canvas["nodes"]:
+        fill = "#f4f4f4" if n["type"] == "text" else "#dde8ff"
+        out.append(f'<rect x="{n["x"]}" y="{n["y"]}" width="{n["width"]}" height="{n["height"]}" '
+                   f'fill="{fill}" stroke="#333"/>')
+        body = n.get("text") or n["file"]
+        chars = max(10, int((n["width"] - 24) / 8))
+        y = n["y"] + 24
+        for line in body.split("\n"):
+            for k in range(0, max(1, len(line)), chars):
+                out.append(f'<text x="{n["x"] + 12}" y="{y}" font-size="13" font-family="sans-serif">'
+                           f'{escape(line[k:k + chars])}</text>')
+                y += 18
+    for e in canvas["edges"]:
+        a = anchor(by_id[e["fromNode"]], e["fromSide"])
+        b = anchor(by_id[e["toNode"]], e["toSide"])
+        color = "#e07000" if e.get("color") else "#555"
+        out.append(f'<line x1="{a[0]}" y1="{a[1]}" x2="{b[0]}" y2="{b[1]}" stroke="{color}" '
+                   f'stroke-width="2" marker-end="url(#a)"/>')
+        out.append(f'<text x="{(a[0] + b[0]) / 2}" y="{(a[1] + b[1]) / 2}" font-size="14" '
+                   f'text-anchor="middle" fill="{color}">{escape(e["label"])}</text>')
+    out.append("</svg>")
+    return "\n".join(out)
+
+
 if __name__ == "__main__":
     result = build()
     validate(result)
     OUT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {OUT} ({len(result['nodes'])} nodes, {len(result['edges'])} edges); "
           "0 edge/label crossings, 0 card overlaps")
+    if len(sys.argv) > 2 and sys.argv[1] == "--svg":
+        Path(sys.argv[2]).write_text(to_svg(result), encoding="utf-8")
+        print(f"wrote {sys.argv[2]}")

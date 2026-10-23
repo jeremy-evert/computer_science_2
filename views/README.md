@@ -32,3 +32,20 @@ Obsidian's Graph View only gets edges from links, and the course markdown has al
 ## Canvas layout checks
 
 `generate_semester_topic_map.py` computes card height from text length, lays cards out in three phase columns, and links only neighbors. `validate()` fails the run if an edge, its curve bounding box, or its label overlaps any card that is not its endpoint, or if two cards overlap. These are geometric checks plus a rendered image; they are not a substitute for opening the canvas in Obsidian once.
+
+## One command to show both maps
+
+```powershell
+powershell -File views\show-maps.ps1            # canvas in front, graph in the next tab
+powershell -File views\show-maps.ps1 -Show graph
+```
+
+This uses Obsidian's own CLI (Settings → General → Advanced → Command line interface). Findings from using it on 2026-10-23:
+
+- The shim is `Obsidian.com` beside `Obsidian.exe`; plain `obsidian` is on PATH only after "Register CLI". The script falls back to the install path.
+- Useful commands: `open path=… [newtab]`, `tab:open view=graph`, `orphans`, `deadends`, `unresolved`, `eval code=…`, `dev:screenshot path=…`. `open` reuses the active tab, so the script uses `newtab` and closes stale canvas/graph tabs first.
+- Pass JS to `eval` as one line and avoid double quotes inside it.
+- `orphans`/`deadends` read Obsidian's index, which still includes the excluded `sidecar/` folder. Excluded folders are hidden from the graph UI, not from the index.
+- Canvas edge labels do not scale with zoom the way cards do, so a long label spills over neighboring cards. Labels are therefore one word (`documented` / `inferred`); the reason is written in the target card.
+
+Check layout without Obsidian: `python views/generate_semester_topic_map.py --svg out.svg` (stdlib only).
