@@ -1,0 +1,27 @@
+# Area: planning
+
+Back to [[views/graph/index|index]]. 23 notes.
+
+- [[planning/fall-2026-course-design|planning/fall-2026-course-design.md]]
+- [[planning/week-01|planning/week-01.md]]
+- [[planning/week-02-local-ai-lab-integration|planning/week-02-local-ai-lab-integration.md]]
+- [[planning/week-02-rhythm|planning/week-02-rhythm.md]]
+- [[planning/week-02|planning/week-02.md]]
+- [[planning/week-03|planning/week-03.md]]
+- [[planning/week-04|planning/week-04.md]]
+- [[planning/week-05|planning/week-05.md]]
+- [[planning/week-06|planning/week-06.md]]
+- [[planning/week-07|planning/week-07.md]]
+- [[planning/week-08|planning/week-08.md]]
+- [[planning/week-09|planning/week-09.md]]
+- [[planning/week-10|planning/week-10.md]]
+- [[planning/week-11|planning/week-11.md]]
+- [[planning/week-12|planning/week-12.md]]
+- [[planning/week-13|planning/week-13.md]]
+- [[planning/week-14|planning/week-14.md]]
+- [[planning/week-15|planning/week-15.md]]
+- [[planning/week-16-farkle-ml-implementation-plan|planning/week-16-farkle-ml-implementation-plan.md]]
+- [[planning/week-16-farkle-ml-target-map|planning/week-16-farkle-ml-target-map.md]]
+- [[planning/week-16|planning/week-16.md]]
+- [[planning/week-17-finals|planning/week-17-finals.md]]
+- [[planning/week-17|planning/week-17.md]]

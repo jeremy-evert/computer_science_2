@@ -3,108 +3,135 @@
     {
       "id": "title",
       "type": "text",
-      "text": "# Fall 2026 CS2 \u2014 Semester Topic Map\n\nTeaching story: earn a trustworthy boundary, then make it collaborate, substitute, swap, hold data, explain tradeoffs, respond to events, and tell an honest evidence-backed story.\n\nSolid dependency arrows are documented in the active sequence; dashed arrows are instructional inferences. Testing, documentation, AI accountability, and review recur throughout (S08).",
+      "text": "# Fall 2026 CS2 \u2014 Semester Topic Map\n\nTeaching story: earn a trustworthy boundary, then make it collaborate, substitute, swap, hold data, explain tradeoffs, respond to events, and tell an honest evidence-backed story.\n\nArrows labeled documented follow the active sequence; arrows labeled inferred (orange) are instructional synthesis. Testing, documentation, AI accountability, and review recur throughout (S08).",
       "x": 0,
-      "y": -420,
-      "width": 1180,
-      "height": 150
+      "y": 0,
+      "width": 1580,
+      "height": 186
     },
     {
       "id": "spine",
       "type": "text",
       "text": "## Progression\nWeeks 3\u20134 design \u2192 5 substitution \u2192 6 contracts \u2192 7\u20138 data abstractions and search/order \u2192 9 GUI/events \u2192 10\u201311 visualization/storytelling. Recursion is an optional design lens when authentic.\n\nSource: docs/curriculum/course-sequence.md:15-22",
       "x": 0,
-      "y": -230,
-      "width": 1180,
-      "height": 120
+      "y": 236,
+      "width": 1580,
+      "height": 173
+    },
+    {
+      "id": "phase1",
+      "type": "text",
+      "text": "# Phase 1 \u00b7 Design a boundary",
+      "x": 0,
+      "y": 509,
+      "width": 340,
+      "height": 82
     },
     {
       "id": "g1",
       "type": "text",
       "text": "## 1 \u00b7 Earn a boundary\nWeeks 3\u20134 \u00b7 S01\n\nWhy it matters: state and behavior should make a small promise that can be explained and tested. Predictions may be rejected.\n\nEvidence: planning/week-04.md; lessons/week-04-cohesive-object-boundary.md; assignments/odyssey_gates/week-04.md",
       "x": 0,
-      "y": 0,
-      "width": 280,
-      "height": 230
+      "y": 641,
+      "width": 340,
+      "height": 342
     },
     {
       "id": "g2",
       "type": "text",
       "text": "## 2 \u00b7 Collaborate and protect\nWeek 4\u20135 \u00b7 S01/S08\n\nWhy it matters: composition gives responsibilities a boundary; an invariant makes correctness observable.\n\nEvidence: lessons/week-04-composition-and-invariants.md; planning/week-05.md",
-      "x": 360,
-      "y": 0,
-      "width": 280,
-      "height": 230
+      "x": 0,
+      "y": 1083,
+      "width": 340,
+      "height": 316
     },
     {
       "id": "g3",
       "type": "text",
       "text": "## 3 \u00b7 Earn substitution\nWeek 6 \u00b7 S02\n\nWhy it matters: inheritance is used only when a genuine is-a relationship gives shared operations different meaning.\n\nEvidence: planning/week-06.md; assignments/odyssey_gates/week-06.md; week_06/03_test_substitution.py",
-      "x": 720,
-      "y": 0,
-      "width": 280,
-      "height": 230
+      "x": 0,
+      "y": 1499,
+      "width": 340,
+      "height": 316
+    },
+    {
+      "id": "phase2",
+      "type": "text",
+      "text": "# Phase 2 \u00b7 Contracts and data",
+      "x": 620,
+      "y": 509,
+      "width": 340,
+      "height": 82
     },
     {
       "id": "g4",
       "type": "text",
       "text": "## 4 \u00b7 Make a contract swappable\nWeek 7 \u00b7 S03/S08\n\nWhy it matters: a caller can depend on a promise while implementations change.\n\nEvidence: planning/week-07.md; assignments/odyssey_gates/week-07.md; week_07/week_07_contract_and_swap/",
-      "x": 0,
-      "y": 320,
-      "width": 280,
-      "height": 230
+      "x": 620,
+      "y": 641,
+      "width": 340,
+      "height": 316
     },
     {
       "id": "g5",
       "type": "text",
       "text": "## 5 \u00b7 Choose a world-fit data shape\nWeek 8 \u00b7 S05\n\nWhy it matters: list/stack/queue behavior becomes meaningful when chosen for a real process and proved with a trace or test.\n\nEvidence: planning/week-08.md; assignments/odyssey_gates/week-08.md",
-      "x": 360,
-      "y": 320,
-      "width": 280,
-      "height": 230
+      "x": 620,
+      "y": 1057,
+      "width": 340,
+      "height": 328
     },
     {
       "id": "g6",
       "type": "text",
       "text": "## 6 \u00b7 Explain lookup/order tradeoffs\nWeek 9 \u00b7 S05/S06\n\nWhy it matters: algorithm choice follows domain need, maintenance cost, and preconditions; binary search is conditional.\n\nEvidence: planning/week-09.md; assignments/odyssey_gates/week-09.md; lessons/plotting-searching-sorting.md",
-      "x": 720,
-      "y": 320,
-      "width": 280,
-      "height": 230
+      "x": 620,
+      "y": 1485,
+      "width": 340,
+      "height": 380
+    },
+    {
+      "id": "phase3",
+      "type": "text",
+      "text": "# Phase 3 \u00b7 Events and story",
+      "x": 1240,
+      "y": 509,
+      "width": 340,
+      "height": 82
     },
     {
       "id": "g7",
       "type": "text",
       "text": "## 7 \u00b7 Put a thin view over the model\nWeek 10 \u00b7 S04\n\nWhy it matters: an event can change real model state without making the GUI the only proof.\n\nEvidence: planning/week-10.md; lessons/week-10-tkinter-model-view-lab.md; assignments/odyssey_gates/week-10.md",
-      "x": 0,
-      "y": 650,
-      "width": 280,
-      "height": 230
+      "x": 1240,
+      "y": 641,
+      "width": 340,
+      "height": 354
     },
     {
       "id": "g8",
       "type": "text",
       "text": "## 8 \u00b7 Turn project data into a story\nWeeks 11\u201312 \u00b7 S09/S07\n\nWhy it matters: a question, readable representation, limitation, and decision make evidence useful; recursion/linked/nested design is optional when authentic.\n\nEvidence: planning/week-11.md; planning/week-12.md; lessons/week-11-data-storytelling-micro-lab.md; assignments/odyssey_gates/week-11.md and week-12.md",
-      "x": 360,
-      "y": 650,
-      "width": 280,
-      "height": 230
+      "x": 1240,
+      "y": 1095,
+      "width": 340,
+      "height": 432
     },
     {
       "id": "evidence",
       "type": "text",
-      "text": "## Recurring proof loop\nWeeks 2\u201315 \u00b7 S08\n\nKnown baseline \u2192 bounded change \u2192 inspect diff/code \u2192 independent test or trace \u2192 explain limits \u2192 accept/reject and review.\n\nEvidence: planning/week-02.md; docs/curriculum/course-sequence.md:22; later Odyssey gates.",
-      "x": 720,
-      "y": 650,
-      "width": 280,
-      "height": 230
+      "text": "## Recurring proof loop (Weeks 2\u201315 \u00b7 S08)\nKnown baseline \u2192 bounded change \u2192 inspect diff/code \u2192 independent test or trace \u2192 explain limits \u2192 accept/reject and review. This loop applies to every card above; it is not an arrow because it recurs everywhere.\n\nEvidence: planning/week-02.md; docs/curriculum/course-sequence.md:22; later Odyssey gates.",
+      "x": 0,
+      "y": 1965,
+      "width": 1580,
+      "height": 173
     },
     {
       "id": "src-sequence",
       "type": "file",
       "file": "docs/curriculum/course-sequence.md",
-      "x": 1040,
-      "y": -390,
+      "x": 0,
+      "y": 2188,
       "width": 260,
       "height": 110,
       "subpath": "",
@@ -114,8 +141,8 @@
       "id": "src-plans",
       "type": "file",
       "file": "planning/week-04.md",
-      "x": 1040,
-      "y": -240,
+      "x": 330,
+      "y": 2188,
       "width": 260,
       "height": 110,
       "subpath": "",
@@ -125,8 +152,8 @@
       "id": "src-gates",
       "type": "file",
       "file": "assignments/odyssey_gates/week-09.md",
-      "x": 1040,
-      "y": -90,
+      "x": 660,
+      "y": 2188,
       "width": 260,
       "height": 110,
       "subpath": "",
@@ -136,8 +163,8 @@
       "id": "src-lesson",
       "type": "file",
       "file": "lessons/week-10-tkinter-model-view-lab.md",
-      "x": 1040,
-      "y": 60,
+      "x": 990,
+      "y": 2188,
       "width": 260,
       "height": 110,
       "subpath": "",
@@ -147,8 +174,8 @@
       "id": "src-test",
       "type": "file",
       "file": "planning/week-02.md",
-      "x": 1040,
-      "y": 210,
+      "x": 1320,
+      "y": 2188,
       "width": 260,
       "height": 110,
       "subpath": "",
@@ -160,17 +187,17 @@
       "id": "e12",
       "fromNode": "g1",
       "toNode": "g2",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "documented: boundary enables collaboration"
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "documented: enables collaboration"
     },
     {
       "id": "e23",
       "fromNode": "g2",
       "toNode": "g3",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "documented: avoid hierarchy until is-a is earned"
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "documented: is-a must be earned"
     },
     {
       "id": "e34",
@@ -178,24 +205,24 @@
       "toNode": "g4",
       "fromSide": "right",
       "toSide": "left",
-      "label": "documented: shared behavior supports contract thinking"
+      "label": "documented: shared behavior"
     },
     {
       "id": "e45",
       "fromNode": "g4",
       "toNode": "g5",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "inferred: interfaces make data implementations discussable",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "inferred: interfaces \u2192 data",
       "color": "2"
     },
     {
       "id": "e56",
       "fromNode": "g5",
       "toNode": "g6",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "documented: data abstraction precedes search/order"
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "documented: data before search/order"
     },
     {
       "id": "e67",
@@ -203,83 +230,16 @@
       "toNode": "g7",
       "fromSide": "right",
       "toSide": "left",
-      "label": "inferred: tested model supplies GUI state",
+      "label": "inferred: model feeds GUI",
       "color": "2"
     },
     {
       "id": "e78",
       "fromNode": "g7",
       "toNode": "g8",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "documented: project evidence continues into story"
-    },
-    {
-      "id": "proof1",
-      "fromNode": "evidence",
-      "toNode": "g1",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "recurs: proof of each claim",
-      "color": "2"
-    },
-    {
-      "id": "proof2",
-      "fromNode": "evidence",
-      "toNode": "g4",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "recurs: contract test",
-      "color": "2"
-    },
-    {
-      "id": "proof3",
-      "fromNode": "evidence",
-      "toNode": "g8",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "recurs: reproducible evidence and limits",
-      "color": "2"
-    },
-    {
-      "id": "src1",
-      "fromNode": "src-sequence",
-      "toNode": "spine",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "source"
-    },
-    {
-      "id": "src2",
-      "fromNode": "src-plans",
-      "toNode": "g1",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "source"
-    },
-    {
-      "id": "src3",
-      "fromNode": "src-gates",
-      "toNode": "g6",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "source"
-    },
-    {
-      "id": "src4",
-      "fromNode": "src-lesson",
-      "toNode": "g7",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "source"
-    },
-    {
-      "id": "src5",
-      "fromNode": "src-test",
-      "toNode": "evidence",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "source"
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "documented: project \u2192 story"
     }
   ]
 }
