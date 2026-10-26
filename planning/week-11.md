@@ -5,3 +5,5 @@ a readable, labeled visualization and defend the representation. Retain
 runnable evidence and identify one misleading alternative or visual pitfall;
 plain Python collections/CSV and Matplotlib are sufficient. **Odyssey:**
 question, visual, rationale, limitation, and World Bible evidence.
+
+**Optional variant (experimental):** `lessons/week-11-benchmark-story-microlab.md` — benchmark sorting and searching on your own machine and tell the story; same gate, same rubric.
