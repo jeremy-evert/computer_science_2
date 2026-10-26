@@ -84,13 +84,9 @@
   \vfill\centering\small Same two numbers. A truncated y-axis makes a 4x change look like 40x. Always show the zero baseline for bar charts.
 \end{frame}
 
-\begin{frame}{Hardware leg (coming)}
-  Run \texttt{count\_and\_time.py} on your machine. Predicted result, to be checked:
-  \begin{itemize}
-    \item operation counts: \textbf{identical} on every platform
-    \item wall-clock time: \textbf{different}, same shape
-  \end{itemize}
-  \vfill\small Share your CSV and one chart in the Week 11 discussion.
+\begin{frame}{8. Another CPU: counts identical, time not}
+  \fig[.58]{S08_hardware}
+  \vfill\centering\small Same code, three Linux machines (Python 3.12 / 3.14 / 3.9; 20 / 32 / 96 CPUs). All 120 count rows match exactly. Bubble at $n=3000$: 0.15 s, 0.21 s, 0.80 s. The Python version differs too, so this is not a pure CPU comparison.
 \end{frame}
 
 \begin{frame}{Your story, in five parts}

@@ -32,7 +32,8 @@ TOPIC_ID = 547375
 CODE = ROOT / "lessons/code/week11_benchmark"
 DECK = ROOT / "presentations/beamer/week11_bigo_story/week11_bigo_story.pdf"
 FILES = [(CODE / "instrumented.py", "text/x-python"), (CODE / "count_and_time.py", "text/x-python"),
-         (CODE / "story_charts.py", "text/x-python"), (CODE / "story_sample.csv", "text/csv"),
+         (CODE / "story_charts.py", "text/x-python"), (CODE / "story_sample.csv", "text/csv"), (CODE / "story_sample_maise.csv", "text/csv"),
+         (CODE / "story_sample_brandy.csv", "text/csv"),
          (DECK, "application/pdf")]
 FOLDER = "week_11/benchmark_microlab"
 BACKUP = ROOT / "sidecar/reports/backup_2026-10-26_pre_week11_bigo_story.json"
@@ -63,7 +64,7 @@ n&sup2;. Here is how it begins, and how to check the claim with evidence.</p>
 <li><strong>Graph it</strong> &rarr; operations vs n and wall-clock vs n, log and linear, with a fitted exponent.</li>
 <li><strong>Was ignoring them right?</strong> &rarr; lower-order terms fade toward 0% of the work; constants stay a fixed share (they change speed, not shape).</li>
 <li><strong>Bigger n</strong> &rarr; fit on small n, check on large n.</li>
-<li><strong>Another CPU</strong> &rarr; operation counts are identical on every machine; time is not.</li>
+<li><strong>Another CPU</strong> &rarr; operation counts are identical on every machine; time is not. We ran it on three Linux machines (Python 3.12, 3.14, 3.9): all 120 count rows matched exactly, while bubble sort at n=3000 took 0.15 s, 0.21 s and 0.80 s. The Python version differed too, so it is not a pure CPU comparison. Example data: {a('story_sample_maise.csv')}, {a('story_sample_brandy.csv')}. Run yours on Windows, WSL or Mac and see.</li>
 <li><strong>Better algorithm</strong> &rarr; early exit, insertion, merge sort (n log n): new curve, and a crossover.</li>
 </ol>
 <h3>Run it yourself</h3>
