@@ -1,0 +1,57 @@
+{
+ "module_items": [
+  {
+   "id": 1530016,
+   "position": 1,
+   "title": "CS2 Week 11 -- Overview",
+   "indent": 0,
+   "quiz_lti": false,
+   "type": "Page",
+   "module_id": 218895,
+   "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530016",
+   "page_url": "cs2-week-11-overview-5",
+   "publish_at": null,
+   "url": "https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-11-overview-5",
+   "published": true,
+   "unpublishable": true
+  },
+  {
+   "id": 1530001,
+   "position": 2,
+   "title": "Reasoning Odyssey Gate -- Week 11 -- Honest Visualization from Project Data (S09/S06/S08)",
+   "indent": 0,
+   "quiz_lti": false,
+   "type": "Assignment",
+   "module_id": 218895,
+   "html_url": "https://swosu.instructure.com/courses/74031/modules/items/1530001",
+   "content_id": 914182,
+   "url": "https://swosu.instructure.com/api/v1/courses/74031/assignments/914182",
+   "published": true,
+   "unpublishable": true
+  }
+ ],
+ "overview_page": {
+  "url": "cs2-week-11-overview-5",
+  "title": "CS2 Week 11 -- Overview",
+  "created_at": "2026-08-26T01:00:47Z",
+  "editing_roles": "teachers",
+  "page_id": 455475,
+  "last_edited_by": {
+   "id": 24406,
+   "anonymous_id": "ity",
+   "display_name": "Jeremy Paul Evert",
+   "avatar_image_url": "https://swosu.instructure.com/images/messages/avatar-50.png",
+   "html_url": "https://swosu.instructure.com/courses/74031/users/24406",
+   "pronouns": null
+  },
+  "published": true,
+  "hide_from_students": false,
+  "front_page": false,
+  "html_url": "https://swosu.instructure.com/courses/74031/pages/cs2-week-11-overview-5",
+  "todo_date": null,
+  "publish_at": null,
+  "updated_at": "2026-10-16T18:08:02Z",
+  "locked_for_user": false,
+  "body": "<h2>Reasoning Odyssey Gate -- Week 10 -- Honest Visualization from Project Data (S09/S06/S08)</h2><p><strong>What are we learning?</strong> Honest data visualization -- choosing a defensible representation and naming what it could mislead someone into believing.</p><p><strong>What am I building/changing?</strong> State a real question about your own selected-world/project data. Produce one or more readable, labeled visualizations that answer it, explain why the representation is defensible, and identify one misleading alternative or visual pitfall. Retain runnable code/data or a reproducible trace -- plotting syntax alone is not the evidence.</p><p><strong>How does my world connect?</strong> This uses your own accumulated project data -- the same system you have been building since Week 3.</p><p><strong>What evidence do I keep?</strong> Keep one concise World Bible entry: what changed, evidence used, and any remaining debt.</p><h3>Success criteria (25 points)</h3><table border=\"1\" cellpadding=\"6\"><tbody><tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr><tr><td>Real question / labeled visualization</td><td>8</td><td>A genuine question about the student own data, answered with a readable, labeled chart.</td></tr><tr><td>Reproducible evidence</td><td>7</td><td>Runnable code/data or a reproducible trace is retained, not just an image.</td></tr><tr><td>Representation/pitfall reasoning / World Bible</td><td>6</td><td>Explains why the representation is defensible and names one pitfall.</td></tr><tr><td>AI accountability</td><td>4</td><td>When AI was used: proposal, diff, independent test, reasoning, accept/reject decision.</td></tr></tbody></table><p><strong>What exactly do I turn in?</strong> The graded Canvas assignment for this gate is now live -- find it in this module, in Assignments, or in Grades, and submit there using the submission types and rubric described above.</p><p><strong>What carries forward?</strong> Week 11 either extends this data story or, if the project is not yet data-rich, reinforces prior design/GUI/testing work instead.</p>"
+ }
+}

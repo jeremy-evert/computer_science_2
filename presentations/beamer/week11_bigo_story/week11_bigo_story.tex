@@ -1,0 +1,97 @@
+% week11_bigo_story.tex -- CS2 Week 11 optional micro-lab deck: the story of Big O.
+% Images are produced by lessons/code/week11_benchmark/story_charts.py from story_sample.csv.
+\documentclass[aspectratio=169]{beamer}
+\usepackage{../theme/cs2theme}
+\usepackage{../theme/cs2commands}
+\setcsweek{Week 11}
+
+\title{The Story of Big O}
+\subtitle{You know how it ends ($n^2$). Here is how it begins.}
+\author{Computer Science II \textbullet\ Dr. Jeremy P. Evert}
+\date{Week 11 optional micro-lab}
+
+\newcommand{\fig}[2][.62]{\centering\includegraphics[width=.92\textwidth,height=#1\textheight,keepaspectratio]{img/#2}}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+  \note{Optional, experimental. Same Week 11 gate: question, visual, rationale, limitation, evidence. The point: with an LLM helping, we can show the process, not one pretty plot.}
+\end{frame}
+
+\begin{frame}{The story arc}
+  \begin{enumerate}
+    \item Naive code $\rightarrow$ highlight what drives it
+    \item Count every operation $\rightarrow$ graph it
+    \item Make $n$ bigger $\rightarrow$ try another CPU
+    \item A better algorithm $\rightarrow$ a new curve
+  \end{enumerate}
+  \vfill\small Evidence: counters and wall-clock time in a CSV you can regenerate on your own machine.
+\end{frame}
+
+\begin{frame}{1. The simple bubble sort}
+  \fig{S01_code_plain}
+  \vfill\centering\small Everything Big O will say is already in these ten lines. Where does the $n^2$ come from?
+\end{frame}
+
+\begin{frame}{2. What drives the behavior}
+  \fig{S02_code_drivers}
+  \vfill\centering\small Two nested loops, and the compare and swap inside them. Passes: $n-1$. Inner trips: $(n-1)+(n-2)+\dots+1 = n(n-1)/2$.
+\end{frame}
+
+\begin{frame}{3. What Big O says to ignore}
+  \fig{S03_code_ignored}
+  \vfill\centering\small Setup, per-pass bookkeeping, a flag per swap. A claim, not a fact: now we \emph{count} to check it.
+\end{frame}
+
+\begin{frame}{4. Count every operation}
+  \fig{S04_counters_vs_n}
+  \vfill\centering\small Instrumented sort, one counter per operation type. Compare and swap grow like $n^2$; passes and setup grow like $n$.
+\end{frame}
+
+\begin{frame}{5. Was ignoring them the right call?}
+  \fig{S05_ignored_share}
+  \vfill\centering\small Lower-order terms fade toward 0\%. Constant-factor work (reads, writes, flag) stays a fixed share: it changes the speed, not the shape.
+\end{frame}
+
+\begin{frame}{6. Operations and time: same shape (log axes)}
+  \fig{S06_ops_and_time_log}
+  \vfill\centering\small Fitted exponents near 2 for both. The count is exact: compare $=n(n-1)/2$.
+\end{frame}
+
+\begin{frame}{6b. The same data on linear axes}
+  \fig{S06_ops_and_time_linear}
+  \vfill\centering\small Linear axes show the parabola; log axes show the exponent. Each answers a different question.
+\end{frame}
+
+\begin{frame}{7. Fit small, predict big}
+  \fig[.66]{S07_extrapolation}
+  \vfill\centering\small Fit made only from $n \le 200$, checked against much larger $n$. Prediction is the test of the model.
+\end{frame}
+
+\begin{frame}{8. Less naive: early exit}
+  \fig[.66]{S11_early_exit_orderings}
+  \vfill\centering\small Stopping after a swap-free pass helps the \emph{best} case (sorted input). Random and reversed input are still $n^2$.
+\end{frame}
+
+\begin{frame}{9. A new curve: insertion and merge sort}
+  \fig{S10_better_algorithms}
+  \vfill\centering\small Insertion sort: same growth, about half the work. Merge sort changes the growth itself, $n\log n$. Look for the crossover in time.
+\end{frame}
+
+\begin{frame}{Pitfall: the misleading alternative}
+  \fig[.58]{S12_PITFALL_truncated_axis}
+  \vfill\centering\small Same two numbers. A truncated y-axis makes a 4x change look like 40x. Always show the zero baseline for bar charts.
+\end{frame}
+
+\begin{frame}{8. Another CPU: counts identical, time not}
+  \fig[.58]{S08_hardware}
+  \vfill\centering\small Same code, three Linux machines (Python 3.12 / 3.14 / 3.9; 20 / 32 / 96 CPUs). All 120 count rows match exactly. Bubble at $n=3000$: 0.15 s, 0.21 s, 0.80 s. The Python version differs too, so this is not a pure CPU comparison.
+\end{frame}
+
+\begin{frame}{Your story, in five parts}
+  \textbf{Question} \textbullet\ \textbf{Visual} \textbullet\ \textbf{Rationale} \textbullet\ \textbf{Limitation} \textbullet\ \textbf{Evidence}\\[2mm]
+  One run, one machine, best-of-N timing, counters add overhead (so time uses the uncounted sort). Claim only what the numbers show.
+\end{frame}
+
+\end{document}
