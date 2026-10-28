@@ -1,0 +1,80 @@
+<h1 id="week-4--cohesive-object-boundary">Week 4 — Cohesive Object
+Boundary</h1>
+<p><strong>Monday, September 7 was Labor Day — no Monday class.</strong>
+Use the Monday bridge to reopen your Week 3 World Bible, choose one
+predicted object, and prepare the smallest boundary question you can
+test on Wednesday. You do not need a larger design to make up the missed
+meeting.</p>
+<h2 id="this-weeks-question">This week's question</h2>
+<p><strong>When does a predicted noun actually deserve to be its own
+object?</strong></p>
+<p>Reopen your <a href="https://swosu.instructure.com/courses/74031/pages/cs2-week-03-overview-found-your-world-slash-world-bible-v0-dot-1" data-api-endpoint="https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-03-overview-found-your-world-slash-world-bible-v0-dot-1" data-api-returntype="Page">Week 3 World
+Bible</a>. Pick <strong>one</strong> candidate from your
+predicted-object list and test whether it earns a <em>cohesive
+boundary</em> — an object that owns related state and the behavior that
+belongs with that state. A prediction that does not hold up is a
+legitimate finding, not a failure.</p>
+<h2 id="what-you-do">What you do</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Day</th>
+<th>Center</th>
+<th>Evidence you keep</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Wednesday</td>
+<td>Reopen and test one prediction</td>
+<td>candidate noun, responsibility/boundary notes, smallest object
+diff</td>
+</tr>
+<tr class="even">
+<td>Friday</td>
+<td>Verify and defend the boundary</td>
+<td>independently run <code>unittest</code>, its result, a one-sentence
+World Bible update</td>
+</tr>
+</tbody>
+</table>
+<p>This is where the semester's testing habit begins: one small
+automated <code>unittest</code> — construct the object, exercise one
+meaningful behavior, assert the result — run by you, independently of
+any manual walkthrough.</p>
+<h2 id="where-to-go">Where to go</h2>
+<ol type="1">
+<li>Read the <a href="https://swosu.instructure.com/courses/74031/pages/cs2-week-04-cohesive-object-boundary-lesson" data-api-endpoint="https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-04-cohesive-object-boundary-lesson" data-api-returntype="Page">Week
+4 lesson — Cohesive Object Boundary</a>.</li>
+<li>Post your work in the <a href="https://swosu.instructure.com/courses/74031/discussion_topics/542906" data-api-endpoint="https://swosu.instructure.com/api/v1/courses/74031/discussion_topics/542906" data-api-returntype="Discussion">Week 4
+Odyssey Gate discussion</a> (25 points; graded discussion — post your
+work, then reply to a classmate; the rubric in that discussion is the
+scoring contract).</li>
+</ol>
+<p>If AI helps: save the request, inspect the proposal and diff, read
+the changed code, run the test yourself, and record an evidence-based
+accept/reject decision. <strong>The test — not the AI's claim — proves
+the behavior.</strong></p>
+<div style="margin:22px 0;padding:16px 18px;border:1px dashed #999;border-radius:8px;background:#fbf6ea;">
+  <h2 style="margin-top:0;">Optional — try this first: The Tavern Tab</h2>
+  <p>A tavern keeps a running tab for each patron. A <code>TavernTab</code> owns <code>patron_name</code> and <code>balance</code>:</p>
+  <ul>
+    <li><code>add_charge(amount)</code> raises <code>ValueError</code> if <code>amount &lt;= 0</code>; otherwise increases the balance.</li>
+    <li><code>pay(amount)</code> raises <code>ValueError</code> if <code>amount &lt;= 0</code>. If <code>amount &gt; balance</code>, it zeroes the balance and <strong>returns the overpayment as change</strong>; otherwise it reduces the balance by <code>amount</code> and returns <code>0</code>.</li>
+  </ul>
+  <p>The reasoning beat, same shape as this week's real gate: does <code>TavernTab</code> deserve a cohesive boundary, or is it just a named number? And does the settlement's full ledger of every patron's tab belong <em>inside</em> <code>TavernTab</code> itself? (No — name why: a single tab owns one patron's balance and the rules for changing it; the ledger of every tab is a different responsibility — a collection this object doesn't need to know about.)</p>
+  <p>One test to write: charge 10, pay 3 → balance 7. Pay 20 → balance 0, change 10.</p>
+  <p><em>This is a separate, lightweight, optional warm-up — the SupplyCrate worked example above is still the serious spine for this week's gate.</em></p>
+</div>
+
+<h2 id="optional">Optional</h2>
+<p>The <a href="https://swosu.instructure.com/courses/24298">SWOSU
+Computing Commons</a> carries the weekly podcasts, AI Fluency, and
+professional-learning material — not required for this course, but there
+if you want it.</p>
+
+<p><em>Next week: Inheritance and Polymorphism — and specifically when
+<strong>not</strong> to reach for them. Composition often fits a
+collaboration better than an unnecessary hierarchy; the
+<a href="https://swosu.instructure.com/courses/74031/pages/cs2-week-05-overview-5" data-api-endpoint="https://swosu.instructure.com/api/v1/courses/74031/pages/cs2-week-05-overview-5" data-api-returntype="Page">Week 5 overview</a>
+frames exactly that choice.</em></p>

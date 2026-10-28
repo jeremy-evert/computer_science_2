@@ -1,0 +1,42 @@
+{
+  "course_id": 74031,
+  "section": "COMSC-1053",
+  "course_name": "Fall 2026 Computer Science II (COMSC-1053-1417)",
+  "go_here_first_shape": "list",
+  "rail_slugs": {
+    "1": "week-1-success-foundations",
+    "2": "week-2-build-and-verify-your-local-ai-lab",
+    "3": "cs2-week-03-overview-found-your-world-slash-world-bible-v0-dot-1",
+    "4": "cs2-week-04-overview-cohesive-object-boundary",
+    "5": "cs2-week-05-overview-5",
+    "6": "cs2-week-06-overview-5",
+    "7": "cs2-week-07-overview-6",
+    "8": "cs2-week-08-world-fit-data-abstraction-overview",
+    "9": "cs2-week-09-overview-5",
+    "10": "cs2-week-10-overview-5",
+    "12": "cs2-week-12-overview-6",
+    "13": "cs2-week-13-overview-5",
+    "14": "cs2-week-14-overview-6",
+    "15": "cs2-week-15-overview-3",
+    "16": "cs2-week-16-overview-5",
+    "17": "cs2-week-17-overview-4"
+  },
+  "pages": {
+    "start-here-this-week": "start_here",
+    "cs2-week-03-overview-found-your-world-slash-world-bible-v0-dot-1": "overview:3",
+    "cs2-week-04-overview-cohesive-object-boundary": "overview:4",
+    "cs2-week-05-overview-5": "overview:5",
+    "cs2-week-06-overview-5": "overview:6",
+    "cs2-week-07-overview-6": "overview:7",
+    "cs2-week-08-world-fit-data-abstraction-overview": "overview:8",
+    "cs2-week-09-overview-5": "overview:9",
+    "cs2-week-10-overview-5": "overview:10",
+    "cs2-week-11-overview-5": "overview:11",
+    "cs2-week-12-overview-6": "overview:12",
+    "cs2-week-13-overview-5": "overview:13",
+    "cs2-week-14-overview-6": "overview:14",
+    "cs2-week-16-overview-5": "overview:16",
+    "cs2-week-17-overview-4": "overview:17"
+  },
+  "note": "Pages only. Canvas module truth wins for the rail; rail_slugs fills weeks the modules cannot name."
+}

@@ -1,0 +1,17 @@
+<h2>Reasoning Odyssey Gate — Week 5 — Collaborating Objects and Invariant (S01/S08)</h2>
+<p><strong>What are we learning?</strong> How objects work together — composition (has-a), collaborating objects, and protecting an invariant with a test. Just as important: recognizing when a job needs a partner object rather than a bigger single class or a hierarchy.</p>
+<p><strong>What am I building/changing?</strong> Refactor a real flow in your world into two or more collaborating objects using composition. Pick one thing that must always be true across that collaboration — an invariant — and protect it with an automated test that fails when it is broken and passes when it holds. Continue the Week 4 <code>unittest</code> habit. An optional first <code>logging</code> line at the invariant boundary is welcome, not required.</p>
+<p><strong>How does my world connect?</strong> Reopen your Week 4 object. Ask what it cannot do meaningfully alone — what does it need to collaborate with, and why? Composition, not a hierarchy: a Vault <em>has-a</em> lock; it is not a kind of Guard.</p>
+<p><strong>What evidence do I keep?</strong> One concise World Bible entry: what changed, what evidence you used, and any remaining debt. Explain in plain language why composition fits better here than an unnecessary hierarchy.</p>
+<h3>Whimsy hook — The Two-Key Vault</h3>
+<p>A vault that no single object can open. There is a <code>Vault</code> and two <code>Keyholder</code>s, and the rule the whole system exists to guarantee is: <em>the vault never opens unless both keyholders turn at the same time</em>. Neither object is a kind of the other — they collaborate. Build the collaboration, then write the test that proves one key alone can never open it. Break the invariant on purpose and watch the test catch you.</p>
+<h3>Success criteria (25 points)</h3>
+<table border="1" cellpadding="6"><tbody>
+<tr><th>Criterion</th><th>Points</th><th>Meets expectation</th></tr>
+<tr><td>Composition fit</td><td>8</td><td>The bounded change is meaningful for the selected world; no artificial hierarchy, recursion, queue, GUI, or algorithm is rewarded.</td></tr>
+<tr><td>Invariant test / trace</td><td>7</td><td>An automated test fails when the invariant is broken and passes when it holds.</td></tr>
+<tr><td>Rationale / World Bible</td><td>6</td><td>Explains, in plain language, why composition fits better than an unnecessary hierarchy.</td></tr>
+<tr><td>AI accountability</td><td>4</td><td>When AI was used: proposal, diff, independent test, reasoning, accept/reject decision.</td></tr>
+</tbody></table>
+<p><strong>What exactly do I turn in?</strong> The graded discussion for this gate — post your collaboration code (or a link), your invariant test, and your one-line World Bible entry, then reply to at least one classmate.</p>
+<p><strong>What carries forward?</strong> Week 6 takes the special case: where a real is-a relationship exists among your collaborating objects, inheritance and polymorphism let two subtypes share one operation with meaningfully different behavior. Week 7’s checkpoint then looks back across Weeks 4–6.</p>
