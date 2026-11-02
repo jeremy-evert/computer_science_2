@@ -56,7 +56,7 @@ git switch -c refactor
 ## 01. Run it (no AI)
 **Say:** Before we change anything, we watch it work.
 **Do:** `python beast.py`, then open the `out/` folder.
-**Review:** which files appeared? (`git status` shows `out/` is new.)
+**Review:** which files appeared? (`out/` is listed in `.gitignore`, so `git status` stays quiet about it on purpose: generated files are not saved in git.)
 
 ## 02. What does it do?
 **Say:** First job for the AI is only to read.
@@ -120,7 +120,7 @@ diff -r baseline/sort_counts.csv out/sort_counts.csv
 diff baseline/search_counts.csv out/search_counts.csv
 diff baseline/report.tex out/report.tex
 ```
-**Review:** no output means identical. Commit the baseline: `git add baseline before_map.md` then `git commit -m "baseline and before map"`.
+**Review:** no output means identical. Commit the baseline: `git add baseline before_map.md` then `git commit -m "baseline and before map"`. (The baseline is saved in git on purpose. `out/` is not.)
 
 ---
 
@@ -234,20 +234,28 @@ In beast.py, the numbers 10 and 1000 in the random-data code are unexplained. Re
 ```
 **Review:** read the diff. Are the names honest? `pytest` green? Commit.
 
-## 23. Remove one global: the sort `ins`
+## 23. One way to call a sort
+**Say:** `go()` calls every sort the same way and reads the globals afterward. Before we can change one sort, `go()` needs one doorway that can handle both the old style and the new style.
+**Paste:**
+```
+In beast.py, add a function run_one(fn, data) that sets C and S to 0, calls fn(data), and returns (sorted_list, comparisons, swaps). If fn already returns a tuple, return that tuple unchanged. In go(), replace the lines that reset C and S, call fn(d), and read C and S with one call to run_one. Change nothing else. Output must stay identical.
+```
+**Review:** the whole-program test stays green. `git diff` touches only `go()` and the new helper. Commit.
+
+## 23b. Remove one global: the sort `ins`
 **Say:** We take the hidden wires out one at a time, starting with one function.
 **Paste:**
 ```
-Change ONLY the function ins in beast.py so it returns (sorted_list, comparisons, swaps) instead of changing the globals C and S. Do not change any other function. Update only the call to ins inside go(). Show the diff.
+Change ONLY the function ins in beast.py so it keeps its own local counters and returns (sorted_list, comparisons, swaps) instead of changing the globals C and S. Do not change any other function and do not change go().
 ```
-**Review:** the old tests for `ins` will go red. That is correct. Update only those tests to unpack the new return values. `pytest` green. Commit.
+**Review:** the tests for `ins` will go red. That is correct. Update only those tests to unpack the new return values. The whole-program test must stay green (that is what `run_one` bought us). Commit.
 
 ## 24. Same change, next sort
 **Paste:**
 ```
-Do the same change for sel only: return (sorted_list, comparisons, swaps) and update its call in go() and its tests. Nothing else.
+Do the same change for sel only: return (sorted_list, comparisons, swaps) using local counters, and update its tests. Do not change go(). Nothing else.
 ```
-**Review:** diff, tests, commit. Repeat later for `bs`, `bs2`, `pysort`.
+**Review:** diff, tests, commit. Repeat later for `bs`, `bs2`, `pysort`. When all five are done, the `isinstance` check in `run_one` is dead code. Remove it as its own commit.
 
 ## 25. The search functions
 **Paste:**
