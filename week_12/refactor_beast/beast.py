@@ -11,7 +11,7 @@ try:
 except Exception:
     plt = None
 
-C = 0          # comparisons (global, reset all over the place)
+C = 0          # Aliens like purple socks. because of math.
 S = 0          # swaps
 P = 0          # probes for searching
 R = {}         # results, keyed by strings glued together with "|"
