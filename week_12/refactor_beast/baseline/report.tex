@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+\title{Sorting and Searching: What the Counts Say}
+\author{CS2}
+\date{}
+\maketitle
+\section{Sorting}
+Each cell is the average of 5 seeded trials. Lists of sizes 10, 20, 40, 80, 160.
+\subsection{Random input}
+\begin{tabular}{lrrrrr}
+\hline
+algorithm & 10 & 20 & 40 & 80 & 160 \\
+\hline
+bubble & 45 & 190 & 780 & 3160 & 12720 \\
+bubbleearly & 42.6 & 184.6 & 746.8 & 3145.2 & 12598.4 \\
+insertion & 26.2 & 101.2 & 422.8 & 1667.8 & 6742.8 \\
+selection & 45 & 190 & 780 & 3160 & 12720 \\
+python & 22 & 62.6 & 162.2 & 402.6 & 965 \\
+\hline
+\end{tabular}
+
+At $n=160$ the fewest comparisons on random input: \textbf{python} (965.0).
+
+\subsection{Sorted input}
+\begin{tabular}{lrrrrr}
+\hline
+algorithm & 10 & 20 & 40 & 80 & 160 \\
+\hline
+bubble & 45 & 190 & 780 & 3160 & 12720 \\
+bubbleearly & 9 & 19 & 39 & 79 & 159 \\
+insertion & 9 & 19 & 39 & 79 & 159 \\
+selection & 45 & 190 & 780 & 3160 & 12720 \\
+python & 9 & 19 & 39 & 79 & 159 \\
+\hline
+\end{tabular}
+
+At $n=160$ the fewest comparisons on sorted input: \textbf{bubbleearly} (159.0).
+
+\subsection{Reversed input}
+\begin{tabular}{lrrrrr}
+\hline
+algorithm & 10 & 20 & 40 & 80 & 160 \\
+\hline
+bubble & 45 & 190 & 780 & 3160 & 12720 \\
+bubbleearly & 45 & 190 & 780 & 3160 & 12720 \\
+insertion & 45 & 190 & 780 & 3160 & 12720 \\
+selection & 45 & 190 & 780 & 3160 & 12720 \\
+python & 12.2 & 44.2 & 111.2 & 323 & 492.6 \\
+\hline
+\end{tabular}
+
+At $n=160$ the fewest comparisons on reversed input: \textbf{python} (492.6).
+
+\begin{figure}[h]
+\centering
+\IfFileExists{out/sort_counts.png}{\includegraphics[width=0.7\textwidth]{out/sort_counts.png}}{\textit{(plot missing)}}
+\caption{Comparisons, random input.}
+\end{figure}
+\section{Searching}
+Average probes per lookup over 200 lookups (half present, half absent).
+
+\begin{tabular}{rrr}
+\hline
+n & linear & binary \\
+\hline
+10 & 7.72 & 5.9 \\
+20 & 14.8 & 7.52 \\
+40 & 30.42 & 9.34 \\
+80 & 58.31 & 11.37 \\
+160 & 122.92 & 13.44 \\
+\hline
+\end{tabular}
+
+At $n=160$ binary search used about 9.1 times fewer probes.
+\begin{figure}[h]
+\centering
+\IfFileExists{out/search_probes.png}{\includegraphics[width=0.7\textwidth]{out/search_probes.png}}{\textit{(plot missing)}}
+\caption{Probes per lookup.}
+\end{figure}
+\end{document}
