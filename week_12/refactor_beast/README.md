@@ -17,3 +17,26 @@ Before you change anything, you must be able to say "this is what it does now." 
 
 ## Hand in
 Your before map, your after map, the four sentences, and a link to your repo or branch with the tests. Post in the class discussion so classmates can see each other's approach.
+
+## Refactored entry point
+
+The extracted implementation lives in `src/`. Run it from this folder with:
+
+```powershell
+python -m src.main
+```
+
+It writes the CSV files, plots, LaTeX report, and (when `pdflatex` is
+available) PDF into `out/`. The original `beast.py` remains available as the
+comparison version while the refactor is developed.
+
+## Looking back: what could work better next time
+
+Before extracting algorithms, agree on their shared contract: whether they
+mutate the input, what they return, and how comparisons, swaps, and search
+probes are counted. We added those counting hooks after the standalone sorts
+were already in place, so deciding that interface earlier could have avoided
+a later pass through every sort. It would also help to establish the
+end-to-end baseline check as soon as collection and output are connected,
+while keeping timing results out of exact comparisons because they vary from
+run to run.
