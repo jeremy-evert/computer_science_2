@@ -2,11 +2,13 @@
 
 from typing import TypeVar
 
+from src.metrics import OperationCounts
+
 
 T = TypeVar("T")
 
 
-def insertion_sort(values: list[T]) -> list[T]:
+def insertion_sort(values: list[T], counts: OperationCounts | None = None) -> list[T]:
     """Sort ``values`` in place with insertion sort and return the same list.
 
     The list must contain values that can be compared with ``>``. Equal
@@ -18,8 +20,14 @@ def insertion_sort(values: list[T]) -> list[T]:
         position = index - 1
 
         while position >= 0 and values[position] > item:
+            if counts is not None:
+                counts.comparisons += 1
+                counts.swaps += 1
             values[position + 1] = values[position]
             position -= 1
+
+        if counts is not None and position >= 0:
+            counts.comparisons += 1
 
         values[position + 1] = item
 

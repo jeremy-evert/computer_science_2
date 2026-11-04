@@ -2,11 +2,13 @@
 
 from typing import TypeVar
 
+from src.metrics import OperationCounts
+
 
 T = TypeVar("T")
 
 
-def selection_sort(values: list[T]) -> list[T]:
+def selection_sort(values: list[T], counts: OperationCounts | None = None) -> list[T]:
     """Sort ``values`` in place with selection sort and return the same list.
 
     The list must contain values that can be compared with ``<``. This
@@ -17,10 +19,14 @@ def selection_sort(values: list[T]) -> list[T]:
     for start in range(length):
         minimum = start
         for index in range(start + 1, length):
+            if counts is not None:
+                counts.comparisons += 1
             if values[index] < values[minimum]:
                 minimum = index
 
         if minimum != start:
             values[start], values[minimum] = values[minimum], values[start]
+            if counts is not None:
+                counts.swaps += 1
 
     return values
