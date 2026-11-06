@@ -11,22 +11,24 @@ Each cell is the average of 5 seeded trials. Lists of sizes 10, 20, 40, 80, 160.
 \subsection{Random input}
 \begin{tabular}{lrrrrr}
 \hline
-algorithm & 10 & 20 & 40 & 80 & 160 \\
+algorithm & 10 & 20 & 40 & 80 & 160
+\\
 \hline
 bubble & 45 & 190 & 780 & 3160 & 12720 \\
 bubbleearly & 42.6 & 184.6 & 746.8 & 3145.2 & 12598.4 \\
 insertion & 26.2 & 101.2 & 422.8 & 1667.8 & 6742.8 \\
 selection & 45 & 190 & 780 & 3160 & 12720 \\
-python & 22 & 62.6 & 162.2 & 402.6 & 965 \\
+python & 23.6 & 64 & 163.8 & 405.8 & 970.4 \\
 \hline
 \end{tabular}
 
-At $n=160$ the fewest comparisons on random input: \textbf{python} (965.0).
+At $n=160$ the fewest comparisons on random input: \textbf{python} (970.4).
 
 \subsection{Sorted input}
 \begin{tabular}{lrrrrr}
 \hline
-algorithm & 10 & 20 & 40 & 80 & 160 \\
+algorithm & 10 & 20 & 40 & 80 & 160
+\\
 \hline
 bubble & 45 & 190 & 780 & 3160 & 12720 \\
 bubbleearly & 9 & 19 & 39 & 79 & 159 \\
@@ -41,17 +43,18 @@ At $n=160$ the fewest comparisons on sorted input: \textbf{bubbleearly} (159.0).
 \subsection{Reversed input}
 \begin{tabular}{lrrrrr}
 \hline
-algorithm & 10 & 20 & 40 & 80 & 160 \\
+algorithm & 10 & 20 & 40 & 80 & 160
+\\
 \hline
 bubble & 45 & 190 & 780 & 3160 & 12720 \\
 bubbleearly & 45 & 190 & 780 & 3160 & 12720 \\
 insertion & 45 & 190 & 780 & 3160 & 12720 \\
 selection & 45 & 190 & 780 & 3160 & 12720 \\
-python & 12.2 & 44.2 & 111.2 & 323 & 492.6 \\
+python & 9.2 & 20.4 & 40.8 & 83 & 165.4 \\
 \hline
 \end{tabular}
 
-At $n=160$ the fewest comparisons on reversed input: \textbf{python} (492.6).
+At $n=160$ the fewest comparisons on reversed input: \textbf{python} (165.4).
 
 \begin{figure}[h]
 \centering
